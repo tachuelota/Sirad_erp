@@ -16,7 +16,7 @@
 			<div class="col-xs-12">
 				<div class="box">
 					<div class="box-body">
-						<form id="RegistrarOrdenCompraForm" class="form-horizontal" method="post" action-1="<?php echo base_url();?>logistica/OrdenCompras/registrar">
+						<form id="RegistrarOrdenCompraForm" class="form-horizontal" method="post" action-1="<?php echo base_url();?>logistica/ordencompras/registrar">
 								<div class="row">
 									<div class="col-lg-6">
 										<div class="form-group">

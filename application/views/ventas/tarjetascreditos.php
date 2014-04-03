@@ -69,8 +69,7 @@
 								<h3>Trabajadores</h3>
 							</div>
 							<div class="modal-body" >
-								<table id="select_trabajador_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source = "<?php echo base_url();?>
-									administracion/servicios/get_trabajadores_activos">
+								<table id="select_trabajador_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source = "<?php echo base_url();?>administracion/servicios/get_trabajadores_activos">
 									<thead>
 										<tr>
 											<th>Nombres</th>
@@ -99,8 +98,7 @@
 								<h3>Clientes</h3>
 							</div>
 							<div class="modal-body" >							
-								<table id="select_cliente_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source = "<?php echo base_url();?>
-									ventas/servicios/getClientes">
+								<table id="select_cliente_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source = "<?php echo base_url();?>ventas/servicios/getClientes">
 									<thead>
 										<tr>
 											<th>Nombres</th>

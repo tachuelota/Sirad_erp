@@ -16,14 +16,7 @@
 			<div class="col-xs-12">
 				<div class="box">
 					<div class="box-body">
-						<form id="ZonapersonalForm" class="form-horizontal" method="post" action-1="<?php echo base_url();?>
-							administracion/zona_personal/registrar" action-2="
-							<?php echo base_url();?>
-							administracion/zona_personal/editar" action-3="
-							<?php echo base_url();?>
-							administracion/zona_personal/eliminar"data-source="
-							<?php echo base_url();?>
-							administracion/servicios/getUbigeo">
+						<form id="ZonapersonalForm" class="form-horizontal" method="post" action-1="<?php echo base_url();?>administracion/zona_personal/registrar" action-2="<?php echo base_url();?>administracion/zona_personal/editar" action-3="<?php echo base_url();?>administracion/zona_personal/eliminar"data-source="<?php echo base_url();?>administracion/servicios/getUbigeo">
 							<input type="hidden" id="idZonapersonal" name="idZonapersonal">
 								<fieldset>
 									<div class="box-content">
@@ -103,8 +96,7 @@
 										<h4 class="modal-title">Trabajadores</h4>
 									</div>
 									<div class="modal-body">
-										<table id="select_trabajador_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source = "<?php echo base_url();?>
-											administracion/servicios/get_trabajadores_sinzona">
+										<table id="select_trabajador_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source = "<?php echo base_url();?>administracion/servicios/get_trabajadores_sinzona">
 											<thead>
 												<tr>
 													<th>Nombres</th>
@@ -130,8 +122,7 @@
 										<h4 class="modal-title">Zonas<h4 class="modal-title">
 									</div>
 									<div class="modal-body">
-										<table id="select_zona_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source = "<?php echo base_url();?>
-											administracion/servicios/get_zonas_activos">
+										<table id="select_zona_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source = "<?php echo base_url();?>administracion/servicios/get_zonas_activos">
 											<thead>
 												<tr>
 													<th>Nombre</th>

@@ -28,8 +28,7 @@
 					</ul>
 					<div class="tab-content">
 						<div class="tab-pane active" id="tab_1">
-							<div id="RepVentasForm" method="post" action-1="<?php echo base_url();?>
-								ventas/servicios/reporte_ventas_bytienda">
+							<div id="RepVentasForm" method="post" action-1="<?php echo base_url();?>ventas/servicios/reporte_ventas_bytienda">
 								<div class="row">
 									<div class="col-lg-8">
 										<div class="form-group">

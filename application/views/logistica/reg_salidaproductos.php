@@ -127,8 +127,7 @@
 						</table>
 					</div>
 					<div class="box-footer">
-						<a href="<?php echo base_url();?>
-							logistica/views/cons_salidaproductos/" class="btn btn-success"> <i class="icon icon-white icon-arrowthick-w"></i>
+						<a href="<?php echo base_url();?>logistica/views/cons_salidaproductos/" class="btn btn-success"> <i class="icon icon-white icon-arrowthick-w"></i>
 							Volver
 						</a>
 						<button id="enviar_salida_producto" type="button" class="btn btn-primary" style="float: right;">
@@ -174,8 +173,7 @@
 								<h3>Trabajadores</h3>
 							</div>
 							<div class="modal-body">
-								<table id="select_trabajador_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>
-									logistica/servicios/get_trabajadores_activos">
+								<table id="select_trabajador_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>logistica/servicios/get_trabajadores_activos">
 									<thead>
 										<tr>
 											<th>Nombres</th>

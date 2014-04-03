@@ -123,8 +123,7 @@
 						</div>
 					</div>
 					<div class="box-footer">
-						<a href="<?php echo base_url() ?>
-							ventas/views/cons_ventas" class="btn btn-success btn-flat"> <i class="fa fa-reply"></i>
+						<a href="<?php echo base_url() ?>ventas/views/cons_ventas" class="btn btn-success btn-flat"> <i class="fa fa-reply"></i>
 							Volver
 						</a>
 						<a href="#" id="imprimir" class="btn btn-success btn-flat" style="float: right;"> <i class="fa fa-print"></i>

@@ -26,8 +26,7 @@
 						</div>
 					</div>
 					<div class="box-body">
-						<table class="table table-striped table-bordered bootstrap-datatable datatable" id="clientes_table" data-source="<?php echo base_url();?>
-							ventas/servicios/getclientes">
+						<table class="table table-striped table-bordered bootstrap-datatable datatable" id="clientes_table" data-source="<?php echo base_url();?>ventas/servicios/getclientes">
 							<thead>
 								<tr>
 									<th>Nombres</th>

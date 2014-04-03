@@ -374,8 +374,7 @@
 							 <h4 class="modal-title"><i class="fa fa-search"></i> Productos</h4>
 						</div>
 						<div class="modal-body">
-							<table id="select_producto_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>
-								ventas/servicios/getProductosToVenta" style="max-height: 450px;">
+							<table id="select_producto_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>ventas/servicios/getProductosToVenta" style="max-height: 450px;">
 								<thead>
 									<tr>
 										<th>Codigo</th>
@@ -433,8 +432,7 @@
 							<h4 class="modal-title"><i class="fa fa-search"></i>Clientes</h4>
 						</div>
 						<div class="modal-body">
-							<table id="select_cliente_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>
-								ventas/servicios/getClientes">
+							<table id="select_cliente_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>ventas/servicios/getClientes">
 								<thead>
 									<tr>
 										<th>Nombres</th>

@@ -201,8 +201,7 @@
 								<h3>Detalles de Orden de Compra</h3>
 							</div>
 							<div class="modal-body">
-								<table id="select_ordped_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>
-									logistica/servicios/get_log_ordcompras">
+								<table id="select_ordped_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>logistica/servicios/get_log_ordcompras">
 									<thead>
 										<tr>
 											<th>Codigo</th>

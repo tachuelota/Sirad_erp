@@ -19,8 +19,7 @@
 			<div class="col-xs-12">
 				<div class="box">
 					<div class="box-body">
-						<form class="form-horizontal" id="IngresoProductosForm" method="post" action-1="<?php echo base_url();?>
-							logistica/IngresoProductos/registrar" >
+						<form class="form-horizontal" id="IngresoProductosForm" method="post" action-1="<?php echo base_url();?>logistica/ingresoproductos/registrar" >
 							<input type="hidden" name="idRegistrado" id="idRegistrado" value="<?php echo $trabajador["nPersonal_id"] ?>
 							">
 							<input type="hidden" name="idLocal" id="idLocal" value="<?php echo $local["nLocal_id"] ?>
@@ -162,8 +161,7 @@
 						<hr>
 					</div>
 					<div class="box-footer">
-						<a href="<?php echo base_url();?>
-							logistica/views/cons_ingresoproductos/" class="btn btn-success">
+						<a href="<?php echo base_url();?>logistica/views/cons_ingresoproductos/" class="btn btn-success">
 							<i class="icon icon-white icon-arrowthick-w"></i>
 							Volver
 						</a>
@@ -181,8 +179,7 @@
 								<h3>Detalles de Orden de Compra</h3>
 							</div>
 							<div class="modal-body">
-								<table id="select_ordped_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>
-									logistica/servicios/get_log_ordcompras">
+								<table id="select_ordped_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>logistica/servicios/get_log_ordcompras">
 									<thead>
 										<tr>
 											<th>Codigo</th>
@@ -211,8 +208,7 @@
 								<h3>Productos</h3>
 							</div>
 							<div class="modal-body">
-								<table id="select_producto_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>
-									logistica/servicios/getProductosLog" >
+								<table id="select_producto_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>logistica/servicios/getProductosLog" >
 									<thead>
 										<tr>
 											<th>Código</th>

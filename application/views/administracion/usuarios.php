@@ -161,8 +161,7 @@
 						<h3 class="box-title">Lista <small>Usuarios</small></h3>
 					</div>
 					<div class="box-body">
-						<table id="usuarios_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>
-							administracion/Servicios/get_usuarios">
+						<table id="usuarios_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>administracion/servicios/get_usuarios">
 							<thead>
 								<tr>
 									<th>Usuario ID</th>
@@ -183,8 +182,7 @@
 							<h4 class="modal-title">Trabajadores</h4>
 						</div>
 						<div class="modal-body">
-							<table id="select_trabajador_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source = "<?php echo base_url();?>
-								administracion/Servicios/get_trabajadores_nouser">
+							<table id="select_trabajador_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source = "<?php echo base_url();?>administracion/servicios/get_trabajadores_nouser">
 								<thead>
 									<tr>
 										<th>Nombres</th>
