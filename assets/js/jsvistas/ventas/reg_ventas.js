@@ -268,6 +268,7 @@ $(document).ready(function(){
 	            location.reload(true);
             } 
         });
+         window.location.reload();
 	};
 
 	var volverConsultar = function(){
