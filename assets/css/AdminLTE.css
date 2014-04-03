@@ -2802,3 +2802,7 @@ Component: timeline
 .pace-inactive {
   display: none;
 }
+
+#login-box.form-box .header{
+  background: #367fa9;
+}

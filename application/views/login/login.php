@@ -1,5 +1,5 @@
 	<div class="form-box" id="login-box">
-        <div class="header">Bienvenido</div>
+        <div class="header"><img src="<?php echo base_url();?>/assets/img/sirad3.png" ></div>
         <form method="post">
             <div class="body bg-gray">
                 <div class="form-group">
@@ -13,9 +13,15 @@
                 </div>
             </div>
             <div class="footer">                                                               
-                <button type="submit" class="btn bg-olive btn-block">Ingresar</button>  
+                <button type="submit" class="btn bg-light-blue btn-block">Ingresar</button>  
                 
                 <!--p><a href="#">I forgot my password</a></p-->
             </div>
         </form>
+        <div class="margin text-center">
+            <span>Síguenos en nuestras redes sociales</span>
+            <br/>
+            <a href="https://www.facebook.com/clmdevelopers" target="_blank" class="btn bg-light-blue btn-circle"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/clmdevelopers" target="_blank" class="btn bg-aqua btn-circle"><i class="fa fa-twitter"></i></a>
+        </div>
     </div>

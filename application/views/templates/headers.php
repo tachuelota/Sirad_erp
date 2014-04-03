@@ -30,15 +30,15 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="skin-blue">
+<body <?php if(isset($isloginview)) echo 'class="bg-black"'; else echo 'class="skin-blue"'; ?> >
 	
 	<!-- header logo: style can be found in header.less -->
 	<header class="header" >
-	    <a href="<?php echo base_url();?>" class="logo">
+	    <a href="<?php echo base_url();?>" class="logo" <?php if(isset($isloginview)) echo 'style="display:none"'; ?>>
 	       <img src="<?php echo base_url();?>/assets/img/sirad3.png" alt="User Image" width="160px" >
 	    </a>
 	    <!-- Header Navbar: style can be found in header.less -->
-	    <nav class="navbar navbar-static-top" role="navigation" <?php if(isset($isloginview)) echo 'style="display:none"'?>>
+	    <nav class="navbar navbar-static-top" role="navigation" <?php if(isset($isloginview)) echo 'style="display:none"'; ?>>
 	        <!-- Sidebar toggle button-->
 	        <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
 	            <span class="sr-only">Toggle navigation</span>
