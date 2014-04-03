@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '/Sirad_v1/';
+$config['base_url']	= '/sirad_erp/';
 
 /*
 |--------------------------------------------------------------------------
