@@ -55,8 +55,8 @@ $(document).ready(function(){
 		$("#TotalGeneral").text(0);
 		$("#TotalEgresos").text(0);
 		date1 = new Date($("#date01").datepicker("getDates"));
-		Reporte_IngTable.fnReloadAjax(base_url+"ventas/Servicios/get_reporteIngEgre_byfecha/1/"+fechaFormatoSQL(date1));
-		Reporte_EgrTable.fnReloadAjax(base_url+"ventas/Servicios/get_reporteIngEgre_byfecha/0/"+fechaFormatoSQL(date1));
+		Reporte_IngTable.fnReloadAjax(base_url+"ventas/servicios/get_reporteIngEgre_byfecha/1/"+fechaFormatoSQL(date1));
+		Reporte_EgrTable.fnReloadAjax(base_url+"ventas/servicios/get_reporteIngEgre_byfecha/0/"+fechaFormatoSQL(date1));
 	});
 
 

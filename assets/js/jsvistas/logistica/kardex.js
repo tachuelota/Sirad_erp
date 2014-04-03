@@ -66,7 +66,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		date02 = new Date($("#date01").datepicker("getDates"));
 		tablakardexval = $.ajax({
-	        url: base_url+"logistica/Servicios/get_kardex_rptvalorizado/"+fechaFormatoSQL(date02),
+	        url: base_url+"logistica/servicios/get_kardex_rptvalorizado/"+fechaFormatoSQL(date02),
 	        async: false
 	    }).responseText;
 
