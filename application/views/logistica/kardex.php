@@ -1,0 +1,75 @@
+<aside class="right-side">
+	<section class="content-header">
+		<h1>Kardex<small>Consultar</small></h1>
+		<ol class="breadcrumb">
+			<li>
+				<a href="<?php echo base_url();?>">Home</a>
+			</li>
+			<li>
+				<a href="<?php echo base_url();?>logistica">Logistica</a>
+			</li>
+			<li class="active">Kardex</li>
+		</ol>
+	</section>
+	<section class="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="box">
+					<div class="box-body">
+						<div class="row-fluid">
+							<div class="span6"></div>
+							<div class="span6">
+								<input id="xlsresumengen" type="button" value="Reporte Resumen" class="btn btn-success" style="float: right; margin: 10px 10px 0 0;"/>
+								<input id="xlsvalorizadogen" type="button" value="Reporte Valorizado" class="btn btn-success" style="float: right; margin: 10px 10px 0 0;"/>
+							</div>
+						</div>
+						<br/>
+						<br/>
+						<div class="form-horizontal" id="KardexForm" name="KardexForm" action-1="<?php echo base_url();?>logistica/servicios/get_kardex_byfecha">
+							<input type="hidden" name="idLocal" id="idLocal" value="<?php echo $local["nLocal_id"];?>">
+							<fieldset>
+								<div class="form-group">
+									<label class="col-lg-4 control-label" for="nom-cargo">Fecha:</label>									
+									<div class="col-xs-3">										
+										<input type="text" class="form-control datepicker" id="date01" name="date01">										
+									</div>
+									<button id="buscarfecha" name="buscarfecha" type="button" class="btn btn-info btn-buscarp" style="margin: 0 18px;"> <i class="icon-search icon-white"></i>
+											Buscar
+										</button>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+					<div class="box-body table-responsive">
+						<table id="kardex_table" class="table table-striped table-bordered bootstrap-datatable datatable">
+							<thead>
+								<tr>
+									<th>Año</th>
+									<th>Mes</th>
+									<th>Producto</th>
+									<th>Marca</th>
+									<th>Tipo Producto</th>
+									<th>Tipo Ingreso</th>
+									<th>Cantidad</th>
+									<th>Prec. Unitario s/.</th>
+									<th>Total s/.</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+					<form method="post" target="_blank" id="CreateXLSGenForm">
+						<input type="hidden" name="titulo" id="titulo"/>
+						<input type="hidden" name="table_kardexgen" id="table_kardexgen"/>
+					</form>
+					<form method="post" target="_blank" id="CreateXLSValForm">
+						<input type="hidden" name="table_kardexgenval" id="table_kardexgenval"/>
+						<input type="hidden" name="local" id="local"/>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</aside>
+</div>
