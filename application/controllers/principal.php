@@ -11,7 +11,7 @@ class Principal extends CI_Controller {
 	}
 	public function index()
 	{
-		$dataheader['title'] = 'Dicars - Productos -';
+		$dataheader['title'] = 'Sirad_erp - Productos -';
 		$this->load->model('administracion/trabajadores_model','tra');
 		$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 		$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);		
