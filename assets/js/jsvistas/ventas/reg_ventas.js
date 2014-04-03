@@ -265,6 +265,7 @@ $(document).ready(function(){
 		$.unblockUI({
             onUnblock: function(){
 	            $(location).attr("href",base_url+"ventas/views/cons_ventas"); 
+	            location.reload(true);
             } 
         });
 	};

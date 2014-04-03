@@ -67,7 +67,7 @@
 						</div>
 						<!-- /.tab-pane -->
 						<div class="tab-pane" id="tab_2">
-							<div id="RepVentasForm" method="post" action-1="<?php echo base_url();?>ventas/servicios/reporte_ventas_byzona">
+							<div id="RepVentasZonasForm" method="post" action-1="<?php echo base_url();?>ventas/servicios/reporte_ventas_byzona">
 								<div class="row">
 									<div class="col-lg-8">
 										<div class="form-group">
