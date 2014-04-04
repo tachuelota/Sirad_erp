@@ -52,7 +52,11 @@
 												<div class="form-group">
 												<label class="col-lg-4 control-label" for="nom-marca">Nombre de Marca</label>
 													<div class="col-lg-8">
-														<input class="form-control focused validate[required,custom[onlyLetterNumberSp]]" id="desc_marca" name="desc_marca" type="text" data-prompt-position="topLeft"></div>
+														<div class="input-group">
+															<input class="form-control focused validate[required,custom[onlyLetterNumberSp]]" id="desc_marca" name="desc_marca" type="text" data-prompt-position="topLeft">
+															<span class="input-group-addon"><i class="fa fa-tag"></i></span>
+														</div>
+													</div>
 												</div>
 												<div class="form-group">
 												<label class="col-lg-4 control-label" for="estado-marca">Estado</label>

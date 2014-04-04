@@ -54,9 +54,12 @@
 										<div class="modal-body">
 											<fieldset>
 												<div class="form-group">
-												<label class="col-lg-4 control-label" for="nom-tienda">Nombre de la Tienda</label>
+												<label class="col-lg-4 control-label" for="nom-tienda">Nombre</label>
 													<div class="col-lg-8">
-												  		<input class="form-control focused validate[required]" id="nombre_tienda" name="nombre_tienda" type="text" data-prompt-position="topLeft">
+														<div class="input-group">
+												  			<input class="form-control focused validate[required]" id="nombre_tienda" name="nombre_tienda" type="text" data-prompt-position="topLeft">
+												  			<span class="input-group-addon"><i class="fa ion-home"></i></span>
+												  		</div>
 													</div>
 											  	</div>
 											  	<div class="form-group">
@@ -71,13 +74,19 @@
 											  	<div class="form-group">
 												<label class="col-lg-4 control-label" for="dir-tienda">Dirección</label>
 													<div class="col-lg-8">
-												  		<input class="form-control focused validate[required]" id="direccion" name="direccion" type="text" maxlength="150" data-prompt-position="topLeft">
+														<div class="input-group">
+												  			<input class="form-control focused validate[required]" id="direccion" name="direccion" type="text" maxlength="150" data-prompt-position="topLeft">
+															<span class="input-group-addon"><i class="fa fa-key"></i></span>
+														</div>
 													</div>
 											  	</div>
 											  	<div class="form-group">
 												<label class="col-lg-4 control-label" for="tel-tienda">Teléfono</label>
 													<div class="col-lg-8">
-												  		<input class="form-control focused validate[required,custom[onlyLetterNumber]]" id="telefono" name="telefono" type="text" placeholder="999999999" title="Sólo números de 9 dígitos" maxlength="11" data-prompt-position="topLeft">
+														<div class="input-group">
+													  		<input class="form-control focused validate[required,custom[onlyLetterNumber]]" id="telefono" name="telefono" type="text" placeholder="999999999" title="Sólo números de 9 dígitos" maxlength="11" data-prompt-position="topLeft">
+															<div class="input-group-addon"><i class="fa fa-phone"></i></div>
+														</div>
 													</div>
 											  	</div>
 											  	<div class="form-group">

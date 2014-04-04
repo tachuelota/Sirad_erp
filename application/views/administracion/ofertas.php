@@ -55,12 +55,20 @@
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="fec-ini">Fecha de Inicio</label>
 												<div class="col-lg-8">
-													<input type="text" class="form-control datepicker validate[required,custom[date]]" id="fecha_ini" name="fecha_ini" data-prompt-position="topLeft"></div>
+													<div class="input-group">
+														<input type="text" class="form-control datepicker validate[required,custom[date]]" id="fecha_ini" name="fecha_ini" data-prompt-position="topLeft">
+														<div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+													</div>
+												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="fec-ven">Fecha de Vencimiento</label>
 												<div class="col-lg-8">
-													<input type="text" class="form-control datepicker validate[required,custom[date]]" id="fecha_fin" name="fecha_fin" data-prompt-position="topLeft"></div>
+													<div class="input-group">
+														<input type="text" class="form-control datepicker validate[required,custom[date]]" id="fecha_fin" name="fecha_fin" data-prompt-position="topLeft">
+														<div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+													</div>
+												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="descripcion">Descripción</label>

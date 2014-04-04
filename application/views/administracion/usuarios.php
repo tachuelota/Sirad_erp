@@ -54,18 +54,30 @@
 												<div class="form-group">
 													<label class="col-lg-4 control-label" for="username">Usuario ID</label>
 													<div class="col-lg-8">
-														<input class="form-control validate[required] validate[custom[onlyLetterNumberSp]]" id="username" name="username" type="text" title="El usuario puede contener leras y números" maxlength="20"></div>
+														<div class="input-group">
+															<input class="form-control validate[required] validate[custom[onlyLetterNumberSp]]" id="username" name="username" type="text" title="El usuario puede contener leras y números" maxlength="20">
+															<span class="input-group-addon"><i class="fa fa-user"></i></span>
+														</div>
+													</div>
 												</div>
 
 												<div class="form-group">
 													<label class="col-lg-4 control-label" for="contrasena">Contraseña</label>
 													<div class="col-lg-8">
-														<input class="form-control validate[required] validate[minSize[8]]" id="password" name="password" type="password"></div>
+														<div class="input-group">
+															<input class="form-control validate[required] validate[minSize[8]]" id="password" name="password" type="password">
+															<span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+														</div>
+													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-lg-4 control-label" for="recontrasena">Re. Contraseña</label>
 													<div class="col-lg-8">
-														<input class="form-control validate[equals[password]]" type="password" name="password2" id="password2"></div>
+														<div class="input-group">
+															<input class="form-control validate[equals[password]]" type="password" name="password2" id="password2">
+															<span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>

@@ -54,44 +54,65 @@
 											<fieldset>
 											  <div class="form-group">
 												<label class="col-lg-4 control-label" for="nom-trabajador">Nombres</label>
-												<div class="col-lg-8">													
-												  <input class="form-control  focused validate[required,custom[onlyLetterSp]]" maxlength="50" title="Este campo debe ser sólo letras" id="nombres" name="nombres" type="text"  data-prompt-position="topLeft">
+												<div class="col-lg-8">
+													<div class="input-group">													
+													  <input class="form-control  focused validate[required,custom[onlyLetterSp]]" maxlength="50" title="Este campo debe ser sólo letras" id="nombres" name="nombres" type="text"  data-prompt-position="topLeft">
+													  <span class="input-group-addon"><i class="fa fa-user"></i></span>	
+													</div>
 												</div>
 											  </div>
 											  <div class="form-group">
 												<label class="col-lg-4 control-label" for="ape-trabajador">Apellidos</label>
 												<div class="col-lg-8">
-												  <input class="form-control focused validate[required,custom[onlyLetterSp]]" maxlength="50"  title="Este campo debe ser sólo letras" id="apellidos" name="apellidos" type="text" data-prompt-position="topLeft">
+													<div class="input-group">
+													  <input class="form-control focused validate[required,custom[onlyLetterSp]]" maxlength="50"  title="Este campo debe ser sólo letras" id="apellidos" name="apellidos" type="text" data-prompt-position="topLeft">
+													  <span class="input-group-addon"><i class="fa fa-user"></i></span>		
+													</div>
 												</div>
 											  </div>
 											  <div class="form-group">
 												<label class="col-lg-4 control-label" for="fec-trabajador">Fecha de Nacimiento</label>
 												<div class="col-lg-8">
-												  <input type="text" placeholder="dd/mm/YYYY"  maxlength="10" title="Debe ingresar un formato de fecha correcto" class="form-control datepicker validate[required,custom[date]]" id="fechanacimiento" name="fechanacimiento" data-prompt-position="topLeft">
+													<div class="input-group">													
+													  	<input type="text" placeholder="dd/mm/YYYY"  maxlength="10" title="Debe ingresar un formato de fecha correcto" class="form-control datepicker validate[required,custom[date]]" id="fechanacimiento" name="fechanacimiento" >
+														<div class="input-group-addon"><i class="fa fa-calendar"></i></div>												
+													</div>
 												</div>
 											  </div>					  
 											   <div class="form-group">
 												<label class="col-lg-4 control-label" for="edad-trabajador">Edad</label>
 												<div class="col-lg-8">
-												  <input class="form-control focused validate[required,custom[onlyNumberSp]]" maxlength="2" title="Este campo sólo admite números" id="edad" name="edad" type="text" data-prompt-position="topLeft">
+													<div class="input-group">
+													  <input class="form-control focused validate[required,custom[onlyNumberSp]]" maxlength="2" title="Este campo sólo admite números" id="edad" name="edad" type="text" data-prompt-position="topLeft">
+													  <span class="input-group-addon"><i class="fa fa-male"></i></span>	
+													</div>
 												</div>
 											  </div>
 											 <div class="form-group">
 												<label class="col-lg-4 control-label" for="dni-trabajador">DNI</label>
 												<div class="col-lg-8">
-												  <input class="form-control focused validate[required,custom[onlyNumberSp]] validate[minSize[8]]" maxlength="8" title="Este campo debe tener 8 números" id="dni" name="dni" type="text" data-prompt-position="topLeft">
+													<div class="input-group">
+													  <input class="form-control focused validate[required,custom[onlyNumberSp]] validate[minSize[8]]" maxlength="8" title="Este campo debe tener 8 números" id="dni" name="dni" type="text" data-prompt-position="topLeft">
+													  <span class="input-group-addon"><i class="fa fa-credit-card"></i></span> 	
+													</div>
 												</div>
 											  </div>
 											  <div class="form-group">
 												<label class="col-lg-4 control-label" for="tel-trabajador">Teléfono</label>
 												<div class="col-lg-8">
-												  <input class="form-control focused validate[required,custom[onlyLetterNumber]]" placeholder="999999999"  maxlength="12" id="telefono" name="telefono" type="text" data-prompt-position="topLeft">
+													<div class="input-group">
+													  <input class="form-control focused validate[required,custom[onlyLetterNumber]]" placeholder="999999999"  maxlength="12" id="telefono" name="telefono" type="text" data-prompt-position="topLeft">
+													  <div class="input-group-addon"><i class="fa fa-phone"></i></div> 	
+													</div>
 												</div>
 											  </div>
 											  <div class="form-group">
 												<label class="col-lg-4 control-label" for="email-trabajador">Email</label>
 												<div class="col-lg-8">
-												  <input class="form-control focused validate[required,custom[email]]" maxlength="100" placeholder="example@domain.com" id="email" name="email" type="email" data-prompt-position="topLeft">
+													<div class="input-group">
+													  <input class="form-control focused validate[required,custom[email]]" maxlength="100" placeholder="example@domain.com" id="email" name="email" type="email" data-prompt-position="topLeft">
+													  <span class="input-group-addon"><i class="fa fa-envelope"></i></span>	
+													</div>
 												</div>
 											  </div>					  
 											  <div class="form-group">

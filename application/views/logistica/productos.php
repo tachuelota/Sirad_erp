@@ -100,12 +100,20 @@
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="preCsot">Precio Costo</label>
 												<div class="col-lg-8">
-													<input  class="form-control validate[required,custom[number]]" name="preciocosto" id="preciocosto" type="text" data-prompt-position="topLeft"></div>
+													<div class="input-group">
+														<input  class="form-control validate[required,custom[number]]" name="preciocosto" id="preciocosto" type="text" data-prompt-position="topLeft">
+														<span class="input-group-addon">.00</span>
+													</div>
+												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="preContado">Precio Venta</label>
 												<div class="col-lg-8">
-													<input class="form-control validate[required,custom[number]]" name="precioventa" id="precioventa" type="text" data-prompt-position="topLeft"></div>
+													<div class="input-group">
+														<input class="form-control validate[required,custom[number]]" name="precioventa" id="precioventa" type="text" data-prompt-position="topLeft">
+														<span class="input-group-addon">.00</span>
+													</div>
+												</div>
 											</div>
 
 											<!--<div class="form-group">
@@ -116,14 +124,21 @@
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="StockMin">Stock Min</label>
 												<div class="col-lg-8">
-													<input  class="form-control validate[required,custom[onlyNumberSp]]" maxlength="11" name="stockmin" id="stockmin" type="text" data-prompt-position="topLeft">
+													<div class="input-group">
+														<input  class="form-control validate[required,custom[onlyNumberSp]]" maxlength="11" name="stockmin" id="stockmin" type="text" data-prompt-position="topLeft">
+														<span class="input-group-addon"><i class="fa fa-paste"></i></span>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="StockMax">Stock Max</label>
 												<div class="col-lg-8">
-													<input class="form-control validate[required,custom[onlyNumberSp]]" maxlength="11" name="stockmax" id="stockmax" type="text" data-prompt-position="topLeft"></div>
+													<div class="input-group">
+														<input class="form-control validate[required,custom[onlyNumberSp]]" maxlength="11" name="stockmax" id="stockmax" type="text" data-prompt-position="topLeft">
+														<span class="input-group-addon"><i class="fa fa-paste"></i></span>
+												</div>
 											</div>
+										</div>
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="estado">Estado</label>
 												<div class="col-lg-8">

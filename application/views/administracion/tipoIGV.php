@@ -54,13 +54,19 @@
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="tipoigv">Tipo IGV</label>
 												<div class="col-lg-8">
-											  		<input class="form-control focused validate[required,custom[onlyLetterNumberSp]]" id="tipo" name="tipo" type="text" data-prompt-position="topLeft">
+													<div class="input-group">
+											  			<input class="form-control focused validate[required,custom[onlyLetterNumberSp]]" id="tipo" name="tipo" type="text" data-prompt-position="topLeft">
+														<span class="input-group-addon"><i class="fa fa-tags"></i></span>
+													</div>
 												</div>
 										  	</div>
 										  	<div class="form-group">
 												<label class="col-lg-4 control-label" for="porcentaje">Porcentaje</label>
 												<div class="col-lg-8">
-											  		<input id="porc" name="porc" type="text" class="form-control validate[required,custom[number]]" data-prompt-position="topLeft">
+													<div class="input-group">
+											  			<input id="porc" name="porc" type="text" class="form-control validate[required,custom[number]]" data-prompt-position="topLeft">
+														<span class="input-group-addon">%</span>
+													</div>
 												</div>
 										  	</div>
 										  	<div class="form-group">

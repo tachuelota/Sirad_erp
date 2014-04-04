@@ -53,7 +53,11 @@
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="nom-categoria">Nombre de Categoría</label>
 												<div class="col-lg-8">
-													<input class="form-control validate[required,custom[onlyLetterNumberSp]]" id="nom_categoria" name="nom_categoria" type="text" data-prompt-position="topLeft"></div>
+													<div class="input-group">
+														<input class="form-control validate[required,custom[onlyLetterNumberSp]]" id="nom_categoria" name="nom_categoria" type="text" data-prompt-position="topLeft">
+														<span class="input-group-addon"><i class="fa ion-social-buffer"></i></span>
+													</div>													
+												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="desc-categoria">Descripción</label>

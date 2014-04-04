@@ -55,13 +55,19 @@
 										  	<div class="form-group">
 												<label class="col-lg-4 control-label" for="nom-moneda">Nombre de la Moneda</label>
 												<div class="col-lg-8">
-											  		<input class="form-control focused validate[required,custom[onlyLetterSp]]" id="desc_tipomoneda" name="desc_tipomoneda" type="text" data-prompt-position="topLeft">
+													<div class="input-group">
+												  		<input class="form-control focused validate[required,custom[onlyLetterSp]]" id="desc_tipomoneda" name="desc_tipomoneda" type="text" data-prompt-position="topLeft">
+														<span class="input-group-addon"><i class="fa fa-money"></i></span>
+													</div>
 												</div>
 										  	</div>
 										  <div class="form-group">
 												<label class="col-lg-4 control-label" for="monto">Monto</label>
 												<div class="col-lg-8">
-											  		<input id="monto" name="monto" type="text" class="form-control validate[required,custom[number]]" data-prompt-position="topLeft">
+													<div class="input-group">
+											  			<input id="monto" name="monto" type="text" class="form-control validate[required,custom[number]]" data-prompt-position="topLeft">
+														<span class="input-group-addon"><i class="fa fa-usd"></i></span>
+													</div>
 												</div>
 										  	</div>
 										  	<div class="form-group">

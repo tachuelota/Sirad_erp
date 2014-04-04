@@ -52,7 +52,10 @@
 										  	<div class="form-group">
 												<label class="col-lg-4 control-label" for="nom-cargo">Nombre de Cargo</label>
 												<div class="col-lg-8">
-											  		<input class="form-control focused validate[required,custom[onlyLetterSp]]" id="nom_cargo" name="nom_cargo" type="text" data-prompt-position="topLeft">
+													<div class="input-group">
+												  		<input class="form-control focused validate[required,custom[onlyLetterSp]]" id="nom_cargo" name="nom_cargo" type="text" data-prompt-position="topLeft">
+														<span class="input-group-addon"><i class="fa fa-paperclip"></i></span>
+													</div>
 												</div>
 										  	</div>
 										  	<div class="form-group">

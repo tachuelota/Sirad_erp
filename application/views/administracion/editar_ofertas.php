@@ -21,12 +21,20 @@
 							<div class="form-group">
 								<label class="col-lg-4 control-label" for="fecInicio">Fecha de Inicio</label>
 								<div class="col-lg-3">
-									<input type="text" class="form-control datepicker validate[required,custom[date]]" name="fecha_ini" id="fecha_ini" value="<?php echo $dOfertaFecVigente ?>"></div>
+									<div class="input-group">
+										<input type="text" class="form-control datepicker validate[required,custom[date]]" name="fecha_ini" id="fecha_ini" value="<?php echo $dOfertaFecVigente ?>">
+										<div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+									</div>
+								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-lg-4 control-label" for="fecFin">Fecha de Vencimiento</label>
 								<div class="col-lg-3">
-									<input type="text" class="form-control datepicker validate[required,custom[date]]" id="fecha_fin" name="fecha_fin" value="<?php echo $dOfertaFecVencto ?>"></div>
+									<div class="input-group">
+										<input type="text" class="form-control datepicker validate[required,custom[date]]" id="fecha_fin" name="fecha_fin" value="<?php echo $dOfertaFecVencto ?>">
+										<div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+									</div>
+								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-lg-4 control-label" for="descripcion">Descripción</label>

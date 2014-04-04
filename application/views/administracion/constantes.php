@@ -56,13 +56,19 @@
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="nom_clase">Descripcion</label>
 											<div class="col-lg-8">
-												<input class="form-control " id="nom_clase" name="nom_clase" type="text" data-prompt-position="topLeft">
+												<div class="input-group">
+													<input class="form-control " id="nom_clase" name="nom_clase" type="text" data-prompt-position="topLeft">
+													<span class="input-group-addon"><i class="fa fa-file-text-o"></i></span>
+												</div>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="valor">Valor</label>
 											<div class="col-lg-8">
-												<input class="form-control validate[required,custom[onlyNumberSp]]" id="valor" name="valor" type="text" data-prompt-position="topLeft">
+												<div class="input-group">
+													<input class="form-control validate[required,custom[onlyNumberSp]]" id="valor" name="valor" type="text" data-prompt-position="topLeft">
+													<span class="input-group-addon"><i class="fa fa-link"></i></span>
+												</div>
 											</div>
 										</div>
 									</div>
