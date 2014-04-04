@@ -23,7 +23,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group_type(2))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Sirad_erp - Logistica -';			
+			$dataheader['title'] = 'Logistica';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -42,7 +42,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_ord_comp"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Sirad_erp - OrdenCompras -';			
+			$dataheader['title'] = 'OrdenCompras';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -61,7 +61,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_ord_comp"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Sirad_erp - OrdenCompras (Registrar) -';
+			$dataheader['title'] = 'OrdenCompras (Registrar)';
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);			
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
@@ -83,7 +83,7 @@ class views extends CI_Controller
 		{
 			$this->load->model('logistica/ordcompra_model','ordcomp');
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Sirad_erp - OrdenCompras (Ver) -';
+			$dataheader['title'] = 'OrdenCompras (Ver)';
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata = $this->ordcomp->get_OrdCompra_views($nOrdenCom_id);				
@@ -103,7 +103,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_ing_prod"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Sirad_erp - Ingreso Productos -';			
+			$dataheader['title'] = 'Ingreso Productos';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -121,7 +121,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_ing_prod"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Sirad_erp - Ingreso Productos (Registrar) - ';
+			$dataheader['title'] = 'Ingreso Productos (Registrar)';
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
@@ -142,7 +142,7 @@ class views extends CI_Controller
 		{
 			$this->load->model('logistica/ingproducto_model','ingprod');
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Sirad_erp - Ingreso Productos (Editar) - ';
+			$dataheader['title'] = 'Ingreso Productos (Editar)';
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);		
 			$pagedata = $this->ingprod->get_IngProducto($nIngProd_id);			
@@ -162,7 +162,7 @@ class views extends CI_Controller
 		{
 			$this->load->model('logistica/ingproducto_model','ingprod');
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Sirad_erp - Ingreso Productos (Ver) - ';			
+			$dataheader['title'] = 'Ingreso Productos (Ver)';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);		
 			$pagedata = $this->ingprod->get_IngProducto($nIngProd_id);			
@@ -182,7 +182,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_gen_kardex"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Sirad_erp - Kardex -';			
+			$dataheader['title'] = 'Kardex';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata["local"] = $this->session->userdata('current_local');			
@@ -202,7 +202,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_prod"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Sirad_erp - Productos -';			
+			$dataheader['title'] = 'Productos';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata["local"] = $this->session->userdata('current_local');
@@ -222,7 +222,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_prove"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Sirad_erp - Proveedores -';			
+			$dataheader['title'] = 'Proveedores';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -241,7 +241,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_sal_prod"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Sirad_erp - Salida Productos -';			
+			$dataheader['title'] = 'Salida Productos';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -259,7 +259,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_sal_prod"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Sirad_erp - Salida Productos (Registrar) - ';
+			$dataheader['title'] = 'Salida Productos (Registrar) ';
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
@@ -281,7 +281,7 @@ class views extends CI_Controller
 		{
 			$this->load->model('logistica/salproducto_model','salprod');
 			$this->load->model('administracion/Trabajadores_Model','tra');			
-			$dataheader['title'] = 'Sirad_erp - Salida Productos (Ver) - ';
+			$dataheader['title'] = 'Salida Productos (Ver)';
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);	
 			$pagedata = $this->salprod->get_SalProducto($nSalProd_id);
@@ -301,7 +301,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_sal_ini"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Sirad_erp - Saldo Inicial - ';			
+			$dataheader['title'] = 'Saldo Inicial';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
