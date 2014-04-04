@@ -22,25 +22,25 @@
 	                        </div>
 							<div class="control-group">
 								<label class="control-label" for="tipo"></label>
-							</div>								
-						</div>					
-						<hr>
-					</div>
-					<div class="box-body table-responsive">
-						<table id="ofertas_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>administracion/servicios/getOfertas">
-							<thead>
-								<tr>
-									<th>Fecha Inicio</th>
-									<th>Descripción</th>
-									<th>Descuento (%)</th>
-									<th>Fecha Vencimiento</th>
-									<th>Estado</th>
-								</tr>
-							</thead>
-							<tbody>
-							</tbody>
-						</table>
-					</div>
+							</div>															
+						</div>
+						<hr>	
+					</div>														
+						<div class="box-body table-responsive">
+							<table id="ofertas_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>administracion/servicios/getOfertas">
+								<thead>
+									<tr>
+										<th>Fecha Inicio</th>
+										<th>Descripción</th>
+										<th>Descuento (%)</th>
+										<th>Fecha Vencimiento</th>
+										<th>Estado</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>						
 					<!--MODALS-->	
 					<div class="modal fade" id="OfertaModal">
 						<div class="modal-dialog">

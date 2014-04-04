@@ -33,7 +33,7 @@ $(document).ready(function(){
 		              { "mDataProp": "dOfertaFecVencto"},
 		              { "mDataProp": "estadolabel"}
 		              ],
-		"sDom":"t<'row-fluid'<'span12'i><'span12 center'p>>",
+		"sDom":"t<'row'<'col-xs-12'i><'col-xs-12 center'p>>",
 		"fnCreatedRow":Actions.RowCBFunction
 	};
 	OfertasTable = createDataTable2('ofertas_table',OfertaOptions);
