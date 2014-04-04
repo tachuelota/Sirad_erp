@@ -6,6 +6,7 @@ $(document).ready(function(){
 	var isEdit = false;
 	var validate = true;
 	var current_user = null
+	var checkboxs = $('#rootwizard input:checkbox');
 
 	$("#UsuarioForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000, promptPosition : "centerRight"});
 
@@ -51,17 +52,14 @@ $(document).ready(function(){
 			$("#btn-trabajador").hide();
 			var groups = getAjaxObject(base_url+"administracion/servicios/get_groupsbyUser/"+aData.id);
 			$(groups).each(function(index){
-				$("#group"+this.id).attr("checked","checked");					
+				$("#group"+this.id).iCheck('check');					
 			});
 
 			var locales = getAjaxObject(base_url+"administracion/servicios/get_LocalbyUser/"+aData.id);
 			$(locales).each(function(index){
-				$("#local"+this.nLocal_id).attr("checked","checked");					
+				$("#local"+this.nLocal_id).iCheck('check');					
 			});
-			$('#rootwizard input[type="checkbox"].flat-blue').iCheck({
-                checkboxClass: 'icheckbox_flat-blue',
-                radioClass: 'iradio_flat-blue'
-            });
+
 			$("#username").attr('readonly','true');
 			$("#username").removeClass("validate[required]");
 			$("#username").val(aData.username);
@@ -106,11 +104,16 @@ $(document).ready(function(){
 	var clearForm = function(data){			
 		$('#rootwizard').bootstrapWizard('show',0);
 		$("#UsuarioForm").reset();
-		$('#rootwizard input:checkbox').removeAttr('checked');
-		$('#rootwizard input[type="checkbox"].flat-blue').iCheck({
+		checkboxs.removeAttr('checked');
+		checkboxs.iCheck('destroy');
+		checkboxs.iCheck({
             checkboxClass: 'icheckbox_flat-blue',
             radioClass: 'iradio_flat-blue'
-        });
+	    });
+		/*$(checkboxs).each(function(index){
+			$("#"+$(this).attr('id')).iCheck('uncheck');
+		});*/
+
 		$("#username").removeAttr('readonly');
 		$("#btn-trabajador").show();
 		$("#username").addClass("validate[required]");
