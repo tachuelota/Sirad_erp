@@ -248,104 +248,113 @@
 								</form>
 							</div>
 							<div class="tab-pane" id="tab3">
-								<div class="form-horizontal">
-									<div id="resumen_venta">
-										<table class="table table-bordered">
-											<tr>
-												<td style="width: 25%;"> <strong>Cliente</strong>
-												</td>
-												<td id="clienteR" colspan="3" style="width: 75%;"></td>
-											</tr>
-											<tr>
-												<td style="width: 25%;"> <strong>Dirección</strong>
-												</td>
-												<td id="direccionR" style="width: 25%;"></td>
-												<td style="width: 25%;">
-													<strong>Fec. Emisión</strong>
-												</td>
-												<td id="fechaR" style="width: 25%;">
-													<?php echo date("d/m/Y"); ?></td>
-											</tr>
-											<tr>
-												<td>
-													<strong>Vendedor</strong>
-												</td>
-												<td id="vendedorR">
-													<?php echo $trabajador["cPersonalNom"]."-".$trabajador["cPersonalApe"];?></td>
-												<td>
-													<strong>Tipo de Pago</strong>
-												</td>
-												<td id="forma_pagoR"></td>
-											</tr>
-										</table>
-										<!-- TABLA DE PRODUCTOS POR COMPRAR aqui -->
-										<table id="tabla_resumen_productos" class="table table-striped table-bordered">
-											<thead >
+								<!-- Main content -->
+				                <section id="resumen_venta" class="content invoice">                    
+				                    <!-- title row -->
+				                    <div class="row">
+				                        <div class="col-xs-12">
+				                            <h2 class="page-header">
+				                                <i class="fa fa-globe"></i> CLM Developers SAC
+				                                <small class="pull-right">Date: 2/10/2014</small>
+				                            </h2>                            
+				                        </div><!-- /.col -->
+				                    </div>
+									<!-- info row -->
+				                    <div class="row invoice-info">
+				                        <div class="col-sm-4 invoice-col">
+				                            De
+				                            <address>
+				                                <strong>CLM Developers, SAC.</strong><br>
+				                                Bernardo Alcedo 187<br>
+				                                Urb. San Fernando, Trujillo<br>
+				                                <i class="fa fa-phone"></i> +51 999494821 / +51 044 612874<br/>
+				                                <i class="fa fa-envelope"></i> contacto@clmdevelopers.com
+				                            </address>
+				                        </div><!-- /.col -->
+				                        <div class="col-sm-4 invoice-col">
+				                            Cliente
+				                            <address>
+				                                <strong id="clienteR"></strong><br>
+				                                <span id="direccionR"></span><br>
+				                            </address>
+				                        </div><!-- /.col -->
+				                        <div class="col-sm-4 invoice-col">
+				                            <br/>
+				                            <b>Fec. Emisión:</b><span id="fechaR"><?php echo date("d/m/Y"); ?></span><br/>
+				                        </div><!-- /.col -->
+				                    </div><!-- /.row -->
+									<!-- TABLA DE PRODUCTOS POR COMPRAR aqui -->
+									<!-- Table row -->
+				                    <div class="row">
+				                        <div class="col-xs-12 table-responsive">
+											<table id="tabla_resumen_productos" class="table table-striped">
+												<thead >
+													<tr>
+														<th style="width: 25%;">Código</th>
+														<th style="width: 25%;">Producto</th>
+														<th style="width: 25%;">Cantidad</th>
+														<th style="width: 25%;">Precio</th>
+													</tr>
+												</thead>
+											</table>
+										</div>
+									</div>
+									<!-- END TABLA DE PRODUCTOS -->
+									<div class="row">
+										<div class="col-lg-6"></div>
+										<div class="col-lg-6">
+											<table class="table">
 												<tr>
-													<th style="width: 25%;">Código</th>
-													<th style="width: 25%;">Producto</th>
-													<th style="width: 25%;">Cantidad</th>
-													<th style="width: 25%;">Valor ó Precio</th>
+													<td style="width: 50%;">
+														<strong>Subtotal</strong>
+													</td>
+													<td id="subtotalR" style="width: 50%;"></td>
 												</tr>
-											</thead>
-										</table>
-										<!-- END TABLA DE PRODUCTOS -->
-										<div class="row">
-											<div class="col-lg-6"></div>
-											<div class="col-lg-6">
-												<table class="table table-bordered">
+												<tr>
+													<td>
+														<strong>Descuento</strong>
+													</td>
+													<td id="descuentoR"></td>
+												</tr>
+												<tr>
+													<td>
+														<strong>IGV</strong>
+													</td>
+													<td id="tipo_igvR"></td>
+												</tr>
+												<tr>
+													<td>
+														<strong>Total (S/.)</strong>
+													</td>
+													<td id="totalR"></td>
+												</tr>
+												<tr id="resumen_dolares">
+													<td>
+														<strong>Total ($.)</strong>
+													</td>
+													<td id="totalDo"></td>
+												</tr>
+											</table>
+											<br>
+											<div id="resume-credito">
+												<table class="table table-striped table-bordered">
 													<tr>
 														<td style="width: 50%;">
-															<strong>Subtotal</strong>
+															<strong>A cuenta</strong>
 														</td>
-														<td id="subtotalR" style="width: 50%;"></td>
+														<td id="amortizacionR" style="width: 50%;"></td>
 													</tr>
 													<tr>
 														<td>
-															<strong>Descuento</strong>
+															<strong>Saldo</strong>
 														</td>
-														<td id="descuentoR"></td>
-													</tr>
-													<tr>
-														<td>
-															<strong>IGV</strong>
-														</td>
-														<td id="tipo_igvR"></td>
-													</tr>
-													<tr>
-														<td>
-															<strong>Total (S/.)</strong>
-														</td>
-														<td id="totalR"></td>
-													</tr>
-													<tr id="resumen_dolares">
-														<td>
-															<strong>Total ($.)</strong>
-														</td>
-														<td id="totalDo"></td>
+														<td id="saldoR"></td>
 													</tr>
 												</table>
-												<br>
-												<div id="resume-credito">
-													<table class="table table-striped table-bordered">
-														<tr>
-															<td style="width: 50%;">
-																<strong>A cuenta</strong>
-															</td>
-															<td id="amortizacionR" style="width: 50%;"></td>
-														</tr>
-														<tr>
-															<td>
-																<strong>Saldo</strong>
-															</td>
-															<td id="saldoR"></td>
-														</tr>
-													</table>
-												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								</section>
 							</div>
 						</div>
 						<div class="box box-info">
