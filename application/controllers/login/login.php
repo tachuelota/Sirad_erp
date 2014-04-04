@@ -28,7 +28,7 @@ class login extends CI_Controller{
 		}
 		else
 		{
-			$dataheader['title'] = 'Dicars - Login -';
+			$dataheader['title'] = 'Login';
 			$dataheader['isloginview'] = true;
 			$this->load->view('templates/headers.php',$dataheader);
 			$this->data['message'] = $this->session->flashdata('message');
