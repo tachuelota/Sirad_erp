@@ -110,10 +110,6 @@ $(document).ready(function(){
             checkboxClass: 'icheckbox_flat-blue',
             radioClass: 'iradio_flat-blue'
 	    });
-		/*$(checkboxs).each(function(index){
-			$("#"+$(this).attr('id')).iCheck('uncheck');
-		});*/
-
 		$("#username").removeAttr('readonly');
 		$("#btn-trabajador").show();
 		$("#username").addClass("validate[required]");
