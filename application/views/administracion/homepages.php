@@ -198,21 +198,23 @@
 	                    </a>
 		            </div>
 		        </div>
-		         <?php endif ?>  
-                  <div class="col-lg-3 col-xs-6">
-                    <div class="small-box bg-maroon">
-                        <div class="inner">
-                            <h3>Backup</h3>
-                            <p>Obtener backups</p>
+		         <?php endif ?>
+                 <?php if($this->ion_auth->in_group("admin_backup")): ?> 
+                      <div class="col-lg-3 col-xs-6">
+                        <div class="small-box bg-maroon">
+                            <div class="inner">
+                                <h3>Backup</h3>
+                                <p>Obtener backups</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion-ios7-locked"></i>
+                            </div>
+                            <a href="<?php echo base_url();?>administracion/servicios/obtenerbakcups" class="small-box-footer">
+                                Administrar <i class="fa fa-arrow-circle-right"></i>
+                            </a>
                         </div>
-                        <div class="icon">
-                            <i class="ion-ios7-locked"></i>
-                        </div>
-                        <a href="<?php echo base_url();?>administracion/servicios/obtenerbakcups" class="small-box-footer">
-                            Administrar <i class="fa fa-arrow-circle-right"></i>
-                        </a>
                     </div>
-                </div>
+                <?php endif ?>
                 <?php if($this->ion_auth->in_group("admin_ofert")): ?>
                 <div class="col-lg-3 col-xs-6">
                     <div class="small-box bg-green">

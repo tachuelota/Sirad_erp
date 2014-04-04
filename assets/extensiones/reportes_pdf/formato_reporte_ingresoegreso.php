@@ -19,6 +19,7 @@ ob_start();
 	}
 	#logo{
 		width:20%;
+		padding: 9px;
 	}
 	#divh3{
 		background: #111;
@@ -55,9 +56,10 @@ ob_start();
 			<table id="header">
 				<tr>
 					<td id="logo" rowspan="3">
-						<img alt="" src="../../img/logo-dicars-200-100.png">
+						<img alt="" src="../../img/siradG2.png">
 					</td>
 				</tr>
+				<tr></tr>
 				<tr>
 					<td style="height: 20px;"></td>
 				</tr>
