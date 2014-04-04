@@ -1,16 +1,16 @@
 /* Set the defaults for DataTables initialisation */
 $.extend( true, $.fn.dataTable.defaults, {
 	"sDom":
-		"<'row'<'col-xs-6'l><'col-xs-6'f>r>"+
+		"<'row'<'col-xs-6'><'col-xs-6'f>r>"+
 		"t"+
-		"<'row'<'col-xs-6'i><'col-xs-6'p>>",
+		"<'row'<'col-xs-4'p><'col-xs-2'l><'col-xs-6'i>>",
 	"oLanguage": {
 		    "sProcessing":     "Procesando...",
 		    "sLengthMenu":     "Mostrar _MENU_ registros",
 		    "sZeroRecords":    "No se encontraron resultados",
 		    "sEmptyTable":     "Ningún dato disponible en esta tabla",
-		    "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-		    "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+		    "sInfo":           "Registros _START_ - _END_ de  _TOTAL_ ",
+		    "sInfoEmpty":      "Registros 0 - 0 de 0",
 		    "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
 		    "sInfoPostFix":    "",
 		    "sSearch":         "Buscar:",
@@ -20,8 +20,8 @@ $.extend( true, $.fn.dataTable.defaults, {
 		    "oPaginate": {
 		        "sFirst":    "Primero",
 		        "sLast":     "Último",
-		        "sNext":     "Siguiente",
-		        "sPrevious": "Anterior"
+		        "sNext":     "",
+		        "sPrevious": ""
 		    },
 		    "oAria": {
 		        "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",

@@ -220,7 +220,6 @@ $(document).ready(function(){
 			{ "mDataProp": "cDetVentaDesc"},
 			{ "mDataProp": "nProductoStock"}
 		              ],
-		//"sDom":"t",
 		"fnCreatedRow":getSimpleSelectRowCallBack(SelectProductoData)
 	};	
 	var BuscarProdTable = createDataTable2('select_producto_table',BuscarProdOptions);
@@ -242,7 +241,8 @@ $(document).ready(function(){
 			{ "mDataProp": "cProductoDesc"},
 			{ "mDataProp": "nDetVentaCant"},
 			{ "mDataProp": "nProductoPVenta"}
-		              ],
+		              ],		
+		"sDom":"t",
 		"fnCreatedRow":VentaProdActions.RowCBFunction
 	};
 	var VentaProdTable = createDataTable2('select_productos_venta',VentaProdOptions);
@@ -254,21 +254,18 @@ $(document).ready(function(){
 			{ "mDataProp": "nDetVentaCant"},
 			{ "mDataProp": "nDetVentaPrecUnt"}
 			],
+		"sDom":"t",
 		"fnCreatedRow":ResumenRCBF
 	};
 	var ResumenProdTable = createDataTable2('tabla_resumen_productos',ResumenProdOptions);
 
 	var unlockload = function(){
-		$("#resumen_venta").printThis({
-            	importCSS: true
-        });
+		$("#resumen_venta").printThis();
 		$.unblockUI({
             onUnblock: function(){
 	            $(location).attr("href",base_url+"ventas/views/cons_ventas"); 
-	            location.reload(true);
             } 
         });
-         window.location.reload();
 	};
 
 	var volverConsultar = function(){
