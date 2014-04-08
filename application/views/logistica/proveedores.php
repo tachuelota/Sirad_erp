@@ -33,8 +33,10 @@
 								<tr>
 									<th>RUC</th>
 									<th>Razón Social</th>
+									<th>Direccion Fiscal</th>
 									<th>Teléfono</th>
-									<th>Email</th>						
+									<th>Email</th>
+									<th>Estado</th>						
 								</tr>
 							</thead>
 							<tbody>

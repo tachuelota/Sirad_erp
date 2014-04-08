@@ -30,10 +30,20 @@ class servicios extends CI_Controller {
 
 	public function getProveedor(){		
 		$this->load->model('logistica/proveedor_model','pro');
-		$result = $this->pro->get_proveedor();
+		$proveedores = $this->pro->get_proveedor();
+		foreach ($proveedores as $key => $proveedor) {
+			switch ($proveedor["nProveedorEstado"]) {				
+			    case 0:
+			        $proveedores[$key]["estadolabel"] = '<span class="label label-info">Inhabilitado</span>';
+			        break;
+			    case 1:
+			        $proveedores[$key]["estadolabel"] = '<span class="label label-success">Habilitado</span>';
+			        break;
+			}
+		}
 		$this->output
 			->set_content_type('application/json')
-			->set_output(json_encode(array('aaData' => $result)));
+			->set_output(json_encode(array('aaData' => $proveedores)));
 	}	
 	public function get_trabajadores_activos(){
 		//$id_local = $this->session->userdata('current_local')["nLocal_id"];		

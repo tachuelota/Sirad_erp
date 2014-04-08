@@ -30,8 +30,10 @@ $(document).ready(function(){
 		"aoColumns":[
 			 		  { "mDataProp": "cProveedorRuc"},
 		              { "mDataProp": "cProveedorRazSocial"},
+		              { "mDataProp": "cProveedorDireccionFiscal"},
 		              { "mDataProp": "cProveedorTel"},
-		              { "mDataProp": "cProveedorEmail"}
+		              { "mDataProp": "cProveedorEmail"},
+		              { "mDataProp": "estadolabel"}
 				],
 		"fnCreatedRow": TipoProveedorTA.RowCBFunction
 	};
