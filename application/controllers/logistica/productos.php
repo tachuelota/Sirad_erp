@@ -17,8 +17,8 @@ class productos extends CI_Controller
 		$form = $this->input->post('formulario');
 		
 		if ($form!=null){			
-			$Serie = "001";
-			$Talla = "001";
+			$Serie = "";
+			$Talla = "";
 			$Marca = $form["marca"];
 			$Tipo = $form["tipprod"];
 			$Categoria = $form["categoria"];
@@ -26,7 +26,8 @@ class productos extends CI_Controller
 			$Imagen = null;
 			$PContado = 0;
 			$PCredito = 0;
-			$PCosto = $form["preciocosto"];
+			//$PCosto = $form["preciocosto"];
+			$PCosto = 0.00;
 			$StockMin = $form["stockmin"];
 			$StockMax = $form["stockmax"];	
 			$Stock = 0;
@@ -114,8 +115,8 @@ class productos extends CI_Controller
 		
 		if ($form!=null){
 			$Productoid=$form["codigo"];
-			$Serie = "001";
-			$Talla = "001";
+			$Serie = "";
+			$Talla = "";
 			$Marca = $form["marca"];
 			$Tipo = $form["tipprod"];
 			$Categoria = $form["categoria"];

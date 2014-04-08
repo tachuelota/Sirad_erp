@@ -97,7 +97,7 @@
 													<textarea class="form-control validate[required]" name="descripcion" maxlength="200" id="descripcion" rows="2" cols="" data-prompt-position="topLeft"></textarea>
 												</div>
 											</div>
-											<div class="form-group">
+											<!--<div class="form-group">
 												<label class="col-lg-4 control-label" for="preCsot">Precio Costo</label>
 												<div class="col-lg-8">
 													<div class="input-group">
@@ -105,7 +105,7 @@
 														<span class="input-group-addon">.00</span>
 													</div>
 												</div>
-											</div>
+											</div>-->
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="preContado">Precio Venta</label>
 												<div class="col-lg-8">
