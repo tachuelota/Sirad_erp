@@ -29,7 +29,10 @@
 										<label class="col-lg-4 control-label" for="registrador">Registrador</label>
 										<div class="col-lg-8">
 											<input id="registrador_id" name="registrador_id" type="hidden" value="<?php echo $trabajador["nPersonal_id"] ?>">
-											<input class="form-control" id="registrador" name="registrador" type="text" readonly value="<?php echo $trabajador["cPersonalNom"]." ".$trabajador["cPersonalApe"] ?>">
+											<div class="input-group">												
+												<input class="form-control" id="registrador" name="registrador" type="text" readonly value="<?php echo $trabajador["cPersonalNom"]." ".$trabajador["cPersonalApe"] ?>">
+												<span id="spandesc" class="input-group-addon"><i class="fa fa-user"></i></span>
+											</div>
 										</div>
 									</div>
 									<div class="form-group">
@@ -45,8 +48,11 @@
 									<div class="form-group">
 										<label class="col-lg-4 control-label" for="tienda">Tienda</label>
 										<div class="col-lg-8">
-											<input class="form-control" id="tienda" name="tienda" type="text" readonly value="<?php echo $local["cLocalDesc"] ?>">
 											<input id="tienda_id" name="tienda_id" type="hidden" value="<?php echo $local["nLocal_id"] ?>">
+											<div class="input-group">
+												<input class="form-control" id="tienda" name="tienda" type="text" readonly value="<?php echo $local["cLocalDesc"] ?>">
+												<span id="spandesc" class="input-group-addon"><i class="fa  fa-home"></i></span>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -54,7 +60,10 @@
 									<div class="form-group">
 										<label class="col-lg-4 control-label" for="fecha">Fecha</label>
 										<div class="col-lg-8">
-											<input class="form-control validate[required]" id="fecha" name="fecha" type="text" readonly value="<?php echo date("d/m/y"); ?>">
+											<div class="input-group">
+												<input class="form-control validate[required]" id="fecha" name="fecha" type="text" readonly value="<?php echo date("d/m/y"); ?>">
+												<span id="spandesc" class="input-group-addon"><i class="fa  fa-calendar"></i></span>
+											</div>
 										</div>
 									</div>
 									<div class="form-group">
@@ -101,7 +110,10 @@
 									<div class="form-group">
 										<label class="col-lg-3 control-label" for="cantidad">Cantidad</label>
 										<div class="col-lg-3">
-											<input class="form-control validate[required,custom[onlyNumberSp]]" id="cantidad" name="cantidad" type="text" min=1 style="margin: 0 18px 0 0;" data-prompt-position="topLeft">
+											<div class="input-group">
+												<input class="form-control validate[required,custom[onlyNumberSp]]" id="cantidad" name="cantidad" type="text" min=1 style="margin: 0 18px 0 0;" data-prompt-position="topLeft">
+												<span id="spandesc" class="input-group-addon"><i class="ion-ios7-information-outline"></i></span>
+											</div>
 										</div>
 										<div class="col-lg-6">
 											<button type="submit" class="btn btn-primary col-lg-12" id="btn-agregar-detalle" name="btn-agregar-detalle">

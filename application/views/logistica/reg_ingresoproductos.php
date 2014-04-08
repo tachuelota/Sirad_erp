@@ -29,12 +29,20 @@
 									<div class="form-group">
 										<label for="registrador" class="col-lg-4 control-label">Registrador</label>
 										<div class="col-lg-8">
-											<input class="form-control" id="registrador" name="registrador" value="<?php echo $trabajador["cPersonalNom"]." ".$trabajador["cPersonalApe"] ?>" type="text" readonly></div>
+											<div class="input-group">
+												<input class="form-control" id="registrador" name="registrador" value="<?php echo $trabajador["cPersonalNom"]." ".$trabajador["cPersonalApe"] ?>" type="text" readonly>
+												<span id="spandesc" class="input-group-addon"><i class="fa fa-user"></i></span>
+											</div>
+										</div>
 									</div>
 									<div class="form-group">
 										<label for="tienda" class="col-lg-4 control-label">Tienda</label>
 										<div class="col-lg-8">
-											<input class="form-control" id="tienda" name="tienda"  type="text" readonly value="<?php echo $local["cLocalDesc"] ?>"></div>
+											<div class="input-group">
+												<input class="form-control" id="tienda" name="tienda"  type="text" readonly value="<?php echo $local["cLocalDesc"] ?>">
+												<span id="spandesc" class="input-group-addon"><i class="fa fa-home"></i></span>
+											</div>
+										</div>
 									</div>
 									<div class="form-group">
 										<label for="tipo" class="col-lg-4 control-label">Tipo</label>
@@ -66,7 +74,10 @@
 									<div class="form-group">
 										<label for="fecha" class="col-lg-4 control-label">Fecha</label>
 										<div class="col-lg-8">
-											<input class="form-control" name="fecharegistro" id="fecharegistro" type="text" readonly value="<?php echo date("d/m/Y"); ?>">
+											<div class="input-group">
+												<input class="form-control" name="fecharegistro" id="fecharegistro" type="text" readonly value="<?php echo date("d/m/Y"); ?>">
+												<span id="spandesc" class="input-group-addon"><i class="fa fa-calendar"></i></span>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -79,7 +90,7 @@
 							<div class="row">
 								<div class="col-lg-6" >
 									<div class="form-group">
-										<label for="codigo" class="col-lg-4 control-label">Pedido</label>
+										<label for="codigo" class="col-lg-4 control-label">Orden de Compra</label>
 										<div class="col-lg-8">
 											<div class="input-group">
 												<input id="id_pedido" name="id_pedido" type="hidden">
@@ -92,13 +103,19 @@
 									<div class="form-group">
 										<label for="importe" class="col-lg-4 control-label">Importe</label>
 										<div class="col-lg-8">
-											<input id="imported" name="imported" class="form-control" type="text">
+											<div class="input-group">
+												<input id="imported" name="imported" class="form-control" type="text">
+												<span id="spandesc" class="input-group-addon">.00</span>
+											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<label  for="cantidadd" class="col-lg-4 control-label">Cantidad</label>
 										<div class="col-lg-8">
-											<input id="cantidadd" name="cantidadd" class="form-control" type="text">
+											<div class="input-group">
+												<input id="cantidadd" name="cantidadd" class="form-control" type="text">
+												<span id="spandesc" class="input-group-addon"><i class="ion-ios7-information-outline"></i></span>
+											</div>
 										</div>
 									</div>
 									<div class="form-group">
@@ -126,13 +143,19 @@
 										<div class="form-group">
 											<label for="importe" class="col-lg-4 control-label">Importe</label>
 											<div class="col-lg-8">
-												<input class="form-control" id="importe" name="importe" type="text">
+												<div class="input-group">
+													<input class="form-control" id="importe" name="importe" type="text">
+													<span id="spandesc" class="input-group-addon">.00</span>
+												</div>
 											</div>
 										</div>
 										<div class="form-group">
 											<label  class="col-lg-4 control-label" for="cantidad">Cantidad</label>
 											<div class="col-lg-8">
-												<input class="form-control" id="cantidad" type="text">
+												<div class="input-group">	
+													<input class="form-control" id="cantidad" type="text">
+													<span id="spandesc" class="input-group-addon"><i class="ion-ios7-information-outline"></i></span>
+												</div>
 											</div>
 										</div>
 										<div class="form-group">

@@ -52,54 +52,64 @@
 										<div class="modal-body">
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="nombres">Nombres</label>
-												<div class="col-lg-7">
+												<div class="col-lg-8">												
 													<div class="input-group">
 														<input class="form-control validate[required,custom[onlyLetterSp]]" maxlength="50" id="nombres" name="nombres" class="focusedInput" type="text" data-prompt-position="topLeft">
 														<span class="input-group-addon"><i class="fa fa-user"></i></span>
-													</div>
+													</div>													
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="apellidos">Apellidos</label>
-												<div class="col-lg-7">
+												<div class="col-lg-8">													
 													<div class="input-group">
 														<input class="form-control validate[required,custom[onlyLetterSp]]" maxlength="50" id="apellidos" name="apellidos" class="focusedInput" type="text" data-prompt-position="topLeft">
 														<span class="input-group-addon"><i class="fa fa-user"></i></span>
-													</div>
+													</div>													
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="dni">DNI</label>
-												<div class="col-lg-7">
+												<div class="col-lg-8">													
 													<div class="input-group">
 														<input class="form-control validate[required,custom[onlyNumberSp]] validate[minSize[8]] validate[maxSize[8]]" id="dni" name="dni" type="text" data-prompt-position="topLeft">
 														<span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
-													</div>
+													</div>													
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="direccion">Dirección</label>
-												<div class="col-lg-7">
-													<input class="form-control validate[required]" maxlength="200" id="direccion"name="direccion" type="text" data-prompt-position="topLeft">
+												<div class="col-lg-8">
+													<div class="input-group">
+														<input class="form-control validate[required]" maxlength="200" id="direccion"name="direccion" type="text" data-prompt-position="topLeft">
+														<span class="input-group-addon"><i class="fa fa-home"></i></span>
+													</div>													
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="referencia">Referencia</label>
-												<div class="col-lg-7">
-													<input class="form-control" value=" " maxlength="200" id="referencia" name="referencia" type="text" ></div>
+												<div class="col-lg-8">
+													<div class="input-group">
+														<input class="form-control" value=" " maxlength="200" id="referencia" name="referencia" type="text" >
+														<span class="input-group-addon"><i class="fa fa-key"></i></span>
+													</div>
+												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="ocupacion">Ocupación</label>
-												<div class="col-lg-7">
-													<input class="form-control" id="ocupacion" name="ocupacion" type="text">
+												<div class="col-lg-8">
+													<div class="input-group">
+														<input class="form-control" id="ocupacion" name="ocupacion" type="text">
+														<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="telefono">Telefono</label>
-												<div class="col-lg-7">
+												<div class="col-lg-8">
 													<div class="input-group">
 														<input class="form-control validate[required,custom[number]]" name="telefono" id="telefono" type="number" data-prompt-position="topLeft">
-														<div class="input-group-addon"><i class="fa fa-phone"></i></div>
+														<span class="input-group-addon"><i class="fa fa-phone-square"></i></span>
 													</div>
 												</div>
 											</div>

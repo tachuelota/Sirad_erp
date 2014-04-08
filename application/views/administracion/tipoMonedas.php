@@ -66,7 +66,7 @@
 												<div class="col-lg-8">
 													<div class="input-group">
 											  			<input id="monto" name="monto" type="text" class="form-control validate[required,custom[number]]" data-prompt-position="topLeft">
-														<span class="input-group-addon"><i class="fa fa-usd"></i></span>
+														<span class="input-group-addon">.00</span>
 													</div>
 												</div>
 										  	</div>

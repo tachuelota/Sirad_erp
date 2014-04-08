@@ -48,17 +48,26 @@
 									</div>
 									<div class="col-lg-2">
 										<div class="form-group">
+											<div class="input-group">
 												<input id="precioventa" type="text" class="form-control" placeholder="Precio Venta">
-										</div>
-									</div>
-									<div class="col-lg-1">
-										<div class="form-group">
-											<input id="unidadmedida" class="form-control" type="text" placeholder="U.M." readonly >
+												<span class="input-group-addon"><i class="fa  fa-usd"></i></span>
+											</div>
 										</div>
 									</div>
 									<div class="col-lg-2">
 										<div class="form-group">
-											<input id="cantidad" type="text" class="form-control" placeholder="Cantidad">
+											<div class="input-group">
+												<input id="unidadmedida" class="form-control" type="text" placeholder="U.M." readonly >
+												<span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div class="form-group">
+											<div class="input-group">
+												<input id="cantidad" type="text" class="form-control" placeholder="Cantidad">
+												<span id="spandesc" class="input-group-addon"><i class="ion-ios7-information-outline"></i></span>
+											</div>
 										</div>
 									</div>
 									<div class="col-lg-2">
