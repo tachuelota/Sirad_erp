@@ -93,7 +93,7 @@
 												<div class="col-lg-8">
 													<div class="input-group">
 													  <input class="form-control focused validate[required,custom[onlyNumberSp]] validate[minSize[8]]" maxlength="8" title="Este campo debe tener 8 números" id="dni" name="dni" type="text" data-prompt-position="topLeft">
-													  <span class="input-group-addon"><i class="fa fa-credit-card"></i></span> 	
+													  <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>	
 													</div>
 												</div>
 											  </div>

@@ -58,7 +58,7 @@ class Auth extends CI_Controller {
 		}
 		else
 		{
-			$dataheader['title'] = 'Dicars - Login -';
+			$dataheader['title'] = 'SIRAD ERP - Login -';
 			$dataheader['isloginview'] = true;
 			$this->load->view('templates/headers.php',$dataheader);
 			$this->data['message'] = $this->session->flashdata('message');
