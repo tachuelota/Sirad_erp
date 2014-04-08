@@ -105,7 +105,7 @@
 										<div class="col-lg-8">
 											<div class="input-group">
 												<input id="imported" name="imported" class="form-control" type="text">
-												<span id="spandesc" class="input-group-addon">%</span>
+												<span id="spandesc" class="input-group-addon">.00</span>
 											</div>
 										</div>
 									</div>
@@ -145,7 +145,7 @@
 											<div class="col-lg-8">
 												<div class="input-group">
 													<input class="form-control" id="importe" name="importe" type="text">
-													<span id="spandesc" class="input-group-addon">%</span>
+													<span id="spandesc" class="input-group-addon">.00</span>
 												</div>
 											</div>
 										</div>

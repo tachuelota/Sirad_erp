@@ -75,45 +75,31 @@
 								<div class="modal-body">
 									<div class="form-group">
 										<label class="col-lg-4 control-label" for="personal">Trabajador</label>
-<<<<<<< HEAD
 										<div class="col-lg-8">
 											<div class="input-group">
 												<input class="form-control" id="personal"  type="text" value="<?php echo $trabajador["cPersonalNom"]." ".$trabajador["cPersonalApe"] ?>" readonly>
 												<span class="input-group-addon"><i class="fa fa-user"></i></span>
-=======
-										<div class="col-lg-7">
-											<div class="input-group">
-												<input class="form-control" id="personal"  type="text" value="<?php echo $trabajador["cPersonalNom"]." ".$trabajador["cPersonalApe"] ?>" readonly>
-												<span class="input-group-addon"><i class="fa fa-user"></i></span>	
->>>>>>> f19584e27dcf7c61a03fdba55644d5db05bf4db5
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="col-lg-4 control-label" for="monto">Monto</label>
-<<<<<<< HEAD
 										<div class="col-lg-8">
 											<div class="input-group">
 												<input class="form-control validate[required,custom[number]]" id="monto" name="monto" type="number" step="0.1" min="1">
 												<span class="input-group-addon"><i class="fa fa-money"></i></span>
-=======
-										<div class="col-lg-7">
-											<div class="input-group">
-												<input class="form-control validate[required,custom[number]]" id="monto" name="monto" type="number" step="0.1" min="1">
-												<span class="input-group-addon"><i class="fa fa-usd"></i></span>
->>>>>>> f19584e27dcf7c61a03fdba55644d5db05bf4db5
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="col-lg-4 control-label" for="concepto">Concepto</label>
-										<div class="col-lg-7">
+										<div class="col-lg-8">
 											<textarea class="form-control" id="concepto" name="concepto" ></textarea>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="col-lg-4 control-label" for="selectTipoMov">Tipo de Movimiento</label>
-										<div class="col-lg-7">
+										<div class="col-lg-8">
 											<select id="selectTipoMov" name="selectTipoMov" class="form-control SelectAjax  validate[required]" data-source="<?php echo base_url();?>
 												administracion/servicios/getConstantesByClase/9" attrval="cConstanteValor" attrdesc="cConstanteDesc" required>
 											</select>
@@ -121,7 +107,7 @@
 									</div>
 									<div class="form-group">
 										<label class="col-lg-4 control-label" for="selectTipoPag">Tipo de Pago</label>
-										<div class="col-lg-7">
+										<div class="col-lg-8">
 											<select id="selectTipoPag" name="selectTipoPag" class="form-control SelectAjax  validate[required]" data-source="<?php echo base_url();?>
 												administracion/servicios/getConstantesByClase/2" attrval="cConstanteValor" attrdesc="cConstanteDesc" required>
 											</select>
