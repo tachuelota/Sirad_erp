@@ -65,7 +65,10 @@
 									<div class="form-group">
 											<label class="col-lg-4 control-label" for="solicitante">Número Documento</label>
 										<div class="col-lg-6">
-											<input class="form-control focused validate[required]" name="edit_numdoc" id="edit_numdoc" type="text" value="<?php echo $cIngProdDocNro ?>">
+											<div class="input-group">
+												<input class="form-control focused validate[required]" name="edit_numdoc" id="edit_numdoc" type="text" value="<?php echo $cIngProdDocNro ?>">
+												<span id="spandesc" class="input-group-addon"><i class="ion-document"></i></span>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -111,13 +114,19 @@
 								<div class="form-group">
 									<label for="importe" class="col-lg-4 control-label">Importe</label>
 									<div class="col-lg-8">
-										<input id="imported" name="imported" class="form-control" type="text">
+										<div class="input-group">
+											<input id="imported" name="imported" class="form-control" type="text">
+											<span id="spandesc" class="input-group-addon">%</span>
+										</div>
 									</div>
 								</div>
 								<div class="form-group">
 									<label  for="cantidadd" class="col-lg-4 control-label">Cantidad</label>
 									<div class="col-lg-8">
-										<input id="cantidadd" name="cantidadd" class="form-control" type="text">
+										<div class="input-group"> 
+											<input id="cantidadd" name="cantidadd" class="form-control" type="text">
+											<span id="spandesc" class="input-group-addon"><i class="ion-ios7-information-outline"></i></span>
+										</div>
 									</div>
 								</div>
 								<div class="form-group">
@@ -145,13 +154,19 @@
 									<div class="form-group">
 										<label  class="col-lg-4 control-label" for="cantidad">Cantidad</label>
 										<div class="col-lg-8">
-											<input class="form-control" id="cantidad" type="text">
+											<div class="input-group">
+												<input class="form-control" id="cantidad" type="text">
+												<span id="spandesc" class="input-group-addon"><i class="ion-ios7-information-outline"></i></span>
+											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<label for="importe" class="col-lg-4 control-label">Precio/Unidad</label>
 										<div class="col-lg-8">
-											<input class="form-control" id="precio_uni" name="precio_uni" type="text">
+											<div class="input-group">
+												<input class="form-control" id="precio_uni" name="precio_uni" type="text">
+												<span id="spandesc" class="input-group-addon">%</span>
+											</div>
 										</div>
 									</div>
 									

@@ -255,7 +255,10 @@
 						<div class="form-group">
 							<label class="col-lg-4 control-label" for="datecuadrecaja">Fecha</label>
 							<div class="col-lg-8">
-								<input id="fecha01" name="fecha01" type="text" class="form-control datepicker"  style="margin: 0 18px 0 0;">
+								<div class="input-group">
+									<input id="fecha01" name="fecha01" type="text" class="form-control datepicker"  style="margin: 0 18px 0 0;">
+									<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+								</div>
 							</div>
 						</div>
 					</div> 

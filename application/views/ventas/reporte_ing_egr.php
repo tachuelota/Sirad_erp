@@ -19,7 +19,10 @@
 		<div id="IngresosForm" name="IngresosForm">
 			<div class="row">
 				<div class="col-lg-4 col-lg-offset-2">
-				    <input type="text" class="form-control datepicker" name="date01" id="date01" value="<?php echo date("d/m/Y"); ?>"/>
+					<div class="input-group">
+				    	<input type="text" class="form-control datepicker" name="date01" id="date01" value="<?php echo date("d/m/Y"); ?>"/>
+						<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+					</div>
 				</div>
 				<div class="col-lg-2">	
 					<button id="buscarfecha" type="button" class="col-lg-12 btn btn-info btn-flat btn-buscarp"> <i class="fa fa-search"></i>  Buscar</button>

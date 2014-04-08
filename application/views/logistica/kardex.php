@@ -30,8 +30,11 @@
 							<fieldset>
 								<div class="form-group">
 									<label class="col-lg-4 control-label" for="nom-cargo">Fecha:</label>									
-									<div class="col-xs-3">										
-										<input type="text" class="form-control datepicker" id="date01" name="date01">										
+									<div class="col-xs-3">	
+										<div class="input-group">									
+											<input type="text" class="form-control datepicker" id="date01" name="date01">										
+											<span id="spandesc" class="input-group-addon"><i class="fa fa-calendar"></i></span>
+										</div>
 									</div>
 									<button id="buscarfecha" name="buscarfecha" type="button" class="btn btn-info btn-buscarp" style="margin: 0 18px;"> <i class="icon-search icon-white"></i>
 											Buscar

@@ -53,14 +53,20 @@
 										</div>
 										<div class="form-group">
 											<label for="docserie" class="col-lg-4 control-label">Documento Serie</label>
-											<div class="col-lg-8">										
+											<div class="col-lg-8">
+												<div class="input-group">										
 													<input class="form-control focused validate[required,custom[onlyNumberSp]]" id="doc_serie" name="doc_serie" type="text" >
+													<span class="input-group-addon"><i class="ion-document"></i></span>
+												</div>		
 											</div>
 										</div>
 										<div class="form-group">
 											<label for="docnumero" class="col-lg-4 control-label">Documento Numero</label>
-											<div class="col-lg-8">										
+											<div class="col-lg-8">
+												<div class="input-group">											
 													<input class="form-control focused validate[required,custom[onlyNumberSp]]" id="doc_numero" name="doc_numero" type="text">
+													<span class="input-group-addon"><i class="ion-document"></i></span>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -119,13 +125,19 @@
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="amortizacion">Importe</label>
 											<div class="col-lg-8">
+												<div class="input-group">
 													<input id="importe" name="importe" type="number" class="form-control">
+													<span id="spandesc" class="input-group-addon">.00</span>
+												</div>
 											</div>
 										</div>
 										<div class="form-group">		
 											<label class="col-lg-4 control-label" for="amortizacion"> <strong>Cantidad</strong></label>
 											<div class="col-lg-8">
+												<div class="input-group">
 													<input id="cantidad" type="number" class="form-control"  min="1">
+													<span id="spandesc" class="input-group-addon"><i class="ion-ios7-information-outline"></i></span>
+												</div>
 											</div>
 										</div>
 										<div class="form-group">
