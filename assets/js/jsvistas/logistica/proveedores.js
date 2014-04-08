@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	$("#ProveedorForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000});
+	$(".SelectAjax").SelectAjax();
 		var TipoProveedorTA = new DTActions({
 		'conf': '010',
 		'idtable': 'proveedores_table',
@@ -54,6 +55,7 @@ $(document).ready(function(){
 		if($("#ProveedorForm").validationEngine('validate'))
 			//para vefiricar console.log($("#TipoIGV_Registrar").serializeObject());
 			enviar($("#ProveedorForm").attr("action-1"),{formulario:$("#ProveedorForm").serializeObject()}, successProveedor, null)
+			//console.log($("#ProveedorForm").serializeObject());
 	});
 	$("#btn-editar-proveedor").click(function(event){
 		event.preventDefault();
