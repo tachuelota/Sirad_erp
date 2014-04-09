@@ -53,6 +53,22 @@
 									<th>Total S/.</th>
 								</tr>
 							</thead>
+							<thead>
+								<tr>
+									<th class="input">
+										<input type="text" placeholder="Nro" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Fecha" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Proveedor" class="search_init form-control" />
+									</th>
+									<th class="select" index="cProveedorRazSocial" nrorow="3">
+									</th>
+									<th></th>
+								</tr>
+							</thead>
 							<tbody>
 							</tbody>
 						</table>

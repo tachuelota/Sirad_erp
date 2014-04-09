@@ -78,7 +78,6 @@ $.fn.dataTableExt.oApi.fnGetColumnData = function ( oSettings, iColumn, bUnique,
 		iRow = aiRows[i];
 		var aData = this.fnGetData(iRow);
 		var sValue = aData[iColumn];
-		
 		// ignore empty values?
 		if (bIgnoreEmpty == true && sValue.length == 0) continue;
 
@@ -144,4 +143,18 @@ function fnGetSelected( oTableLocal )
 		if ( $(aTrs[i]).hasClass('row_selected'))
 			aReturn.push( aTrs[i] );
 	return aReturn;
+}
+
+$.fn.dataTableExt.oApi.reloadSigleFilter = function ()
+{	
+	var oTable = this;
+	$("th.select").each( function ( i ){
+		var indexfilter = $(this).attr("index");
+		var row = $(this).attr("nrorow");
+        this.innerHTML = fnCreateSelect(oTable.fnGetColumnData(indexfilter));
+		$('select',this).addClass("form-control");
+        $('select', this).change( function () {
+            oTable.fnFilter( $(this).val(), row);
+        } );
+    } );
 }

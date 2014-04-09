@@ -338,14 +338,25 @@ function recoveryOprions(inputoptions){
 function createDataTable2(idTable, options){
 	var TOptios = recoveryOprions(options);
 	var asInitVals = new Array();
+	var thselect = null;
 	var oTable = $('#'+idTable).dataTable({
-		"bProcessing": false,
+		"bProcessing": true,
 		"bDestroy": true,		
         "bPaginate": true,
         "bLengthChange": true,
         "bSort": true,
         "bInfo": true,
 		"sAjaxSource": $("#"+idTable).attr("data-source"),
+		"fnServerData": function ( sSource, aoData, fnCallback, oSettings ) {
+	      oSettings.jqXHR = $.ajax( {
+	        "dataType": 'json',
+	        "type": "POST",
+	        "url": sSource,
+	        "data": aoData,
+	        "async": false,
+	        "success": fnCallback
+	      } );
+	    },
 		"aoColumns": TOptios.aoColumns,	
 		'iDisplayLength': TOptios.iDisplayLength,
 		"aLengthMenu": [[5,10, 25, 50], [5,10, 25, 50]],			   
@@ -355,36 +366,30 @@ function createDataTable2(idTable, options){
 	 	"fnDrawCallback": TOptios.fnDrawCallback
 	});
 
-	$("tfoot th.input input").keyup( function () {
-		oTable.fnFilter( this.value, $("tfoot th.input input").index(this) );
+	$("th.input input").keyup( function () {
+		oTable.fnFilter( this.value, $("th.input input").index(this) );
 	} );
 
-	$("tfoot th.input input").each( function (i) {
+	$("th.input input").each( function (i) {
 		asInitVals[i] = this.value;
 	} );
 	
-	$("tfoot th.input input").focus( function () {
+	$("th.input input").focus( function () {
 		if ( this.className == "search_init" )
 		{
-			this.className = "";
+			this.className = "form-control";
 			this.value = "";
 		}
 	} );
 	
-	$("tfoot th.input input").blur( function (i) {
+	$("th.input input").blur( function (i) {
 		if ( this.value == "" )
 		{
-			this.className = "search_init";
-			this.value = asInitVals[$("tfoot th.input input").index(this)];
+			this.className = "search_init form-control";
+			this.value = asInitVals[$("th.input input").index(this)];
 		}
 	} );
 
-	$("tfoot th.select").each( function ( i ) {
-        this.innerHTML = fnCreateSelect( oTable.fnGetColumnData(i) );
-        $('select', this).change( function () {
-            oTable.fnFilter( $(this).val(), i );
-        } );
-    } );	
 	return oTable;
 }
 
@@ -406,7 +411,7 @@ function createDataTable(idTable,UrlaDTable,FormatoDTable, DrawCallBackFunction,
 			 		DrawCallBackFunction();
 		 		});
 	 		}
-    }
+    	}
 	});
 	return oTable;
 }

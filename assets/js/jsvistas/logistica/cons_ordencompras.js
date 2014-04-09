@@ -61,14 +61,16 @@ $('#xlscuadrecaja').click(function(e){
 		              { "mDataProp": "cProveedorRazSocial"},
 		              { "mDataProp": "nOrdComTotal"}
 				],
-		"fnCreatedRow": OrdenCompraTA.RowCBFunction
+		"fnCreatedRow": OrdenCompraTA.RowCBFunction,
+		"sDom":"<'row'<'col-xs-6'l><'col-xs-6'>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>"
 	};
 	var OrdenCompraTable = createDataTable2('ordcom_table',OrdComprasOptions);
 
 	$("#buscarfecha").click(function(event){
 		date1 = new Date($("#date01").datepicker("getDates"));
 		date2 = new Date($("#date02").datepicker("getDates"));
-		OrdenCompraTable.fnReloadAjax($("#OrdCompraForm").attr("action-1")+"/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2))
+		OrdenCompraTable.fnReloadAjax($("#OrdCompraForm").attr("action-1")+"/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2));
+		OrdenCompraTable.reloadSigleFilter();
 	});
 
 	});
