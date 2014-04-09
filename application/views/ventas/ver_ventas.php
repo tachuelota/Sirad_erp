@@ -21,49 +21,53 @@
 			<div class="col-xs-12">
 				<div class="box">
 					<div class="box-body">
-						<div class="form-horizontal">
-							<div id="resumen_venta">
-								<div class="box-body">
-									<table class="table table-bordered table-striped">
-										<tr>
-											<td style="width: 25%;"> <strong>Cliente</strong>
-											</td>
-											<td colspan="3" style="width: 75%;">
-												<?php echo $venta["Cliente"]; ?></td>
-										</tr>
-										<tr>
-											<td style="width: 25%;"> <strong>Dirección</strong>
-											</td>
-											<td style="width: 25%;">
-												<?php echo $venta["Cliente_direccion"];?></td>
-											<td style="width: 25%;">
-												<strong>Fec. Emisión</strong>
-											</td>
-											<td style="width: 25%;">
-												<?php echo $venta["cVentaFecReg"]; ?></td>
-										</tr>
-										<tr>
-											<td>
-												<strong>Vendedor</strong>
-											</td>
-											<td>
-												<?php echo $venta["Vendedor"]; ?></td>
-											<td>
-												<strong>Tipo de Pago</strong>
-											</td>
-											<td>
-												<?php echo $venta["tipo_pago"]; ?></td>
-										</tr>
-									</table>
-								</div>
-								<div class="box-body">
-									<table id="productos_table" class="table table-bordered table-striped">
-										<thead>
+						<section id="resumen_venta" class="content invoice">                    
+		                    <!-- title row -->
+		                    <div class="row">
+		                        <div class="col-xs-12">
+		                            <h2 class="page-header">
+		                                <i class="fa fa-globe"></i> CLM Developers SAC
+		                                <small class="pull-right">Fecha: <?php echo date("d/m/Y"); ?></small>
+		                            </h2>                            
+		                        </div><!-- /.col -->
+		                    </div>
+							<!-- info row -->
+		                    <div class="row invoice-info">
+		                        <div class="col-sm-4 invoice-col">
+		                            De
+		                            <address>
+		                                <strong>CLM Developers, SAC.</strong><br>
+		                                Bernardo Alcedo 187<br>
+		                                Urb. San Fernando, Trujillo<br>
+		                                <i class="fa fa-phone"></i> +51 999494821 / +51 044 612874<br/>
+		                                <i class="fa fa-envelope"></i> contacto@clmdevelopers.com
+		                            </address>
+		                        </div><!-- /.col -->
+		                        <div class="col-sm-4 invoice-col">
+		                            Cliente
+		                            <address>
+		                                <strong id="clienteR"><?php echo $venta["Cliente"]; ?></strong><br>
+		                                <?php echo $venta["Cliente_direccion"];?><br>
+		                            </address>
+		                        </div><!-- /.col -->
+		                        <div class="col-sm-4 invoice-col">
+		                            <br/>
+		                            <b>Fec. Emisión:</b><?php echo date("d/m/Y"); ?><br/>
+		                            <b>Vendedor:</b><?php echo $venta["Vendedor"]; ?><br/>
+		                            <b>Tipo Pago:</b><?php echo $venta["tipo_pago"]; ?><br/>
+		                        </div><!-- /.col -->
+		                    </div><!-- /.row -->
+							<!-- TABLA DE PRODUCTOS POR COMPRAR aqui -->
+							<!-- Table row -->
+		                    <div class="row">
+		                        <div class="col-xs-12 table-responsive">
+		                            <table id="tabla_resumen_productos" class="table table-striped">
+										<thead >
 											<tr>
 												<th>Código</th>
 												<th>Producto</th>
 												<th>Cantidad</th>
-												<th>Importe</th>
+												<th>Precio</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -79,48 +83,48 @@
 													<?php echo $value["Total"]; ?></td>
 											</tr>
 											<?php endforeach ?></tbody>
+										</tbody>
 									</table>
 								</div>
-
-								<div class="row">
-									<div class="col-lg-6"></div>
-									<div class="col-lg-6">
-										<div class="box-body">
-											<table class="table table-bordered table-striped">
-												<tr>
-													<td style="width: 50%;">
-														<strong>Subtotal</strong>
-													</td>
-													<td style="width: 50%;">
-														<?php echo $venta["SubTotal"];?></td>
-												</tr>
-												<tr>
-													<td>
-														<strong>Descuento</strong>
-													</td>
-													<td>
-														<?php echo $venta["Descuento"];?>%</td>
-												</tr>
-												<tr>
-													<td>
-														<strong>IGV</strong>
-													</td>
-													<td>
-														<?php echo $venta["TipoIGV"];?>%</td>
-												</tr>
-												<tr>
-													<td>
-														<strong>Total</strong>
-													</td>
-													<td>
-														<?php echo $venta["Total"];?></td>
-												</tr>
-											</table>
-										</div>
-									</div>
+							</div>
+							<br>
+							<!-- END TABLA DE PRODUCTOS -->
+							<div class="row">
+								<div class="col-xs-6 col-lg-6"></div>
+								<div class="col-xs-6 col-lg-6">
+									<table class="table">
+										<tr>
+											<td >
+												<strong>Subtotal</strong>
+											</td>
+											<td>
+												<?php echo $venta["SubTotal"];?></td>
+											</tr>
+											<tr>
+												<td>
+													<strong>Descuento</strong>
+												</td>
+												<td>
+													<?php echo $venta["Descuento"];?>%</td>
+											</tr>
+											<tr>
+												<td>
+													<strong>IGV</strong>
+												</td>
+												<td>
+													<?php echo $venta["TipoIGV"];?>%</td>
+											</tr>
+											<tr>
+												<td>
+													<strong>Total</strong>
+												</td>
+												<td>
+													<?php echo $venta["Total"];?></td>
+											</tr>
+									</table>
 								</div>
 							</div>
-						</div>
+						</section>
 					</div>
 					<div class="box-footer">
 						<a href="<?php echo base_url() ?>ventas/views/cons_ventas" class="btn btn-success btn-flat"> <i class="fa fa-reply"></i>

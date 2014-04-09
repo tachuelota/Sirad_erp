@@ -205,6 +205,24 @@ class servicios extends CI_Controller {
 			->set_output(json_encode(array('Ok')));		
 	}
 
+	public function getdata_from_ruc($nro_ruc)
+	{
+		$this->load->helper(array('ganon'));
+		$ruc_xml = file_get_dom("http://www.sunat.gob.pe/w/wapS01Alias?ruc=".$nro_ruc);
+
+		$array_data = $ruc_xml('small');
+
+		$data_ruc = array(
+			"ruc" => substr($array_data[0]->getPlainText(),13,11),
+			"nombre" => substr($array_data[0]->getPlainText(),26),
+			"estado" => substr($array_data[3]->getPlainText(),7),
+			);
+
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode($data_ruc));
+	}
+
 	
 
 }
