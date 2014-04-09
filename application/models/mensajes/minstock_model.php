@@ -11,10 +11,10 @@ class minstock_model extends CI_Model {
 		$local = $this->session->userdata('current_local');
 		if($nProducto_id === FALSE )
 		{
-			$query = $this ->db->query('select * from log_productos_con_stockminimo');
+			$query = $this ->db->query('select * from log_productos_con_stockminimo where nLocal_id='.$local["nLocal_id"]);
 			return $query -> result_array();
 		}
-		$query = $this ->db->query('select * from log_productos_con_stockminimo');
+		$query = $this ->db->query('select * from log_productos_con_stockminimo where nLocal_id='.$local["nLocal_id"].' and nProducto_id='.$nProducto_id);
 		return $query->row_array();
 	}
 

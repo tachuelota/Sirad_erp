@@ -23,19 +23,17 @@
 
 					</div>
 					<div class="box-body">
-						<form id="ChangePasswordForm" action-1="<?php echo base_url();?>
-						auth/change_password">
-							<div class="form-horizontal box-content">
-								
+						<form id="notificaciones">							
+							<div class="form-horizontal box-content">								
 								<table id="select_producto_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>mensajes/servicios/getProductos_minstock">
 									<thead>
 										<tr>
 											<th>Codigo de Barra</th>
-											<th>Stock</th>
-											<th>Pre. Costo</th>
-											<th>Codigo de Barra</th>
-											<th>Stock</th>
-											<th>Pre. Costo</th>
+											<th>Producto</th>
+											<th>Unidad de Medida</th>
+											<th>Stock Actual</th>
+											<th>Stock Minimo</th>
+											<th>Stock Maximo</th>
 										</tr>
 									</thead>
 									<tbody>
