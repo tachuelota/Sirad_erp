@@ -48,7 +48,32 @@
 	        </a>
 	        <div class="navbar-right">
 	            <ul class="nav navbar-nav">
-	                <!-- User Account: style can be found in dropdown.less -->
+	                <!-- User Account: style can be found in dropdown.less -->	                
+                  <li class="dropdown messages-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-envelope"></i>
+                                <span class="label label-success">1</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">Tiene 1 nuevo mensaje</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li><!-- start message -->                                            
+                                            <a href="<?php echo base_url();?>mensajes/views/producto_minstock">Lista de Productos
+                                                <div class="pull-left">
+                                                    <i class="ion ion-clipboard"></i> 
+                                                </div>
+                                                <h4>
+                                                    Lista de Productos
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+                                            </a>
+                                        </li><!-- end message -->                                      
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
 	                <li class="dropdown user user-menu">
 	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 	                        <i class="glyphicon glyphicon-user"></i>
@@ -62,7 +87,7 @@
 	                                
 	                                <small><?php echo $trabaja["nCargoDesc"]; ?></small>
 	                            </p>
-	                        </li>
+	                        </li>	                        
 	                        <!-- Menu Body -->
 	                        <li class="user-body">
 	                            <div class="col-xs-4 text-center">
