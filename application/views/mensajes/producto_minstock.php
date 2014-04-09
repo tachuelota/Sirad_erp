@@ -17,7 +17,24 @@
 					</div>
 					<div class="box-header">
 						<div class="box-tools pull-right">
-							<button id="" type="button" class="btn btn-success">Reporte</button>
+							<div>
+								<form method="post" target="_blank" id="CreatePDFForm">
+									<input type="hidden" name="title" id="title"/>
+									<input type="hidden" name="table_productos" id="table_productos"/>
+									<div class="row">												
+										<div class="col-lg-6">
+								            <!-- small box -->
+								            <div class="btn btn-success">							                
+								                <a href="#" id="xlsutton" class="small-box-footer">
+								                    Exportar <i class="fa fa-arrow-circle-right"></i>
+								                </a>
+								            </div>
+								        </div><!-- ./col -->
+									</div>
+								</form>
+							</div>								
+							<input id="pdfgen" type="button" value="Reporte General" class="btn btn-success" />
+							<!--<button id="" type="button" class="btn btn-success">Reporte</button>-->
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#compose-modal">Enviar</button>							
 						</div>
 
@@ -85,7 +102,11 @@
 			                </div><!-- /.modal-content -->
 			            </div><!-- /.modal-dialog -->
 			        </div><!-- /.modal -->
-										
+					
+							
+																
+									
+							
 				</div>
 			</div>
 		</div>
