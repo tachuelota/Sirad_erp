@@ -327,6 +327,11 @@ function recoveryOprions(inputoptions){
 	else
 		outputoptions.fnInitComplete = inputoptions.fnInitComplete
 
+	if(typeof inputoptions.bSort == "undefined")
+		outputoptions.bSort = true;
+	else
+		outputoptions.bSort = inputoptions.bSort;
+
 	return outputoptions;
 }
 

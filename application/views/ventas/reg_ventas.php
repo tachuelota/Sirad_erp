@@ -264,7 +264,7 @@
 				                        <div class="col-xs-12">
 				                            <h2 class="page-header">
 				                                <i class="fa fa-globe"></i> CLM Developers SAC
-				                                <small class="pull-right">Date: 2/10/2014</small>
+				                                <small class="pull-right">Fecha: <?php echo date("d/m/Y"); ?></small>
 				                            </h2>                            
 				                        </div><!-- /.col -->
 				                    </div>
@@ -296,22 +296,24 @@
 									<!-- Table row -->
 				                    <div class="row">
 				                        <div class="col-xs-12 table-responsive">
-											<table id="tabla_resumen_productos" class="table table-striped">
+				                            <table id="tabla_resumen_productos" class="table table-striped">
 												<thead >
 													<tr>
-														<th style="width: 25%;">Código</th>
-														<th style="width: 25%;">Producto</th>
-														<th style="width: 25%;">Cantidad</th>
-														<th style="width: 25%;">Precio</th>
+														<th>Código</th>
+														<th>Producto</th>
+														<th>Cantidad</th>
+														<th>Precio</th>
 													</tr>
 												</thead>
+												<tbody>
+												</tbody>
 											</table>
 										</div>
 									</div>
 									<!-- END TABLA DE PRODUCTOS -->
 									<div class="row">
-										<div class="col-lg-6"></div>
-										<div class="col-lg-6">
+										<div class="col-xs-6 col-lg-6"></div>
+										<div class="col-xs-6 col-lg-6">
 											<table class="table">
 												<tr>
 													<td style="width: 50%;">
@@ -370,10 +372,10 @@
 							<div class="box-body">
 								<ul class="pager wizard">
 									<li class="previous">
-										<a class="btn btn-default" href="#">Antras</a>
+										<a class="btn btn-default" href="javascript:">Antras</a>
 									</li>
 									<li class="next">
-										<a class="btn btn-default" href="#">Siguiente</a>
+										<a class="btn btn-default" href="javascript:">Siguiente</a>
 									</li>
 									<li class="next finish" id="btn-enviar-form" style="display:none;">
 										<a class="btn btn-info" href="javascript:;">Registrar</a>

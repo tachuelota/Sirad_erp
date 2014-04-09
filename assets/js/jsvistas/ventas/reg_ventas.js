@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	var SelectProductoData = new Array();
 	var SelectClienteData = new Array();
+	var ResumenProductos = null;
 	var totalcontado = 0;
 	var totalcredito = 0;
 	var formapago = null;
@@ -98,42 +99,21 @@ $(document).ready(function(){
 		}
 	}
 
-	var prepararDatos = function()
-	{
-		var tabladetalle = toHTML(crearTablaToArray("tdetalle",
-				['Producto','Cantidad', 'Precio Credito','Total'],
-				['style="width: 45%;" class="prodth" ','style="width: 15%;" class="prodth" ','style="width: 20%;" class="prodth" ','style="width: 20%;" class="prodth" '],
-				['desc','cantidad','precio','importe'],
-				['style="width: 45%;" class="izquierda"','style="width: 15%;"','style="width: 20%;"','style="width: 20%;"'],
-				CronogramaReport.detventas));
-
-		var tablacronograma = toHTML(crearTablaToArray("tcronograma",
-				['Cuota','Fecha Vencimiento', 'Deuda','Monto Pagado','Saldo','Estado'],
-				['style="width: 16%;" class="prodth" ','style="width: 18%;" class="prodth" ','style="width: 16%;" class="prodth" ','style="width: 16%;" class="prodth" ','style="width: 16%;" class="prodth" ','style="width: 18%;" class="prodth" '],
-				['nrocuota','fecpago','deuda','monto','saldo','estado'],
-				['style="width: 16%;" class="izquierda"','style="width: 18%;"','style="width: 16%;"','style="width: 16%;"','style="width: 16%;"','style="width: 18%;" '],
-				CronogramaReport.cuotas));
-		
-		resumen = [	{'td1':'','td2': '','td3':'NRO CREDITO:','td4':CronogramaReport.nro,},
-		           	{'td1':'CLIENTE:','td2': CronogramaReport.cliente,'td3':'','td4':'',},
-		           	{'td1':'FECHA REGISTRO CREDITO:','td2': CronogramaReport.fecreg,'td3':'MONTO TOTAL DEUDA:','td4':CronogramaReport.monto,}	];
-
-		tablaresumen = toHTML(crearTablaToArray("resume",null,null,['td1','td2','td3','td4'],['style="width: 25%;" class="impar" ','style="width:25%;" ','style="width: 25%;" class="impar" ','style="width: 25%;" '],resumen));
-	   	
-		$('#tdetalle').val(tabladetalle);
-		$('#tcronograma').val(tablacronograma);
-		$('#tresumen').val(tablaresumen);
-	}
-
 	var CargarTablaResumen = function(formapago){
-		ResumenProdTable.fnClearTable();
+		//ResumenProdTable.fnClearTable();
 		Auxtable = VentaProdTable.fnGetData();
+		ResumenProductos = new Array();
 		CloneAttr(Auxtable,'nOfertaProductoPorc','nDetVentaDscto');
 		if(formapago == 2)
 			CloneAttr(Auxtable,'PrecioContado_Dscto','nDetVentaPrecUnt');
 		else
 			CloneAttr(Auxtable,'PrecioCredito_Dscto','nDetVentaPrecUnt');
-		ResumenProdTable.fnAddData($(Auxtable).CopyArray(["nProducto_id","cProductoCodBarra","cProductoDesc","nDetVentaCant","nDetVentaPrecUnt","nDetVentaDscto","cDetVentaDesc"]));
+		ResumenProductos  = $(Auxtable).CopyArray(["nProducto_id","cProductoCodBarra","cProductoDesc","nDetVentaCant","nDetVentaPrecUnt","nDetVentaDscto","cDetVentaDesc"]);
+		$("#tabla_resumen_productos tbody").html("");
+		$(ResumenProductos).each(function(index){
+			var tr = "<tr><td>"+this.cProductoCodBarra+"</td><td>"+this.cProductoDesc+"</td><td>"+this.nDetVentaCant+"</td><td>"+this.nDetVentaPrecUnt+"</td></tr>";
+			$("#tabla_resumen_productos tbody").append(tr);
+		});
 	};
 
 	var ResumenRCBF = function(nRow, aData, iDisplayIndex)
@@ -206,6 +186,16 @@ $(document).ready(function(){
 		},
 	});
 
+    var unlockload = function()
+    {
+    	console.log("hola");
+    	$.unblockUI({
+	    	onUnblock: function(){
+	            $(location).attr("href",base_url+"ventas/views/cons_ventas"); 
+	        }
+	    });
+    };
+
 	$(".SelectAjax").SelectAjax();
 
 	var BuscarProdOptions = {
@@ -247,25 +237,9 @@ $(document).ready(function(){
 	};
 	var VentaProdTable = createDataTable2('select_productos_venta',VentaProdOptions);
 
-	ResumenProdOptions = {
-		"aoColumns":[
-			{ "mDataProp": "cProductoCodBarra"},
-			{ "mDataProp": "cProductoDesc"},
-			{ "mDataProp": "nDetVentaCant"},
-			{ "mDataProp": "nDetVentaPrecUnt"}
-			],
-		"sDom":"t",
-		"fnCreatedRow":ResumenRCBF
-	};
-	var ResumenProdTable = createDataTable2('tabla_resumen_productos',ResumenProdOptions);
-
-	var unlockload = function(){
-		$("#resumen_venta").printThis();
-		$.unblockUI({
-            onUnblock: function(){
-	            $(location).attr("href",base_url+"ventas/views/cons_ventas"); 
-            } 
-        });
+	var printResumen = function(){		
+		$("#resumen_venta").printThis({importCSS: true});
+		setTimeout(unlockload(), 2000);
 	};
 
 	var volverConsultar = function(){
@@ -276,7 +250,7 @@ $(document).ready(function(){
 	{
 		var datosVenta = {
 			formulario:$("#EnviarVentaForm").serializeObject(),
-			productos: CopyArray(ResumenProdTable.fnGetData(),["nProducto_id","nDetVentaCant","nDetVentaPrecUnt","nDetVentaDscto","nDetVentaTot","cDetVentaDesc"])
+			productos: CopyArray(ResumenProductos,["nProducto_id","nDetVentaCant","nDetVentaPrecUnt","nDetVentaDscto","nDetVentaTot","cDetVentaDesc"])
 		}
 		return datosVenta;
 	}
@@ -346,10 +320,10 @@ $(document).ready(function(){
 	$("#btn-enviar-form").click(function(event){
 		event.preventDefault();
 		$.blockUI({ 
-			onBlock: function() { 
-				enviar($("#EnviarVentaForm").attr("action-1"),prepararDatos(), unlockload, null);
+			onBlock: function() {
+			printResumen();
+				enviar($("#EnviarVentaForm").attr("action-1"),prepararDatos(), printResumen, null);
 				}
         	});
-
 	});
 });
