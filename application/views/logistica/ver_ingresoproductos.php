@@ -30,7 +30,7 @@
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="numIngreso">Número Ingreso</label>
 											<div class="col-lg-8">
-												<span class="help-inline" ><?php echo $cIngProdNro;?></span>
+												<span class="help-inline" ><?php echo $cIngProdSerie." - ".$cIngProdNro; ?></span>
 											</div>
 										</div>
 										<div class="form-group">
@@ -62,7 +62,7 @@
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="numDoc">Número Documento</label>
 											<div class="col-lg-8">
-												<span class="help-inline" ><?php echo $cIngProdDocNro ?></span>
+												<span class="help-inline" ><?php echo $cIngProdDocSerie." - ".$cIngProdDocNro ?></span>
 											</div>
 										</div>
 										<div class="form-group">
@@ -81,7 +81,7 @@
 						<table id="deting_productos_table" name="deting_productos_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url()."logistica/servicios/get_log_detingprod/".$nIngProd_id;?>">
 							<thead>
 								<tr>
-									<th>Serie Producto</th>
+									<th>Producto</th>
 									<th>Cantidad</th>
 									<th>Precio Unit</th>
 									<th>Total</th>

@@ -27,7 +27,7 @@
 
 		BuscarIngresoProductosdOptions = {
 		"aoColumns":[
-			{ "sWidth": "5%","mDataProp": "nProducto_id"},
+			{ "sWidth": "5%","mDataProp": "Producto"},
 			{ "sWidth": "12%","mDataProp": "nDetIngProdCant"},
 			{ "sWidth": "12%","mDataProp": "nDetIngProdPrecUnt"},
 			{ "sWidth": "12%","mDataProp": "nDetIngProdTot"}			

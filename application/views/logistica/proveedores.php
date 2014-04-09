@@ -61,7 +61,9 @@
 														<div class="col-lg-8">
 															<div class="input-group">
 																<input class="form-control focused validate[required,custom[onlyNumberSp]] validate[maxSize[11]] validate[minSize[11]]" id="ruc" name="ruc" type="text" data-prompt-position="topLeft">
-																<span class="input-group-addon"><i class="fa fa-rub"></i></span>
+																<div class="btn btn-info btn-flat input-group-addon btn-validar">
+	                                                				<i class="ion-checkmark"></i>
+	                                            				</div>
 															</div>
 														</div>
 													</div>
@@ -69,7 +71,7 @@
 														<label class="col-lg-4 control-label" for="razonSocial">Razón Social</label>
 														<div class="col-lg-8">
 															<div class="input-group">
-																<input class="form-control focused validate[required,custom[onlyLetterNumberSp]]" type="text" id="razonsocial" name="razonsocial" data-prompt-position="topLeft">
+																<input class="form-control focused validate[required,custom[onlyLetterNumberSp]]" type="text" id="razonsocial" name="razonsocial" data-prompt-position="topLeft" >
 																<span class="input-group-addon"><i class="glyphicon glyphicon-registration-mark"></i></span>
 															</div>	
 														</div>
@@ -165,8 +167,8 @@
 														<label class="col-lg-4 control-label" for="estado">Estado</label>
 														<div class="col-lg-8">															
 															<select id="selectEstado validate[required]" name="selectEstado" class="form-control" >
-																<option value="1">Habilitado</option>
-																<option value="0">Inhabilitado</option>
+																<option value="1">Activo</option>
+																<option value="0">Inactivo</option>
 															</select>														
 														</div>
 													</div>

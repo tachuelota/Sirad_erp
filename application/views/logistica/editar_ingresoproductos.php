@@ -23,7 +23,7 @@
 									<div class="form-group">
 											<label class="col-lg-4 control-label" for="codigo">Número Ingreso</label>
 										<div class="col-lg-8">
-											<span class="help-inline" style="margin-top:5px;"><?php echo $cIngProdNro;?></span>
+											<span class="help-inline" style="margin-top:5px;"><?php echo $cIngProdSerie." - ".$cIngProdNro;?></span>
 											<input type="hidden" id="idingprod" name="idingprod" value="<?php echo $nIngProd_id;?>"></div>
 									</div>
 									<div class="form-group">
@@ -66,7 +66,7 @@
 											<label class="col-lg-4 control-label" for="solicitante">Número Documento</label>
 										<div class="col-lg-6">
 											<div class="input-group">
-												<input class="form-control focused validate[required]" name="edit_numdoc" id="edit_numdoc" type="text" value="<?php echo $cIngProdDocNro ?>">
+												<input class="form-control focused validate[required]" name="edit_numdoc" id="edit_numdoc" type="text" value="<?php echo $cIngProdDocSerie." - ".$cIngProdDocNro ?>">
 												<span id="spandesc" class="input-group-addon"><i class="ion-document"></i></span>
 											</div>
 										</div>

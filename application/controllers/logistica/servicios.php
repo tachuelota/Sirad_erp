@@ -213,9 +213,13 @@ class servicios extends CI_Controller {
 		$array_data = $ruc_xml('small');
 
 		$data_ruc = array(
-			"ruc" => substr($array_data[0]->getPlainText(),13,11),
-			"nombre" => substr($array_data[0]->getPlainText(),26),
-			"estado" => substr($array_data[3]->getPlainText(),7),
+		   "ruc" => substr($array_data[0]->getPlainText(),13,11),
+	       "nombre" => substr($array_data[0]->getPlainText(),26),
+	       "estado" => substr($array_data[3]->getPlainText(),7),
+		   "direccion"=>substr($array_data[6]->getPlainText(),11),
+		   "situacion"=>substr($array_data[7]->getPlainText(),11),
+		   "dependencia"=>substr($array_data[9]->getPlainText(),13),
+		   "tipo"=>substr($array_data[10]->getPlainText(),6)
 			);
 
 		$this->output

@@ -51,6 +51,25 @@ $(document).ready(function(){
 	$('#modalProveedores').modal('show');
 	});
 
+	//validar ruc
+	$(".btn-validar").click(function(e){
+		e.preventDefault();
+		ruc = $("#ruc").val();
+		//alert(ruc);
+		var datos=getAjaxObject(base_url+"logistica/servicios/getdata_from_ruc/"+ruc)
+		$("#razonsocial").val(datos.nombre);
+		$("#dirfiscal").val(datos.direccion);
+		var tipo=datos.tipo;
+		if(tipo=="SOCIEDAD ANONIMA CERRADA"){
+			//$("#tipContribuyente").val(tipo);
+			tipContribuyente[0].selected = true;
+		}else{
+			tipContribuyente[1].selected=true;
+		}
+		var estado=datos.estado;
+		
+	});
+
 	//Registrar
 	$("#btn-reg-proveedor").click(function(event){
 		event.preventDefault();

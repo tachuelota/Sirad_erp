@@ -42,7 +42,7 @@ $(document).ready(function(){
 			{ "mDataProp": "nDetIngProdTot"},
 			{ "mDataProp": "estadolabel"},			
 		              ],
-		"sDom":"t<'row-fluid'<'span12'i><'span12 center'p>>",
+		"sDom":"t<'row'<'col-lg-12'i><'col-lg-12 center'p>>",
 		"fnCreatedRow":IngProductosDetalleActions.RowCBFunction
 		};
 		DetalleProductosTable = createDataTable2('edit_ingresoproductos_table',BuscarIngresoProductosdOptions);
@@ -102,6 +102,7 @@ $(document).ready(function(){
 			event.preventDefault();
 			$("#idProducto").val(SelectProductosData[0].nProducto_id);
 			$('#producto').val(SelectProductosData[0].cProductoDesc);
+			$('#precio_uni').val(SelectProductosData[0].nProductoPCosto);
 			$('#modalBuscarProducto').modal('hide');
 		});
 		
