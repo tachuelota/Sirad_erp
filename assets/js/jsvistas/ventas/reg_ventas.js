@@ -209,8 +209,7 @@ $(document).ready(function(){
 			{ "mDataProp": "nProductoUnidMedida"},			
 			{ "mDataProp": "cDetVentaDesc"},
 			{ "mDataProp": "nProductoStock"}
-		              ],		 		
-		"sDom":"t",      
+		              ],
 		"fnCreatedRow":getSimpleSelectRowCallBack(SelectProductoData)
 	};	
 	var BuscarProdTable = createDataTable2('select_producto_table',BuscarProdOptions);

@@ -340,7 +340,7 @@ function createDataTable2(idTable, options){
 	var asInitVals = new Array();
 	var thselect = null;
 	var oTable = $('#'+idTable).dataTable({
-		"bProcessing": true,
+		"bProcessing": false,
 		"bDestroy": true,		
         "bPaginate": true,
         "bLengthChange": true,
@@ -360,7 +360,7 @@ function createDataTable2(idTable, options){
 	    },
 		'iDisplayLength': TOptios.iDisplayLength,
 		"aLengthMenu": [[5,10, 25, 50], [5,10, 25, 50]],
-    	//"sDom": TOptios.sDom,
+    	"sDom": TOptios.sDom,
 	 	"fnCreatedRow": TOptios.fnCreatedRow,
 		"fnInitComplete": TOptios.fnInitComplete,
 	 	"fnDrawCallback": TOptios.fnDrawCallback
