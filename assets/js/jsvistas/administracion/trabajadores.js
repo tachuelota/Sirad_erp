@@ -48,10 +48,13 @@ $(document).ready(function(){
 	});
 
 	//----------------------------------------------------------
-    var successTrabajador = function(){    	
-		$('#modalTrabajadores').modal('hide');
-		$("#TrabajadoresForm").reset();
-		TrabajadoresTable.fnReloadAjax()
+    var successTrabajador = function(){    
+    	$.unblockUI({
+		    onUnblock: function(){	
+				$("#TrabajadoresForm").reset();
+				TrabajadoresTable.fnReloadAjax()
+			}
+		});		
 	}
 
 	//--funcion de los botones
@@ -59,16 +62,24 @@ $(document).ready(function(){
 	$("#btn-reg-trabajadores").click(function(event){
 		event.preventDefault();
 		if($("#TrabajadoresForm").validationEngine('validate'))
-		{
-			enviar($("#TrabajadoresForm").attr("action-1"),{formulario:$("#TrabajadoresForm").serializeObject()}, successTrabajador, null);
-		}
+			$.blockUI({ 
+				onBlock: function()
+				{
+				    $('#modalTrabajadores').modal('hide');
+					enviar($("#TrabajadoresForm").attr("action-1"),{formulario:$("#TrabajadoresForm").serializeObject()}, successTrabajador, null);
+				}
+			});
 	});
+
 	$("#btn-editar-trabajadores").click(function(event){
 		event.preventDefault();
 		if($("#TrabajadoresForm").validationEngine('validate'))
-			enviar($("#TrabajadoresForm").attr("action-2"),{formulario:$("#TrabajadoresForm").serializeObject()}, successTrabajador, null);
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalTrabajadores').modal('hide');
+			        enviar($("#TrabajadoresForm").attr("action-2"),{formulario:$("#TrabajadoresForm").serializeObject()}, successTrabajador, null);
+				}
+			});
 	});
-	
-
-
 });

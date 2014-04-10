@@ -33,13 +33,16 @@ $(document).ready(function(){
     
 
  	var successTipoMoneda = function(){
-		$('#modalTipoMoneda').modal('hide');
-		$("#TipoMonedaForm").reset();
-		TipoMonedaTable.fnReloadAjax()
+ 		$.unblockUI({
+		    onUnblock: function(){
+				$("#TipoMonedaForm").reset();
+				TipoMonedaTable.fnReloadAjax()
+			}
+		});
 	}
 
 
-	$('#modalTipoMoneda').on('hidden', function(){		
+	$('#modalTipoMoneda').on('hidden.bs.modal', function(){		
 		$("#TipoMonedaForm").reset();
 		$('#modalTipoMoneda').modal('hide');
 		$("#btn-reg-tipomoneda").show();
@@ -54,12 +57,24 @@ $(document).ready(function(){
 	$("#btn-reg-tipomoneda").click(function(event){
 		event.preventDefault();
 		if($("#TipoMonedaForm").validationEngine('validate'))
-			enviar($("#TipoMonedaForm").attr("action-1"),{formulario:$("#TipoMonedaForm").serializeObject()}, successTipoMoneda, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalTipoMoneda').modal('hide');
+					enviar($("#TipoMonedaForm").attr("action-1"),{formulario:$("#TipoMonedaForm").serializeObject()}, successTipoMoneda, null)
+				}
+			});
 	});
 	$("#btn-editar-tipomoneda").click(function(event){
 		event.preventDefault();
 		if($("#TipoMonedaForm").validationEngine('validate'))
-			enviar($("#TipoMonedaForm").attr("action-2"),{formulario:$("#TipoMonedaForm").serializeObject()}, successTipoMoneda, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalTipoMoneda').modal('hide');
+					enviar($("#TipoMonedaForm").attr("action-2"),{formulario:$("#TipoMonedaForm").serializeObject()}, successTipoMoneda, null)
+				}
+			});	
 	})
 
 	 

@@ -143,12 +143,12 @@ $(document).ready(function(){
 	{
 		if($("#IngresoProductosForm").validationEngine('validate'))			
 			$.blockUI({ 
-					onBlock: function()
-					{ 
-						enviar($("#IngresoProductosForm").attr("action-1"),prepararDatos(), successIngresoProductos, null);
-			
-					}
-	    		});	
+				onBlock: function()
+				{ 
+					enviar($("#IngresoProductosForm").attr("action-1"),prepararDatos(), successIngresoProductos, null);
+		
+				}
+    		});	
 	}
 		else
 			$("#agregarproductos").modal("show");

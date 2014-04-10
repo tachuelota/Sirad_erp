@@ -89,7 +89,7 @@
 									</div>
 									<div class="modal-footer">
 										<button type="reset" class="btn" data-dismiss="modal">Cancelar</button>
-										<button id="enviar_oferta_btn" type="button" class="btn btn-primary">Guardar</button>
+										<button id="enviar_oferta_btn" type="button" class="btn btn-primary">Registrar</button>
 									</div>
 								</form>
 							</div>

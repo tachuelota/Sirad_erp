@@ -46,28 +46,43 @@ $(document).ready(function(){
 
 	var successLocales = function(){
 		//alert("Hola Como estas");
-		$('#modalLocales').modal('hide');
-		$("#LocalesForm").reset();
-		TipoLocalTable.fnReloadAjax()
+		$.unblockUI({
+		    onUnblock: function(){
+				$("#LocalesForm").reset();
+				TipoLocalTable.fnReloadAjax()
+			}
+		});
 	}
 
 	//Registrar
 	$("#btn-reg-local").click(function(event){
 		event.preventDefault();
 		if($("#LocalesForm").validationEngine('validate'))
+			$.blockUI({ 
+				onBlock: function()
+				{
 			//para vefiricar console.log($("#TipoIGV_Registrar").serializeObject());
-			enviar($("#LocalesForm").attr("action-1"),{formulario:$("#LocalesForm").serializeObject()}, successLocales, null)
+					$('#modalLocales').modal('hide');
+					enviar($("#LocalesForm").attr("action-1"),{formulario:$("#LocalesForm").serializeObject()}, successLocales, null)
+				}
+			});
 	});
 
 	//Editar
 	$("#btn-editar-local").click(function(event){
 		event.preventDefault();
 		if($("#LocalesForm").validationEngine('validate'))
-			enviar($("#LocalesForm").attr("action-2"),{formulario:$("#LocalesForm").serializeObject()}, successLocales, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalLocales').modal('hide');
+					enviar($("#LocalesForm").attr("action-2"),{formulario:$("#LocalesForm").serializeObject()}, successLocales, null)
+				}
+			});
 	});
 
 	//Modal verificar Acciones	
-	$('#modalLocales').on('hidden', function(){		
+	$('#modalLocales').on('hidden.bs.modal', function(){		
 		$("#LocalesForm").reset();
 		$("#btn-reg-local").show();
 		$("#btn-editar-local").hide();

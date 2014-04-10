@@ -42,10 +42,13 @@ $(document).ready(function(){
 	var TipoProveedorTable = createDataTable2('proveedores_table',ProveedoresOptions);
 
 	var successProveedor = function(){
-		//alert("Hola Como estas");
-		$('#modalProveedores').modal('hide');
-		$("#ProveedorForm").reset();
-		TipoProveedorTable.fnReloadAjax()
+		$.unblockUI({
+		    onUnblock: function(){
+				//alert("Hola Como estas");
+				$("#ProveedorForm").reset();
+				TipoProveedorTable.fnReloadAjax()
+			}
+		});
 	}
 
 	$('#btn-reg').click(function(e){
@@ -76,19 +79,40 @@ $(document).ready(function(){
 	$("#btn-reg-proveedor").click(function(event){
 		event.preventDefault();
 		if($("#ProveedorForm").validationEngine('validate'))
+<<<<<<< Updated upstream
 			//para vefiricar console.log($("#TipoIGV_Registrar").serializeObject());
 			enviar($("#ProveedorForm").attr("action-1"),{formulario:$("#ProveedorForm").serializeObject()}, successProveedor, null)
 			//console.log($("#ProveedorForm").serializeObject());
+=======
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalProveedores').modal('hide');
+					//para vefiricar console.log($("#TipoIGV_Registrar").serializeObject());
+					enviar($("#ProveedorForm").attr("action-1"),{formulario:$("#ProveedorForm").serializeObject()}, successProveedor, null)
+				}
+			});
+>>>>>>> Stashed changes
 	});
 	$("#btn-editar-proveedor").click(function(event){
 		event.preventDefault();
 		if($("#ProveedorForm").validationEngine('validate'))
+<<<<<<< Updated upstream
 			enviar($("#ProveedorForm").attr("action-2"),{formulario:$("#ProveedorForm").serializeObject()}, successProveedor, null)
 				//console.log($("#ProveedorForm").serializeObject());
+=======
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalProveedores').modal('hide');
+					enviar($("#ProveedorForm").attr("action-2"),{formulario:$("#ProveedorForm").serializeObject()}, successProveedor, null)
+				}
+			});
+>>>>>>> Stashed changes
 	});
 
 	//Modal verificar Acciones	
-	$('#modalProveedores').on('hidden', function(){		
+	$('#modalProveedores').on('hidden.bs.modal', function(){		
 		$("#ProveedorForm").reset();
 		$("#btn-reg-proveedor").show();
 		$("#btn-editar-proveedor").hide();

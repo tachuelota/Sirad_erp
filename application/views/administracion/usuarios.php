@@ -148,7 +148,7 @@
 								<div class="box-body">
 									<ul class="pager wizard">
 										<li class="previous">
-											<a class="btn btn-default" href="#">Antras</a>
+											<a class="btn btn-default" href="#">Atrás</a>
 										</li>
 										<li class="next">
 											<a class="btn btn-default" href="#">Siguiente</a>

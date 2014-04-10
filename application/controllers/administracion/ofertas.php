@@ -64,19 +64,20 @@ class ofertas extends CI_Controller
 			if ($this->ofertm->update($form["idOferta"],$Oferta))
 			{
 				$this->db->trans_begin();
-				foreach ($tabla as $index => $row)
-				{
-					$row["idOferta"]= $form["idOferta"];
-					$row["descuento"]= $form["descuento"];
-					if($row["band"]!=1)
+				if( $tabla!= 0)
+					foreach ($tabla as $index => $row)
 					{
-						if(!$this->ofertprodm->insert($row))
+						$row["idOferta"]= $form["idOferta"];
+						$row["descuento"]= $form["descuento"];
+						if($row["band"]!=1)
 						{
-							$band = false;
-							break;
+							if(!$this->ofertprodm->insert($row))
+							{
+								$band = false;
+								break;
+							}
 						}
 					}
-				}
 				if($band)
 					$this->db->trans_commit();
 				else

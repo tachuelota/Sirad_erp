@@ -37,14 +37,16 @@ $(document).ready(function(){
 	});
 	
 	var successCategoria = function(){
-		$('#ConstanteForm').reset();
-		$('#modalConstante').modal('hide');
-		ConstanteTable.fnReloadAjax()
+		$.unblockUI({
+		    onUnblock: function(){
+				ConstanteTable.fnReloadAjax()
+		 	} 
+        });
 	}
 
-	$('#modalConstante').on('hidden', function(){		
-		//$("#ConstanteForm").reset();
-		$('#modalCategoria').modal('hide');
+	$('#modalConstante').on('hidden.bs.modal', function() {
+		$("#ConstanteForm").reset();
+		console.log('hola');
 		$("#btn-reg-constante").show();
 		$("#btn-edit-constante").hide();
 	});
@@ -52,12 +54,24 @@ $(document).ready(function(){
 	$("#btn-reg-constante").click(function(event){
 		event.preventDefault();
 		if($("#ConstanteForm").validationEngine('validate'))
-			enviar($("#ConstanteForm").attr("action-1"),{formulario:$("#ConstanteForm").serializeObject()}, successCategoria, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalConstante').modal('hide');
+					enviar($("#ConstanteForm").attr("action-1"),{formulario:$("#ConstanteForm").serializeObject()}, successCategoria, null)
+				}
+			});
 	});
 	$("#btn-edit-constante").click(function(event){
 		event.preventDefault();
 		if($("#ConstanteForm").validationEngine('validate'))
-			enviar($("#ConstanteForm").attr("action-2"),{formulario:$("#ConstanteForm").serializeObject()}, successCategoria, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalConstante').modal('hide');
+					enviar($("#ConstanteForm").attr("action-2"),{formulario:$("#ConstanteForm").serializeObject()}, successCategoria, null)
+				}
+			});	
 	});
 
 	ConstanteTable.fnReloadAjax(base_url+"administracion/servicios/getConstantesByClase/"+$("#claseconstante").val());

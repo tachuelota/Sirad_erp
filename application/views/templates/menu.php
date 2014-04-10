@@ -206,23 +206,33 @@
         </section>
         <!-- /.sidebar -->
     </aside>
+
+
 <div class="modal fade" id="modalcierremes">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Cierre de Mes</h4>
+				<h4 class="modal-title"><i class="fa fa-exclamation-triangle"></i> Cierre de Mes </h4>
 			</div>
 			<div class="modal-body">
-				<p>¿Está seguro que desea cerrar el mes?</p>
+				<div class="alert alert-danger alert-dismissable">
+					<p>
+						¿Está seguro que desea cerrar el mes?
+					</p>
+				</div>
 			</div>
-			<div class="modal-footer">
+			<div class="modal-footer clearfix">
 				<a href="#" class="btn" data-dismiss="modal">No</a>
 				<a href="#" class="btn btn-primary" id="btn-cierremes">Sí</a>
 			</div>
-		</div>
-	</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
 </div>
+
+
+
+
 <div class="modal fade" id="aftercierremes">
 	<div class="modal-dialog">
 		<div class="modal-content">

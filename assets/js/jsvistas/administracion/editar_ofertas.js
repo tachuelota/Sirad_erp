@@ -14,7 +14,6 @@ $(document).ready(function(){
 				case 1:
 					OfertaProductoTable.fnUpdate('<span class="label label-danger">Eliminar</span>',index,6);
 					aData.band = 0;
-					//console.log(aData);
 					break;
 				case 2:
 					OfertaProductoTable.fnDeleteRow(index); 
@@ -28,17 +27,17 @@ $(document).ready(function(){
 	{
 		DataToSendOferta = {
 			formulario:$("#OfertasForm").serializeObject(),
-			tabla: CopyArray(OfertaProductoTable.fnGetData(),["nProducto_id","band","nOfertaProducto_id"])
+			tabla: OfertaProductoTable.fnSettings().fnRecordsTotal() > 0 ? CopyArray(OfertaProductoTable.fnGetData(),["nProducto_id","band","nOfertaProducto_id"]) : 0
 		}
 		return DataToSendOferta;
 	};
 
 	var successEditarOferta = function(data){
 		$.unblockUI({
-            onUnblock: function(){
+		    onUnblock: function(){
             	BuscarProdTable.fnReloadAjax();
 				OfertaProductoTable.fnReloadAjax();
-	            $(location).attr("href",base_url+"administracion/views/ofertas"); 
+	            //$(location).attr("href",base_url+"administracion/views/ofertas"); 
             } 
         });
 	}
@@ -61,21 +60,17 @@ $(document).ready(function(){
 		UnselectRow("select_producto_table");
 	});
 
-	
-
 	$("#enviar_editar").click(function(event){
 	event.preventDefault();	
 		if($("#OfertasForm").validationEngine('validate'))			
 			$.blockUI({ 
-					onBlock: function()
-					{ 
-						enviar($("#OfertasForm").attr("action-1"),PrepararDatosOferta(), successEditarOferta, null)
-			
-					}
-	    		});	
+				onBlock: function()
+				{
+					enviar($("#OfertasForm").attr("action-1"),PrepararDatosOferta(), successEditarOferta, null)
+				}
+			});	
 	
 	});
-	
 
 	BuscarProdOptions = {
 		"aoColumns":[

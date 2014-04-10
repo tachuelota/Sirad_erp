@@ -25,11 +25,14 @@ $(document).ready(function(){
 	var MovimientosTable = createDataTable2('movimientos_table',MovimientosOptions);
 
 	var successMovimiento = function(){
-		$('#modalMov').modal('hide');
-		date1 = new Date($("#date01").datepicker("getDates"));
-		date2 = new Date($("#date02").datepicker("getDates"));
-		$('#MovimientoForm').reset();
-		MovimientosTable.fnReloadAjax(base_url+"ventas/servicios/getMovimientos/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2));
+		$.unblockUI({
+		    onUnblock: function(){
+				date1 = new Date($("#date01").datepicker("getDates"));
+				date2 = new Date($("#date02").datepicker("getDates"));
+				$('#MovimientoForm').reset();
+				MovimientosTable.fnReloadAjax(base_url+"ventas/servicios/getMovimientos/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2));
+			}
+		});
 	}
 
 	$('.btn-registrar').click(function(e){
@@ -40,8 +43,14 @@ $(document).ready(function(){
 	$("#btn-reg-movimiento").click(function(event){
 		event.preventDefault();
 		if($("#MovimientoForm").validationEngine('validate'))
-			enviar($("#MovimientoForm").attr("action-1"),{formulario:$("#MovimientoForm").serializeObject()}, successMovimiento, null)
-			//console.log($("#MovimientoForm").serializeObject());
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalMov').modal('hide');
+					enviar($("#MovimientoForm").attr("action-1"),{formulario:$("#MovimientoForm").serializeObject()}, successMovimiento, null)
+					//console.log($("#MovimientoForm").serializeObject());
+				}
+			});
 	}); 
 
 	//buscar pr fechas

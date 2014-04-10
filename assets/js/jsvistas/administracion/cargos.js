@@ -38,13 +38,16 @@ $(document).ready(function(){
 
 
 	var successCargo = function(){
-		$('#modalCargo').modal('hide');
-		CargosTable.fnReloadAjax()
-		$("#CargoForm").reset();
+		$.unblockUI({
+		    onUnblock: function(){
+				CargosTable.fnReloadAjax()
+				$("#CargoForm").reset();
+			}
+		})
 	}
 
 
-	$('#modalCargo').on('hidden', function(){		
+	$('#modalCargo').on('hidden.bs.modal', function(){		
 		$("#CargoForm").reset();
 		$("#btn-reg-cargo").show();
 		$("#btn-editar-cargo").hide();		
@@ -61,13 +64,26 @@ $(document).ready(function(){
 		event.preventDefault();
 		if($("#CargoForm").validationEngine('validate'))
 			// para vefiricar console.log($("#CargoForm").serializeObject());
-			enviar($("#CargoForm").attr("action-1"),{formulario:$("#CargoForm").serializeObject()}, successCargo, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalCargo').modal('hide');
+					enviar($("#CargoForm").attr("action-1"),{formulario:$("#CargoForm").serializeObject()}, successCargo, null)
+			//$.blockUI({onOverlayClick: $.unblockUI}); 
+				}
+			});
 	});
 	
 	$("#btn-editar-cargo").click(function(event){
 		event.preventDefault();
 		if($("#CargoForm").validationEngine('validate'))
-			enviar($("#CargoForm").attr("action-2"),{formulario:$("#CargoForm").serializeObject()}, successCargo, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalCargo').modal('hide');
+					enviar($("#CargoForm").attr("action-2"),{formulario:$("#CargoForm").serializeObject()}, successCargo, null)
+				}
+			});
 	});
 	
 	

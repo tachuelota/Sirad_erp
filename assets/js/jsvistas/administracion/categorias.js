@@ -17,12 +17,15 @@ $(document).ready(function(){
 	});
 	
 	var successCategoria = function(){
-		$('#modalCategoria').modal('hide');
-		$("#CategoriaForm").reset();
-		TableCategorias.fnReloadAjax()
+		$.unblockUI({
+		    onUnblock: function(){
+				$("#CategoriaForm").reset();
+				TableCategorias.fnReloadAjax()
+			}
+		});
 	}
 
-	$('#modalCategoria').on('hidden', function(){		
+	$('#modalCategoria').on('hidden.bs.modal', function(){		
 		$("#CategoriaForm").reset();
 		$('#modalCategoria').modal('hide');
 		$("#btn-reg-categoria").show();
@@ -47,12 +50,24 @@ $(document).ready(function(){
 	$("#btn-reg-categoria").click(function(event){
 		event.preventDefault();
 		if($("#CategoriaForm").validationEngine('validate'))
-			enviar($("#CategoriaForm").attr("action-1"),{formulario:$("#CategoriaForm").serializeObject()}, successCategoria, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalCategoria').modal('hide');
+					enviar($("#CategoriaForm").attr("action-1"),{formulario:$("#CategoriaForm").serializeObject()}, successCategoria, null)
+				}
+			});
 	});
 	$("#btn-editar-categoria").click(function(event){
 		event.preventDefault();
 		if($("#CategoriaForm").validationEngine('validate'))
-			enviar($("#CategoriaForm").attr("action-2"),{formulario:$("#CategoriaForm").serializeObject()}, successCategoria, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalCategoria').modal('hide');
+					enviar($("#CategoriaForm").attr("action-2"),{formulario:$("#CategoriaForm").serializeObject()}, successCategoria, null)
+				}
+			});
 	});
 
 	var CategoriaOptions = {
