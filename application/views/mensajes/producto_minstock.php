@@ -21,21 +21,12 @@
 								<form method="post" target="_blank" id="CreatePDFForm">
 									<input type="hidden" name="title" id="title"/>
 									<input type="hidden" name="table_productos" id="table_productos"/>
-									<div class="row">												
-										<div class="col-lg-6">
-								            <!-- small box -->
-								            <div class="btn btn-success">							                
-								                <a href="#" id="xlsutton" class="small-box-footer">
-								                    Exportar <i class="fa fa-arrow-circle-right"></i>
-								                </a>
-								            </div>
-								        </div><!-- ./col -->
+									<div>						
+										<button type="button" class="btn btn-success" id="xlsutton">Exportar</button>	
+					          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#compose-modal">Enviar</button>									       
 									</div>
 								</form>
-							</div>								
-							<input id="pdfgen" type="button" value="Reporte General" class="btn btn-success" />
-							<!--<button id="" type="button" class="btn btn-success">Reporte</button>-->
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#compose-modal">Enviar</button>							
+							</div>																							
 						</div>
 
 					</div>

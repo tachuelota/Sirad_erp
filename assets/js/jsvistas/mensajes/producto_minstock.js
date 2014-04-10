@@ -24,9 +24,7 @@ $(document).ready(function(){
 		$('#modalBuscarProducto').modal('hide');
 	});
 
-		$("#pdfgen").click(function(){
-
-	//ClientesRowCBF = function (){
+	$("#xlsutton").click(function(){
 		table_productos = toHTML(crearTablaToArray("tclientes",
 				['Codigo de Barra','Producto','Unidad Medida','Stock Actual','Stock Minimo','Stock Maximo'],
 				[	'style="width: 5%;" class="head" ','style="width: 25%;" class="head" ','style="width: 15%;" class="head" ',
@@ -35,10 +33,10 @@ $(document).ready(function(){
 				[	'style="width: 5%;" ','style="width: 25%;" ','style="width: 15%;" ',
 					'style="width: 15%;" ','style="width: 15%;" ','style="width: 25%;" '],
 					ProductosTable.fnGetData()));
-		//};
+		
 		$("#title").val("LISTA DE PRODUCTOS CON MÍNIMO DE STOCK");
 		$("#table_productos").val(table_productos);
-		$("#exportmodal").modal('show');	
+		$("#exportmodal").modal('show');				
 		console.log(table_productos);
 	});
 
@@ -47,7 +45,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		$("#CreatePDFForm").attr("action",urlExportXLS);
 		$("#CreatePDFForm").submit();
-		$("#exportmodal").modal('hide');
+		
 	});
 
 
