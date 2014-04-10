@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 	var SelectProductosData = new Array();
 	var DataToSend = {};
-//CREAR EL DATATABLE DE ORDEN DE compra
+	//CREAR EL DATATABLE DE ORDEN DE compra
 	var SelectDetalleCompraData = new Array();
 	var BuscarDetOrCompOptions = {
 	"aoColumns":[

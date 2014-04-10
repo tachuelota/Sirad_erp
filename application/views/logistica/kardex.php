@@ -56,6 +56,28 @@
 									<th>Total s/.</th>
 								</tr>
 							</thead>
+							<thead>
+								<tr>
+									<th class="input">
+										<input type="text" placeholder="Año" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Mes" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Producto" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Marca" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Producto" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Tipo Ingreso" class="search_init form-control" />
+									</th>
+								</tr>
+							</thead>
 							<tbody>
 							</tbody>
 						</table>

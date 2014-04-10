@@ -20,10 +20,10 @@ $(document).ready(function(){
 	var IngreProductosOptions = {
 		"aoColumns":[
 			 		  { "mDataProp": "dIngProdFecReg"},
-		              { "mDataProp": "cIngProdNro"},
+		              { "mDataProp": "serNumIngreso"},
 		              { "mDataProp": "nomape"},
 		              { "mDataProp": "DescMotivo"},
-		              { "mDataProp": "cIngProdDocNro"},
+		              { "mDataProp": "serNumDoc"},
 				],
 		"fnCreatedRow": IngresoProductosTA.RowCBFunction
 	};

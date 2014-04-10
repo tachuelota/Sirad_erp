@@ -107,10 +107,20 @@ class servicios extends CI_Controller {
 	public function get_log_ordcompra_rangefechas($Desde,$Hasta){		
 
 			$this->load->model('logistica/ordcompra_model','ordcomp');
-			$result = $this->ordcomp->get_fromrange($Desde,$Hasta);
+			$ordenCompra = $this->ordcomp->get_fromrange($Desde,$Hasta);
+			foreach ($ordenCompra as $key => $ordenCompras) {
+			switch ($ordenCompras["cOrdComEst"]) {				
+			    case 0:
+			        $ordenCompra[$key]["estadolabel"] = '<span class="label label-info">Inhabilitado</span>';
+			        break;
+			    case 1:
+			        $ordenCompra[$key]["estadolabel"] = '<span class="label label-success">Habilitado</span>';
+			        break;
+			}
 			$this->output
 			->set_content_type('application/json')
-			->set_output(json_encode(array('aaData' => $result)));		
+			->set_output(json_encode(array('aaData' => $ordenCompra)));		
+		}
 	}
 
 	public function get_log_saldoinicial_byfecha($fecha){
@@ -213,15 +223,21 @@ class servicios extends CI_Controller {
 
 		$array_data = $ruc_xml('small');
 
-		$data_ruc = array(
-		   "ruc" => substr($array_data[0]->getPlainText(),13,11),
-	       "nombre" => substr($array_data[0]->getPlainText(),26),
-	       "estado" => substr($array_data[3]->getPlainText(),7),
-		   "direccion"=>substr($array_data[6]->getPlainText(),11),
-		   "situacion"=>substr($array_data[7]->getPlainText(),11),
-		   "dependencia"=>substr($array_data[9]->getPlainText(),13),
-		   "tipo"=>substr($array_data[10]->getPlainText(),6)
+		$correcto=$array_data[0];
+
+		if ($correcto("b",0)->getPlainText()!="El numero Ruc ingresado es invalido.")
+			$data_ruc = array(
+				"valido"=>1,
+				"ruc" => substr($array_data[0]->getPlainText(),13,11),
+				"nombre" => substr($array_data[0]->getPlainText(),26),
+				"estado" => substr($array_data[3]->getPlainText(),7),
+				"direccion"=>substr($array_data[6]->getPlainText(),11),
+				"situacion"=>substr($array_data[7]->getPlainText(),11),
+				"dependencia"=>substr($array_data[9]->getPlainText(),13),
+				"tipo"=>substr($array_data[10]->getPlainText(),6)
 			);
+		else
+			$data_ruc = array("valido"=>0);
 
 		$this->output
 			->set_content_type('application/json')

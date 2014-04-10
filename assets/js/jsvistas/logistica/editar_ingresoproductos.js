@@ -1,11 +1,35 @@
-
 $(document).ready(function(){
-	//$("#IngresoProductosForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000});
+	$("#IngresoProductosForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000});
 
 	var SelectProductosData = new Array();
 	var SelectDetalleCompraData = new Array();	
 	var DataToSend = {};
-	//creamos el datable detalle
+
+	var BuscarProOptions = {
+		"aoColumns":[
+					  { "mDataProp": "cProductoCodBarra"}, 	
+		              { "mDataProp": "cProductoDesc"},
+		              { "mDataProp": "nProductoStock"},
+		              { "mDataProp": "nProductoPCosto"},
+		              { "mDataProp": "nProductoUnidMedida"}
+		              ],
+		"fnCreatedRow":getSimpleSelectRowCallBack(SelectProductosData)
+		};
+		BuscarProductosTable = createDataTable2('select_producto_table',BuscarProOptions);
+		//creamos data table orden pedido
+		var BuscarDetOrCompOptions = {
+		"aoColumns":[
+					  { "mDataProp": "cOrdComDocSerie"}, //serie numero
+		              { "mDataProp": "cProductoDesc"},
+		              { "mDataProp": "cPersonalNom"},
+		              { "mDataProp": "OrdComFecReg"},
+		              { "mDataProp": "nDetCompraCant"},	          
+		              { "mDataProp": "nDetCompraImporte"}	
+		              ],
+		"fnCreatedRow":getSimpleSelectRowCallBack(SelectDetalleCompraData)
+		};
+		BuscarDetIngTable = createDataTable2('select_ordped_table',BuscarDetOrCompOptions);
+		//creamos el datable detalle
 		var IngProductosDetalleActions = new DTActions({
 		'conf': '001',
 		'DropFunction': function(nRow, aData, iDisplayIndex) {
@@ -28,49 +52,47 @@ $(document).ready(function(){
 					break;
 			} 
 			}
+		});	
+
+		//para llamar al modal buscar producrtos
+			$('#btn-buscar').click(function(e){
+				e.preventDefault();
+				$('#modalBuscarOrdPed').modal('show');
+			});
+			$('#btn-buscar-productos').click(function(e){
+				e.preventDefault();
+				$('#modalBuscarProducto').modal('show');
+			});
+			//agregar_detalle
+		$('#select_ordped').click(function(event){
+			event.preventDefault();
+			$('#ordped').val(SelectDetalleCompraData[0].cProductoDesc);
+			$('#cantidadd').val(SelectDetalleCompraData[0].nDetCompraCant);
+			$('#modalBuscarOrdPed').modal('hide');
 		});
-		//refrescar tabla
-	var successEditarOferta = function(data){
-		BuscarProductosTable.fnReloadAjax();
-		DetalleProductosTable.fnReloadAjax();
-	};
-	BuscarIngresoProductosdOptions = {
-		"aoColumns":[
-			{ "mDataProp": "nProducto_id"},
-			{ "mDataProp": "nDetIngProdCant"},
-			{ "mDataProp": "nDetIngProdPrecUnt"},
-			{ "mDataProp": "nDetIngProdTot"},
-			{ "mDataProp": "estadolabel"},			
+		//para la seleccion
+		$('#select_producto').click(function(event){
+			event.preventDefault();
+			$("#idProducto").val(SelectProductosData[0].nProducto_id);
+			$('#producto').val(SelectProductosData[0].cProductoDesc);
+			$('#precio_uni').val(SelectProductosData[0].nProductoPCosto);
+			$('#modalBuscarProducto').modal('hide');
+		});
+
+	
+		BuscarIngresoProductosdOptions = {
+			"aoColumns":[
+				{ "mDataProp": "nProducto_id"},
+				{ "mDataProp": "nDetIngProdCant"},
+				{ "mDataProp": "nDetIngProdPrecUnt"},
+				{ "mDataProp": "nDetIngProdTot"},
+				{ "mDataProp": "estadolabel"},			
 		              ],
 		"sDom":"t<'row'<'col-lg-12'i><'col-lg-12 center'p>>",
 		"fnCreatedRow":IngProductosDetalleActions.RowCBFunction
 		};
 		DetalleProductosTable = createDataTable2('edit_ingresoproductos_table',BuscarIngresoProductosdOptions);
-	//para llamar al modal buscar producrtos
-	$('#btn-buscar').click(function(e){
-			e.preventDefault();
-			$('#modalBuscarOrdPed').modal('show');
-	});
-	$('#btn-buscar-productos').click(function(e){
-			e.preventDefault();
-			$('#modalBuscarProducto').modal('show');
-	});
-
-	//Creamos datatable de el modal para buscar productos
-	var BuscarProOptions = {
-		"aoColumns":[
-					  { "mDataProp": "cProductoCodBarra"}, 	
-		              { "mDataProp": "cProductoDesc"},
-		              { "mDataProp": "nProductoStock"},
-		              { "mDataProp": "nProductoPCosto"},
-		              { "mDataProp": "nProductoUnidMedida"}
-		              ],
-		"fnCreatedRow":getSimpleSelectRowCallBack(SelectProductosData)
-		};
-
-		BuscarProductosTable = createDataTable2('select_producto_table',BuscarProOptions);
-
-		//agregar a la tabla detalle
+		
 		//	Agregar a la tabla
 		$('#agregar_producto').click(function(event){
 			event.preventDefault();		
@@ -87,38 +109,7 @@ $(document).ready(function(){
 			$("#producto").val("");
 			$("#idProducto").val("");		
 			//console.log(BuscarProductosTable.fnGetData());
-		});
-
-
-		//agregar_detalle
-		$('#select_ordped').click(function(event){
-			event.preventDefault();
-			$('#ordped').val(SelectDetalleCompraData[0].cProductoDesc);
-			$('#cantidadd').val(SelectDetalleCompraData[0].nDetCompraCant);
-			$('#modalBuscarOrdPed').modal('hide');
-	});
-		//para la seleccion
-		$('#select_producto').click(function(event){
-			event.preventDefault();
-			$("#idProducto").val(SelectProductosData[0].nProducto_id);
-			$('#producto').val(SelectProductosData[0].cProductoDesc);
-			$('#precio_uni').val(SelectProductosData[0].nProductoPCosto);
-			$('#modalBuscarProducto').modal('hide');
-		});
-		
-		var BuscarDetOrCompOptions = {
-		"aoColumns":[
-					  { "mDataProp": "cOrdComDocSerie"}, //serie numero
-		              { "mDataProp": "cProductoDesc"},
-		              { "mDataProp": "cPersonalNom"},
-		              { "mDataProp": "OrdComFecReg"},
-		              { "mDataProp": "nDetCompraCant"},	          
-		              { "mDataProp": "nDetCompraImporte"}	
-		              ],
-		"fnCreatedRow":getSimpleSelectRowCallBack(SelectDetalleCompraData)
-		};
-		BuscarDetIngTable = createDataTable2('select_ordped_table',BuscarDetOrCompOptions);
-
+		});	
 		$('#agregar_detalle').click(function(event){
 			event.preventDefault();
 			SelectDetalleCompraData[0].nDetOrdCompra = SelectDetalleCompraData[0].nDetCompra_id;
@@ -140,14 +131,18 @@ $(document).ready(function(){
 		//alert("Hola Como estas");
 		//$('#modalProductos').modal('hide');
 		DetalleProductosTable.fnReloadAjax()
-	}
-		
+		}
+		//refrescar tabla
+		var successEditarOferta = function(data){
+			BuscarProductosTable.fnReloadAjax();
+			DetalleProductosTable.fnReloadAjax();
+		};	
 
 		//editar
 		$("#btn_enviar_cambios").click(function(event){
-		event.preventDefault();
-		if($("#RegistrarIngresoForm").validationEngine('validate'))
-			enviar($("#RegistrarIngresoForm").attr("action-1"),{formulario:$("#RegistrarIngresoForm").serializeObject(),
-			tabla: CopyArray(DetalleProductosTable.fnGetData(),["nProducto_id","nDetIngProdCant","nDetIngProdPrecUnt","nDetIngProdTot","band","nDetIngProd_id"])}, successEditarProducto, null)
-	});
+			event.preventDefault();
+			if($("#RegistrarIngresoForm").validationEngine('validate'))
+				enviar($("#RegistrarIngresoForm").attr("action-1"),{formulario:$("#RegistrarIngresoForm").serializeObject(),
+				tabla: CopyArray(DetalleProductosTable.fnGetData(),["nProducto_id","nDetIngProdCant","nDetIngProdPrecUnt","nDetIngProdTot","band","nDetIngProd_id"])}, successEditarProducto, null)
+		});
 });
