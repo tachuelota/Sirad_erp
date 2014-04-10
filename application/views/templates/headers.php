@@ -33,8 +33,9 @@
 <body <?php if(isset($isloginview)) echo 'class="bg-black"'; else echo 'class="skin-blue"'; ?> >
 	
 	<!-- header logo: style can be found in header.less -->
+	<?php if(!isset($isloginview)):?>
 	<header class="header" >
-	    <a href="<?php echo base_url();?>" class="logo" <?php if(isset($isloginview)) echo 'style="display:none"'; ?>>
+	    <a href="<?php echo base_url();?>" class="logo">
 	       <img src="<?php echo base_url();?>/assets/img/sirad-logo.png" alt="User Image" width="160px" >
 	    </a>
 	    <!-- Header Navbar: style can be found in header.less -->
@@ -107,3 +108,4 @@
 	        </div>
 	    </nav>
 	</header>
+	<?php endif ?>

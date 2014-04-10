@@ -344,9 +344,10 @@ function createDataTable2(idTable, options){
 		"bDestroy": true,		
         "bPaginate": true,
         "bLengthChange": true,
-        "bSort": true,
+        "bSort": TOptios.bSort,
         "bInfo": true,
 		"sAjaxSource": $("#"+idTable).attr("data-source"),
+		"aoColumns": TOptios.aoColumns,	
 		"fnServerData": function ( sSource, aoData, fnCallback, oSettings ) {
 	      oSettings.jqXHR = $.ajax( {
 	        "dataType": 'json',
@@ -357,10 +358,9 @@ function createDataTable2(idTable, options){
 	        "success": fnCallback
 	      } );
 	    },
-		"aoColumns": TOptios.aoColumns,	
 		'iDisplayLength': TOptios.iDisplayLength,
-		"aLengthMenu": [[5,10, 25, 50], [5,10, 25, 50]],			   
-    	"sDom": TOptios.sDom,
+		"aLengthMenu": [[5,10, 25, 50], [5,10, 25, 50]],
+    	//"sDom": TOptios.sDom,
 	 	"fnCreatedRow": TOptios.fnCreatedRow,
 		"fnInitComplete": TOptios.fnInitComplete,
 	 	"fnDrawCallback": TOptios.fnDrawCallback

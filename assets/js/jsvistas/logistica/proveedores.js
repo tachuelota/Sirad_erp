@@ -79,11 +79,6 @@ $(document).ready(function(){
 	$("#btn-reg-proveedor").click(function(event){
 		event.preventDefault();
 		if($("#ProveedorForm").validationEngine('validate'))
-<<<<<<< Updated upstream
-			//para vefiricar console.log($("#TipoIGV_Registrar").serializeObject());
-			enviar($("#ProveedorForm").attr("action-1"),{formulario:$("#ProveedorForm").serializeObject()}, successProveedor, null)
-			//console.log($("#ProveedorForm").serializeObject());
-=======
 			$.blockUI({ 
 				onBlock: function()
 				{
@@ -92,15 +87,10 @@ $(document).ready(function(){
 					enviar($("#ProveedorForm").attr("action-1"),{formulario:$("#ProveedorForm").serializeObject()}, successProveedor, null)
 				}
 			});
->>>>>>> Stashed changes
 	});
 	$("#btn-editar-proveedor").click(function(event){
 		event.preventDefault();
 		if($("#ProveedorForm").validationEngine('validate'))
-<<<<<<< Updated upstream
-			enviar($("#ProveedorForm").attr("action-2"),{formulario:$("#ProveedorForm").serializeObject()}, successProveedor, null)
-				//console.log($("#ProveedorForm").serializeObject());
-=======
 			$.blockUI({ 
 				onBlock: function()
 				{
@@ -108,7 +98,6 @@ $(document).ready(function(){
 					enviar($("#ProveedorForm").attr("action-2"),{formulario:$("#ProveedorForm").serializeObject()}, successProveedor, null)
 				}
 			});
->>>>>>> Stashed changes
 	});
 
 	//Modal verificar Acciones	
