@@ -52,6 +52,27 @@
 									<th>Local</th>
 								</tr>
 							</thead>
+							<thead>
+								<tr>
+									<th class="input">
+										<input type="text" placeholder="Documento" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Fec. Registro" class="search_init form-control" />
+									</th>
+									<th></th>
+									<th class="input">
+										<input type="text" placeholder="Solicitante" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Motivo" class="search_init form-control" />
+									</th>
+									<th></th>
+									<th class="input">
+										<input type="text" placeholder="Local" class="search_init form-control" />
+									</th>
+								</tr>
+							</thead>
 							<tbody></tbody>
 						</table>
 					</div>

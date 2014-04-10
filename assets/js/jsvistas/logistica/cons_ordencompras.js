@@ -55,11 +55,12 @@ $('#xlscuadrecaja').click(function(e){
 
 	var OrdComprasOptions = {
 		"aoColumns":[
-			 		  { "mDataProp": "nOrdenCom_id"},
+			 		  { "mDataProp": "serNumOrdenCompra"},
 		              { "mDataProp": "OrdComFecReg"},
 		              { "mDataProp": "cPersonalNom"},
 		              { "mDataProp": "cProveedorRazSocial"},
-		              { "mDataProp": "nOrdComTotal"}
+		              { "mDataProp": "nOrdComTotal"},
+		              { "mDataProp": "estadolabel"}
 				],
 		"fnCreatedRow": OrdenCompraTA.RowCBFunction,
 		"sDom":"<'row'<'col-xs-6'l><'col-xs-6'>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>"

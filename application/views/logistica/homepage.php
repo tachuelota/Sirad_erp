@@ -100,7 +100,7 @@
 		  	<div class="col-lg-3 col-xs-6">
                     <div class="small-box bg-blue">
                     	<div class="inner">
-                            <h3>Productos</h3>
+                            <h3>Ingreso</h3>
                             <p>Ingreso de Producto</p>
                         </div>
                         <div class="icon">
@@ -116,7 +116,7 @@
                 <div class="col-lg-3 col-xs-6">
                     <div class="small-box bg-purple">
                         <div class="inner">
-                            <h3>Productos</h3>
+                            <h3>Salida</h3>
                             <p>Salida de Productos</p>
                         </div>
                         <div class="icon">

@@ -1,5 +1,4 @@
 
-
 $(document).ready(function(){
 	$("#SalProductosForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000});
 	var SalidaProductosTA = new DTActions({

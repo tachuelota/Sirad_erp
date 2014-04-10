@@ -210,7 +210,7 @@
 			</div>
 					<!--MODALS-->
 					<div class="modal fade" id="modalBuscarOrdPed" >
-					<div class="modal-dialog">
+					<div class="modal-dialog" style="width:950px">
 						<div class="modal-content">
 							<div class="modal-header">
 								<h3>Detalles de Orden de Compra</h3>

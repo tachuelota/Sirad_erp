@@ -53,6 +53,25 @@
 									
 								</tr>
 							</thead>
+							<thead>
+								<tr>
+									<th class="input">
+										<input type="text" placeholder="Fecha" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="N° Ingreso" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Personal" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Motivo" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="N° Documento" class="search_init form-control" />
+									</th>									
+								</tr>
+							</thead>
 							<tbody>
 							</tbody>
 						</table>

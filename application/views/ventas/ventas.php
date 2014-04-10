@@ -54,6 +54,27 @@
 									<th>Estado</th>
 								</tr>
 							</thead>
+							<thead>
+								<tr>
+									<th class="input">
+										<input type="text" placeholder="Fecha" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Cliente" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Vendedor" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Tipo Pago" class="search_init form-control" />
+									</th>
+									<th></th>
+									<th></th>
+									<th class="input">
+										<input type="text" placeholder="Estado" class="search_init form-control" />
+									</th>									
+								</tr>
+							</thead>
 							<tbody></tbody>
 						</table>
 					</div><!-- /.box-body -->

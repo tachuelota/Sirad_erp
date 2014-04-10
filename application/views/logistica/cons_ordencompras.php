@@ -51,6 +51,7 @@
 									<th>Registrador</th>
 									<th>Proveedor</th>
 									<th>Total S/.</th>
+									<th>Estado</th>
 								</tr>
 							</thead>
 							<thead>
