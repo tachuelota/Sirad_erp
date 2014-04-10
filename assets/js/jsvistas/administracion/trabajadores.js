@@ -51,13 +51,19 @@ $(document).ready(function(){
     var successTrabajador = function(){    
     	$.unblockUI({
 		    onUnblock: function(){	
-				$("#TrabajadoresForm").reset();
 				TrabajadoresTable.fnReloadAjax()
 			}
 		});		
 	}
 
 	//--funcion de los botones
+	$('#modalTrabajadores').on('hidden.bs.modal', function(){
+		$("#TrabajadoresForm").reset();
+		$("#btn-reg-trabajadores").show();
+		$("#btn-editar-trabajadores").hide();
+	});
+
+
 
 	$("#btn-reg-trabajadores").click(function(event){
 		event.preventDefault();

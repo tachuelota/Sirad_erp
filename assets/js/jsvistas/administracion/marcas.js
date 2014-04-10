@@ -21,13 +21,13 @@ $(document).ready(function(){
 	successMarca = function(){
 		$.unblockUI({
 		    onUnblock: function(){
-		  		$("#MarcaForm").reset();
+		  		
 				MarcasTable.fnReloadAjax();
 			}
 		});
 	}
 	
-	
+
 	//mostrar Buscar Cliente------------------------------------>
 	$('#btn-reg').click(function(e){
 		e.preventDefault();
@@ -42,6 +42,13 @@ $(document).ready(function(){
 		"fnCreatedRow": MarcasTA.RowCBFunction
 	};
 	var MarcasTable = createDataTable2('marcas_table',Marcasptions);
+
+	$('#modalMarca').on('hidden.bs.modal', function(){
+		$("#MarcaForm").reset();
+		$("#btn-reg-marca").show();
+		$("#btn-editar-marca").hide();
+	});
+
 
 	$("#btn-reg-marca").click(function(event){
 		event.preventDefault();
