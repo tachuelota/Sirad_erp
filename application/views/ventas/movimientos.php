@@ -56,6 +56,26 @@
 									<th>Tipo de Pago</th>
 								</tr>
 							</thead>
+							<thead>
+								<tr>
+									<th class="input">
+										<input type="text" placeholder="Fecha" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Trabajador" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Concepto" class="search_init form-control" />
+									</th>
+									<th></th>
+									<th class="input">
+										<input type="text" placeholder="Movimiento" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Tipo Pago" class="search_init form-control" />
+									</th>									
+								</tr>
+							</thead>
 							<tbody></tbody>
 						</table>
 					</div>

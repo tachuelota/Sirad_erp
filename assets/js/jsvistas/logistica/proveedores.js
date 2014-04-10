@@ -62,16 +62,31 @@ $(document).ready(function(){
 		ruc = $("#ruc").val();
 		//alert(ruc);
 		var datos=getAjaxObject(base_url+"logistica/servicios/getdata_from_ruc/"+ruc)
-		$("#razonsocial").val(datos.nombre);
-		$("#dirfiscal").val(datos.direccion);
-		var tipo=datos.tipo;
-		if(tipo=="SOCIEDAD ANONIMA CERRADA"){
-			//$("#tipContribuyente").val(tipo);
-			tipContribuyente[0].selected = true;
-		}else{
-			tipContribuyente[1].selected=true;
+		if(datos.valido==1){
+			$("#razonsocial").val(datos.nombre);
+			$("#dirfiscal").val(datos.direccion);
+			var tipo=datos.tipo;
+			if(tipo=="SOCIEDAD ANONIMA CERRADA"){
+				//$("#tipContribuyente").val(tipo);
+				tipContribuyente[0].selected = true;
+			}else{
+				tipContribuyente[1].selected=true;
+			}
+			var estado=datos.estado;
 		}
-		var estado=datos.estado;
+		else
+		{
+			$("#razonsocial").val("");
+			$("#dirfiscal").val("");
+			$('#ruc').validationEngine(
+				'showPrompt',
+				'Ruc Invalido',
+				'error',
+				"topLeft" ,
+				true);
+
+		}
+		
 		
 	});
 
