@@ -70,9 +70,9 @@
 										</fieldset>
 									</div>								
 									<div class="modal-footer">
-										<button type="reset" class="btn btn-cancelarprov" data-dismiss="modal">Cancelar</button>
-										<button id="btn-reg-cargo" type="button" class="btn btn-primary ">Registrar</button>
-										<button id="btn-editar-cargo" type="button" class="btn btn-primary " style="display:none">Guardar</button>
+										<button type="reset" class="btn btn-flat btn-cancelarprov" data-dismiss="modal">Cancelar</button>
+										<button id="btn-reg-cargo" type="button" class="btn btn-flat btn-primary ">Registrar</button>
+										<button id="btn-editar-cargo" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>
 									</div>
 								</form>
 							</div>

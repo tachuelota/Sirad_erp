@@ -222,9 +222,15 @@
 					</p>
 				</div>
 			</div>
+<<<<<<< HEAD
 			<div class="modal-footer clearfix">
 				<a href="#" class="btn" data-dismiss="modal">No</a>
 				<a href="#" class="btn btn-primary" id="btn-cierremes">Sí</a>
+=======
+			<div class="modal-footer">
+				<a href="#" class="btn btn-flat" data-dismiss="modal">No</a>
+				<a href="#" class="btn btn-flat btn-primary" id="btn-cierremes">Sí</a>
+>>>>>>> 38c565677f0dc264ba8f244ba6fdf0c2e8899a06
 			</div>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
@@ -264,7 +270,7 @@
 					<div class="form-horizontal">
 						<div class="form-group">
 							<label class="col-lg-4 control-label" for="datecuadrecaja">Fecha</label>
-							<div class="col-lg-8">
+							<div class="col-lg-5">
 								<div class="input-group">
 									<input id="fecha01" name="fecha01" type="text" class="form-control datepicker"  style="margin: 0 18px 0 0;">
 									<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -298,7 +304,7 @@
 				            <div class="small-box small-box bg-green">
 				                <div class="inner">
 				                    <h3>
-				                        Exel
+				                        Excel
 				                    </h3>
 				                    <p>
 				                       .xls

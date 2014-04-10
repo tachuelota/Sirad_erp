@@ -34,7 +34,7 @@ class servicios extends CI_Controller {
 		foreach ($proveedores as $key => $proveedor) {
 			switch ($proveedor["nProveedorEstado"]) {				
 			    case 0:
-			        $proveedores[$key]["estadolabel"] = '<span class="label label-info">Inhabilitado</span>';
+			        $proveedores[$key]["estadolabel"] = '<span class="label label-danger">Inhabilitado</span>';
 			        break;
 			    case 1:
 			        $proveedores[$key]["estadolabel"] = '<span class="label label-success">Habilitado</span>';
