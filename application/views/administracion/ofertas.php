@@ -88,13 +88,8 @@
 										</fieldset>
 									</div>
 									<div class="modal-footer">
-<<<<<<< HEAD
-										<button type="reset" class="btn" data-dismiss="modal">Cancelar</button>
-										<button id="enviar_oferta_btn" type="button" class="btn btn-primary">Registrar</button>
-=======
 										<button type="reset" class="btn btn-flat" data-dismiss="modal">Cancelar</button>
 										<button id="enviar_oferta_btn" type="button" class="btn btn-flat btn-primary">Guardar</button>
->>>>>>> 38c565677f0dc264ba8f244ba6fdf0c2e8899a06
 									</div>
 								</form>
 							</div>

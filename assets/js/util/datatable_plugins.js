@@ -151,6 +151,7 @@ $.fn.dataTableExt.oApi.reloadSigleFilter = function ()
 	$("th.select").each( function ( i ){
 		var indexfilter = $(this).attr("index");
 		var row = $(this).attr("nrorow");
+		oTable.fnFilter( "", row);
         this.innerHTML = fnCreateSelect(oTable.fnGetColumnData(indexfilter));
 		$('select',this).addClass("form-control");
         $('select', this).change( function () {
