@@ -208,6 +208,27 @@
     </aside>
 
 
+<div class="modal fade" id="modalcierremes">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title"><i class="fa fa-exclamation-triangle"></i> Cierre de Mes </h4>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-danger alert-dismissable">
+					<p>
+						¿Está seguro que desea cerrar el mes?
+					</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn btn-flat" data-dismiss="modal">No</a>
+				<a href="#" class="btn btn-flat btn-primary" id="btn-cierremes">Sí</a>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
 
 
 
