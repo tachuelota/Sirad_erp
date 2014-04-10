@@ -19,10 +19,14 @@ $(document).ready(function(){
 	};
 
 	successMarca = function(){
-		$('#modalMarca').modal('hide');
-  		$("#MarcaForm").reset();
-		MarcasTable.fnReloadAjax()
+		$.unblockUI({
+		    onUnblock: function(){
+		  		$("#MarcaForm").reset();
+				MarcasTable.fnReloadAjax();
+			}
+		});
 	}
+	
 	
 	//mostrar Buscar Cliente------------------------------------>
 	$('#btn-reg').click(function(e){
@@ -42,11 +46,23 @@ $(document).ready(function(){
 	$("#btn-reg-marca").click(function(event){
 		event.preventDefault();
 		if($("#MarcaForm").validationEngine('validate'))
-			enviar($("#MarcaForm").attr("action-1"),{formulario:$("#MarcaForm").serializeObject()}, successMarca, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalMarca').modal('hide');
+					enviar($("#MarcaForm").attr("action-1"),{formulario:$("#MarcaForm").serializeObject()}, successMarca, null)
+				}
+			});
 	});
 	$("#btn-editar-marca").click(function(event){
 		event.preventDefault();
 		if($("#MarcaForm").validationEngine('validate'))
-			enviar($("#MarcaForm").attr("action-2"),{formulario:$("#MarcaForm").serializeObject()}, successMarca, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalMarca').modal('hide');
+					enviar($("#MarcaForm").attr("action-2"),{formulario:$("#MarcaForm").serializeObject()}, successMarca, null)
+				}
+			});
 	});
 });

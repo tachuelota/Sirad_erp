@@ -79,7 +79,10 @@
 						</div>
 					</div>
 					<div class="box-footer">
-						<a href="#" class="btn btn-default">Cancelar</a>
+						<a href="<?php echo base_url();?>administracion/views/ofertas/" type="reset" class="btn btn-success btn-cancelar" >
+							<i class="icon icon-white icon-arrowthick-w"></i>
+							Cancelar
+						</a>
 						<button id="enviar_editar" type="button" class="btn btn-primary" style="float: right;"> <i class="icon icon-white icon-save"></i>
 							Guardar
 						</button>

@@ -43,10 +43,13 @@ $(document).ready(function(){
 	var TipoProductoTable = createDataTable2('productos_table',ProductosOptions);	              
 
 	var successProducto = function(){
-		//alert("Hola Como estas");
-		$('#ProductoForm').reset();
-		$('#modalProductos').modal('hide');
-		TipoProductoTable.fnReloadAjax()
+		$.unblockUI({
+		    onUnblock: function(){
+				//alert("Hola Como estas");
+				$('#ProductoForm').reset();
+				TipoProductoTable.fnReloadAjax();
+			}
+		});
 	}
 
 	/*function prepararDatos(){
@@ -67,24 +70,31 @@ $(document).ready(function(){
 	$("#btn-reg-prod").click(function(event){
 		event.preventDefault();
 		if($("#ProductoForm").validationEngine('validate'))
-			//para vefiricar console.log($("#TipoIGV_Registrar").serializeObject());
-			enviar($("#ProductoForm").attr("action-1"),{formulario:$("#ProductoForm").serializeObject()}, successProducto, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					//para vefiricar console.log($("#TipoIGV_Registrar").serializeObject());
+					$('#modalProductos').modal('hide');
+					enviar($("#ProductoForm").attr("action-1"),{formulario:$("#ProductoForm").serializeObject()}, successProducto, logdata);
+				}
+			});
 	});
 	//Editar
 	$("#btn-editar-prod").click(function(event){
 		event.preventDefault();
 		if($("#ProductoForm").validationEngine('validate'))
-			enviar($("#ProductoForm").attr("action-2"),{formulario:$("#ProductoForm").serializeObject()}, successProducto, null)		
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalProductos').modal('hide');
+					enviar($("#ProductoForm").attr("action-2"),{formulario:$("#ProductoForm").serializeObject()}, successProducto, logdata); 				}
+			});
 	});
 
-
-
 	//Modal verificar Acciones	
-	$('#modalProductos').on('hidden', function(){		
+	$('#modalProductos').on('hidden.bs.modal', function(){		
 		$("#ProductoForm").reset();
 		$("#btn-reg-prod").show();
 		$("#btn-editar-prod").hide();
 	});
-
-
 });

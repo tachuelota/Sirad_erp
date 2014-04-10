@@ -196,9 +196,9 @@
 						</tbody>
 					</table>
 				</div>
-				<br/>
+				<br/></br>
 				<div class="box-footer">
-					<a href="logistica_cons_ingresoproductos.html" class="btn btn-success">
+					<a href="<?php echo base_url();?>logistica/views/cons_ingresoproductos/" type="reset" class="btn btn-success btn-cancelar" >
 						<i class="icon icon-white icon-arrowthick-w"></i>
 						Volver
 					</a>
@@ -266,6 +266,26 @@
 						</div>
 					</div>
 
+					<div class="modal fade" id="agregarproductos">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title"><i class="fa fa-exclamation-triangle"></i> Atención! </h4>
+								</div>
+								<div class="modal-body">
+									<div class="alert alert-danger alert-dismissable">
+										<p>
+											Necesitas agregar un Pedido o Producto
+										</p>
+									</div>
+								</div>
+								<div class="modal-footer clearfix">
+									<a href="#" class="btn" data-dismiss="modal">Aceptar</a>
+								</div>
+							</div><!-- /.modal-content -->
+		            	</div><!-- /.modal-dialog -->
+					</div>
+					
 				</div>
 			</div>
 		</div>

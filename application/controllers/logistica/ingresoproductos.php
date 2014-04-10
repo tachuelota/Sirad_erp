@@ -102,8 +102,6 @@ class ingresoproductos extends CI_Controller
 			{
 			foreach ($tabla as $key => $row)
 				{
-					
-					
 					switch ($row["band"]) {
 						case 0	:
 							$idDetalle=$row["nDetIngProd_id"];

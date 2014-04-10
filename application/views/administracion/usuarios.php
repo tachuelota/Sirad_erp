@@ -38,15 +38,15 @@
 									<div class="row">
 										<div class="form-horizontal">
 											<div class="col-lg-6 col-md-offset-3">
-												<div class="form-group">
+												<div class="form-group" style="padding-top: 10px;">
 													<label class="col-lg-4 control-label" for="trabajador">Trabajador</label>
 													<div class="col-lg-8">
-														<div class="input-group" style="padding-top: 1em;">
+														<div class="input-group">
 															<input id="trabajador" name="nPersonal_id" type="hidden">
 															<input id="user_id" name="user_id" type="hidden" >
 															<input id="email" name="email" type="hidden">
 															<input class="form-control validate[required]" id="nombre_trabajador" type="text" readonly>
-															<div id="btn-trabajador" class="btn btn-info btn-flat input-group-addon btn-buscarc"> <i class="fa fa-search"></i>
+															<div id="btn-trabajador" class="btn btn-info btn-flat input-group-addon btn-buscarc"> <i class="fa fa-search" style="color:white;"></i>
 															</div>
 														</div>
 													</div>
@@ -148,7 +148,7 @@
 								<div class="box-body">
 									<ul class="pager wizard">
 										<li class="previous">
-											<a class="btn btn-default" href="#">Antras</a>
+											<a class="btn btn-default" href="#">Atrás</a>
 										</li>
 										<li class="next">
 											<a class="btn btn-default" href="#">Siguiente</a>

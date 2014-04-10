@@ -32,10 +32,13 @@ $(document).ready(function(){
 	
 
 	var successTipoIGV = function(){
-		$("#TipoIGV_Registrar").reset();
-		//alert("Hola Como estas");
-		$('#modalTipoIGV').modal('hide');		
-		TipoIGVTable.fnReloadAjax()
+		$.unblockUI({
+		    onUnblock: function(){
+				$("#TipoIGV_Registrar").reset();
+				//alert("Hola Como estas");						
+				TipoIGVTable.fnReloadAjax()
+			}
+		});
 	}
 
 	//Registrar-Modal
@@ -48,12 +51,18 @@ $(document).ready(function(){
 		event.preventDefault();
 		if($("#TipoIGV_Registrar").validationEngine('validate'))
 			//para vefiricar console.log($("#TipoIGV_Registrar").serializeObject());
-			enviar($("#TipoIGV_Registrar").attr("action-1"),{formulario:$("#TipoIGV_Registrar").serializeObject()}, successTipoIGV, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalTipoIGV').modal('hide');
+					enviar($("#TipoIGV_Registrar").attr("action-1"),{formulario:$("#TipoIGV_Registrar").serializeObject()}, successTipoIGV, null)
+				}
+			});
 	});
 
 	//Modal verificar Acciones
 	
-	$('#modalTipoIGV').on('hidden', function(){		
+	$('#modalTipoIGV').on('hidden.bs.modal', function(){		
 		$("#TipoIGV_Registrar").reset();
 		$("#btn-tipoigv-reg").show();
 		$("#btn-tipoigv-edi").hide();
@@ -63,7 +72,13 @@ $(document).ready(function(){
 	$("#btn-tipoigv-edi").click(function(event){
 		event.preventDefault();
 		if($("#TipoIGV_Registrar").validationEngine('validate'))
-			enviar($("#TipoIGV_Registrar").attr("action-2"),{formulario:$("#TipoIGV_Registrar").serializeObject()}, successTipoIGV, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalTipoIGV').modal('hide');
+					enviar($("#TipoIGV_Registrar").attr("action-2"),{formulario:$("#TipoIGV_Registrar").serializeObject()}, successTipoIGV, null)
+				}
+			});
 	});
 
 });

@@ -84,11 +84,16 @@ $(document).ready(function(){
 	});
 
 	var successUsuario = function(data){
-		UsuariosTable.fnReloadAjax();
-		BuscarPersonalTable.fnReloadAjax();		
-		$('#btn-reg-usuario').addClass("current");			
-		$('#btn-update-usuario').removeClass("current");
-		clearForm();
+		console.log("hola");
+		$.unblockUI({
+		    onUnblock: function(){	
+				UsuariosTable.fnReloadAjax();
+				BuscarPersonalTable.fnReloadAjax();		
+				$('#btn-reg-usuario').addClass("current");			
+				$('#btn-update-usuario').removeClass("current");
+				clearForm();
+			}
+		});
 	};
 
 	var successDesactive = function(data){
@@ -146,13 +151,23 @@ $(document).ready(function(){
 	$('#btn-reg-usuario').click(function(event){
 		event.preventDefault();
 		if($("#UsuarioForm").validationEngine("validate"))
-			enviar($("#UsuarioForm").attr("action-1"),{formulario:$("#UsuarioForm").serialize()}, successUsuario, null);
+			$.blockUI({ 
+				onBlock: function()
+				{
+					enviar($("#UsuarioForm").attr("action-1"),{formulario:$("#UsuarioForm").serialize()}, successUsuario, null);
+				}
+			});
 	});
 
 	$('#btn-update-usuario').click(function(event){
 		event.preventDefault();
 		if($("#UsuarioForm").validationEngine("validate"))
-			enviar($("#UsuarioForm").attr("action-2"),{formulario:$("#UsuarioForm").serialize()}, successUsuario, null);
+			$.blockUI({ 
+				onBlock: function()
+				{
+					enviar($("#UsuarioForm").attr("action-2"),{formulario:$("#UsuarioForm").serialize()}, successUsuario, null);
+				}
+			});
 	});
 
 	var BuscarPersonalOptions = {

@@ -35,7 +35,7 @@
 	<!-- header logo: style can be found in header.less -->
 	<header class="header" >
 	    <a href="<?php echo base_url();?>" class="logo" <?php if(isset($isloginview)) echo 'style="display:none"'; ?>>
-	       <img src="<?php echo base_url();?>/assets/img/sirad3.png" alt="User Image" width="160px" >
+	       <img src="<?php echo base_url();?>/assets/img/sirad-logo.png" alt="User Image" width="160px" >
 	    </a>
 	    <!-- Header Navbar: style can be found in header.less -->
 	    <nav class="navbar navbar-static-top" role="navigation" <?php if(isset($isloginview)) echo 'style="display:none"'; ?>>
@@ -48,28 +48,29 @@
 	        </a>
 	        <div class="navbar-right">
 	            <ul class="nav navbar-nav">
-	                <!-- User Account: style can be found in dropdown.less -->	                
-                  <li class="dropdown messages-menu">
+	                <!-- User Account: style can be found in dropdown.less -->
+	            	<?php $notificaciones = $this->notificaciones_model->getnotificaciones(); ?>	                
+                  	<li class="dropdown notifications-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-envelope"></i>
-                                <span class="label label-success">1</span>
+                                <span class="label label-success"><?php echo count($notificaciones) ?></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="header">Tiene 1 nuevo mensaje</li>
+                                <li class="header">Tiene <?php echo count($notificaciones) ?> mensajes</li>
                                 <li>
                                     <!-- inner menu: contains the actual data -->
                                     <ul class="menu">
-                                        <li><!-- start message -->                                            
-                                            <a href="<?php echo base_url();?>mensajes/views/producto_minstock">Lista de Productos
-                                                <div class="pull-left">
-                                                    <i class="ion ion-clipboard"></i> 
-                                                </div>
-                                                <h4>
-                                                    Lista de Productos
-                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                                </h4>
-                                            </a>
-                                        </li><!-- end message -->                                      
+                                    	
+                                    	<?php foreach ($notificaciones as $key => $notificacion):?>
+                                            <?php if ($notificacion["activo"]==1):?>
+	                                        <li><!-- start message -->
+                                                <a href="<?php echo base_url().$notificacion['url']?>">
+                                                    <i class="fa <?php echo $notificacion["icono"]?> info"></i>
+                                                    <?php echo $notificacion["area"] ?> - <?php echo $notificacion["mensaje"] ?>
+                                                </a>
+	                                        </li><!-- end message -->
+                                            <?php endif ?>
+                                        <?php endforeach ?>                                    
                                     </ul>
                                 </li>
                             </ul>

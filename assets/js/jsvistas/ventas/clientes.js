@@ -57,7 +57,7 @@ $("#ClienteForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3
 
 	//--funcion de los botones
 
-	$('#modalClientes').on('hidden', function(){		
+	$('#modalClientes').on('hidden.bs.modal', function(){		
 		$("#ClienteForm").reset();
 		$("#btn-reg-clientes").show();
 		$("#btn-editar-clientes").hide();
@@ -66,21 +66,34 @@ $("#ClienteForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3
 	$("#btn-reg-clientes").click(function(event){
 		event.preventDefault();
 		if($("#ClienteForm").validationEngine('validate'))
-		{
-		enviar($("#ClienteForm").attr("action-1"),{formulario:$("#ClienteForm").serializeObject()}, successClientes, null);
-		}
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalClientes').modal('hide');
+					enviar($("#ClienteForm").attr("action-1"),{formulario:$("#ClienteForm").serializeObject()}, successClientes, null);
+				}
+			});
 	});
 
 	$("#btn-editar-clientes").click(function(event){
 		event.preventDefault();
 		if($("#ClienteForm").validationEngine('validate'))
-		enviar($("#ClienteForm").attr("action-2"),{formulario:$("#ClienteForm").serializeObject()}, successClientes, null);
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalClientes').modal('hide');
+					enviar($("#ClienteForm").attr("action-2"),{formulario:$("#ClienteForm").serializeObject()}, successClientes, null);
+				}
+			});
 	});
 
 	var successClientes = function(){
-		$('#ClienteForm').reset();
-		$('#modalClientes').modal('hide');
-		ClientesTable.fnReloadAjax()
+		$.unblockUI({
+		    onUnblock: function(){
+				$('#ClienteForm').reset();
+				ClientesTable.fnReloadAjax()
+			}
+		});
 	}
 
 	//codigo del php anterior

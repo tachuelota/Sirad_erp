@@ -32,7 +32,7 @@
 												<div class="input-group">	
 													<input class="form-control" id="proveedor" type="text" placeholder="Proveedor" readonly>
 		                                            <div class="btn btn-info btn-flat input-group-addon" id="btn-reg">
-		                                                <i class="fa fa-search"></i>
+		                                                <i class="fa fa-search" style="color:white;"></i>
 		                                            </div>
 													<input id="proveedor_id" class="form-control" name="proveedor_id" type="hidden">
 												</div>
@@ -116,7 +116,7 @@
 												<div class="input-group">
 													<input class="form-control" id="producto" type="text" placeholder="Producto" readonly>
 			                                        <div class="btn btn-info btn-flat input-group-addon" id="btn-reg-producto">
-			                                            <i class="fa fa-search"></i>
+			                                            <i class="fa fa-search" style="color:white;"></i>
 			                                        </div>
 													<input id="producto_id" name="producto_id" type="hidden">
 												</div>
@@ -141,9 +141,9 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<div class="col-lg-8 col-lg-offset-10">
+											<div class="col-lg-8 col-lg-offset-4">
 												<div class="input-group ">
-													<button id="agregar_producto" name="agregar_producto" type="button" class="btn btn-primary">
+													<button id="agregar_producto" name="agregar_producto" type="button" class="btn btn-flat btn-primary">
 														<i class="icon-plus icon-white"></i>Agregar
 													</button>
 												</div>
@@ -170,11 +170,11 @@
 							</table>
 						</div>
 						<div class="box-footer" style="padding-left: 17px;">
-							<a href="<?php echo base_url();?>logistica/views/cons_ordencompra/" type="reset" class="btn btn-success btn-cancelar" >
+							<a href="<?php echo base_url();?>logistica/views/cons_ordencompra/" type="reset" class="btn btn-flat btn-default btn-cancelar" >
 								<i class="icon icon-white icon-arrowthick-w"></i>
 								Volver
 							</a>
-							<button id="btn_enviar_ordcom" type="submit" class="btn btn-primary" style="float: right;">
+							<button id="btn_enviar_ordcom" type="submit" class="btn btn-flat btn-primary" style="float: right;">
 								<i class="icon icon-white icon-save"></i>
 								Guardar
 							</button>
@@ -300,23 +300,28 @@
 				</div>				
 			</div>
 			</div>
-			<div class="modal hide fade" id="agregarproductos">
-				<div class="modal-header">
-					<h3>Atención</h3>
-				</div>
-				<div class="modal-body">
-					<div class="alert alert-error">
-						<p>
-							<i class="icon icon-alert icon-red"></i>
-							Necesitas agregar un Pedido o Producto
-						</p>
-					</div>
+		
 
-				</div>
-				<div class="modal-footer">
-					<a href="#" class="btn" data-dismiss="modal">Aceptar</a>
-				</div>
+			<div class="modal fade" id="agregarproductos">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title"><i class="fa fa-exclamation-triangle"></i> Atención! </h4>
+						</div>
+						<div class="modal-body">
+							<div class="alert alert-danger alert-dismissable">
+								<p>
+									Necesitas agregar un Pedido o Producto
+								</p>
+							</div>
+						</div>
+						<div class="modal-footer clearfix">
+							<a href="#" class="btn" data-dismiss="modal">Aceptar</a>
+						</div>
+					</div><!-- /.modal-content -->
+            	</div><!-- /.modal-dialog -->
 			</div>
+
 				</div>
 			</div>
 		</div>

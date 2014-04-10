@@ -41,7 +41,7 @@
 											<div class="input-group">                                            
 	                                            <input class="form-control" id="producto" type="text" placeholder="Producto" readonly>
 	                                            <div class="btn btn-info btn-flat input-group-addon btn-buscarp">
-	                                                <i class="fa fa-search"></i>
+	                                                <i style="color:white;" class="fa fa-search"></i>
 	                                            </div>
 											</div>
 										</div>
@@ -372,7 +372,11 @@
 							<div class="box-body">
 								<ul class="pager wizard">
 									<li class="previous">
+
 										<a class="btn btn-default" href="javascript:">Antras</a>
+
+										<a class="btn btn-default" href="<?php echo base_url();?>ventas/views/cons_ventas/">Atrás</a>
+
 									</li>
 									<li class="next">
 										<a class="btn btn-default" href="javascript:">Siguiente</a>

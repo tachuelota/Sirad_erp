@@ -19,8 +19,8 @@
 						<div class="row-fluid">
 							<div class="span6"></div>
 							<div class="span6">
-								<input id="xlsresumengen" type="button" value="Reporte Resumen" class="btn btn-success" style="float: right; margin: 10px 10px 0 0;"/>
-								<input id="xlsvalorizadogen" type="button" value="Reporte Valorizado" class="btn btn-success" style="float: right; margin: 10px 10px 0 0;"/>
+								<input id="xlsresumengen" type="button" value="Reporte Resumen" class="btn btn-flat btn-success" style="float: right; margin: 10px 10px 0 0;"/>
+								<input id="xlsvalorizadogen" type="button" value="Reporte Valorizado" class="btn btn-flat btn-success" style="float: right; margin: 10px 10px 0 0;"/>
 							</div>
 						</div>
 						<br/>
@@ -36,9 +36,7 @@
 											<span id="spandesc" class="input-group-addon"><i class="fa fa-calendar"></i></span>
 										</div>
 									</div>
-									<button id="buscarfecha" name="buscarfecha" type="button" class="btn btn-info btn-buscarp" style="margin: 0 18px;"> <i class="icon-search icon-white"></i>
-											Buscar
-										</button>
+									<button id="buscarfecha" name="buscarfecha" type="button" class="btn btn-flat btn-info btn-buscarp" style="margin: 0 18px;"><i class="fa fa-search"></i> Buscar</button>
 								</div>
 							</fieldset>
 						</div>

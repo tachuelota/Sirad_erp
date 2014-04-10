@@ -142,19 +142,15 @@ class productos extends CI_Controller
 				'nProductoUtiBruta'=>$UtiBruta,'cProductoEst'=>$Estado,
 				'nProductoPVenta'=>$PrecioVenta,'nProductoUnidMedida'=>$UnidadMedia);		
 			
-			if($this->pro->update($Productoid,$data)){
-				$return = array('responseCode'=>200, 'datos'=>$data);
-			}
-			else{
-				$return = array('responseCode'=>400, 'greeting'=>'Bad');
-			}		
+			if(!$this->pro->update($Productoid,$data))
+				$this->output->set_status_header('400');
 		}
-		else {
-			$return = array("responseCode"=>400, "greeting"=>"Bad");
-		} 
-	
-		$return = json_encode($return);
-		echo $return;
+		else
+			$this->output->set_status_header('400');
+		
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode("ok"));
 	} 
 }
 

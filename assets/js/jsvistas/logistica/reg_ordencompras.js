@@ -179,7 +179,6 @@ $(document).ready(function(){
 		return datoscompra;
 	}
 
-
 	var successOrdenCompra = function(){
 		$.unblockUI({
             onUnblock: function(){
@@ -188,7 +187,6 @@ $(document).ready(function(){
         });
 	}
 
-
 	//REGISTRAR ORDEN DE COMPRA
 	$("#btn_enviar_ordcom").click(function(event){
 		event.preventDefault();
@@ -196,10 +194,10 @@ $(document).ready(function(){
 		{
 			if($("#RegistrarOrdenCompraForm").validationEngine('validate'))
 				$.blockUI({ 
-				onBlock: function()
-				{ 
-					enviar($("#RegistrarOrdenCompraForm").attr("action-1"),prepararDatos(), successOrdenCompra, null);
-				}
+					onBlock: function()
+					{ 
+						enviar($("#RegistrarOrdenCompraForm").attr("action-1"),prepararDatos(), successOrdenCompra, null);
+					}
 	        	});				
 		}
 		else

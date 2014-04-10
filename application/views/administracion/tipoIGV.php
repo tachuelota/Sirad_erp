@@ -81,9 +81,15 @@
 										</fieldset>
 									</div>
 									<div class="modal-footer">
+<<<<<<< HEAD
 										<button type="reset" class="btn btn-cancelarprov" data-dismiss="modal">Cancelar</button>
-										<button id="btn-tipoigv-reg" type="submit" class="btn btn-primary ">Guardar</button>
+										<button id="btn-tipoigv-reg" type="submit" class="btn btn-primary ">Registrar</button>
 										<button id="btn-tipoigv-edi" type="button" class="btn btn-primary " style="display:none">Guardar</button>
+=======
+										<button type="reset" class="btn btn-flat btn-cancelarprov" data-dismiss="modal">Cancelar</button>
+										<button id="btn-tipoigv-reg" type="submit" class="btn btn-flat btn-primary ">Registrar</button>
+										<button id="btn-tipoigv-edi" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>
+>>>>>>> 38c565677f0dc264ba8f244ba6fdf0c2e8899a06
 									</div>
 								</form>
 							</div>

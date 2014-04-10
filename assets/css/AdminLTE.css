@@ -68,7 +68,7 @@ body > .header {
 }
 @media screen and (min-width: 992px) {
   .left-side {
-    top: 50px;
+    top: 60px;
   }
   /*Right side strech mode*/
   .right-side.strech {
@@ -186,28 +186,28 @@ img {
   background-color: #222222 !important;
 }
 .bg-red {
-  background-color: #f56954 !important;
+  background-color: #DE4149 !important;
 }
 .bg-yellow {
-  background-color: #f39c12 !important;
+  background-color: #F1B900 !important;
 }
 .bg-aqua {
-  background-color: #00c0ef !important;
+  background-color: #027FBA !important;
 }
 .bg-blue {
-  background-color: #0073b7 !important;
+  background-color: #014B6E !important;
 }
 .bg-light-blue {
-  background-color: #3c8dbc !important;
+  background-color: #01547B !important;
 }
 .bg-green {
-  background-color: #00a65a !important;
+  background-color: #057B61 !important;
 }
 .bg-navy {
   background-color: #001f3f !important;
 }
 .bg-teal {
-  background-color: #39cccc !important;
+  background-color: #02ABFA !important;
 }
 .bg-olive {
   background-color: #3d9970 !important;
@@ -222,7 +222,7 @@ img {
   background-color: #f012be !important;
 }
 .bg-purple {
-  background-color: #932ab6 !important;
+  background-color: #7525CD !important;
 }
 .bg-maroon {
   background-color: #85144b !important;
@@ -336,13 +336,13 @@ body > .header {
   z-index: 1030;
 }
 body > .header .navbar {
-  height: 50px;
+  height: 60px;
   margin-bottom: 0;
   margin-left: 220px;
 }
 body > .header .navbar .sidebar-toggle {
   float: left;
-  padding: 9px 5px;
+  padding: 15px 5px;
   margin-top: 8px;
   margin-right: 0;
   margin-bottom: 8px;
@@ -397,13 +397,13 @@ body > .header .navbar .nav > li > a:hover > .label {
 body > .header .logo {
   float: left;
   font-size: 20px;
-  line-height: 50px;
+  line-height: 60px;
   text-align: center;
   padding: 0 10px;
   width: 220px;
   font-family: 'Kaushan Script', cursive;
   font-weight: 500;
-  height: 50px;
+  height: 60px;
   display: block;
 }
 body > .header .logo .icon {
@@ -865,7 +865,7 @@ body > .header .logo .icon {
 .navbar-nav > .user-menu > .dropdown-menu > li.user-header {
   height: 175px;
   padding: 10px;
-  background: #3c8dbc;
+  background: #014B6E;
   text-align: center;
 }
 .navbar-nav > .user-menu > .dropdown-menu > li.user-header > img {
@@ -1170,7 +1170,7 @@ body > .header .logo .icon {
   background: rgba(0, 0, 0, 0.15);
 }
 .small-box h3 {
-  font-size: 38px;
+  font-size: 30px; /*38*/
   font-weight: bold;
   margin: 0 0 10px 0;
   white-space: nowrap;
@@ -1765,7 +1765,7 @@ Component: timeline
   border-bottom-color: #d9dadc;
 }
 .btn.btn-primary {
-  background-color: #3c8dbc;
+  background-color: #027FBA;
   border-color: #367fa9;
 }
 .btn.btn-primary:hover,
@@ -1774,7 +1774,7 @@ Component: timeline
   background-color: #367fa9;
 }
 .btn.btn-success {
-  background-color: #00a65a;
+  background-color: #019249;
   border-color: #008d4c;
 }
 .btn.btn-success:hover,
@@ -1783,7 +1783,7 @@ Component: timeline
   background-color: #008d4c;
 }
 .btn.btn-info {
-  background-color: #00c0ef;
+  background-color: #027FBA;
   border-color: #00acd6;
 }
 .btn.btn-info:hover,
@@ -2429,7 +2429,7 @@ Component: timeline
 */
 /* skin-blue navbar */
 .skin-blue .navbar {
-  background-color: #3c8dbc;
+  background-color: #014B6E;
 }
 .skin-blue .navbar .nav a {
   color: rgba(255, 255, 255, 0.8);
@@ -2445,6 +2445,7 @@ Component: timeline
 }
 .skin-blue .navbar .navbar-right > .nav {
   margin-right: 10px;
+  margin-top: 5px;
 }
 .skin-blue .navbar .sidebar-toggle .icon-bar {
   background: rgba(255, 255, 255, 0.8);
@@ -2454,7 +2455,7 @@ Component: timeline
 }
 /* skin-blue logo */
 .skin-blue .logo {
-  background-color: #367fa9;
+  background-color: #014B6E;
   color: #f9f9f9;
 }
 .skin-blue .logo > a {

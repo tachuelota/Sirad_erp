@@ -14,7 +14,7 @@ class servicios extends CI_Controller {
 		foreach ($cargos as $key => $cargo) {
 		switch ($cargo["cCargosEst"]) {				
 			    case 0:
-			        $cargos[$key]["estadolabel"] = '<span class="label label-info">Inhabilitado</span>';
+			        $cargos[$key]["estadolabel"] = '<span class="label label-danger">Inhabilitado</span>';
 			        break;
 			    case 1:
 			        $cargos[$key]["estadolabel"] = '<span class="label label-success">Habilitado</span>';
@@ -42,7 +42,7 @@ class servicios extends CI_Controller {
 		foreach ($categorias as $key => $categoria) {
 		switch ($categoria["cCategoriaEst"]) {				
 			    case 0:
-			        $categorias[$key]["estadolabel"] = '<span class="label label-info">Inhabilitado</span>';
+			        $categorias[$key]["estadolabel"] = '<span class="label label-danger">Inhabilitado</span>';
 			        break;
 			    case 1:
 			        $categorias[$key]["estadolabel"] = '<span class="label label-success">Habilitado</span>';
@@ -69,7 +69,7 @@ class servicios extends CI_Controller {
 		foreach ($marcas as $key => $marca) {
 			switch ($marca["cMarcaEst"]) {				
 			    case 0:
-			        $marcas[$key]["estadolabel"] = '<span class="label label-info">Inhabilitado</span>';
+			        $marcas[$key]["estadolabel"] = '<span class="label label-danger">Inhabilitado</span>';
 			        break;
 			    case 1:
 			        $marcas[$key]["estadolabel"] = '<span class="label label-success">Habilitado</span>';
@@ -87,7 +87,7 @@ class servicios extends CI_Controller {
 		foreach ($trabajadores as $key => $trabajador) {
 			switch ($trabajador["cPersonalEst"]) {				
 			    case 0:
-			        $trabajadores[$key]["estadolabel"] = '<span class="label label-info">Inhabilitado</span>';
+			        $trabajadores[$key]["estadolabel"] = '<span class="label label-danger">Inhabilitado</span>';
 			        break;
 			    case 1:
 			        $trabajadores[$key]["estadolabel"] = '<span class="label label-success">Habilitado</span>';
@@ -131,7 +131,7 @@ class servicios extends CI_Controller {
 			foreach ($tipomoneda as $key => $tipomonedas) {
 				switch ($tipomonedas["cTipoMonedaEst"]) {		
 				    case 0:
-				        $tipomoneda[$key]["estadolabel"] = '<span class="label label-info">Inhabilitado</span>';
+				        $tipomoneda[$key]["estadolabel"] = '<span class="label label-danger">Inhabilitado</span>';
 				        break;
 				    case 1:
 				        $tipomoneda[$key]["estadolabel"] = '<span class="label label-success">Habilitado</span>';
@@ -170,7 +170,7 @@ class servicios extends CI_Controller {
 			foreach ($tipoigv as $key => $tipo_igv) {
 				switch ($tipo_igv["cTipoIGVEst"]) {				
 				    case 0:
-				        $tipoigv[$key]["estadolabel"] = '<span class="label label-info">Inhabilitado</span>';
+				        $tipoigv[$key]["estadolabel"] = '<span class="label label-danger">Inhabilitado</span>';
 				        break;
 				    case 1:
 				        $tipoigv[$key]["estadolabel"] = '<span class="label label-success">Habilitado</span>';
@@ -194,7 +194,7 @@ class servicios extends CI_Controller {
 		foreach ($zonas as $key => $zona) {
 			switch ($zona["nZonaEst"]) {				
 			    case 0:
-			        $zonas[$key]["estadolabel"] = '<span class="label label-info">Inhabilitado</span>';
+			        $zonas[$key]["estadolabel"] = '<span class="label label-danger">Inhabilitado</span>';
 			        break;
 			    case 1:
 			        $zonas[$key]["estadolabel"] = '<span class="label label-success">Habilitado</span>';
@@ -261,7 +261,7 @@ class servicios extends CI_Controller {
 		foreach ($locales as $key => $local) {
 			switch ($local["nLocalEst"]) {				
 			    case 0:
-			        $locales[$key]["estadolabel"] = '<span class="label label-info">Inhabilitado</span>';
+			        $locales[$key]["estadolabel"] = '<span class="label label-danger">Inhabilitado</span>';
 			        break;
 			    case 1:
 			        $locales[$key]["estadolabel"] = '<span class="label label-success">Habilitado</span>';

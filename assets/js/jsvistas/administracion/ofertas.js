@@ -9,7 +9,13 @@ $(document).ready(function(){
 	$('#enviar_oferta_btn').click(function(event){
 		event.preventDefault();
 		if($("#OfertasForm").validationEngine('validate'))
-		enviar($("#OfertasForm").attr("action-1"),{formulario:$("#OfertasForm").serializeObject()}, successOferta, null)
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#OfertaModal').modal('hide');	
+					enviar($("#OfertasForm").attr("action-1"),{formulario:$("#OfertasForm").serializeObject()}, successOferta, null)
+				}
+			});
 	});
 
 	var Actions = new DTActions({
@@ -20,9 +26,12 @@ $(document).ready(function(){
 	});
 
 	var successOferta = function(){
-		$('#OfertaModal').modal('hide');
-		$('#OfertasForm').reset();
-		OfertasTable.fnReloadAjax();
+		$.unblockUI({
+		    onUnblock: function(){
+				$('#OfertasForm').reset();
+				OfertasTable.fnReloadAjax();
+			}
+		});
 	}
 
 	OfertaOptions = {

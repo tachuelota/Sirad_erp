@@ -62,7 +62,7 @@
 															<div class="input-group">
 																<input class="form-control focused validate[required,custom[onlyNumberSp]] validate[maxSize[11]] validate[minSize[11]]" id="ruc" name="ruc" type="text" data-prompt-position="topLeft">
 																<div class="btn btn-info btn-flat input-group-addon btn-validar">
-	                                                				<i class="ion-checkmark"></i>
+	                                                				<i class="ion-checkmark" style="color:white;"></i>
 	                                            				</div>
 															</div>
 														</div>
@@ -177,9 +177,9 @@
 										</fieldset>
 									</div>
 									<div class="modal-footer">
-										<button type="reset" class="btn btn-cancelarprov" data-dismiss="modal">Cancelar</button>
-										<button id="btn-reg-proveedor" type="button" class="btn btn-primary ">Registrar</button>
-										<button id="btn-editar-proveedor" type="button" class="btn btn-primary " style="display:none">Guardar</button>
+										<button type="reset" class="btn btn-flat btn-cancelarprov" data-dismiss="modal">Cancelar</button>
+										<button id="btn-reg-proveedor" type="button" class="btn btn-flat btn-primary ">Registrar</button>
+										<button id="btn-editar-proveedor" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>
 									</div>
 								</form>
 							</div>

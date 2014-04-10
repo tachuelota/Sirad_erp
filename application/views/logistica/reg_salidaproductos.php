@@ -204,28 +204,27 @@
 						</div>
 					</div>
 				</div>
-					
+				
 				<div class="modal fade" id="agregarproductos">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h3>Atención</h3>
+								<h4 class="modal-title"><i class="fa fa-exclamation-triangle"></i> Atención! </h4>
 							</div>
 							<div class="modal-body">
-								<div class="alert alert-error">
+								<div class="alert alert-danger alert-dismissable">
 									<p>
-										<i class="icon icon-alert icon-red"></i>
 										Necesitas agregar Productos
 									</p>
 								</div>
-
 							</div>
-							<div class="modal-footer">
+							<div class="modal-footer clearfix">
 								<a href="#" class="btn" data-dismiss="modal">Aceptar</a>
 							</div>
-						</div>
-					</div>
+						</div><!-- /.modal-content -->
+	            	</div><!-- /.modal-dialog -->
 				</div>
+
 			</div>
 		</div>
 	</section>

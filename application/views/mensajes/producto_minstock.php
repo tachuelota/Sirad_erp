@@ -13,20 +13,20 @@
 			<div class="col-xs-12">
 				<div class="box">
 					<div class="box-header">
-						<h4 class="box-title">Notificación de Productos</h4>
+						<h4 class="box-title">Productos con minimo de Stock</h4>
 					</div>
 					<div class="box-header">
 						<div class="box-tools pull-right">
-							<div>
-								<form method="post" target="_blank" id="CreatePDFForm">
-									<input type="hidden" name="title" id="title"/>
-									<input type="hidden" name="table_productos" id="table_productos"/>
-									<div>						
-										<button type="button" class="btn btn-success" id="xlsutton">Exportar</button>	
-					          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#compose-modal">Enviar</button>									       
-									</div>
-								</form>
-							</div>																							
+							<form method="post" target="_blank" id="CreatePDFForm" style="display:inline;">
+								<input type="hidden" name="title" id="title"/>
+								<input type="hidden" name="table_productos" id="table_productos"/>    
+				                <button href="#" id="xlsutton" class="btn btn-flat btn-success">
+				                    Exportar <i class="fa fa-arrow-circle-right"></i>
+				                </button>
+							</form>							
+							<input id="pdfgen" type="button" value="Reporte General" class="btn btn-flat btn-success" />
+							<!--<button id="" type="button" class="btn btn-success">Reporte</button>-->
+							<button type="button" class="btn btn-flat btn-primary" data-toggle="modal" data-target="#compose-modal">Enviar</button>	
 						</div>
 
 					</div>
@@ -80,7 +80,7 @@
 			                                </div>
 			                            </div>
 			                            <div class="form-group">
-			                                <textarea name="message" id="email_message" class="form-control" placeholder="Message" style="height: 120px;"></textarea>
+			                                <textarea name="message" id="email_message" class="form-control" placeholder="Message" style="height: 120px;" ></textarea>
 			                            </div>
 			                        </div>
 			                        <div class="modal-footer clearfix">
