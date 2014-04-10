@@ -40,6 +40,7 @@ class servicios extends CI_Controller {
 			        $proveedores[$key]["estadolabel"] = '<span class="label label-success">Habilitado</span>';
 			        break;
 			}
+
 		}
 		$this->output
 			->set_content_type('application/json')

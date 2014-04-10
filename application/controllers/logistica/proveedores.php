@@ -108,8 +108,9 @@ class proveedores extends CI_Controller
 			'cProveedorEmail'=>$Email,'cProveedorSitioWeb'=>$SitioWeb,'cProveedorDirec'=>$Direccion,
 			'cProveedorCCorriente'=>$Corriente,'cProveedorDireccionFiscal'=>$dirFiscal,
 			'nProveedorComprobantePago'=>$comprobantePago,'nProveedorEstado'=>$estado,
-			'dProveedorFechaInscripcion'=>$fecInscripcion->format('Y-m-d'),'dProveedorFechaInicioActividades'=>$fecInicio->format('Y-m-d'),
-			'nProveedorTipoContribuyente'=>$tipContribuyente  );		
+			'dProveedorFechaInscripcion'=>$fecInscripcion->format('Y-m-d'),
+			'dProveedorFechaInicioActividades'=>$fecInicio->format('Y-m-d'),
+			'nProveedorTipoContribuyente'=>$tipContribuyente);		
 			
 			if($this->pro->update($Codigo,$data)){
 				$return = array("responseCode"=>200, "datos"=>"ok");

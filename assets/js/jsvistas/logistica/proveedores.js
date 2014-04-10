@@ -15,8 +15,10 @@ $(document).ready(function(){
 	  		$("#paginaweb").val(aData.cProveedorSitioWeb);
 	  		$("#direccion").val(aData.cProveedorDirec);
 	  		$("#ccorriente").val(aData.cProveedorCCorriente);
+	  		$("#dirfiscal").val(aData.cProveedorDireccionFiscal);
+	  		$("#fecInscripcion").val(aData.dProveedorFechaInscripcion);
+	  		$("#inicioActividades").val(aData.dProveedorFechaInicioActividades);
 	  		//$("#stockmin").val(aData.nProductoStockMin);
-
 	  		$("#codigo").val(aData.nProveedor_id);
 		},
 	});		
@@ -82,6 +84,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		if($("#ProveedorForm").validationEngine('validate'))
 			enviar($("#ProveedorForm").attr("action-2"),{formulario:$("#ProveedorForm").serializeObject()}, successProveedor, null)
+				//console.log($("#ProveedorForm").serializeObject());
 	});
 
 	//Modal verificar Acciones	

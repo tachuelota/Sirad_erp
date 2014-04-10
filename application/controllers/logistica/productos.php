@@ -123,19 +123,24 @@ class productos extends CI_Controller
 			$Descripcion = $form["descripcion"];
 			$PContado = 0;
 			$PCredito = 0;
-			$PCosto = $form["preciocosto"];
+			//$PCosto = $form["preciocosto"];
+			$PCosto = 0.00;
 			$StockMin = $form["stockmin"];
 			$StockMax = $form["stockmax"];
 			$Estado=$form["estado"];
 			$PrecioVenta=$form["precioventa"];
 			$UnidadMedia=$form["unimedida"];
 							
-			$data = array('cProductoSerie' => $Serie,'cProductoTalla' =>$Talla,'nProductoMarca'=>$Marca,'nProductoTipo'=> $Tipo,
-			'nCategoria_id' => $Categoria,'cProductoDesc' => $Descripcion,'cProductoImage' => $Imagen,'nProductoPContado' => $PContado,
-			'nProductoPCredito'=>$PCredito,'nProductoPCosto'=>$PCosto ,'nProductoStockMin'=>$StockMin ,'nProductoStockMax'=>$StockMax,
-			'nProductoStock'=>$Stock,'nProductoPorcUti'=>$PorcUti,'nProductoUtiBruta'=>$UtiBruta,'cProductoEst'=>$Estado,
-			'nProductoPVenta'=>$PrecioVenta,
-			'nProductoUnidMedida'=>$UnidadMedia);		
+			$data = array(
+				'cProductoSerie' => $Serie,'cProductoTalla' =>$Talla,
+				'nProductoMarca'=>$Marca,'nProductoTipo'=> $Tipo,
+				'nCategoria_id' => $Categoria,'cProductoDesc' => $Descripcion,
+				'cProductoImage' => $Imagen,'nProductoPContado' => $PContado,
+				'nProductoPCredito'=>$PCredito,'nProductoPCosto'=>$PCosto ,
+				'nProductoStockMin'=>$StockMin ,'nProductoStockMax'=>$StockMax,
+				'nProductoStock'=>$Stock,'nProductoPorcUti'=>$PorcUti,
+				'nProductoUtiBruta'=>$UtiBruta,'cProductoEst'=>$Estado,
+				'nProductoPVenta'=>$PrecioVenta,'nProductoUnidMedida'=>$UnidadMedia);		
 			
 			if($this->pro->update($Productoid,$data)){
 				$return = array('responseCode'=>200, 'datos'=>$data);
