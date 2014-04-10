@@ -223,7 +223,7 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<a href="#" class="btn btn-flat" data-dismiss="modal">No</a>
+				<a href="#" class="btn btn-flat btn-default" data-dismiss="modal">No</a>
 				<a href="#" class="btn btn-flat btn-primary" id="btn-cierremes">Sí</a>
 			</div>
 		</div><!-- /.modal-content -->
@@ -244,7 +244,7 @@
 				<p>¡El cierre de mes se ha realizado exitosamente!</p>
 			</div>
 			<div class="modal-footer">
-				<a href="#" class="btn" data-dismiss="modal">Cerrar</a>
+				<a href="#" class="btn btn-default" data-dismiss="modal">Cerrar</a>
 			</div>
 		</div>
 	</div>

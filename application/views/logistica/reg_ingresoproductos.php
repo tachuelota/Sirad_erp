@@ -95,7 +95,7 @@
 											<div class="input-group">
 												<input id="id_pedido" name="id_pedido" type="hidden">
 												<input class="form-control" id="ordped" name="ordped" type="text" readonly>
-												<div class="btn btn-info btn-flat input-group-addon" id="btn-reg"> <i class="fa fa-search"></i>
+												<div class="btn btn-info btn-flat input-group-addon" id="btn-reg"> <i class="fa fa-search" style="color:white;"></i>
 												</div>
 											</div>
 										</div>
@@ -135,7 +135,7 @@
 												<div class="input-group">
 													<input class="form-control" id="producto" type="text" readonly>
 													<input id="producto_id" name="producto_id" type="hidden">
-													<div class="btn btn-info btn-flat input-group-addon btn-buscarp" id="btn-producto"> <i class="fa fa-search"></i>
+													<div class="btn btn-info btn-flat input-group-addon btn-buscarp" id="btn-producto"> <i class="fa fa-search" style="color:white;"></i>
 													</div>
 												</div>
 											</div>
@@ -184,11 +184,11 @@
 						<hr>
 					</div>
 					<div class="box-footer">
-						<a href="<?php echo base_url();?>logistica/views/cons_ingresoproductos/" type="reset" class="btn btn-success btn-cancelar" >
+						<a href="<?php echo base_url();?>logistica/views/cons_ingresoproductos/" class="btn btn-flat btn-default">
 							<i class="icon icon-white icon-arrowthick-w"></i>
 							Volver
 						</a>
-						<button type="button" id="enviar_ingreso_producto" class="btn btn-primary" style="float: right;">
+						<button type="button" id="enviar_ingreso_producto" class="btn btn-flat btn-primary" style="float: right;">
 							<i class="icon icon-white icon-save"></i>
 							Guardar
 						</button>

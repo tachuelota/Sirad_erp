@@ -6,7 +6,7 @@
         </h1>
         <ol class="breadcrumb">
             <li><a href="<?php echo base_url();?>">Home</a></li>
-            <li class="active">Administracion</li>
+            <li class="active">Administración</li>
         </ol>
     </section>
     <section class="content">
