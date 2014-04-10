@@ -92,16 +92,18 @@
 	                        </li>	                        
 	                        <!-- Menu Body -->
 	                        <li class="user-body">
-	                            <div class="col-xs-4 text-center">
+	                            <div class="col-xs-6 text-center">
 	                                <a href="<?php echo base_url();?>auth/select_local">Seleccionar Local</a>
 	                            </div>
-	                            <div class="col-xs-4 text-center">
+	                            <div class="col-xs-6 text-center">
 	                                <a href="<?php echo base_url();?>administracion/views/change_password">Cambiar Contraseña</a>
 	                            </div>
-	                            <div class="col-xs-4 text-center">
-	                                <a href="<?php echo base_url();?>logout">Salir</a>
-	                            </div>
 	                        </li>
+	                        <li class="user-footer">
+                                <div class="pull-right">
+                                    <a href="<?php echo base_url();?>logout" class="btn btn-default btn-flat">Salir</a>
+                                </div>
+                            </li>
 	                    </ul>
 	                </li>
 	            </ul>
