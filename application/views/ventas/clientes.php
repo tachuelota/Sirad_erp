@@ -20,7 +20,7 @@
 				<div class="box">
 					<div class="box-header">
 						<div class="box-tools pull-right">
-							<input id="pdfgen" type="button" value="Reporte General" class="btn btn-success" />
+							<input id="pdfgen" type="button" value="Reporte General" class="btn btn-flat btn-success" />
 							<!--<a id="pdfgen" type="button" class="btn btn-flat btn-success"/><i class="fa fa-file-text-o"></i> Reporte General</a>-->
 							<a href="#" class="btn btn-default btn-flat btn-registrar"> <i class="glyphicon glyphicon-plus"></i>
 							</a>
@@ -141,9 +141,9 @@
 											</div>-->
 										</div>
 										<div class="modal-footer">
-											<button type="reset" class="btn" data-dismiss="modal">Cancelar</button>
-											<button id="btn-reg-clientes" type="button" class="btn btn-primary">Registrar</button>
-											<button id="btn-editar-clientes" type="button" class="btn btn-primary " style="display:none">Guardar</button>
+											<button type="reset" class="btn btn-flat" data-dismiss="modal">Cancelar</button>
+											<button id="btn-reg-clientes" type="button" class="btn btn-flat btn-primary">Registrar</button>
+											<button id="btn-editar-clientes" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>
 										</div>
 									</form>
 								</div>

@@ -35,7 +35,7 @@
 	<!-- header logo: style can be found in header.less -->
 	<header class="header" >
 	    <a href="<?php echo base_url();?>" class="logo" <?php if(isset($isloginview)) echo 'style="display:none"'; ?>>
-	       <img src="<?php echo base_url();?>/assets/img/sirad3.png" alt="User Image" width="160px" >
+	       <img src="<?php echo base_url();?>/assets/img/sirad-logo.png" alt="User Image" width="160px" >
 	    </a>
 	    <!-- Header Navbar: style can be found in header.less -->
 	    <nav class="navbar navbar-static-top" role="navigation" <?php if(isset($isloginview)) echo 'style="display:none"'; ?>>

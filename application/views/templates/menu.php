@@ -217,8 +217,8 @@
 				<p>¿Está seguro que desea cerrar el mes?</p>
 			</div>
 			<div class="modal-footer">
-				<a href="#" class="btn" data-dismiss="modal">No</a>
-				<a href="#" class="btn btn-primary" id="btn-cierremes">Sí</a>
+				<a href="#" class="btn btn-flat" data-dismiss="modal">No</a>
+				<a href="#" class="btn btn-flat btn-primary" id="btn-cierremes">Sí</a>
 			</div>
 		</div>
 	</div>
@@ -254,7 +254,7 @@
 					<div class="form-horizontal">
 						<div class="form-group">
 							<label class="col-lg-4 control-label" for="datecuadrecaja">Fecha</label>
-							<div class="col-lg-8">
+							<div class="col-lg-5">
 								<div class="input-group">
 									<input id="fecha01" name="fecha01" type="text" class="form-control datepicker"  style="margin: 0 18px 0 0;">
 									<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -288,7 +288,7 @@
 				            <div class="small-box small-box bg-green">
 				                <div class="inner">
 				                    <h3>
-				                        Exel
+				                        Excel
 				                    </h3>
 				                    <p>
 				                       .xls

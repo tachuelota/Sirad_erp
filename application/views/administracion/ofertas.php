@@ -88,8 +88,8 @@
 										</fieldset>
 									</div>
 									<div class="modal-footer">
-										<button type="reset" class="btn" data-dismiss="modal">Cancelar</button>
-										<button id="enviar_oferta_btn" type="button" class="btn btn-primary">Guardar</button>
+										<button type="reset" class="btn btn-flat" data-dismiss="modal">Cancelar</button>
+										<button id="enviar_oferta_btn" type="button" class="btn btn-flat btn-primary">Guardar</button>
 									</div>
 								</form>
 							</div>
