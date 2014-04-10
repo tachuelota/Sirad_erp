@@ -13,7 +13,7 @@
 			<div class="col-xs-12">
 				<div class="box">
 					<div class="box-header">
-						<h4 class="box-title">Notificación de Productos</h4>
+						<h4 class="box-title">Productos con minimo de Stock</h4>
 					</div>
 					<div class="box-header">
 						<div class="box-tools pull-right">
@@ -80,7 +80,7 @@
 			                                </div>
 			                            </div>
 			                            <div class="form-group">
-			                                <textarea name="message" id="email_message" class="form-control" placeholder="Message" style="height: 120px;"></textarea>
+			                                <textarea name="message" id="email_message" class="form-control" placeholder="Message" style="height: 120px;" ></textarea>
 			                            </div>
 			                        </div>
 			                        <div class="modal-footer clearfix">

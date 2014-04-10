@@ -109,7 +109,7 @@ $autoload['language'] = array('auth');
 |
 */
 
-$autoload['model'] = array();
+$autoload['model'] = array('mensajes/notificaciones_model');
 
 
 /* End of file autoload.php */

@@ -19,4 +19,15 @@ class servicios extends CI_Controller {
 				->set_content_type('application/json')
 				->set_output(json_encode(array('aaData' => $result)));		
 	}
+
+	public function getMensajes(){
+			$this->load->model('mensajes/notificaciones_model','notm');			
+			$stockmin = $this->notm->getnotificaciones();
+
+			$this->output
+				->set_content_type('application/json')
+				->set_output(json_encode($stockmin));		
+	}
+
+
 }
