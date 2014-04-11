@@ -21,7 +21,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		$("#producto_id").val(SelectProductoData[0].nProducto_id);
 		$('#producto').val(SelectProductoData[0].cProductoDesc);
-		$('#modalBuscarProducto').modal('hide');
+		//$('#modalBuscarProducto').modal('hide');
 	});
 
 	$("#xlsutton").click(function(){
