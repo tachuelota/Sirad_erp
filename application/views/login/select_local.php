@@ -15,7 +15,7 @@
 				</div>
             </div>
             <div class="footer">                                                               
-                <button type="submit" class="btn bg-olive btn-block">Ingresar</button>  
+                <button type="submit" class="btn bg-light-blue btn-block">Ingresar</button>  
                 
                 <!--p><a href="#">I forgot my password</a></p-->
             </div>

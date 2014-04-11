@@ -6,7 +6,7 @@
 				<a href="<?php echo base_url();?>">Home</a>
 			</li>
 			<li>
-				<a href="<?php echo base_url();?>logistica">Logistica</a>
+				<a href="<?php echo base_url();?>logistica">Logística</a>
 			</li>
 			<li class="active">Kardex</li>
 		</ol>
@@ -52,8 +52,8 @@
 									<th>Tipo Producto</th>
 									<th>Tipo Ingreso</th>
 									<th>Cantidad</th>
-									<th>Prec. Unitario s/.</th>
-									<th>Total s/.</th>
+									<th>Prec. Unitario S/.</th>
+									<th>Total S/.</th>
 								</tr>
 							</thead>
 							<thead>

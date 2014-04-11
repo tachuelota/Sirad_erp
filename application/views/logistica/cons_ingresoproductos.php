@@ -6,7 +6,7 @@
 				<a href="<?php echo base_url();?>">Home</a>
 			</li>
 			<li>
-				<a href="<?php echo base_url();?>logistica">Logistica</a>
+				<a href="<?php echo base_url();?>logistica">Logística</a>
 			</li>
 			<li class="active">Ingreso de Producto</li>
 		</ol>

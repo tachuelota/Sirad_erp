@@ -9,7 +9,7 @@
 				<a href="<?php echo base_url();?>">Home</a>
 			</li>
 			<li>
-				<a href="<?php echo base_url();?>logistica">Logistica</a>
+				<a href="<?php echo base_url();?>logistica">Logística</a>
 			</li>
 			<li class="active">Ingreso de Productos</li>
 		</ol>
@@ -172,7 +172,7 @@
 						<table id="productos_table" class="table table-striped table-bordered bootstrap-datatable datatable">
 							<thead>
 								<tr>
-									<th>Codigo</th>
+									<th>Código</th>
 									<th>Producto</th>
 									<th>Cantidad</th>
 									<th>Precio Unitario</th>

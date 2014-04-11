@@ -28,7 +28,7 @@
 	        <div class="col-lg-3 col-xs-6">
                 <div class="small-box bg-green">
                     <div class="inner">
-                        <h3>Logistica</h3>
+                        <h3>Logística</h3>
                         <p>Administrar</p>
                     </div>
                     <div class="icon">
@@ -42,7 +42,7 @@
        		<div class="col-lg-3 col-xs-6">
                 <div class="small-box bg-yellow">
                     <div class="inner">
-                        <h3>Administracion</h3>
+                        <h3>Administración</h3>
                         <p>Administrar</p>
                     </div>
                     <div class="icon">

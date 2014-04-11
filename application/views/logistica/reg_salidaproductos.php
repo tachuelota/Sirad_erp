@@ -9,7 +9,7 @@
 				<a href="<?php echo base_url();?>administracion/">Home</a>
 			</li>
 			<li>
-				<a href="<?php echo base_url();?>logistica/">Logistica</a>
+				<a href="<?php echo base_url();?>logistica/">Logística</a>
 			</li>
 			<li class="active">Salida de Productos</li>
 		</ol>
@@ -73,7 +73,7 @@
 												<input class="form-control validate[required]" id="solicitante" name="solicitante" type="text" readonly data-prompt-position="topLeft">
 												<input id="solicitante_id" name="solicitante_id" type="hidden"  >
 												<div id="btn-buscar-trabajador" class="btn btn-info btn-flat input-group-addon btn-solicitante">
-	                                                <i class="fa fa-search"></i>
+	                                                <i class="fa fa-search" style="color:white;"></i>
 	                                            </div>
 											</div>
 										</div>
@@ -100,7 +100,7 @@
 												<input id="producto_id" name="producto_id" type="hidden">
 												<input class="form-control validate[required]" id="producto" name="producto" type="text" readonly>
 												<div id="btn-productos" class="btn btn-info btn-flat input-group-addon btn-buscarp">
-	                                                <i class="fa fa-search"></i>
+	                                                <i class="fa fa-search" style="color:white;"></i>
 	                                            </div>
 											</div>
 										</div>
@@ -116,7 +116,7 @@
 											</div>
 										</div>
 										<div class="col-lg-6">
-											<button type="submit" class="btn btn-primary col-lg-12" id="btn-agregar-detalle" name="btn-agregar-detalle">
+											<button type="submit" class="btn btn-flat btn-primary col-lg-12" id="btn-agregar-detalle" name="btn-agregar-detalle">
 											<i class="icon-plus icon-white"></i>
 											Agregar
 											</button>
@@ -139,17 +139,17 @@
 						</table>
 					</div>
 					<div class="box-footer">
-						<a href="<?php echo base_url();?>logistica/views/cons_salidaproductos/" class="btn btn-success"> <i class="icon icon-white icon-arrowthick-w"></i>
+						<a href="<?php echo base_url();?>logistica/views/cons_salidaproductos/" class="btn btn-flat btn-default"> <i class="icon icon-white icon-arrowthick-w"></i>
 							Volver
 						</a>
-						<button id="enviar_salida_producto" type="button" class="btn btn-primary" style="float: right;">
+						<button id="enviar_salida_producto" type="button" class="btn btn-flat btn-primary" style="float: right;">
 							<i class="icon icon-white icon-save"></i>
 							Guardar
 						</button>
 					</div>
 				</div>
 
-				<!-------MODAL PRODUCTOS---------->
+				<!--MODAL PRODUCTOS-->
 				<div class="modal fade" id="modalBuscarProducto">
 					<div class="modal-dialog">
 						<div class="modal-content">
@@ -170,14 +170,14 @@
 								</table>
 							</div>
 							<div class="modal-footer">
-								<a href="#" class="btn" data-dismiss="modal">Cancelar</a>
-								<a  id="select_producto" href="#" class="btn btn-primary">Seleccionar</a>
+								<a href="#" class="btn btn-flat btn-default" data-dismiss="modal">Cancelar</a>
+								<a  id="select_producto" href="#" class="btn btn-flat btn-primary">Seleccionar</a>
 							</div>
 						</div>
 					</div>
 				</div>
 					
-				<!------------------------Modal TRABAJADOR---------------------------------------->
+				<!--Modal TRABAJADOR-->
 				<div class="modal fade" id="modalBuscarTrabajador">
 					<div class="modal-dialog">
 						<div class="modal-content">

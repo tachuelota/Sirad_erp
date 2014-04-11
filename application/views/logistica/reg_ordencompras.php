@@ -6,7 +6,7 @@
 				<a href="<?php echo base_url();?>">Home</a>
 			</li>
 			<li>
-				<a href="<?php echo base_url();?>logistica">Logistica</a>
+				<a href="<?php echo base_url();?>logistica">Logística</a>
 			</li>
 			<li class="active">Orden de Compras</li>
 		</ol>
@@ -61,7 +61,7 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label for="docnumero" class="col-lg-4 control-label">Documento Numero</label>
+											<label for="docnumero" class="col-lg-4 control-label">Documento Número</label>
 											<div class="col-lg-8">
 												<div class="input-group">											
 													<input class="form-control focused validate[required,custom[onlyNumberSp]]" id="doc_numero" name="doc_numero" type="text">
@@ -157,7 +157,7 @@
 							<table id="productos_table" class="table table-striped table-bordered bootstrap-datatable datatable">
 								<thead>
 									<tr>
-										<th>Codigo</th>
+										<th>Código</th>
 										<th>Producto</th>
 										<th>Cantidad</th>
 										<th>Precio Unitario</th>

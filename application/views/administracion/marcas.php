@@ -6,7 +6,7 @@
 				<a href="<?php echo base_url();?>">Home</a>
 			</li>
 			<li>
-				<a href="<?php echo base_url();?>administracion">Administracion</a>
+				<a href="<?php echo base_url();?>administracion">Administración</a>
 			</li>
 			<li class="active">Marcas</li>
 		</ol>
@@ -70,7 +70,7 @@
 											</fieldset>
 										</div>
 										<div class="modal-footer">
-											<button type="reset" class="btn btn-flat" data-dismiss="modal">Cancelar</button>
+											<button type="reset" class="btn btn-flat btn-default" data-dismiss="modal">Cancelar</button>
 											<button id="btn-reg-marca" class="btn btn-flat btn-primary">Registrar</button>
 											<button id="btn-editar-marca" class="btn btn-flat btn-primary" style="display:none">Guardar</button>
 										</div>

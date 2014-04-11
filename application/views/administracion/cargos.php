@@ -6,7 +6,7 @@
 					<a href="<?php echo base_url();?>">Home</a>
 				</li>
 				<li>
-					<a href="<?php echo base_url();?>administracion">Administracion</a>
+					<a href="<?php echo base_url();?>administracion">Administración</a>
 				</li>
 				<li class="active">Cargos</li>
 			</ol>

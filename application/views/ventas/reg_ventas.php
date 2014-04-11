@@ -372,9 +372,6 @@
 							<div class="box-body">
 								<ul class="pager wizard">
 									<li class="previous">
-
-										<a class="btn btn-default" href="javascript:">Antras</a>
-
 										<a class="btn btn-default" href="<?php echo base_url();?>ventas/views/cons_ventas/">Atrás</a>
 
 									</li>
@@ -401,7 +398,7 @@
 							<table id="select_producto_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>ventas/servicios/getProductosToVenta" style="max-height: 450px;">
 								<thead>
 									<tr>
-										<th>Codigo</th>
+										<th>Código</th>
 										<th>Producto</th>
 										<th>Precio Venta</th>
 										<th>Marca</th>
@@ -441,8 +438,8 @@
 							</table>
 						</div>
 						<div class="modal-footer clearfix">
-							<a href="#" class="btn" data-dismiss="modal">Cancelar</a>
-							<a  id="select_producto" href="#" class="btn btn-primary">Seleccionar</a>
+							<a href="#" class="btn btn-flat btn-default" data-dismiss="modal">Cancelar</a>
+							<a  id="select_producto" href="#" class="btn btn-flat btn-primary">Seleccionar</a>
 						</div>
 					</div><!-- /.modal-content -->
             	</div><!-- /.modal-dialog -->

@@ -20,12 +20,12 @@
             	<?php if($this->ion_auth->in_group_type(3)): ?>
 	                <li>
 	                    <a href="<?php echo base_url();?>administracion/views">
-	                        <i class="fa fa-dashboard"></i> <span>Administracion</span>
+	                        <i class="fa fa-dashboard"></i> <span>Administración</span>
 	                    </a>
 	                </li>
 	            <?php endif ?>
 	            <?php if($this->ion_auth->in_group_type(1)): ?>
-	                <li class="treeview">
+	                <li id="dropventas" class="treeview">
 	                    <a href="#">
 	                        <i class="fa fa-shopping-cart"></i>
 	                        <span>Ventas</span>
@@ -71,7 +71,7 @@
 							<?php endif ?>
 							<?php if($this->ion_auth->in_group("ven_movi")): ?>
 							<li id="movimientos">
-								<a href="<?php echo base_url();?>ventas/views/movimientos">
+								<a class="ajax-link" href="<?php echo base_url();?>ventas/views/movimientos">
 									<i class="fa fa-money"></i>
 									Movimientos</span>
 								</a>
@@ -113,7 +113,7 @@
 	                </li>           
 				<?php endif ?>
 				<?php if($this->ion_auth->in_group_type(2)): ?>
-	                <li class="treeview">
+	                <li id="droplogistica" class="treeview">
 	                    <a href="#">
 	                        <i class="fa fa-laptop"></i>
 	                        <span>Logística</span>

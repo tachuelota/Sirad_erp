@@ -1,7 +1,7 @@
 	<aside class="right-side">
 		<section class="content-header">
         <h1>
-            Administracion
+            Administración
             <small>Opciones</small>
         </h1>
         <ol class="breadcrumb">
@@ -100,7 +100,7 @@
                 <div class="col-lg-3 col-xs-6">
                     <div class="small-box bg-purple">
                         <div class="inner">
-                            <h3>Categorias</h3>
+                            <h3>Categorías</h3>
                             <p>Registrar y Editar</p>
                         </div>
                         <div class="icon">

@@ -135,8 +135,8 @@
 									</div>
 								</div>
 								<div class="modal-footer">
-									<button type="reset" class="btn btn-cancelarprov" data-dismiss="modal">Cancelar</button>
-									<button id="btn-reg-movimiento" type="button" class="btn btn-primary ">Registrar</button>
+									<button type="reset" class="btn btn-flat btn-default btn-cancelarprov" data-dismiss="modal">Cancelar</button>
+									<button id="btn-reg-movimiento" type="button" class="btn btn-flat btn-primary ">Registrar</button>
 								</div>
 							</form>
 						</div>
@@ -178,7 +178,7 @@
 											<!-- small box -->
 											<div class="small-box small-box bg-green">
 												<div class="inner">
-													<h3>Exel</h3>
+													<h3>Excel</h3>
 													<p>.xls</p>
 												</div>
 												<div class="icon">

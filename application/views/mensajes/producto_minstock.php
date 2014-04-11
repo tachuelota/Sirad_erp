@@ -13,17 +13,17 @@
 			<div class="col-xs-12">
 				<div class="box">
 					<div class="box-header">						
-						<h3 class="box-title">Productos con Stock minimo</h3>		
-							<div class="box-tools pull-right">
-								<form method="post" target="_blank" id="CreatePDFForm">
-									<input type="hidden" name="title" id="title"/>
-									<input type="hidden" name="table_productos" id="table_productos"/>
-									<div>						
-										<button type="button" class="btn btn-success btn-flat" id="xlsutton">Exportar</button>	
-					          <button type="button" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#compose-modal">Enviar</button>									       
-									</div>
-								</form>
-							</div>
+						<h3 class="box-title">Productos con Stock mínimo</h3>		
+						<div class="box-tools pull-right">
+							<form method="post" target="_blank" id="CreatePDFForm">
+								<input type="hidden" name="title" id="title"/>
+								<input type="hidden" name="table_productos" id="table_productos"/>
+								<div>						
+									<button type="button" class="btn btn-success btn-flat" id="xlsutton">Exportar</button>	
+				          <button type="button" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#compose-modal">Enviar</button>									       
+								</div>
+							</form>
+						</div>
 					</div>
 					<div class="box-body">
 						<form id="notificaciones">							
@@ -31,12 +31,12 @@
 								<table id="select_producto_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>mensajes/servicios/getProductos_minstock">
 									<thead>
 										<tr>
-											<th>Codigo de Barra</th>
+											<th>Código de Barra</th>
 											<th>Producto</th>
 											<th>Unidad de Medida</th>
 											<th>Stock Actual</th>
-											<th>Stock Minimo</th>
-											<th>Stock Maximo</th>
+											<th>Stock Mínimo</th>
+											<th>Stock Máximo</th>
 										</tr>
 									</thead>
 									<tbody>

@@ -1,14 +1,14 @@
 <aside class="right-side">
 	<section class="content-header">
-			<h1>Categoria<small>Consultar</small></h1>
+			<h1>Categorías<small>Consultar</small></h1>
 			<ol class="breadcrumb">
 				<li>
 					<a href="<?php echo base_url();?>">Home</a>
 				</li>
 				<li>
-					<a href="<?php echo base_url();?>administracion/">Administracion</a>
+					<a href="<?php echo base_url();?>administracion/">Administración</a>
 				</li>
-				<li class="active">Categoria</li>
+				<li class="active">Categorías</li>
 			</ol>
 	</section>
 	<section class="content">
@@ -77,7 +77,7 @@
 										</fieldset>
 									</div>
 									<div class="modal-footer">
-										<button type="reset" class="btn btn-flat btn-cancelarprov" data-dismiss="modal">Cancelar</button>
+										<button type="reset" class="btn btn-flat btn-default btn-cancelarprov" data-dismiss="modal">Cancelar</button>
 										<button id="btn-reg-categoria" type="button" class="btn btn-flat btn-primary ">Registrar</button>
 										<button id="btn-editar-categoria" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>
 									</div>

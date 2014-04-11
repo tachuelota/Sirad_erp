@@ -50,6 +50,7 @@ class views extends CI_Controller
 			$this->load->view('logistica/cons_ordencompras.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/cons_ordencompras.js';
 			$datafooter['active'] = 'ord_com';
+			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -71,6 +72,7 @@ class views extends CI_Controller
 			$this->load->view('logistica/reg_ordencompras.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/reg_ordencompras.js';
 			$datafooter['active'] = 'ord_com';
+			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -92,6 +94,7 @@ class views extends CI_Controller
 			$this->load->view('logistica/ver_ordencompras.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/ver_ordencompras.js';
 			$datafooter['active'] = 'ord_com';
+			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -111,6 +114,7 @@ class views extends CI_Controller
 			$this->load->view('logistica/cons_ingresoproductos.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/cons_ingresoproductos.js';
 			$datafooter['active'] = 'ing_prod';
+			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -131,6 +135,7 @@ class views extends CI_Controller
 			$this->load->view('logistica/reg_ingresoproductos.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/reg_ingresoproductos.js';
 			$datafooter['active'] = 'ing_prod';
+			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -151,6 +156,7 @@ class views extends CI_Controller
 			$this->load->view('logistica/editar_ingresoproductos.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/editar_ingresoproductos.js';
 			$datafooter['active'] = 'ing_prod';
+			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -171,6 +177,7 @@ class views extends CI_Controller
 			$this->load->view('logistica/ver_ingresoproductos.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/ver_ingresoproductos.js';
 			$datafooter['active'] = 'ing_prod';
+			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -191,6 +198,7 @@ class views extends CI_Controller
 			$this->load->view('logistica/kardex.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/kardex.js';
 			$datafooter['active'] = 'gen_kardex';
+			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -211,6 +219,7 @@ class views extends CI_Controller
 			$this->load->view('logistica/productos.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/productos.js';
 			$datafooter['active'] = 'admin_prod';
+			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -229,7 +238,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('logistica/proveedores.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/proveedores.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin_provee';
+			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -249,6 +259,7 @@ class views extends CI_Controller
 			$this->load->view('logistica/cons_salidaproductos.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/cons_salidaproductos.js';
 			$datafooter['active'] = 'sal_prod';
+			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -269,6 +280,7 @@ class views extends CI_Controller
 			$this->load->view('logistica/reg_salidaproductos.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/reg_salidaproductos.js';
 			$datafooter['active'] = '';
+			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -290,6 +302,7 @@ class views extends CI_Controller
 			$this->load->view('logistica/ver_salidaproductos.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/ver_salidaproductos.js';
 			$datafooter['active'] = '';
+			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -308,7 +321,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('logistica/saldo_inicial.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/saldo_inicial.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'saldos';
+			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else

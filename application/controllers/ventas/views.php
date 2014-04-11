@@ -31,6 +31,7 @@ class views extends CI_Controller
 			$this->load->view('ventas/homepages.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/homepages.js';
 			$datafooter['active'] = '';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -53,6 +54,7 @@ class views extends CI_Controller
 			$this->load->view('ventas/clientes.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/clientes.js';
 			$datafooter['active'] = 'clientes';
+			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -74,6 +76,7 @@ class views extends CI_Controller
 			$this->load->view('ventas/cronogramas.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/cronograma.js';
 			$datafooter['active'] = 'cron_pago';
+			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -95,6 +98,7 @@ class views extends CI_Controller
 			$this->load->view('ventas/cronogramas_detalle.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/cronogramas_detalle.js';
 			$datafooter['active'] = 'cron_pago';
+			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -114,6 +118,7 @@ class views extends CI_Controller
 			$this->load->view('ventas/reporte_zonas.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/reporte_zonas.js';
 			$datafooter['active'] = 'clienteszonas_rep';
+			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -134,6 +139,7 @@ class views extends CI_Controller
 			$this->load->view('ventas/tarjetascreditos.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/tarjetascreditos.js';
 			$datafooter['active'] = 'tarj_cred';
+			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -155,6 +161,7 @@ class views extends CI_Controller
 			$this->load->view('ventas/ventas.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/consultar.js';
 			$datafooter['active'] = 'venta_prod';
+			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -178,6 +185,7 @@ class views extends CI_Controller
 			$this->load->view('ventas/editar_ventas.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/editar_ventas.js';
 			$datafooter['active'] = 'venta_prod';
+			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -201,6 +209,7 @@ class views extends CI_Controller
 			$this->load->view('ventas/reg_ventas.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/reg_ventas.js';
 			$datafooter['active'] = 'venta_prod';
+			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -224,6 +233,7 @@ class views extends CI_Controller
 			$this->load->view('ventas/ver_ventas.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/ver_ventas.js';
 			$datafooter['active'] = 'venta_prod';
+			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -244,6 +254,7 @@ class views extends CI_Controller
 			$this->load->view('ventas/reporte_ventas.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/reporte_ventas.js';
 			$datafooter['active'] ='ventas_rep';
+			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -265,7 +276,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('ventas/movimientos.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/movimientos.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'movimientos';
+			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -284,6 +296,7 @@ class views extends CI_Controller
 		$this->load->view('ventas/clientesmorosos.php');
 		$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/clientesmorosos.js';
 		$datafooter['active'] = '';
+		$datafooter['dropactive'] = 'dropventas';
 		$this->load->view('templates/footer.php',$datafooter);
 		
 	}		
@@ -301,6 +314,7 @@ class views extends CI_Controller
 			$this->load->view('ventas/reporte_ing_egr.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/reporte_ing_egr.js';
 			$datafooter['active'] = 'ingrEgre_rep';
+			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else

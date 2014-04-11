@@ -33,7 +33,7 @@
 									<th>Nombres</th>
 									<th>Apellidos</th>
 									<th>DNI</th>
-									<th>Telefono</th>
+									<th>Teléfono</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -105,7 +105,7 @@
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-lg-4 control-label" for="telefono">Telefono</label>
+												<label class="col-lg-4 control-label" for="telefono">Teléfono</label>
 												<div class="col-lg-8">
 													<div class="input-group">
 														<input class="form-control validate[required,custom[number]]" name="telefono" id="telefono" type="number" data-prompt-position="topLeft">
@@ -141,7 +141,7 @@
 											</div>-->
 										</div>
 										<div class="modal-footer">
-											<button type="reset" class="btn btn-flat" data-dismiss="modal">Cancelar</button>
+											<button type="reset" class="btn btn-flat btn-default" data-dismiss="modal">Cancelar</button>
 											<button id="btn-reg-clientes" type="button" class="btn btn-flat btn-primary">Registrar</button>
 											<button id="btn-editar-clientes" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>
 										</div>
@@ -185,7 +185,7 @@
 										            <div class="small-box small-box bg-green">
 										                <div class="inner">
 										                    <h3>
-										                        Exel
+										                        Excel
 										                    </h3>
 										                    <p>
 										                       .xls

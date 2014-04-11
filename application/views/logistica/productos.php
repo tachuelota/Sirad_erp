@@ -6,7 +6,7 @@
 				<a href="<?php echo base_url();?>">Home</a>
 			</li>
 			<li>
-				<a href="<?php echo base_url();?>logistica">Logistica</a>
+				<a href="<?php echo base_url();?>logistica">LogÍstica</a>
 			</li>
 			<li class="active">Productos</li>
 		</ol>
@@ -151,7 +151,7 @@
 										</fieldset>
 									</div>
 									<div class="modal-footer">
-										<button type="reset" class="btn btn-flat btn-cancelarprov" data-dismiss="modal">Cancelar</button>
+										<button type="reset" class="btn btn-flat btn-default btn-cancelarprov" data-dismiss="modal">Cancelar</button>
 										<button id="btn-reg-prod" type="button" class="btn btn-flat btn-primary ">Registrar</button>
 										<button id="btn-editar-prod" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>
 									</div>

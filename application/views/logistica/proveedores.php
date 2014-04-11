@@ -6,7 +6,7 @@
 				<a href="<?php echo base_url();?>">Home</a>
 			</li>
 			<li>
-				<a href="<?php echo base_url();?>logistica">Logistica</a>
+				<a href="<?php echo base_url();?>logistica">Logística</a>
 			</li>
 			<li class="active">Proveedores</li>
 		</ol>
@@ -33,7 +33,7 @@
 								<tr>
 									<th>RUC</th>
 									<th>Razón Social</th>
-									<th>Direccion Fiscal</th>
+									<th>Dirección Fiscal</th>
 									<th>Teléfono</th>
 									<th>Email</th>
 									<th>Estado</th>						
@@ -125,7 +125,7 @@
 												<!---->
 												<div class="col-lg-6">
 													<div class="form-group">
-														<label class="col-lg-4 control-label" for="paginaweb">Direccion Fiscal</label>
+														<label class="col-lg-4 control-label" for="paginaweb">Dirección Fiscal</label>
 														<div class="col-lg-8">
 															<div class="input-group">
 																<input class="form-control focused" id="dirfiscal" name="dirfiscal" type="text">
@@ -140,7 +140,7 @@
 														</div>
 													</div>
 													<div class="form-group">
-														<label class="col-lg-4 control-label" for="paginaweb">Fecha Inscripcion</label>
+														<label class="col-lg-4 control-label" for="paginaweb">Fecha Inscripción</label>
 														<div class="col-lg-8">
 															<div class="input-group">
 																<input class="form-control datepicker" id="fecInscripcion" name="fecInscripcion" type="text">
@@ -177,7 +177,7 @@
 										</fieldset>
 									</div>
 									<div class="modal-footer">
-										<button type="reset" class="btn btn-flat btn-cancelarprov" data-dismiss="modal">Cancelar</button>
+										<button type="reset" class="btn btn-flat btn-default btn-cancelarprov" data-dismiss="modal">Cancelar</button>
 										<button id="btn-reg-proveedor" type="button" class="btn btn-flat btn-primary ">Registrar</button>
 										<button id="btn-editar-proveedor" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>
 									</div>

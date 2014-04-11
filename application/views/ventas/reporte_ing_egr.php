@@ -37,7 +37,7 @@
 			<table id="ingresos_table" class="table table-bordered">
 				<thead>
 					<tr>
-						<th>Id</th>
+						<th>ID</th>
 						<th>Cantidad Vendida</th>
 						<th>Monto Facturado</th>
 						<th>Monto cobrado</th>
@@ -55,7 +55,7 @@
 			<table id="egresos_table" class="table table-bordered" >
 				<thead>
 					<tr>
-						<th>Id</th>
+						<th>ID</th>
 						<th>Monto cobrado</th>
 						<th>Tipo</th>
 						<th>Concepto</th>

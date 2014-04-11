@@ -11,7 +11,7 @@
 				<a href="<?php echo base_url();?>">Home</a>
 			</li>
 			<li>
-				<a href="<?php echo base_url();?>administracion">Administracion</a>
+				<a href="<?php echo base_url();?>administracion">Administración</a>
 			</li>
 			<li class="active">Usuarios</li>
 		</ol>
@@ -97,7 +97,7 @@
 											<?php endforeach?>
 										</div>
 										<div class="col-lg-3 col-md-offset-1">
-											<h4 class="top-block">Logistica</h4>
+											<h4 class="top-block">Logística</h4>
 											<?php foreach ($groups_logistica as $group):?>
 												<div class="form-group">
 													<label>
@@ -108,7 +108,7 @@
 											<?php endforeach?>
 										</div>
 										<div class="col-lg-3 col-md-offset-1">
-											<h4 class="top-block">Administracion</h4>
+											<h4 class="top-block">Administración</h4>
 											<?php foreach ($groups_administracion as $group):?>
 												<div class="form-group">
 													<label>
@@ -207,8 +207,8 @@
 							</table>
 						</div>
 						<div class="modal-footer">
-							<a href="#" class="btn" data-dismiss="modal">Cancelar</a>
-							<a  id="select_trabajador" href="#" class="btn btn-primary">Seleccionar</a>
+							<a href="#" data-dismiss="modal" class="btn btn-flat btn-default">Cancelar</a>
+							<a  id="select_trabajador" href="#" class="btn btn-flat btn-primary">Seleccionar</a>
 						</div>
 					</div>
 				</div>

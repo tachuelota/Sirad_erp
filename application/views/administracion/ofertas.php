@@ -6,7 +6,7 @@
 				<a href="<?php echo base_url();?>">Home</a>
 			</li>
 			<li>
-				<a href="<?php echo base_url();?>administracion/">Administracion</a>
+				<a href="<?php echo base_url();?>administracion/">Administración</a>
 			</li>
 			<li class="active">Ofertas</li>
 		</ol>
@@ -88,7 +88,7 @@
 										</fieldset>
 									</div>
 									<div class="modal-footer">
-										<button type="reset" class="btn btn-flat" data-dismiss="modal">Cancelar</button>
+										<button type="reset" class="btn btn-flat btn-default" data-dismiss="modal">Cancelar</button>
 										<button id="enviar_oferta_btn" type="button" class="btn btn-flat btn-primary">Guardar</button>
 									</div>
 								</form>

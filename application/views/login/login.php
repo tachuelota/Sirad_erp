@@ -1,5 +1,5 @@
 	<div class="form-box" id="login-box">
-        <div class="header"><img src="<?php echo base_url();?>/assets/img/sirad3.png" ></div>
+        <div class="header"><img src="<?php echo base_url();?>/assets/img/sirad-logo.png" ></div>
         <form method="post">
             <div class="body bg-gray">
                 <div class="form-group">

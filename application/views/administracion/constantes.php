@@ -6,7 +6,7 @@
 					<a href="<?php echo base_url();?>">Home</a>
 				</li>
 				<li>
-					<a href="<?php echo base_url();?>administracion">Administracion</a>
+					<a href="<?php echo base_url();?>administracion">Administración</a>
 				</li>
 				<li class="active">Constante</li>
 			</ol>
@@ -54,7 +54,7 @@
 									<div class="modal-body">
 										<input id="clase" name="clase" type="hidden">										
 										<div class="form-group">
-											<label class="col-lg-4 control-label" for="nom_clase">Descripcion</label>
+											<label class="col-lg-4 control-label" for="nom_clase">Descripción</label>
 											<div class="col-lg-8">
 												<div class="input-group">
 													<input class="form-control " id="nom_clase" name="nom_clase" type="text" data-prompt-position="topLeft">
@@ -73,7 +73,7 @@
 										</div>
 									</div>
 									<div class="modal-footer">
-										<button type="reset" class="btn btn-flat btn-cancelarprov" data-dismiss="modal">Cancelar</button>			
+										<button type="reset" class="btn btn-flat btn-default btn-cancelarprov" data-dismiss="modal">Cancelar</button>			
 										<button id="btn-reg-constante" class="btn btn-flat btn-primary">Registrar</button>
 										<button id="btn-edit-constante" class="btn btn-flat btn-primary" style="display:none">Guardar</button>
 									</div>

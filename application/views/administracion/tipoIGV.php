@@ -6,7 +6,7 @@
 				<a href="<?php echo base_url();?>">Home</a>
 			</li>
 			<li>
-				<a href="<?php echo base_url();?>administracion/">Administracion</a>
+				<a href="<?php echo base_url();?>administracion/">Administración</a>
 			</li>
 			<li class="active">Tipo IGV</li>
 		</ol>
@@ -81,7 +81,7 @@
 										</fieldset>
 									</div>
 									<div class="modal-footer">
-										<button type="reset" class="btn btn-flat btn-cancelarprov" data-dismiss="modal">Cancelar</button>
+										<button type="reset" class="btn btn-flat btn-default btn-cancelarprov" data-dismiss="modal">Cancelar</button>
 										<button id="btn-tipoigv-reg" type="submit" class="btn btn-flat btn-primary ">Registrar</button>
 										<button id="btn-tipoigv-edi" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>
 									</div>
