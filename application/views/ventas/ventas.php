@@ -70,8 +70,14 @@
 									</th>
 									<th></th>
 									<th></th>
-									<th class="input">
-										<input type="text" placeholder="Estado" class="search_init form-control" />
+									<th class="customselect" nrorow="6">
+										<select class="form-control">
+											<option value="">Todos</option>
+											<option value="Pagada">Pagada</option>
+											<option value="Anulada">Anulada</option>
+											<option value="Credito">Credito</option>											
+											<option value="Separacion">Separacion</option>
+										</select>
 									</th>									
 								</tr>
 							</thead>

@@ -389,7 +389,7 @@ function createDataTable2(idTable, options){
 			this.value = asInitVals[$("th.input input").index(this)];
 		}
 	} );
-
+	oTable.reloadSigleFilter();
 	return oTable;
 }
 
