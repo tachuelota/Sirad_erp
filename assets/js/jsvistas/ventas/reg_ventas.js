@@ -124,8 +124,9 @@ $(document).ready(function(){
 	var VentaProdActions = new DTActions({
 		'conf': '001',
 		'DropFunction': function(nRow, aData, iDisplayIndex) {
-			var index = $(VentaProdTable.fnGetData()).getIndexObj(aData,'nProducto_id');				
+			var index = $(VentaProdTable.fnGetData()).getIndexObj(aData,'nProducto_id');
 			VentaProdTable.fnDeleteRow(index);
+			$("#total_contado").text(totalcontado = (sumArrayByAttr(VentaProdTable.fnGetData(),'nProductoPVenta','nDetVentaCant')).toFixed(2));
 		}
 	});
 
