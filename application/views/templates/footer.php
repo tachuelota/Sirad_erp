@@ -1,4 +1,4 @@
-	
+
 	<!-- jQuery 2.0.2 -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <!-- jQuery UI 1.10.3 -->
@@ -31,12 +31,16 @@
 	<script src="<?php echo base_url();?>assets/js/datepicker/js/bootstrap-datepicker.js"></script>
 	<script src="<?php echo base_url();?>assets/js/datepicker/js/locales/bootstrap-datepicker.es.js"></script>
 
+
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#<?=$dropactive ?>').addClass('active');
 			$('#<?=$active ?>').addClass('active');
 		});
 	</script>
+
+	<script src="<?php echo base_url();?>assets/js/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+
 
     <!-- AdminLTE App -->
     <script src="<?php echo base_url();?>assets/js/AdminLTE/app.js" type="text/javascript"></script>

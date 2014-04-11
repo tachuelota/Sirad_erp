@@ -54,35 +54,38 @@
 			                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			                        <h4 class="modal-title"><i class="fa fa-envelope-o"></i>  Redactar nuevo mensaje</h4>
 			                    </div>
-			                    <form action="#" method="post">
+			                    <form action="#" method="post">			                    	
 			                        <div class="modal-body">
+			                        	<div class="form-group">																											
+																		<div class="input-group">
+																			<span id="from" class="input-group-addon"><i class="fa fa-user"></i></span>
+																			<input class="form-control" id="registrador" name="registrador" value="<?php echo $trabajador["cPersonalNom"]." ".$trabajador["cPersonalApe"] ?>" type="text" readonly>																			
+																		</div>
+																	
+																</div>
 			                            <div class="form-group">
 			                                <div class="input-group">
 			                                    <span class="input-group-addon">TO:</span>
-			                                    <input name="email_to" type="email" class="form-control" placeholder="Email TO">
+			                                    <input type="text" data-provide="typeahead">
+			                                    <!--<input name="email_to" type="email" class="form-control" placeholder="Email TO">-->
 			                                </div>
 			                            </div>
 			                            <div class="form-group">
 			                                <div class="input-group">
 			                                    <span class="input-group-addon">CC:</span>
-			                                    <input name="email_to" type="email" class="form-control" placeholder="Email CC">
+			                                    <input name="email_cc" type="email" class="form-control" placeholder="Email CC">
+			                                    
 			                                </div>
-			                            </div>
-			                            <div class="form-group">
-			                                <div class="input-group">
-			                                    <span class="input-group-addon">BCC:</span>
-			                                    <input name="email_to" type="email" class="form-control" placeholder="Email BCC">
-			                                </div>
-			                            </div> 
+			                            </div>			                        
 			                            <div class="form-group">
 			                                <textarea name="message" id="email_message" class="form-control" placeholder="Message" style="height: 120px;" ></textarea>
 			                            </div>
 			                        </div>
 			                        <div class="modal-footer clearfix">
 
-			                            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+			                            <button type="button" class="btn btn-flat" data-dismiss="modal">Cancelar</button>
 
-			                            <button type="submit" class="btn btn-primary pull-left"><i class="fa fa-envelope"></i> Enviar</button>
+			                            <button type="submit" class="btn btn-primary btn-flat"> Enviar</button>
 			                        </div>
 			                    </form>
 			                </div><!-- /.modal-content -->

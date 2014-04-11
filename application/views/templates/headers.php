@@ -22,6 +22,7 @@
 		echo link_tag('assets/css/datatables.actions.css');
 		echo link_tag('assets/css/jqueryvalidation/css/validationEngine.jquery.css');		
 		echo link_tag('assets/css/prettify.css');
+        echo link_tag('assets/css/bootstrap-tagsinput/bootstrap-tagsinput.css');
 	?>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,7 +54,7 @@
 	            	<?php $notificaciones = $this->notificaciones_model->getnotificaciones(); ?>	                
                   	<li class="dropdown notifications-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-envelope"></i>
+                                <i class="fa fa-warning"></i>
                                 <span class="label label-success"><?php echo count($notificaciones) ?></span>
                             </a>
                             <ul class="dropdown-menu">

@@ -40,7 +40,7 @@ class views extends CI_Controller
 	public function producto_minstock()
 	{
 		$this->load->model('administracion/trabajadores_model','tra');
-		$dataheader['title'] = 'Notificación';			
+		$dataheader['title'] = 'Notificación';					
 		$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 		$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 		$this->load->view('templates/headers.php',$dataheader);		

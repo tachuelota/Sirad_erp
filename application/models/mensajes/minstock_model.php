@@ -18,6 +18,15 @@ class minstock_model extends CI_Model {
 		return $query->row_array();
 	}
 
+
+ 	public function get_useradmin()
+	{
+		$query = $this->db->query("SELECT * FROM adm_email_administrador;");
+		return $query->result_array();
+	}
+
+ 	
+
 }
 
 ?>

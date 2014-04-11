@@ -4,29 +4,8 @@ class email extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
-		$this->load->model('administracion/cargo_model','acam');
+		$this->load->model('mensajes/notificaciones_model','notm');
 	}
-
-	/*function get_email()
-	{
-		$config = array(
-
-			);
-		$this->load->library('email');
-		$this->email->from('avilasauna@gmail.com', 'Nombre');
-		$this->email->cc('avilasauna@gmail.com');
-		$this->email->bcc('avilasauna@gmail.com'); 
-
-		$this->email->subject('Mi correo a través de CodeIgniter desde localhost'); 
-		$this->email->message('Probando Email .....');
-	
-		if ($this->email->send()) {
-			//echo "correo enviado";
-			$this->load();
-		}
-		else
-			echo $this->email->print_debugger();
-	} */
 
 	function sendemail()
 	{
@@ -39,19 +18,19 @@ class email extends CI_Controller {
     );
 
     $this->load->library('email',$config);
+    $this->email->initialize($config);
 
     $this->email->from('avilasauna@gmail.com');
     $this->email->to('avilasauna@gmail.com');
-    $this->email->bcc('avilasauna@gmail.com', 'Cinthya');
 
-    $this->email->subject('Message sent from the contact form in website');
+    $this->email->subject('Reporte de Productos con Stock Minimo');
     $this->email->message('Body of message...');
 
-    if ($this->email->send()) {
-           show_error($this->email->print_debugger()); 
-    }
-    else  {
- echo 'Your e-mail has been sent!';}
+    if ($this->email->send()) 
+      show_error($this->email->print_debugger());    
+    else 
+			echo 'Your e-mail has been sent!';
+					
 	}
 
 

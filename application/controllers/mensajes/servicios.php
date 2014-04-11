@@ -29,5 +29,13 @@ class servicios extends CI_Controller {
 				->set_output(json_encode($stockmin));		
 	}
 
+	public function get_administrador(){
+		$this->load->model('mensajes/minstock_model','prod');
+		$result = $this->prod->get_useradmin();
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode(array('aaData' => $result)));
+	}
+
 
 }
