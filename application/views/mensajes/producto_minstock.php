@@ -12,11 +12,9 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="box">
-					<div class="box-header">
-						<h4 class="box-title">Productos con Stock minimo</h4>
-					</div>
-					<div class="box-header">
-							<div>
+					<div class="box-header">						
+						<h3 class="box-title">Productos con Stock minimo</h3>		
+							<div class="box-tools pull-right">
 								<form method="post" target="_blank" id="CreatePDFForm">
 									<input type="hidden" name="title" id="title"/>
 									<input type="hidden" name="table_productos" id="table_productos"/>
@@ -25,7 +23,7 @@
 					          <button type="button" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#compose-modal">Enviar</button>									       
 									</div>
 								</form>
-							</div>	
+							</div>
 					</div>
 					<div class="box-body">
 						<form id="notificaciones">							
@@ -75,7 +73,7 @@
 			                                    <span class="input-group-addon">BCC:</span>
 			                                    <input name="email_to" type="email" class="form-control" placeholder="Email BCC">
 			                                </div>
-			                            </div>
+			                            </div> 
 			                            <div class="form-group">
 			                                <textarea name="message" id="email_message" class="form-control" placeholder="Message" style="height: 120px;" ></textarea>
 			                            </div>

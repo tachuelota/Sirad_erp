@@ -20,8 +20,7 @@ $(document).ready(function(){
 	$('#select_producto').click(function(event){
 		event.preventDefault();
 		$("#producto_id").val(SelectProductoData[0].nProducto_id);
-		$('#producto').val(SelectProductoData[0].cProductoDesc);
-		//$('#modalBuscarProducto').modal('hide');
+		$('#producto').val(SelectProductoData[0].cProductoDesc);		
 	});
 
 	$("#xlsutton").click(function(){
