@@ -93,7 +93,7 @@ $.fn.dataTableExt.oApi.fnGetColumnData = function ( oSettings, iColumn, bUnique,
 
 function fnCreateSelect( aData )
 {
-    var r='<select><option value=""></option>', i, iLen=aData.length;
+    var r='<select class="form-control"><option value="">Todos</option>', i, iLen=aData.length;
     for ( i=0 ; i<iLen ; i++ )
     {
         r += '<option value="'+aData[i]+'">'+aData[i]+'</option>';
@@ -153,9 +153,14 @@ $.fn.dataTableExt.oApi.reloadSigleFilter = function ()
 		var row = $(this).attr("nrorow");
 		oTable.fnFilter( "", row);
         this.innerHTML = fnCreateSelect(oTable.fnGetColumnData(indexfilter));
-		$('select',this).addClass("form-control");
         $('select', this).change( function () {
             oTable.fnFilter( $(this).val(), row);
         } );
-    } );
+    });
+    $("th.customselect").each(function(index){
+    	var row = $(this).attr("nrorow");
+		$(this).find("select").change( function () {
+		    oTable.fnFilter( $(this).val(), row);
+		} );
+    });
 }
