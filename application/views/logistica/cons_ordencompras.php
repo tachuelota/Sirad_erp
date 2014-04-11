@@ -67,7 +67,15 @@
 									</th>
 									<th class="select" index="cProveedorRazSocial" nrocol="3">
 									</th>
-									<th></th>
+									<th>
+									</th>
+									<th class="customselect" nrocol="5">
+										<select class="form-control">
+											<option value="">Todos</option>
+											<option value="Habilitado">Habilitado</option>
+											<option value="Inhabilitado">Inhabilitado</option>
+										</select>
+									</th>	
 								</tr>
 							</thead>
 							<tbody>

@@ -43,7 +43,7 @@
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="motivo">Motivo</label>
 											<div class="col-lg-8">
-												<span class="help-inline" style="margin-top:5px;" id="motivo"><?php echo $nSalProdMotivo;?></span>
+												<span class="help-inline" style="margin-top:5px;" id="motivo"><?php echo $DescMotivo;?></span>
 											</div>
 										</div>
 										<div class="form-group">

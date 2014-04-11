@@ -37,7 +37,7 @@
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="nroOrdeCompras">N° Orden Compra</label>
 											<div class="col-lg-8">
-												<span id="codigo" class="help-inline"><?php echo $cOrdComDocSerie."-".$cOrdComDocNro;?></span>					
+												<span id="codigo" class="help-inline"><?php echo $serNumOrdenCompra;?></span>					
 											</div>
 										</div>
 										<div class="form-group">
@@ -69,25 +69,25 @@
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="subtotal">Subtotal</label>
 											<div class="col-lg-8">
-												<span id="subtotal" class="help-inline"><?php echo $nOrdComSubTotal;?></span>
+												<span id="subtotal" class="help-inline"><?php echo "S/ ".$nOrdComSubTotal;?></span>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="subtotal">IGV</label>
 											<div class="col-lg-8">
-												<span id="igv" class="help-inline" style="margin-top:5px;"><?php echo $nOrdComIGV;?></span>
+												<span id="igv" class="help-inline" style="margin-top:5px;"><?php echo $nOrdComIGV."  %";?></span>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="descuento">Descuento</label>
 											<div class="col-lg-8">
-												<span id="descuento" class="help-inline" style="margin-top:5px;"><?php echo $nOrdComDesct;?></span>
+												<span id="descuento" class="help-inline" style="margin-top:5px;"><?php echo $nOrdComDesct." %";?></span>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="subtotal">Total</label>
 											<div class="col-lg-8">
-												<span id="total" class="help-inline"><?php echo $nOrdComTotal;?></span>
+												<span id="total" class="help-inline"><?php echo "S/  ".$nOrdComTotal;?></span>
 											</div>
 										</div>
 									</div>
