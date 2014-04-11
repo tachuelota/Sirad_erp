@@ -65,7 +65,7 @@
 									<th class="input">
 										<input type="text" placeholder="Proveedor" class="search_init form-control" />
 									</th>
-									<th class="select" index="cProveedorRazSocial" nrorow="3">
+									<th class="select" index="cProveedorRazSocial" nrocol="3">
 									</th>
 									<th></th>
 								</tr>

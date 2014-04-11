@@ -70,7 +70,7 @@
 									</th>
 									<th></th>
 									<th></th>
-									<th class="customselect" nrorow="6">
+									<th class="customselect" nrocol="6">
 										<select class="form-control">
 											<option value="">Todos</option>
 											<option value="Pagada">Pagada</option>

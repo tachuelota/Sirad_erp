@@ -150,17 +150,17 @@ $.fn.dataTableExt.oApi.reloadSigleFilter = function ()
 	var oTable = this;
 	$("th.select").each( function ( i ){
 		var indexfilter = $(this).attr("index");
-		var row = $(this).attr("nrorow");
-		oTable.fnFilter( "", row);
+		var col = $(this).attr("nrocol");
+		oTable.fnFilter( "", col);
         this.innerHTML = fnCreateSelect(oTable.fnGetColumnData(indexfilter));
         $('select', this).change( function () {
-            oTable.fnFilter( $(this).val(), row);
+            oTable.fnFilter( $(this).val(), col);
         } );
     });
     $("th.customselect").each(function(index){
-    	var row = $(this).attr("nrorow");
+    	var col = $(this).attr("nrocol");
 		$(this).find("select").change( function () {
-		    oTable.fnFilter( $(this).val(), row);
+		    oTable.fnFilter( $(this).val(), col);
 		} );
     });
 }
