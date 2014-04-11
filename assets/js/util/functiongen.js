@@ -340,6 +340,7 @@ function createDataTable2(idTable, options){
 	var asInitVals = new Array();
 	var thselect = null;
 	var oTable = $('#'+idTable).dataTable({
+        "bAutoWidth": false,
 		"bProcessing": false,
 		"bDestroy": true,		
         "bPaginate": true,

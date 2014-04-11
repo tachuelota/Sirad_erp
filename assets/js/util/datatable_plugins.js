@@ -101,39 +101,6 @@ function fnCreateSelect( aData )
     return r+'</select>';
 }
 
-/* Default class modification */
-$.extend( $.fn.dataTableExt.oStdClasses, {
-	"sSortAsc": "header headerSortDown",
-	"sSortDesc": "header headerSortUp",
-	"sSortable": "header"
-} );
-
-/* API method to get paging information */
-$.fn.dataTableExt.oApi.fnPagingInfo = function ( oSettings )
-{
-	return {
-		"iStart":         oSettings._iDisplayStart,
-		"iEnd":           oSettings.fnDisplayEnd(),
-		"iLength":        oSettings._iDisplayLength,
-		"iTotal":         oSettings.fnRecordsTotal(),
-		"iFilteredTotal": oSettings.fnRecordsDisplay(),
-		"iPage":          Math.ceil( oSettings._iDisplayStart / oSettings._iDisplayLength ),
-		"iTotalPages":    Math.ceil( oSettings.fnRecordsDisplay() / oSettings._iDisplayLength )
-	};
-}
-
-
-
-/* Define two custom functions (asc and desc) for string sorting */
-/*jQuery.fn.dataTableExt.oSort['string-case-asc']  = function(x,y) {
-		return ((x < y) ? -1 : ((x > y) ?  1 : 0));
-};
-	
-jQuery.fn.dataTableExt.oSort['string-case-desc'] = function(x,y) {
-		return ((x < y) ?  1 : ((x > y) ? -1 : 0));
-};*/
-
-
 function fnGetSelected( oTableLocal )
 {
 	var aReturn = new Array();

@@ -1,9 +1,9 @@
 /* Set the defaults for DataTables initialisation */
 $.extend( true, $.fn.dataTable.defaults, {
 	"sDom":
-		"<'row'<'col-xs-6'><'col-xs-6'f>r>"+
+		"<'row'<'col-xs-6'l><'col-xs-6'f>r>"+
 		"t"+
-		"<'row'<'col-xs-4'p><'col-xs-2'l><'col-xs-6'i>>",
+		"<'row'<'col-xs-6'i><'col-xs-6'p>>",
 	"oLanguage": {
 		    "sProcessing":     "Procesando...",
 		    "sLengthMenu":     "Mostrar _MENU_ registros",
@@ -168,7 +168,7 @@ else {
 
 				$(nPaging).append(
 					'<ul class="pagination">'+
-						'<li class="prev disabled"><a href="#"> &larr;'+oLang.sPrevious+'</a></li>'+
+						'<li class="prev disabled"><a href="#">&larr; '+oLang.sPrevious+'</a></li>'+
 						'<li class="next disabled"><a href="#">'+oLang.sNext+' &rarr; </a></li>'+
 					'</ul>'
 				);

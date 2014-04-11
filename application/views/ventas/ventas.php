@@ -45,13 +45,13 @@
 						<table id="ventas_table" class="table table-bordered table-striped" >
 							<thead>
 								<tr>
-									<th>Fec. Registro</th>
-									<th>Cliente</th>
-									<th>Vendedor</th>
-									<th>Tipo Pago</th>
-									<th>Cant. Prod.</th>
-									<th>Total S/.</th>
-									<th>Estado</th>
+									<th width="13%">Fec. Registro</th>
+									<th width="25%">Cliente</th>
+									<th width="25%">Vendedor</th>
+									<th width="10%">Tipo Pago</th>
+									<th width="12%">Cant. Prod.</th>
+									<th width="10%">Total S/.</th>
+									<th width="5%">Estado</th>
 								</tr>
 							</thead>
 							<thead>
