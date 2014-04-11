@@ -391,6 +391,7 @@ function createDataTable2(idTable, options){
 		}
 	} );
 	oTable.reloadSigleFilter();
+	$(".div_filter input,.div_length select").addClass("form-control input-sm");
 	return oTable;
 }
 
