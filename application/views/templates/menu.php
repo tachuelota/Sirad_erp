@@ -18,7 +18,7 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
             	<?php if($this->ion_auth->in_group_type(3)): ?>
-	                <li>
+	                <li id="admin">
 	                    <a href="<?php echo base_url();?>administracion/views">
 	                        <i class="fa fa-dashboard"></i> <span>Administración</span>
 	                    </a>

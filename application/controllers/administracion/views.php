@@ -30,7 +30,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/homepages.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/homepages.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -50,7 +51,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/cargos.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/cargos.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -69,7 +71,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);		
 			$this->load->view('administracion/categorias');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/categorias.js';
-			$datafooter['active'] = 'admin_prod';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -89,7 +92,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/constantes.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/constantes.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -108,7 +112,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/locales.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/locales.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -127,7 +132,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/marcas.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/marcas.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -146,7 +152,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/tipoIGV.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/tipoIGV.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -165,7 +172,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/tipoMonedas.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/tipoMonedas.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -190,7 +198,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/usuarios.php',$dataview);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/usuarios.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -209,7 +218,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/editar_zonasPersonal.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/zona_edit.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -228,7 +238,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/zona_personal.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/zona_personal.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -247,7 +258,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/cons_zonas.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/zonas.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -268,7 +280,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/trabajadores.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/trabajadores.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -289,7 +302,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/ofertas.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/ofertas.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -311,7 +325,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/editar_ofertas.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/editar_ofertas.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -329,7 +344,8 @@ class views extends CI_Controller
 		$this->load->view('templates/menu.php',$data);
 		$this->load->view('administracion/change_password.php');
 		$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/change_password.js';
-		$datafooter['active'] = '';
+		$datafooter['active'] = 'admin';
+		$datafooter['dropactive'] = '';
 		$this->load->view('templates/footer.php',$datafooter);
 	}
 }
