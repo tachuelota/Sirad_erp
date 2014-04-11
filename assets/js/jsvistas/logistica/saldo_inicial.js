@@ -1,49 +1,34 @@
-	var urlES =  "js/es_ES.txt";
-
-		//var urlExportCierreXLS = base_url +"extensiones/reportes_xls/formato_reporte_logistica.php";
-		//var urlExportCierrePDF = base_url +"extensiones/reportes_pdf/formato_reporte_logistica.php";
-		var urlExportXLS = base_url +"assets/extensiones/reportes_xls/formato_reporte_saldos.php";
-	$(document).ready(function(){
-		//CREAMOS DATATABLE
-		$("#SaldoInicialForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000});
-			var SaldoInicialTA = new DTActions({
-			'conf': '000',
-			'idtable': 'saldoini_table',
-		});
-
-	SaldoInicialRowCBF = function(nRow, aData, iDisplayIndex){
-	};
-	var UrlaDTable = $("#saldoini_table").attr("data-source");
-	FormatoDTable = [
-		              { "sWidth": "10%","mDataProp": "Anio"},
-		              { "sWidth": "10%","mDataProp": "Mes"},
-		              { "sWidth": "25%","mDataProp": "Producto"},
-		              { "sWidth": "15%","mDataProp": "Stock"},
-		              { "sWidth": "15%","mDataProp": "PrecUnit"},
-		              { "sWidth": "15%","mDataProp": "PrecTotal"}
-		              ];
-
-	SaldoInicialTable = createDataTable('saldoini_table',UrlaDTable,FormatoDTable,null, SaldoInicialRowCBF);
-	//creamos datatable de saldo actual
+var urlExportXLS = base_url +"assets/extensiones/reportes_xls/formato_reporte_saldos.php";
+$(document).ready(function(){
+	//CREAMOS DATATABLE
+	$("#SaldoInicialForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000});	
 	$("#SaldoActualForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000});
-			var SaldoActualTA = new DTActions({
-			'conf': '000',
-			'idtable': 'saldoactual_table',
-	});
 
-	SaldoActualRowCBF = function(nRow, aData, iDisplayIndex){
+	var SaldoIniOptions = {
+		"aoColumns": [
+		              { "mDataProp": "Anio"},
+		              { "mDataProp": "Mes"},
+		              { "mDataProp": "Producto"},
+		              { "mDataProp": "Stock"},
+		              { "mDataProp": "PrecUnit"},
+		              { "mDataProp": "PrecTotal"}
+		              ]
 	};
-	var UrlaDTable = $("#saldoactual_table").attr("data-source");
-	FormatoDTable = [
-		              { "sWidth": "10%","mDataProp": "Anio"},
-		              { "sWidth": "10%","mDataProp": "Mes"},
-		              { "sWidth": "25%","mDataProp": "Producto"},
-		              { "sWidth": "15%","mDataProp": "Stock"},
-		              { "sWidth": "15%","mDataProp": "PrecUnit"},
-		              { "sWidth": "15%","mDataProp": "PrecTot"}
-		              ];
+	var SaldoInicialTable = createDataTable2('saldoini_table',SaldoIniOptions);
 
-	SaldoActualTable = createDataTable('saldoactual_table',UrlaDTable,FormatoDTable,null, SaldoActualRowCBF);
+	//creamos datatable de saldo actual
+	var SaldoActOptions = {
+		"aoColumns": [
+		              { "mDataProp": "Anio"},
+		              { "mDataProp": "Mes"},
+		              { "mDataProp": "Producto"},
+		              { "mDataProp": "Stock"},
+		              { "mDataProp": "PrecUnit"},
+		              { "mDataProp": "PrecTot"}
+		              ]
+	};
+	var SaldoActualTable = createDataTable2('saldoactual_table',SaldoActOptions);
+
 	//REPOTE INICIAL
 	function prepararIniDatos(){
 	var tablasaldos = toHTML(crearTablaToArray("tdetalle",

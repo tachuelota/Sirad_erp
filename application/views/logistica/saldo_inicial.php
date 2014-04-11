@@ -45,12 +45,12 @@
 							<table id="saldoini_table" class="table table-striped table-bordered">
 								<thead>
 									<tr>
-										<th>Año</th>
-										<th>Mes</th>
-										<th>Producto</th>
-										<th>Cantidad</th>
-										<th>Prec. Unitario S/.</th>
-										<th>Total S/.</th>
+										<th width="7%">Año</th>
+										<th width="13%">Mes</th>
+										<th width="41%">Producto</th>
+										<th width="11%">Cantidad</th>
+										<th width="13%">Prec. Unitario S/.</th>
+										<th width="11%">Total S/.</th>
 									</tr>
 								</thead>
 								<thead>
@@ -67,7 +67,8 @@
 										<th></th>
 										<th class="input">
 											<input type="text" placeholder="Prec. Unitario" class="search_init form-control" />
-										</th>									
+										</th>
+										<th></th>								
 									</tr>
 								</thead>
 								<tbody>
@@ -96,12 +97,12 @@
 							<table id="saldoactual_table" class="table table-striped table-bordered">
 								<thead>
 									<tr>
-										<th>Año</th>
-										<th>Mes</th>
-										<th>Producto</th>
-										<th>Cantidad</th>
-										<th>Prec. Unitario s/.</th>
-										<th>Total s/.</th>
+										<th width="7%">Año</th>
+										<th width="13%">Mes</th>
+										<th width="41%">Producto</th>
+										<th width="11%">Cantidad</th>
+										<th width="13%">Prec. Unitario s/.</th>
+										<th width="11%">Total s/.</th>
 									</tr>
 								</thead>
 								<thead>
@@ -118,7 +119,9 @@
 										<th></th>
 										<th class="input">
 											<input type="text" placeholder="Prec. Unitario" class="search_init form-control" />
-										</th>									
+										</th>
+										<th>
+										</th>								
 									</tr>
 								</thead>
 								<tbody>
