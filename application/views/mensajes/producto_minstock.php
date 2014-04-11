@@ -13,22 +13,19 @@
 			<div class="col-xs-12">
 				<div class="box">
 					<div class="box-header">
-						<h4 class="box-title">Productos con minimo de Stock</h4>
+						<h4 class="box-title">Productos con Stock minimo</h4>
 					</div>
 					<div class="box-header">
-						<div class="box-tools pull-right">
-							<form method="post" target="_blank" id="CreatePDFForm" style="display:inline;">
-								<input type="hidden" name="title" id="title"/>
-								<input type="hidden" name="table_productos" id="table_productos"/>    
-				                <button href="#" id="xlsutton" class="btn btn-flat btn-success">
-				                    Exportar <i class="fa fa-arrow-circle-right"></i>
-				                </button>
-							</form>							
-							<input id="pdfgen" type="button" value="Reporte General" class="btn btn-flat btn-success" />
-							<!--<button id="" type="button" class="btn btn-success">Reporte</button>-->
-							<button type="button" class="btn btn-flat btn-primary" data-toggle="modal" data-target="#compose-modal">Enviar</button>	
-						</div>
-
+							<div>
+								<form method="post" target="_blank" id="CreatePDFForm">
+									<input type="hidden" name="title" id="title"/>
+									<input type="hidden" name="table_productos" id="table_productos"/>
+									<div>						
+										<button type="button" class="btn btn-success btn-flat" id="xlsutton">Exportar</button>	
+					          <button type="button" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#compose-modal">Enviar</button>									       
+									</div>
+								</form>
+							</div>	
 					</div>
 					<div class="box-body">
 						<form id="notificaciones">							
@@ -92,12 +89,7 @@
 			                    </form>
 			                </div><!-- /.modal-content -->
 			            </div><!-- /.modal-dialog -->
-			        </div><!-- /.modal -->
-					
-							
-																
-									
-							
+			        </div><!-- /.modal -->																						
 				</div>
 			</div>
 		</div>
