@@ -104,12 +104,21 @@ $(document).ready(function(){
 
 		PrepareData();		
 		var tableingresos = toHTML(crearTablaToArray("tmovimiento",
+<<<<<<< Updated upstream
 			['FECHA','PERSONAL','CONCEPTO','MONTO','TIPO MOVIMIENTO','FORMA DE PAGO'],
 			[	'style="width: 20%;" class="head" ','style="width: 20%;" class="head" ','style="width: 10%;" class="head" ',
 				'style="width: 10%;" class="head" ','style="width: 20%;" class="head" ','style="width: 20%;" class="head" '],
 			['dMovimientoFecReg','personal','cMovimientoConcepto','nMovimientoMonto','nMovimientoTip','nMovimientoTipPag'],
 			[	'style="width: 20%;" ','style="width: 20%;" ','style="width: 10%;" ',
 				'style="width: 10%;" ','style="width: 20%;" ','style="width: 20%;" '],
+=======
+			['FECHA','PERSONAL','CONCEPTO','TIPO MOVIMIENTO','FORMA DE PAGO','MONTO'],
+			[	'style="width: 20%;" class="head" ','style="width: 20%;" class="head" ','style="width: 20%;" class="head" ',
+				'style="width: 20%;" class="head" ','style="width: 20%;" class="head" ','style="width: 20%;" class="head" '],
+			['dMovimientoFecReg','personal','cMovimientoConcepto','nMovimientoTip','nMovimientoTipPag','nMovimientoMonto'],
+			[	'style="width: 20%;" ','style="width: 20%;" ','style="width: 20%;" ',
+				'style="width: 20%;" ','style="width: 20%;" '],
+>>>>>>> Stashed changes
 				TablaIngresos));
 
 		var tablesalidas = toHTML(crearTablaToArray("tmovimiento",

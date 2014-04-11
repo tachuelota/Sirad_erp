@@ -30,7 +30,7 @@
 						<div class="tab-pane active" id="tab_1">
 							<div id="RepVentasForm" method="post" action-1="<?php echo base_url();?>ventas/servicios/reporte_ventas_bytienda">
 								<div class="row">
-									<div class="col-lg-8">
+									<div class="col-lg-6">
 										<div class="form-group">
 											<div class="input-daterange input-group">
 											    <input type="text" class="form-control" name="start" id="date01" value="<?php echo date("d/m/Y"); ?>"/>
@@ -39,6 +39,48 @@
 											</div>
 										</div>
 									</div>
+									<div class="col-lg-3">								
+										<div class="form-group">
+											<div class="input-group">
+												<input id="vendedor" type="text" class="form-control" placeholder="Vendedor">
+												<span class="input-group-addon"><i class="fa  fa-user"></i></span>
+											</div>
+										</div>	
+									</div>
+									<div class="col-lg-3">
+										<div class="form-group">
+											<div class="input-group">
+												<input id="cliente" type="text" class="form-control" placeholder="Cliente">
+												<span class="input-group-addon"><i class="fa  fa-user"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">									
+									<div class="col-lg-4">
+										<div class="form-group">
+											<label class="col-lg-4 control-label" for="selectTipoPag">Tipo de Pago</label>
+											<div class="col-lg-8">
+												<select id="selectTipoPag" name="selectTipoPag" class="form-control SelectAjax  validate[required]" data-source="<?php echo base_url();?>
+													administracion/servicios/getConstantesByClase/2" attrval="cConstanteValor" attrdesc="cConstanteDesc" required>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="form-group">
+											<label class="col-lg-3 control-label" for="estado">Estado</label>
+											<div class="col-lg-9">															
+												<select id="estado" name="estado" class="form-control  validate[required]" >
+													<option value="-1">Seleccionar</option>
+													<option value="2">Pagada</option>
+													<option value="0">Anulada</option>
+													<option value="1">Credito</option>
+													<option value="3">Sepracion</option>
+												</select>														
+											</div>
+										</div>
+									</div>									
 									<div class="col-lg-2">	
 										<button id="buscarfecha" type="button" class="col-lg-12 btn btn-info btn-flat btn-buscarp"> <i class="fa fa-search"></i>  Buscar</button>
 									</div>
@@ -47,21 +89,46 @@
 									</div>
 								</div>
 							</div>
+							<hr>
 							<table id="ventas_table" class="table table-bordered table-striped">
 								<thead>
 									<tr>
-										<th>Fecha Registro</th>
-										<th>Tienda</th>
+										<th>Fecha Emision</th>
+										<th>Vendedor</th>
 										<th>Cliente</th>
-										<th>Producto</th>
-										<th>Serie</th>
-										<th>Cant.</th>
-										<th>Desct. S/.</th>
-										<th>Prec. Costo S/.</th>
-										<th>Prec. Contado S/.</th>
-										<th>Prec. Credito S/.</th>
+										<th>Tipo Pago</th>
+										<th>Sub-Total S/.</th>
+										<th>Descuento(%)</th>
+										<th>IGV(%)</th>
+										<th>Total Facturado S/.</th>
+										<th>A Cuenta S/.</th>
+										<th>Saldo S/.</th>
+										<th>Estado</th>
 									</tr>
 								</thead>
+								<thead>
+								<tr>
+									<th></th>
+									<th class="input">
+										<input type="text" placeholder="Vendedor" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Cliente" class="search_init form-control" />
+									</th>
+									<th class="input">
+										<input type="text" placeholder="Tipo Pago" class="search_init form-control" />
+									</th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th></th>
+									<th class="input">
+										<input type="text" placeholder="Estado" class="search_init form-control" />
+									</th>								
+								</tr>
+							</thead>
 								<tbody></tbody>
 							</table>
 						</div>
@@ -69,7 +136,7 @@
 						<div class="tab-pane" id="tab_2">
 							<div id="RepVentasZonasForm" method="post" action-1="<?php echo base_url();?>ventas/servicios/reporte_ventas_byzona">
 								<div class="row">
-									<div class="col-lg-8">
+									<div class="col-lg-6">
 										<div class="form-group">
 											<div class="input-daterange input-group">
 											    <input type="text" class="form-control" name="start" id="date01zona" value="<?php echo date("d/m/Y"); ?>"/>
@@ -78,30 +145,76 @@
 											</div>
 										</div>
 									</div>
+									<div class="col-lg-3">								
+										<div class="form-group">
+											<div class="input-group">
+												<input id="vendedorZona" type="text" class="form-control" placeholder="Vendedor">
+												<span class="input-group-addon"><i class="fa  fa-user"></i></span>
+											</div>
+										</div>	
+									</div>
+									<div class="col-lg-3">
+										<div class="form-group">
+											<div class="input-group">
+												<input id="clienteZona" type="text" class="form-control" placeholder="Cliente">
+												<span class="input-group-addon"><i class="fa  fa-user"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="form-group">
+											<label class="col-lg-4 control-label" for="selectTipoPag_byZona">Tipo de Pago</label>
+											<div class="col-lg-8">
+												<select id="selectTipoPag_byZona" name="selectTipoPag_byZona" class="form-control SelectAjaxTipo  validate[required]" data-source="<?php echo base_url();?>
+													administracion/servicios/getConstantesByClase/2" attrval="cConstanteValor" attrdesc="cConstanteDesc" required>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="form-group">
+											<label class="col-lg-3 control-label" for="estado">Estado</label>
+											<div class="col-lg-9">															
+												<select id="estadoZona" name="estadoZona" class="form-control  validate[required]" >
+													<option value="-1">Seleccionar</option>
+													<option value="2">Pagada</option>
+													<option value="0">Anulada</option>
+													<option value="1">Credito</option>
+													<option value="3">Sepracion</option>
+												</select>														
+											</div>
+										</div>
+									</div>	
 									<div class="col-lg-2">	
 										<button id="buscarfechazona" type="button" class="col-lg-12 btn btn-info btn-flat btn-buscarp"> <i class="fa fa-search"></i>  Buscar</button>
 									</div>
 									<div class="col-lg-2">	
 										<button id="btn-rpt-zona" type="button" class="col-lg-12 btn btn-success btn-flat" >Reporte</button>
 									</div>
-								</div>							
-								<table id="ventas_table_zona" class="table table-bordered table-striped">
-									<thead>
-										<tr>
-											<th>Fecha Registro</th>
-											<th>Tienda</th>
-											<th>Cliente</th>
-											<th>Producto</th>
-											<th>Serie</th>
-											<th>Cant.</th>
-											<th>Desct. S/.</th>
-											<th>Prec. Costo S/.</th>
-											<th>Prec. Contado S/.</th>
-											<th>Prec. Credito S/.</th>
-										</tr>
-									</thead>
-									<tbody></tbody>
-								</table>
+								</div>
+								<hr>
+								<div class="box-body table-responsive">							
+									<table id="ventas_table_zona" class="table table-bordered table-striped">
+										<thead>
+											<tr>
+												<th>Fecha Emision</th>
+												<th>Vendedor</th>
+												<th>Cliente</th>
+												<th>Tipo Pago</th>
+												<th>Sub-Total S/.</th>
+												<th>Descuento(%)</th>
+												<th>IGV(%)</th>
+												<th>Total Facturado S/.</th>
+												<th>A Cuenta S/.</th>
+												<th>Saldo S/.</th>
+												<th>Estado</th>
+											</tr>
+										</thead>
+										<tbody></tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 						<!-- /.tab-pane -->

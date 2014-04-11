@@ -126,26 +126,34 @@ class servicios extends CI_Controller {
 			->set_output(json_encode(array('aaData' => $result)));
 	}
 
-	public function reporte_ventas_bytienda($fecInicio,$fecFinal){
+	public function reporte_ventas_bytienda($fecInicio,$fecFinal,$cliente,$vendedor,$estado,$tipoPago){
 			$tipo=1;
 			$fecIni = $fecInicio;
 			$fecFin=  $fecFinal;
+			$cliente=$cliente;
+			$vendedor=$vendedor;
+			$estado=$estado;
+			$tipoPago=$tipoPago;
 			$id_local=intval($this->session->userdata('current_local')["nLocal_id"]);
 
 			$this->load->model('ventas/venta_model','ven');
-			$result = $this->ven->reporte_ventas_bytienda($tipo,$fecIni,$fecFin,$id_local);
+			$result = $this->ven->reporte_ventas_bytienda($tipo,$fecIni,$fecFin,$cliente,$vendedor,$estado,$tipoPago,$id_local);
 			$this->output
 			->set_content_type('application/json')
 			->set_output(json_encode(array('aaData' => $result)));		
 	}
-	public function reporte_ventas_byzona($fecInicio,$fecFinal){
+	public function reporte_ventas_byzona($fecInicio,$fecFinal,$cliente,$vendedor,$estado,$tipoPago){
 			$tipo=2;
 			$fecIni = $fecInicio;
 			$fecFin=  $fecFinal;
+			$cliente=$cliente;
+			$vendedor=$vendedor;
+			$estado=$estado;
+			$tipoPago=$tipoPago;
 			$id_local=intval($this->session->userdata('current_local')["nLocal_id"]);
 
 			$this->load->model('ventas/venta_model','ven');
-			$result = $this->ven->reporte_ventas_byzona($tipo,$fecIni,$fecFin,$id_local);
+			$result = $this->ven->reporte_ventas_byzona($tipo,$fecIni,$fecFin,$cliente,$vendedor,$estado,$tipoPago,$id_local);
 			$this->output
 				->set_content_type('application/json')
 				->set_output(json_encode(array('aaData' => $result)));

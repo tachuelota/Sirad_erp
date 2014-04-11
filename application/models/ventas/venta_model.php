@@ -71,22 +71,22 @@ class venta_model extends CI_Model
 			return true;
 		}
 	}
-	public function reporte_ventas_bytienda($tipo,$fecIni,$fecFin,$id_local)
+	public function reporte_ventas_bytienda($tipo,$fecIni,$fecFin,$cliente,$vendedor,$estado,$tipoPago,$id_local)
 	{		
-		$procedure="call sp_consultar_venta(?,?,?,?)";
+		$procedure="call sp_consultar_venta(?,?,?,?,?,?,?,?)";
 
-		$params =array($tipo,$fecIni,$fecFin,$id_local);		
+		$params =array($tipo,$fecIni,$fecFin,$cliente,$vendedor,$estado,$tipoPago,$id_local);		
 
 		$result = $this->db->query($procedure,$params);
 		
 		return $result -> result_array();
 	}
 
-	public function reporte_ventas_byzona($tipo,$fecIni,$fecFin,$id_local)
+	public function reporte_ventas_byzona($tipo,$fecIni,$fecFin,$cliente,$vendedor,$estado,$tipoPago,$id_local)
 	{		
-		$procedure="call sp_consultar_venta(?,?,?,?)";
+		$procedure="call sp_consultar_venta(?,?,?,?,?,?,?,?)";
 
-		$params =array($tipo,$fecIni,$fecFin,$id_local);		
+		$params =array($tipo,$fecIni,$fecFin,$cliente,$vendedor,$estado,$tipoPago,$id_local);		
 
 		$result = $this->db->query($procedure,$params);
 		

@@ -109,8 +109,8 @@ class servicios extends CI_Controller {
 	public function getConstantesByClase($clase)
 	{
 		$this->load->model('administracion/constante_model','constm');
-		$result = $this->constm->get_ByClase($clase);
-		echo json_encode(array('aaData' => $result));
+		$constante = $this->constm->get_ByClase($clase);
+		echo json_encode(array('aaData' => $constante));
 	}
 	
 	public function getClaseConstante()

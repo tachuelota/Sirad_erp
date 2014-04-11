@@ -42,7 +42,11 @@
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="motivo">Motivo</label>
 											<div class="col-lg-8">
+<<<<<<< Updated upstream
 												<span class="help-inline" ><?php echo $DescMotivo;?></span>
+=======
+												<span class="help-inline" ><?php echo $nIngProdMotivo; ?></span>
+>>>>>>> Stashed changes
 											</div>
 										</div>
 										<div class="form-group">

@@ -1,19 +1,23 @@
 	$(document).ready(function(){
+		$(".SelectAjax").SelectAjax();
+		$(".SelectAjaxTipo").SelectAjax();
+
 		var urlExportXLS = base_url + "assets/extensiones/reportes_xls/formato_reporte_ventas.php";
 		var urlExportPDF = base_url +"assets/extensiones/reportes_pdf/formato_reporte_ventas.php";
 
 		var VenTiendasOptions = {
 		"aoColumns":[
-				{ "mDataProp": "FecReg"},
-				{ "mDataProp": "Tienda"},
+				{ "mDataProp": "cVentaFecReg"},
+				{ "mDataProp": "Vendedor"},
 				{ "mDataProp": "Cliente"}, 
-				{ "mDataProp": "Producto"},
-				{ "mDataProp": "Serie"} ,
-				{ "mDataProp": "Cant"}, 
-				{ "mDataProp": "Desct"} ,
-				{ "mDataProp": "PrecioCosto"} ,
-				{ "mDataProp": "PrecioVentaContado"} ,
-				{ "mDataProp": "PrecioVentaCredito"} 
+				{ "mDataProp": "tipo_pago"},
+				{ "mDataProp": "SubTotal"} ,
+				{ "mDataProp": "Descuento"}, 
+				{ "mDataProp": "TipoIGV"} ,
+				{ "mDataProp": "Total"} ,
+				{ "mDataProp": "Acuenta"} ,
+				{ "mDataProp": "Saldo"},
+				{ "mDataProp": "Estado"}
 				],
 		//"sDom":"t<'row-fluid'<'span12'i><'span12 center'p>>",		
 	};
@@ -23,7 +27,11 @@
 	$("#buscarfecha").click(function(event){
 		date1 = new Date($("#date01").datepicker("getDates"));
 		date2 = new Date($("#date02").datepicker("getDates"));
-		VenTiendaTable.fnReloadAjax($("#RepVentasForm").attr("action-1")+"/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2))
+		vendedor= $("#vendedor").val();
+		cliente=$("#cliente").val();
+		tipo=$("#selectTipoPag").val();
+		estado=$("#estado").val();
+		VenTiendaTable.fnReloadAjax($("#RepVentasForm").attr("action-1")+"/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2)+"/"+cliente+"/"+vendedor+"/"+estado+"/"+tipo)
 	});	
 	/********************************************/
 	var VenZonasOptions = {
@@ -31,13 +39,13 @@
 				{ "mDataProp": "FecReg"},
 				{ "mDataProp": "Tienda"},
 				{ "mDataProp": "Cliente"}, 
-				{ "mDataProp": "Producto"},
-				{ "mDataProp": "Serie"} ,
-				{ "mDataProp": "Cant"}, 
-				{ "mDataProp": "Desct"} ,
-				{ "mDataProp": "PrecioCosto"} ,
-				{ "mDataProp": "PrecioVentaContado"} ,
-				{ "mDataProp": "PrecioVentaCredito"} 
+				{ "mDataProp": "Cliente"},
+				{ "mDataProp": "Cliente"},
+				{ "mDataProp": "Cliente"},
+				{ "mDataProp": "Cliente"},
+				{ "mDataProp": "Cliente"},
+				{ "mDataProp": "Cliente"},
+				{ "mDataProp": "Cliente"} 
 				],
 		//"sDom":"t<'row-fluid'<'span12'i><'span12 center'p>>",		
 	};
@@ -47,7 +55,11 @@
 	$("#buscarfechazona").click(function(event){
 		date1 = new Date($("#date01zona").datepicker("getDates"));
 		date2 = new Date($("#date02zona").datepicker("getDates"));
-		VenZonasTable.fnReloadAjax($("#RepVentasZonasForm").attr("action-1")+"/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2))
+		vendedor= $("#vendedorZona").val();
+		cliente=$("#clienteZona").val();
+		tipo=$("#selectTipoPag_byZona").val();
+		estado=$("#estadoZona").val();
+		VenZonasTable.fnReloadAjax($("#RepVentasZonasForm").attr("action-1")+"/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2)+"/"+cliente+"/"+vendedor+"/"+estado+"/"+tipo)
 	});	
 	//REPORTES
 		$("#btn-rpt-tienda").click(function(){
