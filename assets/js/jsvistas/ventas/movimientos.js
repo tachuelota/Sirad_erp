@@ -69,10 +69,10 @@ $(document).ready(function(){
 
 
 	    var movimientotable = toHTML(crearTablaToArray("tmovimiento",
-				['FECHA REGISTRO','CONCEPTO','MONTO','TIPO MOV','TIPO PAGO','PERSONAL'],
+				['FECHA REGISTRO','PERSONAL','CONCEPTO','MONTO','TIPO MOV','TIPO PAGO'],
 				[	'style="width: 16%;" class="head" ','style="width: 16%;" class="head" ','style="width: 16%;" class="head" ',
 					'style="width: 16%;" class="head" ','style="width: 16%;" class="head" ','style="width: 16%;" class="head" '],
-				['dMovimientoFecReg','cMovimientoConcepto','nMovimientoMonto','nMovimientoTip','nMovimientoTipPag','personal'],
+				['dMovimientoFecReg','personal','cMovimientoConcepto','nMovimientoMonto','nMovimientoTip','nMovimientoTipPag'],
 				[	'style="width: 16%;" ','style="width: 16%;" ','style="width: 16%;" ',
 					'style="width: 16%;" ','style="width: 16%;" ','style="width: 16%;" '],
 					MovimientosTable.fnGetData()));
@@ -104,21 +104,21 @@ $(document).ready(function(){
 
 		PrepareData();		
 		var tableingresos = toHTML(crearTablaToArray("tmovimiento",
-			['FECHA','PERSONAL','CONCEPTO','FORMA DE PAGO','MONTO'],
-			[	'style="width: 20%;" class="head" ','style="width: 20%;" class="head" ','style="width: 20%;" class="head" ',
-				'style="width: 20%;" class="head" ','style="width: 20%;" class="head" '],
-			['dMovimientoFecReg','personal','cMovimientoConcepto','nMovimientoTipPag','nMovimientoMonto'],
-			[	'style="width: 20%;" ','style="width: 20%;" ','style="width: 20%;" ',
-				'style="width: 20%;" ','style="width: 20%;" '],
+			['FECHA','PERSONAL','CONCEPTO','MONTO','TIPO MOVIMIENTO','FORMA DE PAGO'],
+			[	'style="width: 20%;" class="head" ','style="width: 20%;" class="head" ','style="width: 10%;" class="head" ',
+				'style="width: 10%;" class="head" ','style="width: 20%;" class="head" ','style="width: 20%;" class="head" '],
+			['dMovimientoFecReg','personal','cMovimientoConcepto','nMovimientoMonto','nMovimientoTip','nMovimientoTipPag'],
+			[	'style="width: 20%;" ','style="width: 20%;" ','style="width: 10%;" ',
+				'style="width: 10%;" ','style="width: 20%;" ','style="width: 20%;" '],
 				TablaIngresos));
 
 		var tablesalidas = toHTML(crearTablaToArray("tmovimiento",
-			['FECHA','PERSONAL','CONCEPTO','FORMA DE PAGO','MONTO'],
-			[	'style="width: 20%;" class="head" ','style="width: 20%;" class="head" ','style="width: 20%;" class="head" ',
-				'style="width: 20%;" class="head" ','style="width: 20%;" class="head" '],
-			['dMovimientoFecReg','personal','cMovimientoConcepto','nMovimientoTipPag','nMovimientoMonto'],
-			[	'style="width: 20%;" ','style="width: 20%;" ','style="width: 20%;" ',
-				'style="width: 20%;" ','style="width: 20%;" '],
+			['FECHA','PERSONAL','CONCEPTO','MONTO','TIPO MOVIMIENTO','FORMA DE PAGO'],
+			[	'style="width: 20%;" class="head" ','style="width: 20%;" class="head" ','style="width: 10%;" class="head" ',
+				'style="width: 10%;" class="head" ','style="width: 20%;" class="head" ','style="width: 20%;" class="head" '],
+			['dMovimientoFecReg','personal','cMovimientoConcepto','nMovimientoMonto','nMovimientoTip','nMovimientoTipPag'],
+			[	'style="width: 20%;" ','style="width: 20%;" ','style="width: 10%;" ',
+				'style="width: 10%;" ','style="width: 20%;" ','style="width: 20%;" '],
 				TablaSalidas));		
 		$("#title").val("REPORTE DE MOVIMIENTOS");
 		$("#table_ingresos").val(tableingresos);
