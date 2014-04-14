@@ -30,7 +30,8 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('administracion/homepages.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/homepages.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = '';			
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
@@ -48,6 +49,7 @@ class views extends CI_Controller
 		$this->load->view('mensajes/producto_minstock.php');
 		$datafooter['jsvista'] = base_url().'assets/js/jsvistas/mensajes/producto_minstock.js';
 		$datafooter['active'] = '';
+		$datafooter['dropactive'] = '';
 		$this->load->view('templates/footer.php',$datafooter);
 	}
 }

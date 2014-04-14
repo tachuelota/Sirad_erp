@@ -2807,3 +2807,7 @@ Component: timeline
 #login-box.form-box .header{
   background: #014B6E;
 }
+
+.ui-front {
+  z-index: 1051;
+}

@@ -8,6 +8,10 @@
 	<meta name="author" content="CLM Developers">
 	<?php
 		echo link_tag('assets/css/bootstrap.min.css');
+        //tag
+        echo link_tag('http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css');
+        echo link_tag('assets/css/sliptree-bootstrap-tokenfield/bootstrap-tokenfield.css');
+
 		echo link_tag('assets/css/font-awesome.min.css');
 		echo link_tag('assets/css/ionicons.min.css');
 		//echo link_tag('assets/css/jvectormap/jquery-jvectormap-1.2.2.css');
@@ -17,12 +21,13 @@
 		echo link_tag('assets/css/datatables/dataTables.bootstrap.css');
 		echo link_tag('assets/css/iCheck/all.css');
 		echo link_tag('assets/css/AdminLTE.css');
+
 		//echo link_tag('assets/css/DicarsDataTable.css');
 		echo link_tag('assets/css/datepicker/css/datepicker.css');
 		echo link_tag('assets/css/datatables.actions.css');
 		echo link_tag('assets/css/jqueryvalidation/css/validationEngine.jquery.css');		
 		echo link_tag('assets/css/prettify.css');
-        echo link_tag('assets/css/bootstrap-tagsinput/bootstrap-tagsinput.css');
+
 	?>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
