@@ -1,10 +1,11 @@
 $(document).ready(function(){
 
 	var successInicie_Caja = function(){
+		$("#importe").disabled=true;
 		$.unblockUI({
 		    onUnblock: function(){
-				//CargosTable.fnReloadAjax()
-				$("#InicieCajaForm").reset();
+				//$("#InicieCajaForm").reset();				
+				
 			}
 		})
 	}
