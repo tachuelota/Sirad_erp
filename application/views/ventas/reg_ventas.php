@@ -108,7 +108,7 @@
 										    			<input type="hidden" id="cliente_id" name="cliente_id" value="<?php echo $clianonimo["nCliente_id"] ?>">                                    
 			                                            <input class="form-control" id="cliente" type="text" readonly value="<?php echo $clianonimo["cClienteNom"]." ".$clianonimo["cClienteApe"] ?>">
 			                                            <div class="btn btn-info btn-flat input-group-addon btn-buscarc">
-			                                                <i class="fa fa-search"></i>
+			                                                <i class="fa fa-search" style="color:white;"></i>
 			                                            </div>
 													</div>
 												</div> 

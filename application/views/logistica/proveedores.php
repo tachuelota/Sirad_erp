@@ -15,16 +15,11 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="box">
-					<div class="box-body">						
-						<div class="form-horizontal">
-							<div class="box-tools pull-right">
-	                            <button id="btn-reg" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i></button>
-	                        </div>
-	                        <div class="control-group">
-								<label class="control-label" for="tipo"></label>
-							</div>							
-						</div>					
-						<hr>
+					<div class="box-header">
+						<h3 class="box-title">Lista <small>de Proveedores</small></h3>
+						<div class="box-tools pull-right">
+                            <button id="btn-reg" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i></button>
+                        </div>
 					</div>
 					<div class="box-body table-responsive">
 						<table class="table table-striped table-bordered bootstrap-datatable datatable" id="proveedores_table" 
@@ -117,7 +112,7 @@
 														<div class="col-lg-8">
 															<div class="input-group">
 																<input class="form-control focused" id="paginaweb" name="paginaweb" type="text">
-																<span class="input-group-addon"><i class="fa fa-inbox"></i></span>
+																<span class="input-group-addon"><i class="fa fa-globe"></i></span>
 															</div>
 														</div>
 													</div>

@@ -2,12 +2,12 @@
 <aside class="right-side">
 	<section class="content-header">
 		<h1>
-		   Logistica
+		   Logística
 		    <small>Opciones</small>
 		</h1>
 		<ol class="breadcrumb">
 		    <li><a href="<?php echo base_url();?>">Home</a></li>
-		    <li class="active">Logistica</li>
+		    <li class="active">Logística</li>
 		</ol>
 	</section>
 	<section class="content">

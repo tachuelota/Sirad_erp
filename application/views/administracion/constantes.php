@@ -15,10 +15,13 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="box">
-	    			<div class="box-body">					
+					<div class="box-header">
+						<h3 class="box-title">Constantes <small>por Tipo</small></h3>
 						<div class="box-tools pull-right">
                             <button  id="btn-reg" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i></button>
                         </div>
+					</div>
+	    			<div class="box-body">					
                         <div class="row">
 	                        <div class="form-horizontal col-lg-6 col-lg-offset-2">
 								<div class="form-group">
@@ -67,7 +70,7 @@
 											<div class="col-lg-8">
 												<div class="input-group">
 													<input class="form-control validate[required,custom[onlyNumberSp]]" id="valor" name="valor" type="text" data-prompt-position="topLeft">
-													<span class="input-group-addon"><i class="fa fa-link"></i></span>
+													<span class="input-group-addon"><i class="fa fa-sort-numeric-asc"></i></span>
 												</div>
 											</div>
 										</div>

@@ -23,7 +23,7 @@
                         Ventas
                     </h3>
                     <p>
-                        Credito, Contado y Separacion
+                        Crédito, Contado y Separación
                     </p>
                 </div>
                 <div class="icon">

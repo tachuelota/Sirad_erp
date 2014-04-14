@@ -66,7 +66,7 @@
 													<div class="col-lg-8">
 														<div class="input-group">
 															<input class="form-control validate[required] validate[minSize[8]]" id="password" name="password" type="password">
-															<span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+															<span class="input-group-addon"><i class="fa fa-key"></i></span>
 														</div>
 													</div>
 												</div>
@@ -75,7 +75,7 @@
 													<div class="col-lg-8">
 														<div class="input-group">
 															<input class="form-control validate[equals[password]]" type="password" name="password2" id="password2">
-															<span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+															<span class="input-group-addon"><i class="fa fa-key"></i></span>
 														</div>
 													</div>
 												</div>
@@ -170,7 +170,7 @@
 				</div>
 				<div class="box">
 					<div class="box-header">
-						<h3 class="box-title">Lista <small>Usuarios</small></h3>
+						<h3 class="box-title">Lista <small>de Usuarios</small></h3>
 					</div>
 					<div class="box-body">
 						<table id="usuarios_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>administracion/servicios/get_usuarios">
