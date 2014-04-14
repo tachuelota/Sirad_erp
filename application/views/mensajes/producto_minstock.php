@@ -27,7 +27,7 @@
 					</div>
 					<div class="box-body">
 						<form id="notificaciones">							
-							<div class="form-horizontal box-content">								
+							<div class="form-horizontal box-content">															
 								<table id="select_producto_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>mensajes/servicios/getProductos_minstock">
 									<thead>
 										<tr>
@@ -46,51 +46,43 @@
 							</div>							
 						</form>
 					</div>
-					<!-- Inicio de Modal-->
-					<div class="modal fade" id="compose-modal" tabindex="-1" role="dialog" aria-hidden="true">
-			            <div class="modal-dialog">
-			                <div class="modal-content">
-			                    <div class="modal-header">
-			                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			                        <h4 class="modal-title"><i class="fa fa-envelope-o"></i>  Redactar nuevo mensaje</h4>
-			                    </div>
-			                    <form action="#" method="post">			                    	
-			                        <div class="modal-body">
-			                        	<div class="form-group">																											
-																		<div class="input-group">
-																			<span id="from" class="input-group-addon"><i class="fa fa-user"></i></span>
-																			<input class="form-control" id="registrador" name="registrador" value="<?php echo $trabajador["cPersonalNom"]." ".$trabajador["cPersonalApe"] ?>" type="text" readonly>																			
-																		</div>
-																	
-																</div>
-			                            <div class="form-group">
-			                                <div class="input-group">
-			                                    <span class="input-group-addon">TO:</span>
-			                                    <input type="text" data-provide="typeahead">
-			                                    <!--<input name="email_to" type="email" class="form-control" placeholder="Email TO">-->
-			                                </div>
-			                            </div>
-			                            <div class="form-group">
-			                                <div class="input-group">
-			                                    <span class="input-group-addon">CC:</span>
-			                                    <input name="email_cc" type="email" class="form-control" placeholder="Email CC">
-			                                    
-			                                </div>
-			                            </div>			                        
-			                            <div class="form-group">
-			                                <textarea name="message" id="email_message" class="form-control" placeholder="Message" style="height: 120px;" ></textarea>
-			                            </div>
-			                        </div>
-			                        <div class="modal-footer clearfix">
+					<!--MODALS-->
+					<div class="modal fade" id="compose-modal">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                  <h4 class="modal-title"><i class="fa fa-envelope-o"></i>  Redactar nuevo mensaje</h4>
+                                </div>
+                                <div class="modal-body">
+                                	<form id="EnviarForm" class="form-horizontal" action-1="<?php echo base_url();?>mensajes/email/sendemail">
+                                		<div class="form-group">
+                							<div class="col-lg-12">
+                								<div class="input-group">
+                							  		<span id="from" class="input-group-addon"><i class="fa fa-user"></i></span>
+                										<input class="form-control" id="registrador" name="registrador" value="<?php echo $trabajador["cPersonalNom"]." ".$trabajador["cPersonalApe"] ?>" type="text" readonly>
+                								</div>
+                							</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-lg-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">TO:</span>                          
+                                                    <input name="email_to" id="email_to" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer clearfix">
 
-			                            <button type="button" class="btn btn-flat" data-dismiss="modal">Cancelar</button>
-
-			                            <button type="submit" class="btn btn-primary btn-flat"> Enviar</button>
-			                        </div>
-			                    </form>
-			                </div><!-- /.modal-content -->
-			            </div><!-- /.modal-dialog -->
-			        </div><!-- /.modal -->																						
+                                        <button type="button" class="btn btn-flat" data-dismiss="modal">Cancelar</button>
+                                        <button id="btn_enviar_correo" type="button" class="btn btn-primary btn-flat"> Enviar</button>
+                                    </div>                                    
+                                	</form>
+                                </div>
+							</div>
+						</div>
+					</div>
+																									
 				</div>
 			</div>
 		</div>
