@@ -18,41 +18,89 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-body">                  
-                        
                         <div class="row">
-                            <div class="form-horizontal col-lg-6 col-lg-offset-2">
+                            <div class="form-horizontal col-lg-12 col-lg-offset-0"><!--6-2-->
+                                <legend>CAJA 1</legend>
                                 <div class="form-group">
-                                    <label class="col-lg-4 control-label" for="nom_clase">Caja</label>
-                                    <div class="col-lg-8">
+                                    <label class="col-lg-5 control-label" for="nom_caja">Caja</label><!--4-8-->
+                                    <div class="col-lg-3">
                                         <div class="input-group">
-                                            <input class="form-control " id="nom_clase" name="nom_clase" type="text" data-prompt-position="topLeft">
+                                            <input class="form-control " id="nom_caja" name="nom_clase" type="text" data-prompt-position="topLeft">
                                             <span class="input-group-addon"><i class="fa fa-file-text-o"></i></span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-4 control-label" for="fec-trabajador">Fecha </label>
-                                    <div class="col-lg-8">
+                                    <label class="col-lg-5 control-label" for="fec-caja">Fecha </label>
+                                    <div class="col-lg-3">
                                         <div class="input-group">                                                   
-                                            <input type="text" placeholder="dd/mm/YYYY"  maxlength="10" title="Debe ingresar un formato de fecha correcto" class="form-control datepicker validate[required,custom[date]]" id="fechanacimiento" name="fechanacimiento" >
+                                            <input type="text" placeholder="dd/mm/YYYY"  maxlength="10" title="Debe ingresar un formato de fecha correcto" class="form-control datepicker validate[required,custom[date]]" id="fecApertura" name="fecApertura" >
                                             <div class="input-group-addon"><i class="fa fa-calendar"></i></div>                                             
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-4 control-label" for="valor">Importe</label>
-                                    <div class="col-lg-8">
+                                    <label class="col-lg-5 control-label" for="valor">Importe</label>
+                                    <div class="col-lg-3">
+                                        <div class="input-group">
+                                            <input class="form-control validate[required,custom[onlyNumberSp]]" id="importe" name="importe" type="text" data-prompt-position="topLeft">
+                                            <span class="input-group-addon"><i class="fa fa-link"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </br>
+                                <div class="col-lg-4 col-lg-offset-4">
+                                </div>
+                                <div class="col-lg-2">  
+                                    <button id="Abrir_caja" type="button" class="col-lg-12 btn btn-info btn-flat btn-abrirc">   Abrir</button>
+                                </div>
+                                <div class="col-lg-2">  
+                                    <button id="Cerrar_caja" type="button" class="col-lg-12 btn btn-success btn-flat" >Cerrar</button>
+                                </div>
+                        </br>
+                        </br>
+                        </br>
+                        </br>
+                            </div>
+                            <div class="form-horizontal col-lg-12 col-lg-offset-0"><!--6-2-->
+                                <legend>CAJA 2</legend>
+                                <div class="form-group">
+                                    <label class="col-lg-5 control-label" for="nom_caja">Caja</label><!--4-8-->
+                                    <div class="col-lg-3">
+                                        <div class="input-group">
+                                            <input class="form-control " id="nom_clase" name="nom_caja" type="text" data-prompt-position="topLeft">
+                                            <span class="input-group-addon"><i class="fa fa-file-text-o"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-5 control-label" for="fec-caja">Fecha </label>
+                                    <div class="col-lg-3">
+                                        <div class="input-group">                                                   
+                                            <input type="text" placeholder="dd/mm/YYYY"  maxlength="10" title="Debe ingresar un formato de fecha correcto" class="form-control datepicker validate[required,custom[date]]" id="fechanacimiento" name="fecha" >
+                                            <div class="input-group-addon"><i class="fa fa-calendar"></i></div>                                             
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-5 control-label" for="valor">Importe</label>
+                                    <div class="col-lg-3">
                                         <div class="input-group">
                                             <input class="form-control validate[required,custom[onlyNumberSp]]" id="valor" name="valor" type="text" data-prompt-position="topLeft">
                                             <span class="input-group-addon"><i class="fa fa-link"></i></span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="from-group col-lg-offset-9">
-                                        <button type="reset" class="btn btn-flat btn-default btn-cancelarprov" data-dismiss="modal">Cerrar</button>           
-                                        <button id="btn-reg-iniceCierre" class="btn btn-flat btn-primary">Abrir</button>
-                                        <!--<button id="btn-edit-constante" class="btn btn-flat btn-primary" style="display:none">Guardar</button>-->
+                            </br>
+                                <div class="col-lg-4 col-lg-offset-4">
                                 </div>
+                                <div class="col-lg-2">  
+                                    <button id="Abrir_caja" type="button" class="col-lg-12 btn btn-info btn-flat btn-abrirc">   Abrir</button>
+                                </div>
+                                <div class="col-lg-2">  
+                                    <button id="Cerrar_caja" type="button" class="col-lg-12 btn btn-success btn-flat" >Cerrar</button>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>  
