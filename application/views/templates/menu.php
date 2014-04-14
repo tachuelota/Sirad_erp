@@ -109,6 +109,15 @@
 									</a>
 								</li>		
 							<?php endif ?>
+							<?php //if($this->ion_auth->in_group("ven_inicie_caja")): ?>
+								<li id="cuadre_caja">
+									<a class="ajax-link" href="<?php echo base_url();?>ventas/views/inicie_caja">
+										<i class="fa  fa-hdd-o"></i>
+										Inicio/Cierre de Caja</span>
+									</a>
+								</li>		
+							<?php //endif ?>
+
 						</ul>	
 	                </li>           
 				<?php endif ?>

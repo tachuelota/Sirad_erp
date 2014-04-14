@@ -321,4 +321,24 @@ class views extends CI_Controller
 			redirect('/ventas', 'refresh');
 	}
 
+	public function inicie_caja()
+	{
+		//if($this->ion_auth->in_group("ven_inicie_caja"))
+		//{
+			$this->load->model('administracion/trabajadores_model','tra');
+			$dataheader['title'] = 'Inicie/Cierre Caja';			
+			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
+			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
+			$this->load->view('templates/headers.php',$dataheader);		
+			$this->load->view('templates/menu.php',$data);
+			$this->load->view('ventas/inicie_caja.php');
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/reporte_ing_egr.js';
+			$datafooter['active'] = 'ven_inicie_caja';
+			$datafooter['dropactive'] = 'dropventas';
+			$this->load->view('templates/footer.php',$datafooter);
+		//}
+		//else
+			//redirect('/ventas', 'refresh');
+	}
+
 }

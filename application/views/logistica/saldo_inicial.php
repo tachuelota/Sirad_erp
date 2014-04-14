@@ -64,7 +64,8 @@
 										<th class="input">
 											<input type="text" placeholder="Producto" class="search_init form-control" />
 										</th>
-										<th></th>
+										<th>
+										</th>
 										<th class="input">
 											<input type="text" placeholder="Prec. Unitario" class="search_init form-control" />
 										</th>
