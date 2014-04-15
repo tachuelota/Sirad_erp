@@ -45,7 +45,8 @@
                                     <div class="col-lg-3">
                                         <div class="input-group">
                                             <input class="form-control validate[required,custom[onlyNumberSp]]" id="importe" name="importe" type="text" data-prompt-position="topLeft">
-                                            <span class="input-group-addon"><i class="fa fa-link"></i></span>
+
+                                            <span class="input-group-addon">0.0</span>
                                         </div>
                                     </div>
                                 </div>
@@ -64,8 +65,6 @@
                         </br>
                             </div>
 
-                        </div>
-                    </div><!-- /.box-body-->
                 
                     <div class="box-body table-responsive">
                         <legend>CONSULTA</legend>

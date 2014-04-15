@@ -9,7 +9,10 @@ class email extends CI_Controller {
 
 	function sendemail()
 	{
-		  $config = array(
+        $prodSinStock = $this->input->post('table_productos');
+        $trabCorreo = $this->input->post('trabajadoresId');
+
+		$config = array(
         'protocol' => 'smtp',
         'smtp_host' => 'mail.clmdevelopers.com',
         'smtp_port' => 25,
@@ -21,10 +24,11 @@ class email extends CI_Controller {
     $this->email->initialize($config);
 
     $this->email->from('avilasauna@gmail.com');
-    $this->email->to('avilasauna@gmail.com');
+    $this->email->to($trabCorreo);
+    //$this->email->cc();
 
     $this->email->subject('Reporte de Productos con Stock Minimo');
-    $this->email->message('Body of message...');
+    $this->email->message($prodSinStock);
 
     if ($this->email->send()) 
       show_error($this->email->print_debugger());    

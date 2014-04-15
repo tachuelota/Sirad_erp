@@ -20,10 +20,11 @@ $(document).ready(function(){
 	var CajaTable = createDataTable2('caja_table',CajaOptions);
 
 	var successInicie_Caja = function(){
+		$("#importe").disabled=true;
 		$.unblockUI({
 		    onUnblock: function(){
-				//CargosTable.fnReloadAjax()
-				$("#InicieCajaForm").reset();
+				//$("#InicieCajaForm").reset();				
+				
 			}
 		})
 	}

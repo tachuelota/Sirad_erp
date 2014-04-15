@@ -39,6 +39,10 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('#modalMov').modal('show');
 	});
+	$('#modal_caja').click(function(e){
+		e.preventDefault();
+		$('#rquiredproducts').modal('show');
+	});
 
 	$("#btn-reg-movimiento").click(function(event){
 		event.preventDefault();

@@ -40,13 +40,16 @@ public function __construct()
 				 	'nLocal_id' =>$idLocal,
 				 	'nCajaSaldoFinal'=> $saldoFinal,
 				 	'nCajaFaltanteSobrante'=>$saldoSobrante);
-				if($this->inicie->insert($Caja))
 <<<<<<< Updated upstream
-					
+				if($this->inicie->insert($Caja)){
+					$this->session->set_userdata('estadoCaja',1);
+					$return = array("responseCode"=>200, "datos"=>"ok");
+				}else
 =======
->>>>>>> Stashed changes
+				if($this->inicie->insert($Caja))
 					$return = array("responseCode"=>200, "datos"=>"ok");
 				else
+>>>>>>> Stashed changes
 					$return = array("responseCode"=>400, "greeting"=>"Bad");
 			} 
 			else
