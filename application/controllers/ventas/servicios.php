@@ -190,5 +190,15 @@ class servicios extends CI_Controller {
 				'nVenta_id' => $Venta["nVenta_id"],
 				'cliente' => $Venta["Cliente"])));
 	}
+
+	public function getCaja()
+	{
+		$this->load->model('ventas/inicie_caja_model','acm');
+		$result = $this->acm->get_caja();
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode(array('aaData' => $result)));
+	}
 	
 }
+

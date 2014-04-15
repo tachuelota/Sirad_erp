@@ -9,7 +9,7 @@
         <ol class="breadcrumb">
             <li><a href="<?php echo base_url();?>">Home</a></li>
             <li><a href="<?php echo base_url();?>ventas">Ventas</a></li>
-            <li class="active">Consultar</li>
+            <li class="active">Inicie/Cierre Caja</li>
         </ol>
     </section>
         <!-- Main content -->
@@ -21,7 +21,7 @@
                         <form id="InicieCajaForm" class="form-horizontal" action-1="<?php echo base_url();?>ventas/inicie_caja/registrar">
                         <div class="row">
                             <div class="form-horizontal col-lg-12 col-lg-offset-0"><!--6-2-->
-                                <legend>CAJA 1</legend>
+                                <legend>APERTURA DE CAJA</legend>
                                 <div class="form-group">
                                     <label class="col-lg-5 control-label" for="nom_caja">Caja</label><!--4-8-->
                                     <div class="col-lg-3">
@@ -63,51 +63,56 @@
                         </br>
                         </br>
                             </div>
-                            <div class="form-horizontal col-lg-12 col-lg-offset-0"><!--6-2-->
-                                <legend>CAJA 2</legend>
-                                <!--<div class="form-group">
-                                    <label class="col-lg-5 control-label" for="nom_caja">Caja</label>
-                                    <div class="col-lg-3">
-                                        <div class="input-group">
-                                            <input class="form-control " id="nom_clase" name="nom_caja" type="text" data-prompt-position="topLeft">
-                                            <span class="input-group-addon"><i class="fa fa-file-text-o"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-lg-5 control-label" for="fec-caja">Fecha </label>
-                                    <div class="col-lg-3">
-                                        <div class="input-group">                                                   
-                                            <input type="text" placeholder="dd/mm/YYYY"  maxlength="10" title="Debe ingresar un formato de fecha correcto" class="form-control datepicker validate[required,custom[date]]" id="fechanacimiento" name="fecha" >
-                                            <div class="input-group-addon"><i class="fa fa-calendar"></i></div>                                             
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-lg-5 control-label" for="valor">Importe</label>
-                                    <div class="col-lg-3">
-                                        <div class="input-group">
-                                            <input class="form-control validate[required,custom[onlyNumberSp]]" id="importe" name="importe" type="text" data-prompt-position="topLeft">
-                                            <span class="input-group-addon"><i class="fa fa-link"></i></span>
-                                        </div>
-                                    </div>
-                                </div>-->
-                            </br>
-                                <!--<div class="col-lg-4 col-lg-offset-4">
-                                </div>
-                                <div class="col-lg-2">  
-                                    <button id="Abrir_caja" type="button" class="col-lg-12 btn btn-info btn-flat btn-abrirc">   Abrir</button>
-                                </div>
-                                <div class="col-lg-2">  
-                                    <button id="Cerrar_caja" type="button" class="col-lg-12 btn btn-success btn-flat" >Cerrar</button>
-                                </div>-->
-                                
-                            </div>
+
                         </div>
-                    </form>
-                    </div>  
+                    </div><!-- /.box-body-->
+                
+                    <div class="box-body table-responsive">
+                        <legend>CONSULTA</legend>
+                        <table id="caja_table" class="table table-bordered table-striped" data-source="<?php echo base_url();?>ventas/servicios/getCaja" >
+                            <thead>
+                                <tr>
+                                    <th width="15%">Fecha Apertura</th>
+                                    <th width="25%">Fecha Cierre</th>
+                                    <th width="25%">Saldo Final</th>
+                                    <th width="13%">Faltante/Sobrante</th>
+                                    <th width="12%">Saldo Final Caja</th>
+                                    <th width="10%">Estado</th>
+                                </tr>
+                            </thead>
+                            <thead>
+                                <tr>
+                                    <th class="input">
+                                        <input type="text" placeholder="Fecha Apertura" class="search_init form-control" />
+                                    </th>
+                                    <th class="input">
+                                        <input type="text" placeholder="Fecha Cierre" class="search_init form-control" />
+                                    </th>
+                                    <th class="input">
+                                        <input type="text" placeholder="Saldo Final" class="search_init form-control" />
+                                    </th>
+                                    <th class="input">
+                                        <input type="text" placeholder="Faltante/Sobrante" class="search_init form-control" />
+                                    </th>
+                                    
+                                    <th></th>
+                                    <th class="customselect" nrocol="6">
+                                        <select class="form-control">
+                                            <option value="">Todos</option>
+                                            <option value="Anulado">Anulado</option>
+                                            <option value="Aperturado">Aperturado</option>
+                                            <option value="Cerrado">Cerrado</option>                                            
+                                            
+                                        </select>
+                                    </th>                                   
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div><!-- /.box-body table-responsive-->
+
                 </div>
-            </div>
+            </div>  
         </div>
     </section>
 </aside>

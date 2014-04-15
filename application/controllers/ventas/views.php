@@ -240,6 +240,28 @@ class views extends CI_Controller
 			redirect('/ventas', 'refresh');
 	} 
 
+	public function ver_caja($nCaja_id)
+	{
+		if($this->ion_auth->in_group("ven_ven_prod"))
+		{
+		
+			$this->load->model('administracion/trabajadores_model','tra');
+			$this->load->model('ventas/inicie_caja_model','inimod');
+			$dataheader['title'] = 'Ventas -(registrar)';
+			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
+			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);			
+			$pagedata["venta"] = $this->inimod->get_caja($nCaja_id);      	
+			$this->load->view('templates/headers.php',$dataheader);		
+			$this->load->view('templates/menu.php',$data);
+			$this->load->view('ventas/ver_caja.php',$pagedata);
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/ver_caja.js';
+			$datafooter['active'] = '';
+			$datafooter['dropactive'] = 'dropventas';
+			$this->load->view('templates/footer.php',$datafooter);
+		}
+		else
+			redirect('/ventas', 'refresh');
+	} 
 
 	public function reporte_ventas()
 	{

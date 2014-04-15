@@ -1,4 +1,23 @@
 $(document).ready(function(){
+	var CajaActions = new DTActions({
+		'conf': '100',		
+		'ViewFunction':function(nRow, aData, iDisplayIndex){
+			location.href = base_url+"ventas/views/ver_caja/"+aData.nCaja_id;
+		}
+	});
+
+	var CajaOptions = {
+		"aoColumns":[
+			{ "mDataProp": "FechaApertura"},
+		    { "mDataProp": "FechaCierre"},
+		    { "mDataProp": "SaldoFinal"},
+		    { "mDataProp": "FaltanteSobrante"},
+		    { "mDataProp": "SaldoFinalCaja"},
+		    { "mDataProp": "Estado"}
+				],
+		"fnCreatedRow": CajaActions.RowCBFunction
+	};
+	var CajaTable = createDataTable2('caja_table',CajaOptions);
 
 	var successInicie_Caja = function(){
 		$.unblockUI({
