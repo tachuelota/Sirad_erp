@@ -17,7 +17,7 @@ $(document).ready(function(){
 	ProductosTable = createDataTable2('select_producto_table',ProdOptions);
 	
 	var Trabajadores = (getAjaxObject(base_url+"administracion/servicios/get_trabajadores_activos")).aaData;
-	CloneAttr(Trabajadores, "nPersonal_id", "value" );
+	CloneAttr(Trabajadores, "cPersonalEmail", "value" );
 	CloneAttr(Trabajadores, "cPersonalNom", "label");
 	Trabajadores = CopyArray(Trabajadores, ["value","label"]);
 
