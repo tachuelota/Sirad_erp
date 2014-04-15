@@ -255,7 +255,7 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('ventas/ver_caja.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/ver_caja.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'inicie_caja';
 			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
@@ -355,7 +355,29 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('ventas/inicie_caja.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/inicie_caja.js';
-			$datafooter['active'] = 'ven_inicie_caja';
+			$datafooter['active'] = 'inicie_caja';
+			$datafooter['dropactive'] = 'dropventas';
+			$this->load->view('templates/footer.php',$datafooter);
+		//}
+		//else
+			//redirect('/ventas', 'refresh');
+	}
+
+	public function cuadre_caja()
+	{
+		//if($this->ion_auth->in_group("ven_inicie_caja"))
+		//{
+			$this->load->model('administracion/trabajadores_model','tra');
+			$this->load->model('ventas/inicie_caja_model','inimod');			
+			$dataheader['title'] = 'CuadredeCaja';			
+			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
+			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
+			$pagedata["cuadrecaja"] = $this->inimod->get_EstadoCaja(); 
+			$this->load->view('templates/headers.php',$dataheader);		
+			$this->load->view('templates/menu.php',$data);
+			$this->load->view('ventas/cuadrecaja.php',$pagedata);
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/cuadre_caja.js';
+			$datafooter['active'] = 'cuadre_caja';
 			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
 		//}

@@ -70,8 +70,9 @@
                         <table id="caja_table" class="table table-bordered table-striped" data-source="<?php echo base_url();?>ventas/servicios/getCaja" >
                             <thead>
                                 <tr>
-                                    <th width="15%">Fecha Apertura</th>
-                                    <th width="25%">Fecha Cierre</th>
+                                    <th width="14%">Nombre Local</th>
+                                    <th width="13%">Fecha Apertura</th>
+                                    <th width="13%">Fecha Cierre</th>
                                     <th width="25%">Saldo Final</th>
                                     <th width="13%">Faltante/Sobrante</th>
                                     <th width="12%">Saldo Final Caja</th>
@@ -80,6 +81,9 @@
                             </thead>
                             <thead>
                                 <tr>
+                                    <th class="input">
+                                        <input type="text" placeholder="Nombre Local" class="search_init form-control" />
+                                    </th>
                                     <th class="input">
                                         <input type="text" placeholder="Fecha Apertura" class="search_init form-control" />
                                     </th>

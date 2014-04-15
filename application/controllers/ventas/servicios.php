@@ -199,6 +199,15 @@ class servicios extends CI_Controller {
 			->set_content_type('application/json')
 			->set_output(json_encode(array('aaData' => $result)));
 	}
+
+	public function getCuadrecaja()
+	{
+		$this->load->model('ventas/cuadre_caja_model','acm');
+		$result = $this->acm->get_cuadrecaja();
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode(array('aaData' => $result)));
+	}
 	
 }
 

@@ -77,6 +77,22 @@
 								</a>
 							</li>
 							<?php endif ?>
+							<?php //if($this->ion_auth->in_group("ven_caja")): ?>
+								<li id="cuadre_caja">
+									<a class="ajax-link" href="<?php echo base_url();?>ventas/views/cuadre_caja">
+										<i class="fa  fa-inbox"></i>
+										Cuadre de Caja</span>
+									</a>
+								</li>		
+							<?php //endif ?>
+							<?php //if($this->ion_auth->in_group("ven_inicie_caja")): ?>
+								<li id="inicie_caja">
+									<a class="ajax-link" href="<?php echo base_url();?>ventas/views/inicie_caja">
+										<i class="fa  fa-hdd-o"></i>
+										Inicio/Cierre de Caja</span>
+									</a>
+								</li>		
+							<?php //endif ?>
 							<?php if($this->ion_auth->in_group("ven_rep_tiendzon")): ?>
 							<li id="ventas_rep">
 								<a class="ajax-link" href="<?php echo base_url();?>ventas/views/reporte_ventas">
@@ -105,18 +121,11 @@
 								<li id="cuadre_caja">
 									<a class="ajax-link" href="#" id="lanza-cuadrecaja">
 										<i class="fa  fa-inbox"></i>
-										Cuadre de Caja</span>
+										Reporte Cuadre de Caja</span>
 									</a>
 								</li>		
 							<?php endif ?>
-							<?php //if($this->ion_auth->in_group("ven_inicie_caja")): ?>
-								<li id="cuadre_caja">
-									<a class="ajax-link" href="<?php echo base_url();?>ventas/views/inicie_caja">
-										<i class="fa  fa-hdd-o"></i>
-										Inicio/Cierre de Caja</span>
-									</a>
-								</li>		
-							<?php //endif ?>
+							
 
 						</ul>	
 	                </li>           

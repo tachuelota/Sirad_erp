@@ -8,6 +8,7 @@ $(document).ready(function(){
 
 	var CajaOptions = {
 		"aoColumns":[
+			{ "mDataProp": "NombreLocal"},
 			{ "mDataProp": "FechaApertura"},
 		    { "mDataProp": "FechaCierre"},
 		    { "mDataProp": "SaldoFinal"},
