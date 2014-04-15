@@ -122,7 +122,55 @@ class Auth extends CI_Controller {
 			->set_output(json_encode(array('aaData' => $result)));
 	}
 
-	
+	function forgot_password()
+	{	
+		if(isset($_POST['email']))
+		{
+			if($_POST['email'] != "")
+			{
+				$identity = $this->ion_auth->where('email', strtolower($this->input->post('email')))->users()->row();
+		        if(empty($identity)) 
+		        {
+		            $this->ion_auth->set_message('forgot_password_email_not_found');
+		            $this->session->set_flashdata('message', $this->ion_auth->messages());
+		            redirect("auth/forgot_password", 'refresh');
+		        }
+		        
+				//run the forgotten password method to email an activation code to the user
+				$forgotten = $this->ion_auth->forgotten_password($identity->{$this->config->item('identity', 'ion_auth')});
+
+				if ($forgotten)
+				{
+					//if there were no errors
+					$this->session->set_flashdata('message', $this->ion_auth->messages());
+					redirect("auth/login", 'refresh'); //we should display a confirmation page here instead of the login page
+				}
+				else
+				{
+					$this->session->set_flashdata('message', $this->ion_auth->errors());
+					redirect("auth/forgot_password", 'refresh');
+				}
+			}
+			else
+			{
+				$this->ion_auth->set_message('forgot_password_email_not_found');
+	            $this->session->set_flashdata('message', $this->ion_auth->messages());
+	            redirect("auth/forgot_password", 'refresh');
+			}
+		        
+		}
+		else
+		{
+			$this->data['message'] = $this->session->flashdata('message');
+			$dataheader['isloginview'] = true;
+			$dataheader['title'] = 'Dicars - Select Local';
+			$this->load->view('templates/headers.php',$dataheader);			
+			$this->load->view('login/forgot_password',$this->data);
+			$datafooter['jsvista'] = '';
+			$datafooter['active'] = '';
+			$this->load->view('templates/footer.php',$datafooter);
+		}
+	}
 
 	//change password
 	function change_password()

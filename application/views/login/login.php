@@ -2,6 +2,11 @@
         <div class="header"><img src="<?php echo base_url();?>/assets/img/sirad-logo.png" ></div>
         <form method="post">
             <div class="body bg-gray">
+                <?php if($message != ""): ?>
+                    <div class="alert alert-info">
+                        <?php echo $message;?>
+                    </div>
+                <?php endif ?>
                 <div class="form-group">
                     <input type="text" name="username" id="username" type="text" placeholder="Usuario" class="form-control">
                 </div>
