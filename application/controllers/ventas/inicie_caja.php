@@ -52,4 +52,31 @@ public function __construct()
 			$return = json_encode($return);
 			echo $return;
 		}
+		public function cierre_caja()
+		{
+			$form = $this->input->post('formulario');
+
+			$fechaCierre=null;
+
+			if ($form != null)
+			{
+				$fechaCierre =  date_create_from_format("d/m/Y",$form["fecApertura"]);						
+				$estado = 2;					
+				
+				$Caja = array(
+					'dCajaFechaCierre'=> $fechaCierre->format('Y-m-d'),
+				 	'cCajaEstado'=> $estado);
+				if($this->inicie->cierre_caja($Caja)){
+					$this->session->set_userdata('estadoCaja',0);
+					$return = array("responseCode"=>200, "datos"=>"ok");
+				}else
+					$return = array("responseCode"=>400, "greeting"=>"Bad");
+			} 
+			else
+				$return = array("responseCode"=>400, "greeting"=>"Bad");
+
+			$return = json_encode($return);
+			echo $return;
+
+		}
 	}

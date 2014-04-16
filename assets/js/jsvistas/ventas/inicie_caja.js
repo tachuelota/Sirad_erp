@@ -21,14 +21,25 @@ $(document).ready(function(){
 	var CajaTable = createDataTable2('caja_table',CajaOptions);
 
 	var successInicie_Caja = function(){
-		$("#importe").disabled=true;
+		//location.reload(true);
 		$.unblockUI({
 		    onUnblock: function(){
-				//$("#InicieCajaForm").reset();				
+				//$("#InicieCajaForm").reset();	
+				location.reload(true);			
 				
 			}
 		})
 	}
+	/*var successCierre_Caja = function(){
+		location.reload(true);
+		/*$.unblockUI({
+		    onUnblock: function(){
+				//$("#InicieCajaForm").reset();	
+				location.reload(true);			
+				
+			}
+		})
+	}*/
 
 	$("#Abrir_caja").click(function(event){
 		event.preventDefault();
@@ -38,6 +49,20 @@ $(document).ready(function(){
 				onBlock: function()
 				{
 					enviar($("#InicieCajaForm").attr("action-1"),{formulario:$("#InicieCajaForm").serializeObject()}, successInicie_Caja, null)
+				
+				}
+			});
+	});
+
+	$("#Cerrar_caja").click(function(event){
+		event.preventDefault();
+		if($("#InicieCajaForm").validationEngine('validate'))
+			// para vefiricar console.log($("#CargoForm").serializeObject());
+			$.blockUI({ 
+				onBlock: function()
+				{
+					enviar($("#InicieCajaForm").attr("action-2"),{formulario:$("#InicieCajaForm").serializeObject()}, successInicie_Caja, null)
+				
 				}
 			});
 	});

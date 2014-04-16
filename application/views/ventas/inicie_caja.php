@@ -18,7 +18,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-body">                  
-                        <form id="InicieCajaForm" class="form-horizontal" action-1="<?php echo base_url();?>ventas/inicie_caja/registrar">
+                        <form id="InicieCajaForm" class="form-horizontal" action-1="<?php echo base_url();?>ventas/inicie_caja/registrar" action-2="<?php echo base_url(); ?>ventas/inicie_caja/cierre_caja">
                         <div class="row">
                             <div class="form-horizontal col-lg-12 col-lg-offset-0"><!--6-2-->
                                 <legend>APERTURA DE CAJA</legend>
@@ -31,16 +31,45 @@
                                         </div>
                                     </div>
                                 </div>
+                                <?php if( $this->session->userdata('estadoCaja') === 1){ ?>
                                 <div class="form-group">
                                     <label class="col-lg-5 control-label" for="fec-caja">Fecha </label>
                                     <div class="col-lg-3">
                                         <div class="input-group">                                                   
-                                            <input type="text" placeholder="dd/mm/YYYY"  maxlength="10" title="Debe ingresar un formato de fecha correcto" class="form-control datepicker validate[required,custom[date]]" id="fecApertura" name="fecApertura" value="<?php echo date("d/m/Y"); ?>" >
+                                            <input readonly type="text" placeholder="dd/mm/YYYY"  maxlength="10" title="Debe ingresar un formato de fecha correcto" class="form-control datepicker validate[required,custom[date]]" id="fecApertura" name="fecApertura" value="<?php echo date("d/m/Y"); ?>" >
                                             <div class="input-group-addon"><i class="fa fa-calendar"></i></div>                                             
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                 <div class="form-group">
+                                    <label class="col-lg-5 control-label" for="valor">Importe</label>
+                                    <div class="col-lg-3">
+                                        <div class="input-group">
+                                            <input readonly class="form-control" id="importe" name="importe" type="text" data-prompt-position="topLeft" value="<?php echo $caja["nCajaSaldoInicial"]; ?>">
+                                            <span class="input-group-addon">0.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                </br>
+                                <div class="col-lg-4 col-lg-offset-4">
+                                </div>
+                                <div class="col-lg-2">  
+                                    <button disabled="true" id="Abrir_caja" type="button" class="col-lg-12 btn btn-info btn-flat btn-abrirc">   Abrir</button>
+                                </div>
+                                <div class="col-lg-2">  
+                                    <button id="Cerrar_caja" type="button" class="col-lg-12 btn btn-success btn-flat" >Cerrar</button>
+                                </div>
+                                <?php }else{ ?>
+                                 <div class="form-group">
+                                    <label class="col-lg-5 control-label" for="fec-caja">Fecha </label>
+                                    <div class="col-lg-3">
+                                        <div class="input-group">                                                   
+                                            <input  type="text" placeholder="dd/mm/YYYY"  maxlength="10" title="Debe ingresar un formato de fecha correcto" class="form-control datepicker validate[required,custom[date]]" id="fecApertura" name="fecApertura" value="<?php echo date("d/m/Y"); ?>" >
+                                            <div class="input-group-addon"><i class="fa fa-calendar"></i></div>                                             
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="form-group">
                                     <label class="col-lg-5 control-label" for="valor">Importe</label>
                                     <div class="col-lg-3">
                                         <div class="input-group">
@@ -49,15 +78,18 @@
                                         </div>
                                     </div>
                                 </div>
-                            </br>
+                                </br>
                                 <div class="col-lg-4 col-lg-offset-4">
                                 </div>
                                 <div class="col-lg-2">  
                                     <button id="Abrir_caja" type="button" class="col-lg-12 btn btn-info btn-flat btn-abrirc">   Abrir</button>
                                 </div>
                                 <div class="col-lg-2">  
-                                    <button id="Cerrar_caja" type="button" class="col-lg-12 btn btn-success btn-flat" >Cerrar</button>
+                                    <button disabled="true" id="Cerrar_caja" type="button" class="col-lg-12 btn btn-success btn-flat" >Cerrar</button>
                                 </div>
+                                <?php } ?>
+                               
+                            
                         </br>
                         </br>
                         </br>

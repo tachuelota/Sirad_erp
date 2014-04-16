@@ -7,7 +7,7 @@ class inicie_caja_model extends CI_Model {
 		parent::__construct();
 	}
 
-	function insert($data){
+	public function insert($data){
 		$this->db->trans_start(true);
 		
 		$this->db->trans_begin();
@@ -24,6 +24,31 @@ class inicie_caja_model extends CI_Model {
 			$this->db->trans_commit();
 			return true;
 		}
+	}
+
+	public function cierre_caja($data)
+	{
+
+		$this->db->trans_start();
+		
+		$this->db->trans_begin();
+
+		$fechaActual=date('Y-m-d');
+
+        $this->db->where('dCajaFechaApertura',$fechaActual);
+		$this->db->update('caja',$data);
+
+		if ($this->db->trans_status() === FALSE)
+		{
+			$this->db->trans_rollback();
+			return false;
+		}
+		else
+		{
+			$this->db->trans_commit();
+			return true;
+		}
+
 	}
 
 
