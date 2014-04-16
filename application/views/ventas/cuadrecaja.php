@@ -21,7 +21,7 @@
                         <form id="InicieCajaForm" class="form-horizontal" >
                         <div class="row">
                             <div class="form-horizontal col-lg-12 col-lg-offset-0"><!--6-2-->
-                                <legend>CUADRE DE CAJA</legend>
+                                <legend>CUADRAR CAJA</legend>
                               
                                 <div class="form-group">
                                     <label class="col-lg-5 control-label" for="valor">Saldo Final</label>

@@ -42,7 +42,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_ord_comp"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'OrdenCompras';			
+			$dataheader['title'] = 'Orden de Compras - ';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -106,7 +106,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_ing_prod"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Ingreso Productos';			
+			$dataheader['title'] = 'Ingreso Productos - ';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -189,7 +189,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_gen_kardex"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Kardex';			
+			$dataheader['title'] = 'Kardex - ';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata["local"] = $this->session->userdata('current_local');			
@@ -210,7 +210,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_prod"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Productos';			
+			$dataheader['title'] = 'Productos - ';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata["local"] = $this->session->userdata('current_local');
@@ -231,7 +231,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_prove"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Proveedores';			
+			$dataheader['title'] = 'Proveedores - ';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -251,7 +251,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_sal_prod"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Salida Productos';			
+			$dataheader['title'] = 'Salida Productos - ';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -314,7 +314,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_sal_ini"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Saldo Inicial';			
+			$dataheader['title'] = 'Saldo Inicial - ';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		

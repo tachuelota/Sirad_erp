@@ -46,7 +46,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("ven_client"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Ventas';			
+			$dataheader['title'] = 'Clientes - ';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -68,7 +68,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("ven_crono"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Ventas';			
+			$dataheader['title'] = 'Cronogramas - ';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -110,7 +110,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("ven_rep_clienzon"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Reporte Zonas';			
+			$dataheader['title'] = 'Reporte Zonas - ';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -153,7 +153,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("ven_ven_prod"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-	      	$dataheader['title'] = 'Ventas';	      	
+	      	$dataheader['title'] = 'Ventas - ';	      	
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -175,7 +175,7 @@ class views extends CI_Controller
 			$this->load->model('ventas/venta_model','venm');
 			$this->load->model('administracion/trabajadores_model','tra');
 			$this->load->model('ventas/detalleventa_model','detvenm');
-			$dataheader['title'] = 'Ventas -(editar)';	      	
+			$dataheader['title'] = 'Ventas - (editar)';	      	
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata["venta"] = $this->venm->get_venta($nVenta_id);
@@ -247,7 +247,7 @@ class views extends CI_Controller
 		
 			$this->load->model('administracion/trabajadores_model','tra');
 			$this->load->model('ventas/inicie_caja_model','inimod');
-			$dataheader['title'] = 'Ventas -(registrar)';
+			$dataheader['title'] = 'Inicie Caja - ';
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);			
 			$pagedata["venta"] = $this->inimod->get_caja($nCaja_id);      	
@@ -289,7 +289,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("ven_movi"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Movimientos';
+			$dataheader['title'] = 'Movimientos - ';
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);			
 			$pagedata["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
@@ -310,7 +310,7 @@ class views extends CI_Controller
 	public function clientes_morosos()
 	{		
 		$this->load->model('administracion/trabajadores_model','tra');
-		$dataheader['title'] = 'Clientes-Morosos';		
+		$dataheader['title'] = 'Clientes-Morosos - ';		
 		$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 		$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 		$this->load->view('templates/headers.php',$dataheader);		
@@ -328,7 +328,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("ven_rep_ing_egr"))
 		{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Reporte Ingreso/Egreso';			
+			$dataheader['title'] = 'Reporte Ingreso/Egreso - ';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -348,7 +348,7 @@ class views extends CI_Controller
 		//if($this->ion_auth->in_group("ven_inicie_caja"))
 		//{
 			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Inicie/Cierre Caja';			
+			$dataheader['title'] = 'Inicie/Cierre Caja - ';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
@@ -369,7 +369,7 @@ class views extends CI_Controller
 		//{
 			$this->load->model('administracion/trabajadores_model','tra');
 			$this->load->model('ventas/inicie_caja_model','inimod');			
-			$dataheader['title'] = 'CuadredeCaja';			
+			$dataheader['title'] = 'Cuadre de Caja - ';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata["cuadrecaja"] = $this->inimod->get_EstadoCaja(); 
