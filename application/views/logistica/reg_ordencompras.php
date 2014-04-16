@@ -22,8 +22,8 @@
 										<div class="form-group">
 											<label for="registrador" class="col-lg-4 control-label">Registrador</label>
 											<div class="col-lg-8">												
-													<input class="form-control" type="hidden" id="id_registrador" name="id_registrador" value="<?php echo $trabajador["nPersonal_id"] ?>">
-													<input class="form-control" readonly type="text" id="registrador" name="registrador" value="<?php echo $trabajador["cPersonalNom"]." ".$trabajador["cPersonalApe"] ?>">
+													<input class="form-control" type="hidden" id="id_registrador" name="id_registrador" value="<?php echo $this->session->userdata('trabajador')["nPersonal_id"] ?>">
+													<input class="form-control" readonly type="text" id="registrador" name="registrador" value="<?php echo $this->session->userdata('trabajador')["cPersonalNom"]." ".$this->session->userdata('trabajador')["cPersonalApe"] ?>">
 											</div>
 										</div>
 										<div class="form-group">

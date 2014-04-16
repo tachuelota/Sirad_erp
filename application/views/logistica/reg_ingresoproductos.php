@@ -20,7 +20,7 @@
 				<div class="box">
 					<div class="box-body">
 						<form class="form-horizontal" id="IngresoProductosForm" method="post" action-1="<?php echo base_url();?>logistica/ingresoproductos/registrar" >
-							<input type="hidden" name="idRegistrado" id="idRegistrado" value="<?php echo $trabajador["nPersonal_id"] ?>
+							<input type="hidden" name="idRegistrado" id="idRegistrado" value="<?php echo $this->session->userdata('trabajador')["nPersonal_id"] ?>
 							">
 							<input type="hidden" name="idLocal" id="idLocal" value="<?php echo $local["nLocal_id"] ?>
 							">
@@ -30,7 +30,7 @@
 										<label for="registrador" class="col-lg-4 control-label">Registrador</label>
 										<div class="col-lg-8">
 											<div class="input-group">
-												<input class="form-control" id="registrador" name="registrador" value="<?php echo $trabajador["cPersonalNom"]." ".$trabajador["cPersonalApe"] ?>" type="text" readonly>
+												<input class="form-control" id="registrador" name="registrador" value="<?php echo $this->session->userdata('trabajador')["cPersonalNom"]." ".$this->session->userdata('trabajador')["cPersonalApe"] ?>" type="text" readonly>
 												<span id="spandesc" class="input-group-addon"><i class="fa fa-user"></i></span>
 											</div>
 										</div>

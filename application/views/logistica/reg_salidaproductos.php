@@ -20,7 +20,7 @@
 				<div class="box">
 					<div class="box-body">
 						<form id="RegistrarSalidaForm" class="form-horizontal" method="post" action-1="<?php echo base_url();?>logistica/salidaproductos/registrar">
-							<input type="hidden" name="idRegistrado" id="idRegistrado" value="<?php echo $trabajador["nPersonal_id"];?>">
+							<input type="hidden" name="idRegistrado" id="idRegistrado" value="<?php echo $this->session->userdata('trabajador')["nPersonal_id"];?>">
 							<input type="hidden" name="idLocal" id="idLocal" value="<?php echo $local["nLocal_id"] ?>
 							">
 							<div class="row">
@@ -28,9 +28,9 @@
 									<div class="form-group">
 										<label class="col-lg-4 control-label" for="registrador">Registrador</label>
 										<div class="col-lg-8">
-											<input id="registrador_id" name="registrador_id" type="hidden" value="<?php echo $trabajador["nPersonal_id"] ?>">
+											<input id="registrador_id" name="registrador_id" type="hidden" value="<?php echo $this->session->userdata('trabajador')["nPersonal_id"] ?>">
 											<div class="input-group">												
-												<input class="form-control" id="registrador" name="registrador" type="text" readonly value="<?php echo $trabajador["cPersonalNom"]." ".$trabajador["cPersonalApe"] ?>">
+												<input class="form-control" id="registrador" name="registrador" type="text" readonly value="<?php echo $this->session->userdata('trabajador')["cPersonalNom"]." ".$this->session->userdata('trabajador')["cPersonalApe"] ?>">
 												<span id="spandesc" class="input-group-addon"><i class="fa fa-user"></i></span>
 											</div>
 										</div>

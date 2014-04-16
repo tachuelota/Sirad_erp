@@ -94,7 +94,7 @@
 							</div>
 							<form id="MovimientoForm" class="form-horizontal" method="post" action-1="<?php echo base_url();?>
 								ventas/movimientos/registrar/">
-								<input type="hidden" name="idRegistrado" id="idRegistrado" value="<?php echo $trabajador["nPersonal_id"] ?>
+								<input type="hidden" name="idRegistrado" id="idRegistrado" value="<?php echo $this->session->userdata('trabajador')["nPersonal_id"] ?>
 								">
 								<input type="hidden" name="idLocal" id="idLocal" value="<?php echo $local["nLocal_id"] ?>
 								">
@@ -103,7 +103,7 @@
 										<label class="col-lg-4 control-label" for="personal">Trabajador</label>
 										<div class="col-lg-8">
 											<div class="input-group">
-												<input class="form-control" id="personal"  type="text" value="<?php echo $trabajador["cPersonalNom"]." ".$trabajador["cPersonalApe"] ?>" readonly>
+												<input class="form-control" id="personal"  type="text" value="<?php echo $this->session->userdata('trabajador')["cPersonalNom"]." ".$this->session->userdata('trabajador')["cPersonalApe"] ?>" readonly>
 												<span class="input-group-addon"><i class="fa fa-user"></i></span>
 											</div>
 										</div>

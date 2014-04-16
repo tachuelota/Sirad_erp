@@ -21,13 +21,10 @@ class views extends CI_Controller
 	public function index()
 	{
 		if($this->ion_auth->in_group_type(2))
-		{
-			$this->load->model('administracion/trabajadores_model','tra');
+		{			
 			$dataheader['title'] = 'Logistica';			
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/homepage.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/homepage.js';
 			$datafooter['active'] = '';
@@ -40,13 +37,10 @@ class views extends CI_Controller
 	public function cons_ordencompra()
 	{
 		if($this->ion_auth->in_group("log_ord_comp"))
-		{
-			$this->load->model('administracion/trabajadores_model','tra');
+		{			
 			$dataheader['title'] = 'Orden de Compras - ';			
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/cons_ordencompras.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/cons_ordencompras.js';
 			$datafooter['active'] = 'ord_com';
@@ -61,14 +55,10 @@ class views extends CI_Controller
 	{
 		if($this->ion_auth->in_group("log_ord_comp"))
 		{
-			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'OrdenCompras (Registrar)';
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);			
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$pagedata["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
+			$dataheader['title'] = 'OrdenCompras (Registrar)';			
 			$pagedata["local"] = $this->session->userdata('current_local');			
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/reg_ordencompras.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/reg_ordencompras.js';
 			$datafooter['active'] = 'ord_com';
@@ -84,13 +74,10 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_ord_comp"))
 		{
 			$this->load->model('logistica/ordcompra_model','ordcomp');
-			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'OrdenCompras (Ver)';
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
+			$dataheader['title'] = 'OrdenCompras (Ver)';			
 			$pagedata = $this->ordcomp->get_OrdCompra_views($nOrdenCom_id);				
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/ver_ordencompras.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/ver_ordencompras.js';
 			$datafooter['active'] = 'ord_com';
@@ -105,12 +92,9 @@ class views extends CI_Controller
 	{
 		if($this->ion_auth->in_group("log_ing_prod"))
 		{
-			$this->load->model('administracion/trabajadores_model','tra');
 			$dataheader['title'] = 'Ingreso Productos - ';			
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/cons_ingresoproductos.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/cons_ingresoproductos.js';
 			$datafooter['active'] = 'ing_prod';
@@ -124,14 +108,10 @@ class views extends CI_Controller
 	{
 		if($this->ion_auth->in_group("log_ing_prod"))
 		{
-			$this->load->model('administracion/trabajadores_model','tra');
 			$dataheader['title'] = 'Ingreso Productos (Registrar)';
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$pagedata["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata["local"] = $this->session->userdata('current_local');			
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/reg_ingresoproductos.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/reg_ingresoproductos.js';
 			$datafooter['active'] = 'ing_prod';
@@ -146,13 +126,10 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_ing_prod"))
 		{
 			$this->load->model('logistica/ingproducto_model','ingprod');
-			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Ingreso Productos (Editar)';
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);		
+			$dataheader['title'] = 'Ingreso Productos (Editar)';	
 			$pagedata = $this->ingprod->get_IngProducto($nIngProd_id);			
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/editar_ingresoproductos.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/editar_ingresoproductos.js';
 			$datafooter['active'] = 'ing_prod';
@@ -167,13 +144,10 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_ing_prod"))
 		{
 			$this->load->model('logistica/ingproducto_model','ingprod');
-			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Ingreso Productos (Ver)';			
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);		
+			$dataheader['title'] = 'Ingreso Productos (Ver)';				
 			$pagedata = $this->ingprod->get_IngProducto($nIngProd_id);			
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/ver_ingresoproductos.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/ver_ingresoproductos.js';
 			$datafooter['active'] = 'ing_prod';
@@ -188,13 +162,10 @@ class views extends CI_Controller
 	{
 		if($this->ion_auth->in_group("log_gen_kardex"))
 		{
-			$this->load->model('administracion/trabajadores_model','tra');
 			$dataheader['title'] = 'Kardex - ';			
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata["local"] = $this->session->userdata('current_local');			
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/kardex.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/kardex.js';
 			$datafooter['active'] = 'gen_kardex';
@@ -209,13 +180,10 @@ class views extends CI_Controller
 	{
 		if($this->ion_auth->in_group("log_prod"))
 		{
-			$this->load->model('administracion/trabajadores_model','tra');
 			$dataheader['title'] = 'Productos - ';			
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata["local"] = $this->session->userdata('current_local');
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/productos.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/productos.js';
 			$datafooter['active'] = 'admin_prod';
@@ -230,12 +198,9 @@ class views extends CI_Controller
 	{
 		if($this->ion_auth->in_group("log_prove"))
 		{
-			$this->load->model('administracion/trabajadores_model','tra');
 			$dataheader['title'] = 'Proveedores - ';			
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/proveedores.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/proveedores.js';
 			$datafooter['active'] = 'admin_provee';
@@ -250,12 +215,9 @@ class views extends CI_Controller
 	{
 		if($this->ion_auth->in_group("log_sal_prod"))
 		{
-			$this->load->model('administracion/trabajadores_model','tra');
 			$dataheader['title'] = 'Salida Productos - ';			
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/cons_salidaproductos.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/cons_salidaproductos.js';
 			$datafooter['active'] = 'sal_prod';
@@ -269,14 +231,10 @@ class views extends CI_Controller
 	{
 		if($this->ion_auth->in_group("log_sal_prod"))
 		{
-			$this->load->model('administracion/trabajadores_model','tra');
-			$dataheader['title'] = 'Salida Productos (Registrar) ';
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$pagedata["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
+			$dataheader['title'] = 'Salida Productos (Registrar) ';			
 			$pagedata["local"] = $this->session->userdata('current_local');			
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/reg_salidaproductos.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/reg_salidaproductos.js';
 			$datafooter['active'] = '';
@@ -291,14 +249,11 @@ class views extends CI_Controller
 	{
 		if($this->ion_auth->in_group("log_sal_prod"))
 		{
-			$this->load->model('logistica/salproducto_model','salprod');
-			$this->load->model('administracion/Trabajadores_Model','tra');			
+			$this->load->model('logistica/salproducto_model','salprod');			
 			$dataheader['title'] = 'Salida Productos (Ver)';
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);	
 			$pagedata = $this->salprod->get_SalProducto($nSalProd_id);
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/ver_salidaproductos.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/ver_salidaproductos.js';
 			$datafooter['active'] = '';
@@ -313,12 +268,9 @@ class views extends CI_Controller
 	{
 		if($this->ion_auth->in_group("log_sal_ini"))
 		{
-			$this->load->model('administracion/trabajadores_model','tra');
 			$dataheader['title'] = 'Saldo Inicial - ';			
-			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php',$data);
+			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/saldo_inicial.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/saldo_inicial.js';
 			$datafooter['active'] = 'saldos';

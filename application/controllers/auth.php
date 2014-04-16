@@ -58,6 +58,10 @@ class Auth extends CI_Controller {
 					$estadoCaja=0;
 				}
 				$this->session->set_userdata('estadoCaja', $estadoCaja);
+				$this->load->model('administracion/trabajadores_model','tra');
+				$trabajador=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
+
+				$this->session->set_userdata('trabajador',$trabajador);
 
 				redirect('auth/select_local', 'refresh');
 			}
