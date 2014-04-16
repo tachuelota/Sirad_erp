@@ -4,7 +4,8 @@ $(document).ready(function(){
 		//location.reload(true);
 		$.unblockUI({
 		    onUnblock: function(){
-				$("#CuadreCajaForm").reset();	
+				$("#CuadreCajaForm").reset();
+				$("#saldo").val("");	
 				//location.reload(true);			
 				
 			}

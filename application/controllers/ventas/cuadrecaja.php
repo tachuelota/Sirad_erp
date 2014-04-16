@@ -21,7 +21,7 @@ class cuadrecaja extends CI_Controller {
 			->set_output(json_encode( $result->result_array()));
 	}
 
-	public function cuadrecaja()
+	public function cuadre_caja()
 	{
 		$form = $this->input->post('formulario');
 		
