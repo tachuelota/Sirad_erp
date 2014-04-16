@@ -75,7 +75,7 @@ $(document).ready(function(){
 	var crearTabla = function()
 	{
 		table_productos = toHTML(crearTablaToArray("tclientes",
-				['Codigo de Barra','Producto','Unidad Medida','Stock Actual','Stock Minimo','Stock Maximo'],
+				['Código de Barra','Producto','Unidad Medida','Stock Actual','Stock Mínimo','Stock Máximo'],
 				[	'style="width: 5%;" class="head" ','style="width: 25%;" class="head" ','style="width: 15%;" class="head" ',
 					'style="width: 15%;" class="head" ','style="width: 15%;" class="head" ','style="width: 25%;" class="head" ',],
 				['CodBarra','Producto','UnidMedida','Stock_Actual','Stock_Minimo','Stock_Maximo'],
