@@ -77,14 +77,21 @@
 								</a>
 							</li>
 							<?php endif ?>
-							<?php //if($this->ion_auth->in_group("ven_caja")): ?>
+							<?php if( $this->session->userdata('estadoCaja') === 1){  ?>
 								<li id="cuadre_caja">
 									<a class="ajax-link" href="<?php echo base_url();?>ventas/views/cuadre_caja">
 										<i class="fa  fa-inbox"></i>
 										Cuadre de Caja</span>
 									</a>
 								</li>		
-							<?php //endif ?>
+							<?php }else{ ?>
+							<li id="cuadre_caja">
+									<a class="ajax-link" data-target="#rquiredproducts" data-toggle="modal" >
+										<i class="fa  fa-inbox"></i>
+										Cuadre de Caja</span>
+									</a>
+								</li>
+							<?php } ?>
 							<?php //if($this->ion_auth->in_group("ven_inicie_caja")): ?>
 								<li id="inicie_caja">
 									<a class="ajax-link" href="<?php echo base_url();?>ventas/views/inicie_caja">
@@ -224,7 +231,26 @@
         </section>
         <!-- /.sidebar -->
     </aside>
-
+<!--MODAL-->
+<div class="modal fade" id="rquiredproducts">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title"><i class="fa fa-exclamation-triangle"></i> Atención</h4>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-danger alert-dismissable">
+					<p>
+						Necesita Iniciar Caja
+					</p>
+				</div>
+			</div>
+			<div class="modal-footer clearfix">
+				<a href="#" class="btn" data-dismiss="modal">Aceptar</a>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
 
 <div class="modal fade" id="modalcierremes">
 	<div class="modal-dialog">
