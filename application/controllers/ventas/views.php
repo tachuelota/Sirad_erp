@@ -348,12 +348,9 @@ class views extends CI_Controller
 		//if($this->ion_auth->in_group("ven_inicie_caja"))
 		//{
 			$this->load->model('administracion/trabajadores_model','tra');
-<<<<<<< Updated upstream
 			$dataheader['title'] = 'Inicie/Cierre Caja - ';			
-=======
 			$this->load->model('ventas/inicie_caja_model','inicie');
-			$dataheader['title'] = 'Inicie/Cierre Caja';			
->>>>>>> Stashed changes
+			//$dataheader['title'] = 'Inicie/Cierre Caja';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata["caja"]=$this->inicie->get_EstadoCaja();
