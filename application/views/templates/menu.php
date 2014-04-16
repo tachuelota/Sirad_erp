@@ -86,7 +86,7 @@
 								</li>		
 							<?php }else{ ?>
 							<li id="cuadre_caja">
-									<a class="ajax-link" data-target="#rquiredproducts" data-toggle="modal" >
+									<a class="ajax-link" data-target="#modal_iniciecaja" data-toggle="modal" >
 										<i class="fa  fa-inbox"></i>
 										Cuadre de Caja</span>
 									</a>
@@ -232,7 +232,7 @@
         <!-- /.sidebar -->
     </aside>
 <!--MODAL-->
-<div class="modal fade" id="rquiredproducts">
+<div class="modal fade" id="modal_iniciecaja">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
