@@ -41,7 +41,10 @@ public function __construct()
 				 	'nCajaSaldoFinal'=> $saldoFinal,
 				 	'nCajaFaltanteSobrante'=>$saldoSobrante);
 				if($this->inicie->insert($Caja))
+<<<<<<< Updated upstream
 					
+=======
+>>>>>>> Stashed changes
 					$return = array("responseCode"=>200, "datos"=>"ok");
 				else
 					$return = array("responseCode"=>400, "greeting"=>"Bad");
