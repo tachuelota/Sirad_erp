@@ -16,10 +16,10 @@
 			<div class="col-xs-12">
 				<div class="box">
 					<div class="box-header">
-	                        <h3 class="box-title"></h3>
-							<div class="box-tools pull-right">
-	                            <a href="<?php echo base_url();?>logistica/views/reg_ordencompra/" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i></a>
-	                        </div>
+						<h3 class="box-title">Buscar</h3>
+						<div class="box-tools pull-right">
+                            <a href="<?php echo base_url();?>logistica/views/reg_ordencompra/" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i></a>
+                        </div>
                 	</div>
                 	<div class="box-body">
                 		<div id="OrdCompraForm" name="OrdCompraForm" action-1="<?php echo base_url();?>logistica/servicios/get_log_ordcompra_rangefechas" action-2="<?php echo base_url();?>logistica/views/ver_ordencompras">						

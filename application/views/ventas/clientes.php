@@ -19,11 +19,12 @@
 			<div class="col-lg-12">
 				<div class="box">
 					<div class="box-header">
+						<h3 class="box-title">Lista <small>de Clientes</small></h3>
 						<div class="box-tools pull-right">
 							<input id="pdfgen" type="button" value="Reporte General" class="btn btn-flat btn-success" />
 							<!--<a id="pdfgen" type="button" class="btn btn-flat btn-success"/><i class="fa fa-file-text-o"></i> Reporte General</a>-->
-							<a href="#" class="btn btn-default btn-flat btn-registrar"> <i class="glyphicon glyphicon-plus"></i>
-							</a>
+							<button class="btn btn-default btn-flat btn-registrar"> <i class="glyphicon glyphicon-plus"></i>
+							</button>
 						</div>
 					</div>
 					<div class="box-body">
@@ -82,7 +83,7 @@
 												<div class="col-lg-8">
 													<div class="input-group">
 														<input class="form-control validate[required]" maxlength="200" id="direccion"name="direccion" type="text" data-prompt-position="topLeft">
-														<span class="input-group-addon"><i class="fa fa-home"></i></span>
+														<span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
 													</div>													
 												</div>
 											</div>
@@ -91,7 +92,7 @@
 												<div class="col-lg-8">
 													<div class="input-group">
 														<input class="form-control" value=" " maxlength="200" id="referencia" name="referencia" type="text" >
-														<span class="input-group-addon"><i class="fa fa-key"></i></span>
+														<span class="input-group-addon"><i class="fa fa-location-arrow"></i></span>
 													</div>
 												</div>
 											</div>
@@ -108,8 +109,8 @@
 												<label class="col-lg-4 control-label" for="telefono">Teléfono</label>
 												<div class="col-lg-8">
 													<div class="input-group">
-														<input class="form-control validate[required,custom[number]]" name="telefono" id="telefono" type="number" data-prompt-position="topLeft">
-														<span class="input-group-addon"><i class="fa fa-phone-square"></i></span>
+													  <input class="form-control focused validate[required,custom[number]]" placeholder="999999999"  maxlength="12" id="telefono" name="telefono" type="text" data-prompt-position="topLeft">
+													  <div class="input-group-addon"><i class="fa fa-phone"></i></div> 	
 													</div>
 												</div>
 											</div>

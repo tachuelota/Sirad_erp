@@ -55,7 +55,7 @@
                   	<li class="dropdown notifications-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-warning"></i>
-                                <span class="label label-success"><?php echo count($notificaciones) ?></span>
+                                <span class="label label-warning"><?php echo count($notificaciones) ?></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="header">Tiene <?php echo count($notificaciones) ?> mensajes</li>

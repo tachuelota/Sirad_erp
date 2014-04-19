@@ -15,32 +15,27 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="box">
-					<div class="box-body">						
-						<div class="form-horizontal">
-							<div class="box-tools pull-right">
-	                            <button id="btn-reg" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i></button>
-	                        </div>
-							<div class="control-group">
-								<label class="control-label" for="tipo"></label>
-							</div>															
-						</div>
-						<hr>	
+					<div class="box-header">
+						<h3 class="box-title">Lista <small>de Ofertas</small></h3>
+						<div class="box-tools pull-right">
+                            <button id="btn-reg" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i></button>
+                        </div>
 					</div>														
-						<div class="box-body table-responsive">
-							<table id="ofertas_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>administracion/servicios/getOfertas">
-								<thead>
-									<tr>
-										<th>Fecha Inicio</th>
-										<th>Descripción</th>
-										<th>Descuento (%)</th>
-										<th>Fecha Vencimiento</th>
-										<th>Estado</th>
-									</tr>
-								</thead>
-								<tbody>
-								</tbody>
-							</table>
-						</div>						
+					<div class="box-body table-responsive">
+						<table id="ofertas_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>administracion/servicios/getOfertas">
+							<thead>
+								<tr>
+									<th>Fecha Inicio</th>
+									<th>Descripción</th>
+									<th>Descuento (%)</th>
+									<th>Fecha Vencimiento</th>
+									<th>Estado</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>						
 					<!--MODALS-->	
 					<div class="modal fade" id="OfertaModal">
 						<div class="modal-dialog">

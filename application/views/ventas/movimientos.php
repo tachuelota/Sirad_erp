@@ -19,6 +19,7 @@
 			<div class="col-lg-12">
 				<div class="box">
 					<div class="box-header">
+						<h3 class="box-title">Buscar Movimientos</h3>
 						<div class="box-tools pull-right">
 							<button id="pdfgen" type="button" class="btn btn-success btn-flat">Reporte General</button>
 							<button id="pdfdet" type="button" class="btn btn-success btn-flat">Reporte Detallado</button>

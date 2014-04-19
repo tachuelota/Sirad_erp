@@ -15,16 +15,14 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="box">
-					<div class="box-body">
-						<div class="row-fluid">
-							<div class="span6"></div>
-							<div class="span6">
-								<input id="xlsresumengen" type="button" value="Reporte Resumen" class="btn btn-flat btn-success" style="float: right; margin: 10px 10px 0 0;"/>
-								<input id="xlsvalorizadogen" type="button" value="Reporte Valorizado" class="btn btn-flat btn-success" style="float: right; margin: 10px 10px 0 0;"/>
-							</div>
+					<div class="box-header">
+						<h3 class="box-title">Reporte <small>Kardex</small></h3>
+						<div class="box-tools pull-right">
+							<input id="xlsresumengen" type="button" value="Reporte Resumen" class="btn btn-flat btn-success" style="float: right; margin: 10px 10px 0 0;"/>
+							<input id="xlsvalorizadogen" type="button" value="Reporte Valorizado" class="btn btn-flat btn-success" style="float: right; margin: 10px 10px 0 0;"/>
 						</div>
-						<br/>
-						<br/>
+					</div>
+					<div class="box-body">
 						<div class="form-horizontal" id="KardexForm" name="KardexForm" action-1="<?php echo base_url();?>logistica/servicios/get_kardex_byfecha">
 							<input type="hidden" name="idLocal" id="idLocal" value="<?php echo $local["nLocal_id"];?>">
 							<fieldset>
