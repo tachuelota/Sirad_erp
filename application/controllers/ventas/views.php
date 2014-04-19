@@ -196,14 +196,14 @@ class views extends CI_Controller
 	{
 		if($this->ion_auth->in_group("ven_ven_prod"))
 		{
-			$this->load->model('administracion/trabajadores_model','tra');
+			$this->load->model('administracion/trabajadores_model','tra');			
 			$this->load->model('ventas/clientes_model','cli');
 			$dataheader['title'] = 'Ventas -(registrar)';
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);			
 			$pagedata["clianonimo"] = $this->cli->get_anonimo();
 			$pagedata["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$pagedata["local"] = $this->session->userdata('current_local');	      	
+			$pagedata["local"] = $this->session->userdata('current_local');
 			$this->load->view('templates/headers.php',$dataheader);		
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('ventas/reg_ventas.php',$pagedata);
@@ -332,7 +332,7 @@ class views extends CI_Controller
 			$this->load->view('templates/headers.php',$dataheader);		
 			$this->load->view('templates/menu.php',$data);
 			$this->load->view('ventas/inicie_caja.php');
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/reporte_ing_egr.js';
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/inicie_caja.js';
 			$datafooter['active'] = 'ven_inicie_caja';
 			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);

@@ -44,10 +44,21 @@ class Auth extends CI_Controller {
 	{
 		if(isset($_POST['username']) && isset($_POST['password']))
 		{
+			$this->load->model('ventas/inicie_caja_model','inicie');
 			$remember = (bool) $this->input->post('remember');
 			if ($this->ion_auth->login($this->input->post('username'), $this->input->post('password'),$remember))
 			{
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
+
+				$result=$this->inicie->get_EstadoCaja();				
+
+				if($result !=null){
+					$estadoCaja=1;
+				}else{
+					$estadoCaja=0;
+				}
+				$this->session->set_userdata('estadoCaja', $estadoCaja);
+
 				redirect('auth/select_local', 'refresh');
 			}
 			else

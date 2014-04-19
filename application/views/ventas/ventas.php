@@ -20,7 +20,11 @@
                     <div class="box-header">
                         <h3 class="box-title">Buscar Ventas</h3>
 						<div class="box-tools pull-right">
+							<?php if( $this->session->userdata('estadoCaja') === 1){ ?>
                             <a href="<?php echo base_url();?>ventas/views/registrar_ventas" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i></a>
+                        	<?php }else{ ?>
+							<button id="modal_caja" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i></button>
+                        	<?php } ?>
                         </div>
                     </div><!-- /.box-header -->
                     <div class="box-body">
@@ -107,6 +111,26 @@
 						</div>
 					</div>
 				</div>
+				<!--MODAL-->
+				<div class="modal fade" id="rquiredproducts">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title"><i class="fa fa-exclamation-triangle"></i> Atención</h4>
+						</div>
+						<div class="modal-body">
+							<div class="alert alert-danger alert-dismissable">
+								<p>
+									Necesita Iniciar Caja
+								</p>
+							</div>
+						</div>
+						<div class="modal-footer clearfix">
+							<a href="#" class="btn" data-dismiss="modal">Aceptar</a>
+						</div>
+					</div><!-- /.modal-content -->
+            	</div><!-- /.modal-dialog -->
+			</div>
 			</div>
         </div>
     </section><!-- /.content -->

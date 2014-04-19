@@ -4,6 +4,9 @@ $(document).ready(function(){
 	$('.btn-elim').click(function(e){
 		$('#modalAnular').modal('show');
 	});
+	$('#modal_caja').click(function(e){
+		$('#rquiredproducts').modal('show');
+	});
 
 	$("#buscarfecha").click(function(event){
 		event.preventDefault();

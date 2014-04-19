@@ -26,6 +26,13 @@ class inicie_caja_model extends CI_Model {
 		}
 	}
 
+	public function get_EstadoCaja()
+	{
+		$fechaActual=date('Y-m-d');
+		$query = $this->db->query("SELECT * FROM ven_consultar_caja_all  where FechaApertura ='".$fechaActual."'");
+		return $query->row_array();
+	}
+
 
 
 }
