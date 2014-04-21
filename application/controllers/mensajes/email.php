@@ -7,12 +7,21 @@ class email extends CI_Controller {
         $this->load->model('mensajes/notificaciones_model','notm');
     }
 
+    function get_copia()
+    {
+            $query = $this->db->query("SELECT * FROM adm_email_administrador");
+            return $query->row_array();            
+    }
+  
     function sendemail()
     {
         $prodSinStock = $this->input->post('table_productos');
         $trabCorreo = $this->input->post('trabajadoresId');
-        $from = $this->ion_auth->user()->row()->email;      
-            
+        $from = $this->ion_auth->user()->row()->email; 
+        $copia = $this->get_copia();
+        $copia = $copia["email"];
+        
+      
         $para           =  $trabCorreo;
         $subject        =  "Listado de Productos con Stock Mínimo";
 
@@ -48,13 +57,16 @@ class email extends CI_Controller {
         $msg            =  $html;
         $mainheaders    =  'Content-type: text/html; charset=utf-8' . "\r\n";
         $mainheaders    .=  'From: SIRAD <'.$from.'>' . "\r\n";
-        $mainheaders    .=  "Cc:" . $from;
+        $mainheaders    .=  "Bcc:" . $copia . "\r\n";
+
        
 
         $resultado = mail ($para, $subject, $msg, $mainheaders, "-f ".$from);
 
         if($resultado){
            echo 'Enviado! :)';
+        echo $copia;
+            
         }        
         else
             echo 'Error! :(';

@@ -21,6 +21,7 @@ $(document).ready(function(){
 	CloneAttr(Trabajadores, "cPersonalNom", "label");
 	Trabajadores = CopyArray(Trabajadores, ["value","label"]);
 
+
 	$('#email_to').tokenfield({
 	  autocomplete: {
 	    source: Trabajadores,
