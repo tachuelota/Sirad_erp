@@ -64,9 +64,7 @@ class email extends CI_Controller {
         $resultado = mail ($para, $subject, $msg, $mainheaders, "-f ".$from);
 
         if($resultado){
-           echo 'Enviado! :)';
-        echo $copia;
-            
+           echo 'Enviado! :)';       
         }        
         else
             echo 'Error! :(';
