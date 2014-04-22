@@ -13,6 +13,7 @@ class ventas extends CI_Controller {
 		$this->load->model('logistica/ingproducto_model','ingpro');
 		$this->load->model('logistica/detingproducto_model','detingpro');
 		$this->load->model('logistica/producto_model','prodm');
+		$this->load->model('ventas/caja_venta_model','cjm');
 	}
 
 	public function registrar()
@@ -30,6 +31,7 @@ class ventas extends CI_Controller {
 				$MontoTrans = $form["total"];
 				$DesTrans = "Venta al Contado";
 				$Estado = null;
+				$id_Caja=$this->session->userdata('id_Caja');
 
 				if ($form["forma_pago"] == 1) 
 					$Estado = '2'; //pagada/cancelada
@@ -59,6 +61,11 @@ class ventas extends CI_Controller {
 					);
 
 				$nVenta_id = $this->venm->insert($venta);
+				$Caja_Venta=array(
+					"nCaja_id"=>$id_Caja,	
+					"nVenta_id"=>$nVenta_id	
+					);
+				$this->cjm->insert($Caja_Venta);
 
 				if($form["forma_pago"] == '3')
 				{

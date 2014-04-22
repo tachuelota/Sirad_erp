@@ -10,7 +10,7 @@ class venta_model extends CI_Model
 		parent::__construct();
 	}
 
-	public function insert($data)
+	public function insert($data,$id_Caja)
 	{
 		$this->db->insert('ven_venta',$data);
 

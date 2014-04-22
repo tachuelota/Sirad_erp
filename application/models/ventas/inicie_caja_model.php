@@ -13,6 +13,7 @@ class inicie_caja_model extends CI_Model {
 		$this->db->trans_begin();
 
 		$this->db->insert('caja',$data);
+		$id_Caja=$this->db->insert_id();
 
 		if ($this->db->trans_status() === FALSE)
 		{
@@ -22,7 +23,7 @@ class inicie_caja_model extends CI_Model {
 		else
 		{
 			$this->db->trans_commit();
-			return true;
+			return $id_Caja;
 		}
 	}
 

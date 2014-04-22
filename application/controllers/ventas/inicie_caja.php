@@ -40,8 +40,10 @@ public function __construct()
 				 	'nLocal_id' =>$idLocal,
 				 	'nCajaSaldoFinal'=> $saldoFinal,
 				 	'nCajaFaltanteSobrante'=>$saldoSobrante);
-				if($this->inicie->insert($Caja)){
+				$id_Caja=$this->inicie->insert($Caja);
+				if($id_Caja!=null){
 					$this->session->set_userdata('estadoCaja',1);
+					$this->session->set_userdata('id_Caja', $id_Caja);
 					$return = array("responseCode"=>200, "datos"=>"ok");
 				}else
 					$return = array("responseCode"=>400, "greeting"=>"Bad");

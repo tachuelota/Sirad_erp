@@ -106,7 +106,7 @@ class Auth extends CI_Controller {
 			{
 				$dataheader['isloginview'] = true;
 				$dataview["locales"] = $this->lo->by_user($this->session->userdata('user_id'));
-				$dataheader['title'] = 'Dicars - Select Local';
+				$dataheader['title'] = 'Sirad - Select Local';
 				$this->load->view('templates/headers.php',$dataheader);
 				$this->load->view('login/select_local.php', $dataview);
 				$datafooter['jsvista'] = '';
