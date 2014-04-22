@@ -20,6 +20,7 @@ class Principal extends CI_Controller {
 		$this->load->view('principal');
 		$datafooter['jsvista'] = 'assets/js/jsvistas/principal.js';
 		$datafooter['active'] = '';
+		$datafooter['dropactive'] = '';
 		$this->load->view('templates/footer.php',$datafooter);
 	}
 }

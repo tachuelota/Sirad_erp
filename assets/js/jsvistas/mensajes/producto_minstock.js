@@ -21,6 +21,7 @@ $(document).ready(function(){
 	CloneAttr(Trabajadores, "cPersonalNom", "label");
 	Trabajadores = CopyArray(Trabajadores, ["value","label"]);
 
+
 	$('#email_to').tokenfield({
 	  autocomplete: {
 	    source: Trabajadores,
@@ -47,24 +48,9 @@ $(document).ready(function(){
 		console.log(prepararDatos());
 	});	
 
-	/* 
-	$("#btn-reg-marca").click(function(event){
-		event.preventDefault();
-		if($("#MarcaForm").validationEngine('validate'))
-			$.blockUI({ 
-				onBlock: function()
-				{
-					$('#modalMarca').modal('hide');
-					enviar($("#MarcaForm").attr("action-1"),{formulario:$("#MarcaForm").serializeObject()}, successMarca, null)
-				}
-			});
-	});
-	*/
 
-	successProdStock = function(){
-		//MarcasTable.fnReloadAjax();		
-	}
-	
+	successProdStock = function(){		
+	}	
 
 	$('#select_producto').click(function(event){
 		event.preventDefault();

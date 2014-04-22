@@ -28,6 +28,7 @@ class views extends CI_Controller
 			$this->load->view('logistica/homepage.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/homepage.js';
 			$datafooter['active'] = '';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
