@@ -73,13 +73,12 @@
 									<th class="input">
 										<input type="text" placeholder="Concepto" class="search_init form-control" />
 									</th>
-									<th></th>
-									<th class="input">
-										<input type="text" placeholder="Movimiento" class="search_init form-control" />
+									<th>
 									</th>
-									<th class="input">
-										<input type="text" placeholder="Tipo Pago" class="search_init form-control" />
-									</th>									
+									<th class="select" index="nMovimientoTip" nrocol="4">
+									</th>
+									<th class="select" index="nMovimientoTipPag" nrocol="5">
+									</th>																
 								</tr>
 							</thead>
 							<tbody></tbody>

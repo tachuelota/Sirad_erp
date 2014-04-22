@@ -25,7 +25,8 @@ $(document).ready(function(){
 		              { "mDataProp": "DescMotivo"},
 		              { "mDataProp": "serNumDoc"},
 				],
-		"fnCreatedRow": IngresoProductosTA.RowCBFunction
+		"fnCreatedRow": IngresoProductosTA.RowCBFunction,
+		"sDom": "t<'row'<'col-xs-6'i><'col-xs-6'p>>"
 	};
 	var IngresoProductosTable = createDataTable2('ingreso_productos_table',IngreProductosOptions);
 

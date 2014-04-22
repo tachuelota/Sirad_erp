@@ -439,6 +439,19 @@ function getAjaxObject(url){
 		}).responseText;
 	return jQuery.parseJSON(data);
 }
+
+function getAjaxObjectPost(url,datos){
+	var data = $.ajax({
+		url: url,
+		dataType: "json",
+		async: false,
+		data: datos,		
+        type: "POST"
+		}).responseText;
+	return jQuery.parseJSON(data);
+}
+
+
 function ajaxResponseData(namediv,path){
 	var data = $.ajax({
         url: path,

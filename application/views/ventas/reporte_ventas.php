@@ -109,14 +109,11 @@
 								<thead>
 								<tr>
 									<th></th>
-									<th class="input">
-										<input type="text" placeholder="Vendedor" class="search_init form-control" />
+									<th>
 									</th>
-									<th class="input">
-										<input type="text" placeholder="Cliente" class="search_init form-control" />
+									<th >
 									</th>
-									<th class="input">
-										<input type="text" placeholder="Tipo Pago" class="search_init form-control" />
+									<th>
 									</th>
 									<th></th>
 									<th></th>
@@ -124,9 +121,7 @@
 									<th></th>
 									<th></th>
 									<th></th>
-									<th class="input">
-										<input type="text" placeholder="Estado" class="search_init form-control" />
-									</th>								
+									<th></th>								
 								</tr>
 							</thead>
 								<tbody></tbody>

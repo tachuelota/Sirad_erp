@@ -30,7 +30,8 @@ $(document).ready(function(){
 		              { "sWidth": "15%","mDataProp": "PrecUnit"},
 		              { "sWidth": "15%","mDataProp": "PrecTot"}
 		              ],
-		"fnCreatedRow":KardexRowCBF
+		"fnCreatedRow":KardexRowCBF,
+		"sDom": "t<'row'<'col-xs-6'i><'col-xs-6'p>>"
 		};
 
 		KardexTable = createDataTable2('kardex_table',KardexOptions);
