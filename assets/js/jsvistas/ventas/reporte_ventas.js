@@ -19,20 +19,39 @@
 				{ "mDataProp": "Saldo"},
 				{ "mDataProp": "Estado"}
 				],
-		//"sDom":"t<'row-fluid'<'span12'i><'span12 center'p>>",		
+		"sDom":"t<'row'<'col-lg-6'i><'col-lg-6'p>>",		
 	};
 
 	VenTiendaTable = createDataTable2('ventas_table',VenTiendasOptions);
 
 	$("#buscarfecha").click(function(event){
+		var datosReporteVentas = getAjaxObjectPost($("#RepVentasForm").attr("action-1"),prepararDatospost());
+		VenTiendaTable.fnClearTable();
+		console.log(datosReporteVentas);
+		if (datosReporteVentas.length > 0);
+			VenTiendaTable.fnAddData(datosReporteVentas);
+	});	
+
+	var prepararDatospost = function()
+	{
 		date1 = new Date($("#date01").datepicker("getDates"));
 		date2 = new Date($("#date02").datepicker("getDates"));
 		vendedor= $("#vendedor").val();
 		cliente=$("#cliente").val();
 		tipo=$("#selectTipoPag").val();
 		estado=$("#estado").val();
-		VenTiendaTable.fnReloadAjax($("#RepVentasForm").attr("action-1")+"/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2)+"/"+cliente+"/"+vendedor+"/"+estado+"/"+tipo)
-	});	
+		var datosventa = {
+			date1:fechaFormatoSQL(date1),
+			date2:fechaFormatoSQL(date2),
+			vendedor: vendedor,
+			cliente: cliente,
+			tipo: tipo,
+			estado: estado,
+		}
+		return datosventa;
+	}
+
+
 	/********************************************/
 	var VenZonasOptions = {
 		"aoColumns":[
@@ -47,20 +66,39 @@
 				{ "mDataProp": "Cliente"},
 				{ "mDataProp": "Cliente"} 
 				],
-		//"sDom":"t<'row-fluid'<'span12'i><'span12 center'p>>",		
+		"sDom":"t<'row-fluid'<'span12'i><'span12 center'p>>",		
 	};
 
 	VenZonasTable = createDataTable2('ventas_table_zona',VenZonasOptions);
 
 	$("#buscarfechazona").click(function(event){
+		var datosReporteZonas = getAjaxObjectPost($("#RepVentasZonasForm").attr("action-1"),prepararDatospost());
+		VenZonasTable.fnClearTable();
+		console.log(datosReporteZonas);
+		if (datosReporteZonas.length > 0);
+			VenZonasTable.fnAddData(datosReporteZonas);
+	});	
+
+	var prepararDatosZona = function()
+	{
 		date1 = new Date($("#date01zona").datepicker("getDates"));
 		date2 = new Date($("#date02zona").datepicker("getDates"));
 		vendedor= $("#vendedorZona").val();
 		cliente=$("#clienteZona").val();
 		tipo=$("#selectTipoPag_byZona").val();
 		estado=$("#estadoZona").val();
-		VenZonasTable.fnReloadAjax($("#RepVentasZonasForm").attr("action-1")+"/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2)+"/"+cliente+"/"+vendedor+"/"+estado+"/"+tipo)
-	});	
+		var datoszona = {
+			date1:fechaFormatoSQL(date1),
+			date2:fechaFormatoSQL(date2),
+			vendedor: vendedor,
+			cliente: cliente,
+			tipo: tipo,
+			estado: estado,
+		}
+		return datoszona;
+	}
+	
+
 	//REPORTES
 		$("#btn-rpt-tienda").click(function(){
 			var table_venta = toHTML(crearTablaToArray("tventas",

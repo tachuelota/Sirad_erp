@@ -27,7 +27,9 @@ $(document).ready(function(){
 		              { "mDataProp": "cSalProdObsv"},
 		              { "mDataProp": "cLocalDesc"}
 		              ],
-	"fnCreatedRow":SalidaProductosTA.RowCBFunction
+	"fnCreatedRow":SalidaProductosTA.RowCBFunction,
+	"sDom": "t<'row'<'col-xs-6'i><'col-xs-6'p>>"
+	
 	};
 	SalidaProductosTable = createDataTable2('salida_prod_table',SalProdOptions);
 

@@ -31,6 +31,7 @@ $(document).ready(function(){
 				date2 = new Date($("#date02").datepicker("getDates"));
 				$('#MovimientoForm').reset();
 				MovimientosTable.fnReloadAjax(base_url+"ventas/servicios/getMovimientos/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2));
+				MovimientosTable.reloadSigleFilter();
 			}
 		});
 	}
@@ -62,7 +63,8 @@ $(document).ready(function(){
 		event.preventDefault();
 		date1 = new Date($("#date01").datepicker("getDates"));
 		date2 = new Date($("#date02").datepicker("getDates"));
-		MovimientosTable.fnReloadAjax(base_url+"ventas/servicios/getMovimientos/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2))
+		MovimientosTable.fnReloadAjax(base_url+"ventas/servicios/getMovimientos/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2));
+		MovimientosTable.reloadSigleFilter();
 	});
 
 	//Reportes
@@ -108,7 +110,6 @@ $(document).ready(function(){
 
 		PrepareData();		
 		var tableingresos = toHTML(crearTablaToArray("tmovimiento",
-//<<<<<<< Updated upstream
 			['FECHA','PERSONAL','CONCEPTO','MONTO','TIPO MOVIMIENTO','FORMA DE PAGO'],
 			[	'style="width: 20%;" class="head" ','style="width: 20%;" class="head" ','style="width: 10%;" class="head" ',
 				'style="width: 10%;" class="head" ','style="width: 20%;" class="head" ','style="width: 20%;" class="head" '],

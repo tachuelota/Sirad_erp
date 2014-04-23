@@ -12,7 +12,8 @@ $(document).ready(function(){
 		              { "mDataProp": "Stock"},
 		              { "mDataProp": "PrecUnit"},
 		              { "mDataProp": "PrecTotal"}
-		              ]
+		              ],
+		"sDom": "t<'row'<'col-xs-6'i><'col-xs-6'p>>"
 	};
 	var SaldoInicialTable = createDataTable2('saldoini_table',SaldoIniOptions);
 
@@ -25,7 +26,8 @@ $(document).ready(function(){
 		              { "mDataProp": "Stock"},
 		              { "mDataProp": "PrecUnit"},
 		              { "mDataProp": "PrecTot"}
-		              ]
+		              ],
+		"sDom": "t<'row'<'col-xs-6'i><'col-xs-6'p>>"
 	};
 	var SaldoActualTable = createDataTable2('saldoactual_table',SaldoActOptions);
 

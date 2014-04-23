@@ -13,6 +13,7 @@ $(document).ready(function(){
 		date1 = new Date($("#date01").datepicker("getDates"));
 		date2 = new Date($("#date02").datepicker("getDates"));
 		VentasTable.fnReloadAjax(base_url + "ventas/servicios/getventas/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2));
+		VentasTable.reloadSigleFilter();
 	});
 
 	var success = function(data){
@@ -62,7 +63,8 @@ $(document).ready(function(){
 			{ "mDataProp": "VentaTotal"},
 			{ "mDataProp": "estadolabel"}
 				],
-		"fnCreatedRow": VentaActions.RowCBFunction
+		"fnCreatedRow": VentaActions.RowCBFunction,
+		"sDom": "t<'row'<'col-xs-6'i><'col-xs-6'p>>"
 	};
 	var VentasTable = createDataTable2('ventas_table',VentasOptions);
 

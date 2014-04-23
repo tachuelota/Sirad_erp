@@ -69,9 +69,8 @@
 									<th class="input">
 										<input type="text" placeholder="Vendedor" class="search_init form-control" />
 									</th>
-									<th class="input">
-										<input type="text" placeholder="Tipo Pago" class="search_init form-control" />
-									</th>
+									<th class="select" index="tipo_pago" nrocol="3">
+									</th>									
 									<th></th>
 									<th></th>
 									<th class="customselect" nrocol="6">
