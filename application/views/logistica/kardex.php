@@ -68,11 +68,15 @@
 									<th class="input">
 										<input type="text" placeholder="Marca" class="search_init form-control" />
 									</th>
-									<th class="input">
-										<input type="text" placeholder="Producto" class="search_init form-control" />
+									<th class="select" index="Tipo_Producto" nrocol="4">
 									</th>
-									<th class="input">
-										<input type="text" placeholder="Tipo Ingreso" class="search_init form-control" />
+									<th class="select" index="TipoIngreso" nrocol="5">
+									</th>
+									<th>
+									</th>
+									<th>
+									</th>
+									<th>
 									</th>
 								</tr>
 							</thead>

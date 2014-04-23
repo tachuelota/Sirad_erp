@@ -83,7 +83,6 @@ class servicios extends CI_Controller {
 
 	//CARGAR POR RANGO DE FECHAS
 	public function get_log_ingprod($Desde,$Hasta){		
-
 			$this->load->model('logistica/ingproducto_model','ingprod');
 			$result = $this->ingprod->get_fromrange($Desde,$Hasta);
 			$this->output
@@ -92,7 +91,6 @@ class servicios extends CI_Controller {
 	}
 	
 	public function get_log_salprod($Desde,$Hasta){		
-
 			$this->load->model('logistica/salproducto_model','salpro');
 			$result = $this->salpro->get_fromrange($Desde,$Hasta);
 			foreach ($result as $key => $value) {

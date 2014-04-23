@@ -64,12 +64,10 @@
 									<th class="input">
 										<input type="text" placeholder="Solicitante" class="search_init form-control" />
 									</th>
-									<th class="input">
-										<input type="text" placeholder="Motivo" class="search_init form-control" />
+									<th class="select" index="DescMotivo" nrocol="5">
 									</th>
 									<th></th>
-									<th class="input">
-										<input type="text" placeholder="Local" class="search_init form-control" />
+									<th class="select" index="cLocalDesc" nrocol="6">
 									</th>
 								</tr>
 							</thead>

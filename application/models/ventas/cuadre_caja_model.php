@@ -47,5 +47,27 @@ class cuadre_caja_model extends CI_Model {
 		}
 
 	}
+	public function ingreso_egreso($idcaja,$idlocal){
+		$procedure="call sp_consultar_ing_egre_byCaja(?,?,?)";
+		
+		$fechaActual=date('Y-m-d');
+
+		$params =array($idcaja,$idlocal,$fechaActual);
+
+		$result = $this->db->query($procedure,$params);
+		
+		//$result->next_result();
+		//$result->free_result();
+		if ($this->db->trans_status() === FALSE)
+			{
+			return false;
+			}
+		else
+			{
+			return $result -> result_array();
+			}
+	}
+
+		
 
 }

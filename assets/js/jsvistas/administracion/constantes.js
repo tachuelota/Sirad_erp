@@ -1,8 +1,5 @@
 $(document).ready(function(){
 	$("#ConstanteForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000});
-
-
-	
 	$(".SelectAjax").SelectAjax();
 
 	var Actions = new DTActions({

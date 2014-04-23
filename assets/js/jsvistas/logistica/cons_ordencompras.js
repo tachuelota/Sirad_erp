@@ -63,7 +63,7 @@ $('#xlscuadrecaja').click(function(e){
 		              { "mDataProp": "estadolabel"}
 				],
 		"fnCreatedRow": OrdenCompraTA.RowCBFunction,
-		"sDom":"<'row'<'col-xs-6'l><'col-xs-6'>r>t<'row'<'col-xs-6'i><'col-xs-6'p>>"
+		"sDom": "t<'row'<'col-xs-6'i><'col-xs-6'p>>"
 	};
 	var OrdenCompraTable = createDataTable2('ordcom_table',OrdComprasOptions);
 

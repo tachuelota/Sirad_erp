@@ -27,7 +27,7 @@
 	$("#buscarfecha").click(function(event){
 		var datosReporteVentas = getAjaxObjectPost($("#RepVentasForm").attr("action-1"),prepararDatospost());
 		VenTiendaTable.fnClearTable();
-		console.log(datosReporteVentas);
+		//console.log(datosReporteVentas);
 		if (datosReporteVentas.length > 0);
 			VenTiendaTable.fnAddData(datosReporteVentas);
 	});	

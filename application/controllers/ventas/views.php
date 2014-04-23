@@ -329,9 +329,13 @@ class views extends CI_Controller
 	{
 		//if($this->ion_auth->in_group("ven_inicie_caja"))
 		//{
-			$this->load->model('ventas/inicie_caja_model','inimod');			
+			$this->load->model('ventas/inicie_caja_model','inimod');	
+			$this->load->model('ventas/cuadre_caja_model','ccm');	
+			$id_local=intval($this->session->userdata('current_local')["nLocal_id"]);
+			$id_caja=$this->session->userdata('id_Caja');	
 			$dataheader['title'] = 'Cuadre de Caja - ';			
-			$pagedata["cuadrecaja"] = $this->inimod->get_EstadoCaja(); 
+			$pagedata["cuadrecaja"] = $this->inimod->get_EstadoCaja();
+			$pagedata["ingreso_egreso"] = $this->ccm->ingreso_egreso($id_caja,$id_local);
 			$this->load->view('templates/headers.php',$dataheader);		
 			$this->load->view('templates/menu.php');
 			$this->load->view('ventas/cuadrecaja.php',$pagedata);

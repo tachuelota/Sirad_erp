@@ -66,29 +66,32 @@ $(document).ready(function(){
 	
 	$('#tsaldos').val(tablasaldos);
 	$('#titulo').val(titulo);
-}
+	}
+
 		//Mandar la fecha
 		$("#buscarfecha").click(function(event){
 			dateSalInicial = new Date($("#fecSalInicial").datepicker("getDates"));
 			SaldoInicialTable.fnReloadAjax($("#SaldoInicialForm").attr("action-1")+"/"+fechaFormatoSQL(dateSalInicial))
-	});
+		});
 		//Mandar la fecha
 		$("#buscarfecha2").click(function(event){
 			date2 = new Date($("#date02").datepicker("getDates"));
 			SaldoActualTable.fnReloadAjax($("#SaldoActualForm").attr("action-1")+"/"+fechaFormatoSQL(date2))
-	});
+		});
+
 	//REPORTE DE SALDO INICIAL
-	$("#xlsinigen").click(function(e){
-		e.preventDefault();
-		prepararIniDatos();
-		$("#CreateXLSForm").attr("action",urlExportXLS);
-		$("#CreateXLSForm").submit();
-	});
-	$("#xlsactualgen").click(function(e){
-		e.preventDefault();
-		prepararActDatos();
-		$("#CreateXLSForm").attr("action",urlExportXLS);
-		$("#CreateXLSForm").submit();
-	});	
+		$("#xlsinigen").click(function(e){
+			e.preventDefault();
+			prepararIniDatos();
+			$("#CreateXLSForm").attr("action",urlExportXLS);
+			$("#CreateXLSForm").submit();
+		});
+		
+		$("#xlsactualgen").click(function(e){
+			e.preventDefault();
+			prepararActDatos();
+			$("#CreateXLSForm").attr("action",urlExportXLS);
+			$("#CreateXLSForm").submit();
+		});	
 
 });

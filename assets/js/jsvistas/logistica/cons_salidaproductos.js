@@ -36,6 +36,7 @@ $(document).ready(function(){
 	$("#buscarfecha").click(function(event){
 		date1 = new Date($("#date01").datepicker("getDates"));
 		date2 = new Date($("#date02").datepicker("getDates"));
-		SalidaProductosTable.fnReloadAjax(base_url+"logistica/servicios/get_log_salprod/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2))
+		SalidaProductosTable.fnReloadAjax(base_url+"logistica/servicios/get_log_salprod/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2));
+		SalidaProductosTable.reloadSigleFilter();
 	});
 });
