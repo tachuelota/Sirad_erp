@@ -47,6 +47,7 @@ $(document).ready(function(){
 		date1 = new Date($("#date01").datepicker("getDates"));
 		date2 = new Date($("#date02").datepicker("getDates"));
 		IngresoProductosTable.fnReloadAjax($("#IngProductosForm").attr("action-1")+"/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2))
+
 	});
 
 

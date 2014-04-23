@@ -70,8 +70,13 @@
 									</th>
 									<th class="select" index="Tipo_Producto" nrocol="4">
 									</th>
-									</th>
 									<th class="select" index="TipoIngreso" nrocol="5">
+									</th>
+									<th>
+									</th>
+									<th>
+									</th>
+									<th>
 									</th>
 								</tr>
 							</thead>

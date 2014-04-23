@@ -24,7 +24,7 @@ $(document).ready(function(){
 		              { "sWidth": "10%","mDataProp": "Mes"},
 		              { "sWidth": "25%","mDataProp": "Producto"},
 		              { "sWidth": "10%","mDataProp": "cMarcaDesc"},
-		              { "sWidth": "10%","mDataProp": "cMarcaDesc"},
+		              { "sWidth": "10%","mDataProp": "Tipo_Producto"},
 		              { "sWidth": "15%","mDataProp": "TipoIngreso"},
 		              { "sWidth": "10%","mDataProp": "Cantidad"},
 		              { "sWidth": "15%","mDataProp": "PrecUnit"},
@@ -39,7 +39,8 @@ $(document).ready(function(){
 	$("#buscarfecha").click(function(e){
 		e.preventDefault();		
 		date1 = new Date($("#date01").datepicker("getDates"));
-		KardexTable.fnReloadAjax($("#KardexForm").attr("action-1")+"/"+fechaFormatoSQL(date1))
+		KardexTable.fnReloadAjax($("#KardexForm").attr("action-1")+"/"+fechaFormatoSQL(date1));
+		KardexTable.reloadSigleFilter();
 	});
 
 	function prepararGenDatos(){
