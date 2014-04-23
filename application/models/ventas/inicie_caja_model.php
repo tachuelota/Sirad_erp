@@ -52,7 +52,11 @@ class inicie_caja_model extends CI_Model {
 
 	}
 
+
 	/*public function cierre_caja($data)
+
+	public function cierre_caja($data)
+
 	{
 
 		$this->db->trans_start();
@@ -75,7 +79,11 @@ class inicie_caja_model extends CI_Model {
 			return true;
 		}
 
+
+	}
+
 	}*/
+
 
 
 	public function get_EstadoCaja()

@@ -308,7 +308,7 @@ class views extends CI_Controller
 			$pagedata["caja"]=$this->inicie->get_EstadoCaja();
 			//$this->load->view('templates/headers.php',$dataheader);		
 			//$this->load->view('templates/menu.php');
-			
+			$this->load->model('ventas/inicie_caja_model','inicie');
 			$dataheader['title'] = 'Inicie/Cierre Caja';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
