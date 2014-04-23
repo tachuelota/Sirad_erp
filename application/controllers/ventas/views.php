@@ -304,15 +304,15 @@ class views extends CI_Controller
 			{
 				$this->load->model('ventas/inicie_caja_model','inicie');
 				$result=$this->inicie->get_EstadoCaja();				
-					$id_Caja=$result["id"];
+					
 
 					if($result !=null){
 						$estadoCaja=1;
 					}else{
 						$estadoCaja=0;
 					}
-					if ($id_Caja!=null) {
-						$this->session->set_userdata('id_Caja',$id_Caja);
+					if (count($result)>0) {
+						$this->session->set_userdata('id_Caja',$result["id"]);
 					}else{
 						$this->session->set_userdata('id_Caja',0);
 					}
