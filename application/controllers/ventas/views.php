@@ -300,11 +300,21 @@ class views extends CI_Controller
 	{
 		//if($this->ion_auth->in_group("ven_inicie_caja"))
 		//{
-			$dataheader['title'] = 'Inicie/Cierre Caja - ';			
-			$this->load->model('ventas/inicie_caja_model','inicie');
+
+			$dataheader['title'] = 'Inicie/Cierre Caja - ';	
+			$this->load->model('administracion/trabajadores_model','tra');
+			$this->load->model('ventas/inicie_caja_model','inicie');		
+			//$this->load->model('ventas/inicie_caja_model','inicie');
+			$pagedata["caja"]=$this->inicie->get_EstadoCaja();
+			//$this->load->view('templates/headers.php',$dataheader);		
+			//$this->load->view('templates/menu.php');
+			
+			$dataheader['title'] = 'Inicie/Cierre Caja';			
+			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
+			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$pagedata["caja"]=$this->inicie->get_EstadoCaja();
 			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
+			$this->load->view('templates/menu.php',$data);
 			$this->load->view('ventas/inicie_caja.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/inicie_caja.js';
 			$datafooter['active'] = 'inicie_caja';
