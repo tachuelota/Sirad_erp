@@ -300,6 +300,24 @@ class views extends CI_Controller
 	{
 		//if($this->ion_auth->in_group("ven_inicie_caja"))
 		//{
+			if( $this->session->userdata('estadoCaja') === 0)
+			{
+				$this->load->model('ventas/inicie_caja_model','inicie');
+				$result=$this->inicie->get_EstadoCaja();				
+					$id_Caja=$result["id"];
+
+					if($result !=null){
+						$estadoCaja=1;
+					}else{
+						$estadoCaja=0;
+					}
+					if ($id_Caja!=null) {
+						$this->session->set_userdata('id_Caja',$id_Caja);
+					}else{
+						$this->session->set_userdata('id_Caja',0);
+					}
+					$this->session->set_userdata('estadoCaja', $estadoCaja);
+			}
 
 			$dataheader['title'] = 'Inicie/Cierre Caja - ';	
 			$this->load->model('administracion/trabajadores_model','tra');

@@ -86,6 +86,7 @@ class Auth extends CI_Controller {
 			$this->load->view('login/login.php', $this->data);
 			$datafooter['jsvista'] = '';
 			$datafooter['active'] = '';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 	}
@@ -117,6 +118,7 @@ class Auth extends CI_Controller {
 				$this->load->view('login/select_local.php', $dataview);
 				$datafooter['jsvista'] = '';
 				$datafooter['active'] = '';
+				$datafooter['dropactive'] = '';
 				$this->load->view('templates/footer.php',$datafooter);
 			}
 		}
