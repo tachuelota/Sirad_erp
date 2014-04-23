@@ -51,11 +51,17 @@ class Auth extends CI_Controller {
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
 
 				$result=$this->inicie->get_EstadoCaja();				
+				$id_Caja=$result["id"];
 
 				if($result !=null){
 					$estadoCaja=1;
 				}else{
 					$estadoCaja=0;
+				}
+				if ($id_Caja!=null) {
+					$this->session->set_userdata('id_Caja',$id_Caja);
+				}else{
+					$this->session->set_userdata('id_Caja',0);
 				}
 				$this->session->set_userdata('estadoCaja', $estadoCaja);
 				$this->load->model('administracion/trabajadores_model','tra');
