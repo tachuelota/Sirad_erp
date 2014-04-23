@@ -354,6 +354,8 @@ class views extends CI_Controller
 			$dataheader['title'] = 'Cuadre de Caja - ';			
 			$pagedata["cuadrecaja"] = $this->inimod->get_EstadoCaja();
 			$pagedata["ingreso_egreso"] = $this->ccm->ingreso_egreso($id_caja,$id_local);
+			$pagedata["egreso"] = $this->ccm->egreso($id_caja,$id_local);
+			$pagedata["total"] = $this->ccm->monto_total($id_caja,$id_local);
 			$this->load->view('templates/headers.php',$dataheader);		
 			$this->load->view('templates/menu.php');
 			$this->load->view('ventas/cuadrecaja.php',$pagedata);

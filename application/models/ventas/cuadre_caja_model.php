@@ -73,6 +73,56 @@ class cuadre_caja_model extends CI_Model {
 			}
 	}
 
+	public function egreso($idcaja,$idlocal){
+		$procedure="call sp_consultar_ing_egre_byCaja(?,?)";
 		
+		$params =array($idcaja,$idlocal);
+
+		$result = $this->db->query($procedure,$params);
+		
+		$cajaegreso = $result -> result_array();
+
+		$result->next_result();
+		$result->free_result();
+		
+		if ($this->db->trans_status() === FALSE)
+			{
+			return false;
+			}
+		else
+			{
+			$total = 0;
+			foreach ($cajaegreso as $key => $value) {
+				$total += $value["Egreso"];
+			}
+			return $total;
+			}
+	}	
+
+	public function monto_total($idcaja,$idlocal){
+		$procedure="call sp_consultar_ing_egre_byCaja(?,?)";
+		
+		$params =array($idcaja,$idlocal);
+
+		$result = $this->db->query($procedure,$params);
+		
+		$cajatot = $result -> result_array();
+
+		$result->next_result();
+		$result->free_result();
+		
+		if ($this->db->trans_status() === FALSE)
+			{
+			return false;
+			}
+		else
+			{
+			$total = 0;
+			foreach ($cajatot as $key => $value) {
+				$total = $value["Ingreso"] - $value["Egreso"];
+			}
+			return $total;
+			}
+	}
 
 }

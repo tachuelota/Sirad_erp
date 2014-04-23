@@ -222,7 +222,7 @@ class servicios extends CI_Controller {
 		$this->load->model('ventas/cuadre_caja_model','ccm');
 		$id_local=intval($this->session->userdata('current_local')["nLocal_id"]);
 		$id_caja=$this->session->userdata('id_Caja');
-		$result = $this->ccm->ingreso_egreso($id_caja,$id_local);
+		$result = $this->ccm->egreso($id_caja,$id_local);
 		$this->output
 			->set_content_type('application/json')
 			->set_output(json_encode($result));

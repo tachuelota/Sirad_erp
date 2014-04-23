@@ -42,7 +42,7 @@
                                     <label class="col-lg-4 control-label" for="valor">Egreso</label>
                                     <div class="col-lg-8">
                                         <div class="input-group">
-                                            <input class="form-control validate[required,custom[onlyNumberSp]]" id="egreso" name="egreso" type="text" data-prompt-position="topLeft" readonly>
+                                            <input value="<?php echo $egreso; ?>" class="form-control validate[required,custom[onlyNumberSp]]" id="egreso" name="egreso" type="text" data-prompt-position="topLeft" readonly>
                                             <span class="input-group-addon">S/.</span>
                                         </div>
                                     </div>
@@ -55,7 +55,7 @@
                                     <label class="col-lg-4 control-label" for="valor">Monto Total</label>
                                     <div class="col-lg-8">
                                         <div class="input-group">
-                                            <input class="form-control validate[required,custom[onlyNumberSp]]" id="total" name="total" type="text" data-prompt-position="topLeft" readonly>
+                                            <input value="<?php echo $total; ?>" class="form-control validate[required,custom[onlyNumberSp]]" id="total" name="total" type="text" data-prompt-position="topLeft" readonly>
                                             <span class="input-group-addon">S/.</span>
                                         </div>
                                     </div>
