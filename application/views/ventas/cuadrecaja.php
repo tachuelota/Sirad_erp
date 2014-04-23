@@ -33,7 +33,7 @@
                                     <label class="col-lg-4 control-label" for="valor">Ingreso</label>
                                     <div class="col-lg-8">
                                         <div class="input-group">
-                                            <input value="<?php echo $ingreso_egreso["Ingreso"]; ?>" class="form-control validate[required,custom[onlyNumberSp]]" id="ingreso" name="ingreso" type="text" data-prompt-position="topLeft" readonly>
+                                            <input value="<?php echo $ingreso_egreso; ?>" class="form-control validate[required,custom[onlyNumberSp]]" id="ingreso" name="ingreso" type="text" data-prompt-position="topLeft" readonly>
                                             <span class="input-group-addon">S/.</span>
                                         </div>
                                     </div>
