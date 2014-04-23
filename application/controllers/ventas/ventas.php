@@ -160,61 +160,69 @@ class ventas extends CI_Controller {
 	{
 		if(isset($_POST) && !empty($_POST))
 		{
-			$nVenta_id = $this->input->post('nVenta_id',true);
-			$transAnular = $this->transm->get_byVenta($nVenta_id);
+			if ($this->session->userdata("estadoCaja")==1) {		
+				
+				$nVenta_id = $this->input->post('nVenta_id',true);
+				$transAnular = $this->transm->get_byVenta($nVenta_id);
 
-			$nLocal_id = $this->session->userdata('current_local')["nLocal_id"];
-			$nPersonal_id = $this->ion_auth->user()->row()->nPersonal_id;
-			$datenow = date("Y-m-d");
+				$nLocal_id = $this->session->userdata('current_local')["nLocal_id"];
+				$nPersonal_id = $this->ion_auth->user()->row()->nPersonal_id;
+				$datenow = date("Y-m-d");
 
-			$productos = $this->detvenm->get_detalles($nVenta_id);
-			$DetalleIngProd = array();
+				$productos = $this->detvenm->get_detalles($nVenta_id);
+				$DetalleIngProd = array();
 
-			$IngProd = array(
-				"nPersonal_id" => $nPersonal_id,
-				"nLocal_id" => $nLocal_id,
-				"nIngProdMotivo" => 2,
-				"cIngProdDocSerie" => "0000",
-				"cIngProdDocNro" => "00000000",
-				"cIngProdObsv" => "Anulacion de Ventas");
-
-			$nIngreso_id = $this->ingpro->insert($IngProd);
-
-			foreach ($productos as $key => $prod)
-			{
-				$auxprod = $this->prodm->get_producto($prod["nProducto_id"]);
-
-				$DetalleIngProd[]= array(
-					"nIngProd_id" => $nIngreso_id,
-					"nProducto_id" => $prod["nProducto_id"],
-					"nDetIngProdCant" => $prod["cant_prod"],
-					"nDetIngProdPrecUnt" => $auxprod["nProductoPCosto"],
-					"nDetIngProdTot" => $auxprod["nProductoPCosto"]*$prod["cant_prod"],
-					"nDetOrdCompra" => 0
-					);
-			}
-			$this->detingpro->insert_batch($DetalleIngProd);
-
-			$transaccion = array(
+				$IngProd = array(
 					"nPersonal_id" => $nPersonal_id,
-					"nVenta_id" => $nVenta_id,
-					"cTransaccionDesc" => "Anulacion de Ventas",
-					"nTransaccionMont" => $transAnular["nTransaccionMont"]*-1,
-					"dTransaccionFecReg" => $datenow,
-					"nTransaccionTipPag" => 1
-					);
+					"nLocal_id" => $nLocal_id,
+					"nIngProdMotivo" => 2,
+					"cIngProdDocSerie" => "0000",
+					"cIngProdDocNro" => "00000000",
+					"cIngProdObsv" => "Anulacion de Ventas");
 
-			$this->transm->insert($transaccion);
-			$this->venm->anular($nVenta_id);
+				$nIngreso_id = $this->ingpro->insert($IngProd);
 
-			if ($this->db->trans_status() === FALSE)
-			{
-				$this->output->set_status_header('400');
-				$this->db->trans_rollback();
+				foreach ($productos as $key => $prod)
+				{
+					$auxprod = $this->prodm->get_producto($prod["nProducto_id"]);
+
+					$DetalleIngProd[]= array(
+						"nIngProd_id" => $nIngreso_id,
+						"nProducto_id" => $prod["nProducto_id"],
+						"nDetIngProdCant" => $prod["cant_prod"],
+						"nDetIngProdPrecUnt" => $auxprod["nProductoPCosto"],
+						"nDetIngProdTot" => $auxprod["nProductoPCosto"]*$prod["cant_prod"],
+						"nDetOrdCompra" => 0
+						);
+				}
+				$this->detingpro->insert_batch($DetalleIngProd);
+
+				$transaccion = array(
+						"nPersonal_id" => $nPersonal_id,
+						"nVenta_id" => $nVenta_id,
+						"cTransaccionDesc" => "Anulacion de Ventas",
+						"nTransaccionMont" => $transAnular["nTransaccionMont"]*-1,
+						"dTransaccionFecReg" => $datenow,
+						"nTransaccionTipPag" => 1
+						);
+
+				$this->transm->insert($transaccion);
+				$this->venm->anular($nVenta_id);
+
+				if ($this->db->trans_status() === FALSE)
+				{
+					$this->output->set_status_header('400');
+					$this->db->trans_rollback();
+				}
+				else
+				{
+					$this->db->trans_commit();
+				}
+				$result=1;
 			}
 			else
 			{
-				$this->db->trans_commit();
+				$result=0;
 			}
 		}
 		else
@@ -222,7 +230,7 @@ class ventas extends CI_Controller {
 
 		$this->output
 		->set_content_type('application/json')
-		->set_output(json_encode("ok"));
+		->set_output(json_encode(array('estadoCaja'=>$result)));
 	}
 
 	public function editar()

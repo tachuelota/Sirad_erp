@@ -16,8 +16,12 @@ $(document).ready(function(){
 	});
 
 	var success = function(data){
-		console.log(data);
-		VentasTable.fnReloadAjax();
+		if(data.estadoCaja===1){
+			VentasTable.fnReloadAjax();	
+		}else{
+			$('#rquiredproducts').modal('show');
+		}
+		
 	}
 
 	var VentaActions = new DTActions({
