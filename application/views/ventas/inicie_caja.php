@@ -88,6 +88,8 @@
                                     <button disabled="true" id="Cerrar_caja" type="button" class="col-lg-12 btn btn-success btn-flat" >Cerrar</button>
                                 </div>
                                 <?php } ?>
+
+                    
                         </br>
                         </br>
                         </br>
