@@ -22,7 +22,6 @@ $(document).ready(function(){
 		}else{
 			$('#rquiredproducts').modal('show');
 		}
-		
 	}
 
 	var VentaActions = new DTActions({

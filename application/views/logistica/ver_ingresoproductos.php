@@ -93,12 +93,14 @@
 							<tbody>
 							</tbody>
 						</table>
-						<div class="form-actions"> 
-							<a href="<?php echo base_url();?>logistica/views/cons_ingresoproductos" class="btn btn-success"> <i class="icon icon-white icon-arrowthick-w"></i>
-								Volver
-							</a>
-						</div>
-			</div>
+					</div></br></br>
+					<div class="box-footer"> 
+						<a href="<?php echo base_url();?>logistica/views/cons_ingresoproductos/" class="btn btn-flat btn-default">
+							<i class="icon icon-white icon-arrowthick-w"></i>
+							Volver
+						</a>
+					</div>
+					
 				</div>
 			</div>
 		</div>

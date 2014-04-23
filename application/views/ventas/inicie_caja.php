@@ -88,8 +88,6 @@
                                     <button disabled="true" id="Cerrar_caja" type="button" class="col-lg-12 btn btn-success btn-flat" >Cerrar</button>
                                 </div>
                                 <?php } ?>
-                               
-                            
                         </br>
                         </br>
                         </br>
@@ -99,7 +97,7 @@
                 
                     <div class="box-body table-responsive">
                         <legend>CONSULTA</legend>
-                        <table id="caja_table" class="table table-bordered table-striped" data-source="<?php echo base_url();?>ventas/servicios/getCaja" >
+                        <table id="caja_table" class="table table-bordered table-striped" data-source="<?php echo base_url();?>ventas/servicios/getCaja">
                             <thead>
                                 <tr>
                                     <th width="14%">Nombre Local</th>
@@ -136,7 +134,6 @@
                                             <option value="Anulado">Anulado</option>
                                             <option value="Aperturado">Aperturado</option>
                                             <option value="Cerrado">Cerrado</option>                                            
-                                            
                                         </select>
                                     </th>                                   
                                 </tr>
@@ -144,7 +141,6 @@
                             <tbody></tbody>
                         </table>
                     </div><!-- /.box-body table-responsive-->
-
                 </div>
             </div>  
         </div>
