@@ -8,6 +8,21 @@ $(document).ready(function(){
 	});
 
 	//DATATABLE MATERIAL
+	var Actions = new DTActions({
+		'conf': '010',
+		'idtable': 'materiales_table',
+		'EditFunction': function(nRow, aData, iDisplayIndex) {
+			$("#btn-reg-mat").hide();
+			$("#btn-editar-mat").show();
+	  		$("#modalMateriales").modal('show');
+	  		$("#precio").val(aData.nMaterialPCosto);
+	  		$("#cantidad").val(aData.nMaterialCantidad);
+	  		$("#descripcion").val(aData.cMaterialDesc);
+	  		$("#codigo").val(aData.nMaterial_id);
+	  		$("#estado").val(aData.cMaterialEst);
+		},
+	});
+
 	var MaterialOptions = {
 		"aoColumns":[
 			{ "mDataProp": "cMaterialDesc"},
@@ -16,8 +31,8 @@ $(document).ready(function(){
 			{ "mDataProp": "nMaterialCantidad"},
 			{ "mDataProp": "nMaterialPCosto"},
 		    { "mDataProp": "cConstanteDesc"}
-				]
-		//"fnCreatedRow": CargosTA.RowCBFunction
+				],
+		"fnCreatedRow": Actions.RowCBFunction
 	};
 	var MaterialTable = createDataTable2('materiales_table',MaterialOptions);
 
