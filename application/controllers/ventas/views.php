@@ -300,40 +300,19 @@ class views extends CI_Controller
 	{
 		//if($this->ion_auth->in_group("ven_inicie_caja"))
 		//{
-			if( $this->session->userdata('estadoCaja') === 0)
-			{
-				$this->load->model('ventas/inicie_caja_model','inicie');
-				$result=$this->inicie->get_EstadoCaja();				
-					
-
-					if($result !=null){
-						$estadoCaja=1;
-					}else{
-						$estadoCaja=0;
-					}
-					if (count($result)>0) {
-						$this->session->set_userdata('id_Caja',$result["id"]);
-					}else{
-						$this->session->set_userdata('id_Caja',0);
-					}
-					$this->session->set_userdata('estadoCaja', $estadoCaja);
-			}
+			$this->load->model('ventas/inicie_caja_model','inicie');
+			$this->inicie->get_EstadoCaja();	
 
 			$dataheader['title'] = 'Inicie/Cierre Caja - ';	
 			$this->load->model('administracion/trabajadores_model','tra');
 			$this->load->model('ventas/inicie_caja_model','inicie');		
-			//$this->load->model('ventas/inicie_caja_model','inicie');
-			$pagedata["caja"]=$this->inicie->get_EstadoCaja();
-			//$this->load->view('templates/headers.php',$dataheader);		
-			//$this->load->view('templates/menu.php');
 			$this->load->model('ventas/inicie_caja_model','inicie');
 			$dataheader['title'] = 'Inicie/Cierre Caja';			
 			$dataheader['trabaja']=$this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
 			$data["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
-			$pagedata["caja"]=$this->inicie->get_EstadoCaja();
 			$this->load->view('templates/headers.php',$dataheader);		
 			$this->load->view('templates/menu.php',$data);
-			$this->load->view('ventas/inicie_caja.php',$pagedata);
+			$this->load->view('ventas/inicie_caja.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/ventas/inicie_caja.js';
 			$datafooter['active'] = 'inicie_caja';
 			$datafooter['dropactive'] = 'dropventas';
@@ -350,7 +329,7 @@ class views extends CI_Controller
 			$this->load->model('ventas/inicie_caja_model','inimod');	
 			$this->load->model('ventas/cuadre_caja_model','ccm');	
 			$id_local=intval($this->session->userdata('current_local')["nLocal_id"]);
-			$id_caja=$this->session->userdata('id_Caja');	
+			$id_caja=$this->session->userdata('caja')["id"];	
 			$dataheader['title'] = 'Cuadre de Caja - ';			
 			$pagedata["cuadrecaja"] = $this->inimod->get_EstadoCaja();
 			$pagedata["ingreso_egreso"] = $this->ccm->ingreso_egreso($id_caja,$id_local);

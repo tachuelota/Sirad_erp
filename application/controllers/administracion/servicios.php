@@ -364,4 +364,13 @@ class servicios extends CI_Controller {
 		echo json_encode(array('aaData' => $result));
 	}
 
+	public function getMaterial()
+	{
+		$this->load->model('administracion/material_model','mm');
+		$result = $this->mm->get_material();
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode(array('aaData' => $result)));
+	}
+
 }

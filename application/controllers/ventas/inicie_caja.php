@@ -42,8 +42,7 @@ public function __construct()
 				 	'nCajaFaltanteSobrante'=>$saldoSobrante);
 				$id_Caja=$this->inicie->insert($Caja);
 				if($id_Caja!=null){
-					$this->session->set_userdata('estadoCaja',1);
-					$this->session->set_userdata('id_Caja', $id_Caja);
+					$this->inicie->get_EstadoCaja();
 					$return = array("responseCode"=>200, "datos"=>"ok");
 				}else
 					$return = array("responseCode"=>400, "greeting"=>"Bad");
@@ -69,7 +68,7 @@ public function __construct()
 					'dCajaFechaCierre'=> $fechaCierre->format('Y-m-d'),
 				 	'cCajaEstado'=> $estado);
 				if($this->inicie->cierre_caja($Caja)){
-					$this->session->set_userdata('estadoCaja',0);
+					$this->inicie->get_EstadoCaja();
 					$return = array("responseCode"=>200, "datos"=>"ok");
 				}else
 					$return = array("responseCode"=>400, "greeting"=>"Bad");
@@ -78,7 +77,7 @@ public function __construct()
 				$return = array("responseCode"=>400, "greeting"=>"Bad");
 
 			$return = json_encode($return);
+			
 			echo $return;
-
 		}
 	}

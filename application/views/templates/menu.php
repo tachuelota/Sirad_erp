@@ -77,7 +77,7 @@
 								</a>
 							</li>
 							<?php endif ?>
-							<?php if( $this->session->userdata('estadoCaja') === 1){  ?>
+							<?php if( $this->session->userdata('caja')["cCajaEstado"] === "1"){  ?>
 								<li id="cuadre_caja">
 									<a class="ajax-link" href="<?php echo base_url();?>ventas/views/cuadre_caja">
 										<i class="fa  fa-inbox"></i>

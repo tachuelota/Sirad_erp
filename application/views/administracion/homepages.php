@@ -231,6 +231,22 @@
                     </div>
                 </div>
                 <?php endif ?>
+                <?php if($this->ion_auth->in_group("admin_ofert")): ?>
+                <div class="col-lg-3 col-xs-6">
+                    <div class="small-box bg-blue">
+                        <div class="inner">
+                            <h3>Materiales</h3>
+                            <p>Registrar y Editar</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion-android-promotion"></i>
+                        </div>
+                        <a href="<?php echo base_url();?>administracion/views/material" class="small-box-footer">
+                            Administrar <i class="fa fa-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <?php endif ?>
 			 </div>              
 		</section>
 	</aside>

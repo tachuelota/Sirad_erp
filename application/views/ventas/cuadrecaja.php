@@ -24,7 +24,7 @@
                                     <label class="col-lg-4 control-label" for="valor">Saldo Final</label>
                                     <div class="col-lg-8">
                                         <div class="input-group">
-                                            <input value="<?php echo $cuadrecaja["SaldoFinal"]; ?>" class="form-control" id="saldo" name="saldo" type="text" data-prompt-position="topLeft" readonly>
+                                            <input value="<?php echo $this->session->userdata('caja')["SaldoFinalCaja"] ; ?>" class="form-control" id="saldo" name="saldo" type="text" data-prompt-position="topLeft" readonly>
                                             <span class="input-group-addon">0.0</span>
                                         </div>
                                     </div>

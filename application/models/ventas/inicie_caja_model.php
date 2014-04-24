@@ -65,7 +65,18 @@ class inicie_caja_model extends CI_Model {
 	{
 		$fechaActual=date('Y-m-d');
 		$query = $this->db->query("SELECT * FROM ven_consultar_caja_all  where FechaApertura ='".$fechaActual."'");
-		return $query->row_array();
+		$Caja=$query->row_array();
+
+		if (count($Caja)>0) 
+		{		
+			$this->session->set_userdata('caja',$Caja);						
+		}
+		else
+		{
+			$Caja=array('id' => 0,'cCajaEstado'=>0 );
+			$this->session->set_userdata('caja',$Caja);
+		}
+		return true;
 	}
 
 

@@ -299,4 +299,21 @@ class views extends CI_Controller
 		$datafooter['dropactive'] = '';
 		$this->load->view('templates/footer.php',$datafooter);
 	}
+
+	public function material()
+	{
+		if($this->ion_auth->in_group("admin_material"))
+		{			
+			$dataheader['title'] = 'Materiales';			
+			$this->load->view('templates/headers.php',$dataheader);		
+			$this->load->view('templates/menu.php');
+			$this->load->view('administracion/materiales.php');
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/materiales.js';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
+			$this->load->view('templates/footer.php',$datafooter);
+		}
+		else
+			redirect('/administracion', 'refresh');
+	}
 }

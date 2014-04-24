@@ -24,7 +24,7 @@
 							<button id="pdfgen" type="button" class="btn btn-success btn-flat">Reporte General</button>
 							<button id="pdfdet" type="button" class="btn btn-success btn-flat">Reporte Detallado</button>
 							
-							<?php if( $this->session->userdata('estadoCaja') === 1){ ?>
+							<?php if( $this->session->userdata('caja')["cCajaEstado"] === "1"){ ?>
                             <button href="#" class="btn btn-default btn-flat btn-registrar"> <i class="glyphicon glyphicon-plus"></i>
 							</button>
                         	<?php }else{ ?>

@@ -31,7 +31,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <?php if( $this->session->userdata('estadoCaja') === 1){ ?>
+                                <?php if( $this->session->userdata('caja')["cCajaEstado"] === "1"){ ?>
                                 <div class="form-group">
                                     <label class="col-lg-5 control-label" for="fec-caja">Fecha </label>
                                     <div class="col-lg-3">
@@ -45,7 +45,7 @@
                                     <label class="col-lg-5 control-label" for="valor">Importe</label>
                                     <div class="col-lg-3">
                                         <div class="input-group">
-                                            <input readonly class="form-control" id="importe" name="importe" type="text" data-prompt-position="topLeft" value="<?php echo $caja["nCajaSaldoInicial"]; ?>">
+                                            <input readonly class="form-control" id="importe" name="importe" type="text" data-prompt-position="topLeft" value="<?php echo $this->session->userdata('caja')["nCajaSaldoInicial"]; ?>">
                                             <span class="input-group-addon">0.0</span>
                                         </div>
                                     </div>
