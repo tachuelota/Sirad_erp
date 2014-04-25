@@ -89,22 +89,31 @@ function getButtons(options){
 	var view_tooltip = "Ver";
 	var edit_tooltip = "Editar";
 	var drop_tooltip = "Deshabilitar";
+	var report1_icon = "glyphicon glyphicon-eye-open";
+	var report2_icon = "glyphicon glyphicon-pencil"
+
 
 	if(typeof options.view_tooltip != "undefined")
-		view_tooltip = options.view_tooltip;
+	view_tooltip = options.view_tooltip;
 
 	if(typeof options.edit_tooltip != "undefined")
-		edit_tooltip = options.edit_tooltip;
+	edit_tooltip = options.edit_tooltip;
 
 	if(typeof options.drop_tooltip != "undefined")
-		drop_tooltip = options.drop_tooltip;
+	drop_tooltip = options.drop_tooltip;
+
+	if(typeof options.report1_icon != "undefined")
+	report1_icon = options.report1_icon;
+
+	if(typeof options.report2_icon != "undefined")
+	report2_icon = options.report2_icon;
 
 	if(options.conf.substring(0,1)==1)
-	    actions += '<li><button class="btn btn-default btn-sm btn-action btn-view" data-toggle="tooltip" data-placement="top" title="'+view_tooltip+'"><i class="glyphicon glyphicon-eye-open"></i></button></li>';
+	actions += '<li><button class="btn btn-default btn-sm btn-action btn-view" data-toggle="tooltip" data-placement="top" title="'+view_tooltip+'"><i class="'+report1_icon+'"></i></button></li>';
 	if(options.conf.substring(1,2)==1)
-	    actions += '<li><button class="btn btn-default btn-sm btn-action btn-edit" data-toggle="tooltip" data-placement="top" title="'+edit_tooltip+'"><i class="glyphicon glyphicon-pencil"></i></button></li>';
+	actions += '<li><button class="btn btn-default btn-sm btn-action btn-edit" data-toggle="tooltip" data-placement="top" title="'+edit_tooltip+'"><i class="'+report2_icon+'"></i></button></li>';
 	if(options.conf.substring(2,3)==1)
-	    actions += '<li><button class="btn btn-default btn-sm btn-action btn-drop" data-toggle="tooltip" data-placement="top" title="'+drop_tooltip+'"><i class="glyphicon glyphicon-trash"></i></button></li>';
+	actions += '<li><button class="btn btn-default btn-sm btn-action btn-drop" data-toggle="tooltip" data-placement="top" title="'+drop_tooltip+'"><i class="glyphicon glyphicon-trash"></i></button></li>';
 	actions += '<ul>';
 	return actions;
 }

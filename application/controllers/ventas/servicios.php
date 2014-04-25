@@ -228,5 +228,27 @@ class servicios extends CI_Controller {
 			->set_output(json_encode($result));
 	}
 
+	public function getDetalleCaja_byCaja($nCaja_id )
+	{
+		$this->load->model('ventas/inicie_caja_model','acm');
+		$id_local=intval($this->session->userdata('current_local')["nLocal_id"]);		
+		$result = $this->acm->getDetalleCaja_byCaja($nCaja_id );
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode(array('aaData' => $result)));
+	}
+
+
+	public function getMovimiento_byCaja($nCaja_id)
+	{
+		$this->load->model('ventas/inicie_caja_model','acm');
+		//$id_local=intval($this->session->userdata('current_local')["nLocal_id"]);
+		$result = $this->acm->getMovimientos_byCaja($nCaja_id);
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode(array('aaData' => $result)));
+	}
+
+	
 }
 

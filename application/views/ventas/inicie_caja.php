@@ -19,132 +19,119 @@
                 <div class="box">
                     <div class="box-body">                  
                         <form id="InicieCajaForm" class="form-horizontal" action-1="<?php echo base_url();?>ventas/inicie_caja/registrar" action-2="<?php echo base_url(); ?>ventas/inicie_caja/cierre_caja">
-                        <div class="row">
-                            <div class="form-horizontal col-lg-12 col-lg-offset-0"><!--6-2-->
-                                <legend>APERTURA DE CAJA</legend>
-                                <div class="form-group">
-                                    <label class="col-lg-5 control-label" for="nom_caja">Caja</label><!--4-8-->
-                                    <div class="col-lg-3">
-                                        <div class="input-group">
-                                            <input class="form-control " id="caja" name="caja" value="CAJA PRINCIPAL" readonly type="text" data-prompt-position="topLeft">
-                                            <span class="input-group-addon"><i class="fa fa-file-text-o"></i></span>
+                            <div class="row">
+                                <div class="form-horizontal col-lg-12 col-lg-offset-0"><!--6-2-->
+                                    <legend>APERTURA DE CAJA</legend>
+                                    <div class="form-group">
+                                        <label class="col-lg-5 control-label" for="nom_caja">Caja</label><!--4-8-->
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                                <input class="form-control " id="caja" name="caja" value="CAJA PRINCIPAL" readonly type="text" data-prompt-position="topLeft">
+                                                <span class="input-group-addon"><i class="fa fa-file-text-o"></i></span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <?php if( $this->session->userdata('caja')["cCajaEstado"] === "1"){ ?>
-                                <div class="form-group">
-                                    <label class="col-lg-5 control-label" for="fec-caja">Fecha </label>
-                                    <div class="col-lg-3">
-                                        <div class="input-group">                                                   
-                                            <input readonly type="text" placeholder="dd/mm/YYYY"  maxlength="10" title="Debe ingresar un formato de fecha correcto" class="form-control datepicker validate[required,custom[date]]" id="fecApertura" name="fecApertura" value="<?php echo date("d/m/Y"); ?>" >
-                                            <div class="input-group-addon"><i class="fa fa-calendar"></i></div>                                             
+                                    <?php if( $this->session->userdata('caja')["cCajaEstado"] === "1"):?>
+                                    <div class="form-group">
+                                        <label class="col-lg-5 control-label" for="fec-caja">Fecha </label>
+                                        <div class="col-lg-3">
+                                            <div class="input-group">                                                   
+                                                <input readonly type="text" placeholder="dd/mm/YYYY"  maxlength="10" title="Debe ingresar un formato de fecha correcto" class="form-control datepicker validate[required,custom[date]]" id="fecApertura" name="fecApertura" value="<?php echo date("d/m/Y"); ?>" >
+                                                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>                                             
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                 <div class="form-group">
-                                    <label class="col-lg-5 control-label" for="valor">Importe</label>
-                                    <div class="col-lg-3">
-                                        <div class="input-group">
-                                            <input readonly class="form-control" id="importe" name="importe" type="text" data-prompt-position="topLeft" value="<?php echo $this->session->userdata('caja')["nCajaSaldoInicial"]; ?>">
-                                            <span class="input-group-addon">0.0</span>
+                                    <div class="form-group">
+                                        <label class="col-lg-5 control-label" for="valor">Importe</label>
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                                <input readonly class="form-control" id="importe" name="importe" type="text" data-prompt-position="topLeft" value="<?php echo $this->session->userdata('caja')["nCajaSaldoInicial"]; ?>">
+                                                <span class="input-group-addon">0.0</span>
+                                            </div>
+                                        </div>
+                                    </div>                                
+                                    <div class="box-tools pull-right">                                        
+                                        <button id="Abrir_caja" type="button" class="col-lg-6 btn btn-info btn-flat btn-abrirc">   Abrir</button> 
+                                        <button disabled="true" id="Cerrar_caja" type="button" class="col-lg-6 btn btn-success btn-flat" >Cerrar</button>
+                                        
+                                    </div>
+                                    <?php else : ?>
+                                    <div class="form-group">
+                                        <label class="col-lg-5 control-label" for="fec-caja">Fecha </label>
+                                        <div class="col-lg-3">
+                                            <div class="input-group">                                                   
+                                                <input  type="text" placeholder="dd/mm/YYYY"  maxlength="10" title="Debe ingresar un formato de fecha correcto" class="form-control datepicker validate[required,custom[date]]" id="fecApertura" name="fecApertura" value="<?php echo date("d/m/Y"); ?>" >
+                                                <div class="input-group-addon"><i class="fa fa-calendar"></i>
+                                                </div>                                             
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                </br>
-                                <div class="col-lg-4 col-lg-offset-4">
-                                </div>
-                                <div class="col-lg-2">  
-                                    <button disabled="true" id="Abrir_caja" type="button" class="col-lg-12 btn btn-info btn-flat btn-abrirc">   Abrir</button>
-                                </div>
-                                <div class="col-lg-2">  
-                                    <button id="Cerrar_caja" type="button" class="col-lg-12 btn btn-success btn-flat" >Cerrar</button>
-                                </div>
-                                <?php }else{ ?>
-                                 <div class="form-group">
-                                    <label class="col-lg-5 control-label" for="fec-caja">Fecha </label>
-                                    <div class="col-lg-3">
-                                        <div class="input-group">                                                   
-                                            <input  type="text" placeholder="dd/mm/YYYY"  maxlength="10" title="Debe ingresar un formato de fecha correcto" class="form-control datepicker validate[required,custom[date]]" id="fecApertura" name="fecApertura" value="<?php echo date("d/m/Y"); ?>" >
-                                            <div class="input-group-addon"><i class="fa fa-calendar"></i></div>                                             
+                                    <div class="form-group">
+                                        <label class="col-lg-5 control-label" for="valor">Importe</label>
+                                        <div class="col-lg-3">
+                                            <div class="input-group">
+                                                <input class="form-control validate[required,custom[onlyNumberSp]]" id="importe" name="importe" type="text" data-prompt-position="topLeft">
+                                                <span class="input-group-addon">0.0</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                 <div class="form-group">
-                                    <label class="col-lg-5 control-label" for="valor">Importe</label>
-                                    <div class="col-lg-3">
-                                        <div class="input-group">
-                                            <input class="form-control validate[required,custom[onlyNumberSp]]" id="importe" name="importe" type="text" data-prompt-position="topLeft">
-                                            <span class="input-group-addon">0.0</span>
-                                        </div>
+                                    <div class="box-tools pull-right">                                        
+                                        <button id="Abrir_caja" type="button" class=" btn btn-info btn-flat btn-abrirc">   Abrir</button> 
+                                        <button disabled="true" id="Cerrar_caja" type="button" class=" btn btn-success btn-flat" >Cerrar</button>
                                     </div>
+                                    <?php endif ?>
                                 </div>
-                                </br>
-                                <div class="col-lg-4 col-lg-offset-4">
-                                </div>
-                                <div class="col-lg-2">  
-                                    <button id="Abrir_caja" type="button" class="col-lg-12 btn btn-info btn-flat btn-abrirc">   Abrir</button>
-                                </div>
-                                <div class="col-lg-2">  
-                                    <button disabled="true" id="Cerrar_caja" type="button" class="col-lg-12 btn btn-success btn-flat" >Cerrar</button>
-                                </div>
-                                <?php } ?>
-
-                    
-                        </br>
-                        </br>
-                        </br>
-                        </br>
                             </div>
-
-                
-                    <div class="box-body table-responsive">
-                        <legend>CONSULTA</legend>
-                        <table id="caja_table" class="table table-bordered table-striped" data-source="<?php echo base_url();?>ventas/servicios/getCaja">
-                            <thead>
-                                <tr>
-                                    <th width="14%">Nombre Local</th>
-                                    <th width="13%">Fecha Apertura</th>
-                                    <th width="13%">Fecha Cierre</th>
-                                    <th width="25%">Saldo Final</th>
-                                    <th width="13%">Faltante/Sobrante</th>
-                                    <th width="12%">Saldo Final Caja</th>
-                                    <th width="10%">Estado</th>
-                                </tr>
-                            </thead>
-                            <thead>
-                                <tr>
-                                    <th class="input">
-                                        <input type="text" placeholder="Nombre Local" class="search_init form-control" />
-                                    </th>
-                                    <th class="input">
-                                        <input type="text" placeholder="Fecha Apertura" class="search_init form-control" />
-                                    </th>
-                                    <th class="input">
-                                        <input type="text" placeholder="Fecha Cierre" class="search_init form-control" />
-                                    </th>
-                                    <th class="input">
-                                        <input type="text" placeholder="Saldo Final" class="search_init form-control" />
-                                    </th>
-                                    <th class="input">
-                                        <input type="text" placeholder="Faltante/Sobrante" class="search_init form-control" />
-                                    </th>
-                                    
-                                    <th></th>
-                                    <th class="customselect" nrocol="6">
-                                        <select class="form-control">
-                                            <option value="">Todos</option>
-                                            <option value="Anulado">Anulado</option>
-                                            <option value="Aperturado">Aperturado</option>
-                                            <option value="Cerrado">Cerrado</option>                                            
-                                        </select>
-                                    </th>                                   
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                    </div><!-- /.box-body table-responsive-->
-                </div>
-            </div>  
+                        </form>
+                        <div class="box-body table-responsive">
+                            <legend>CONSULTA</legend>
+                                <table id="caja_table" class="table table-bordered table-striped" data-source="<?php echo base_url();?>ventas/servicios/getCaja">
+                                    <thead>
+                                        <tr>
+                                            <th width="14%">Nombre Local</th>
+                                            <th width="13%">Fecha Apertura</th>
+                                            <th width="13%">Fecha Cierre</th>
+                                            <th width="25%">Saldo Final</th>
+                                            <th width="13%">Faltante/Sobrante</th>
+                                            <th width="12%">Saldo Final Caja</th>
+                                            <th width="10%">Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr>
+                                            <th class="input">
+                                                <input type="text" placeholder="Nombre Local" class="search_init form-control" />
+                                            </th>
+                                            <th class="input">
+                                                <input type="text" placeholder="Fecha Apertura" class="search_init form-control" />
+                                            </th>
+                                            <th class="input">
+                                                <input type="text" placeholder="Fecha Cierre" class="search_init form-control" />
+                                            </th>
+                                            <th class="input">
+                                                <input type="text" placeholder="Saldo Final" class="search_init form-control" />
+                                            </th>
+                                            <th class="input">
+                                                <input type="text" placeholder="Faltante/Sobrante" class="search_init form-control" />
+                                            </th>
+                                            
+                                            <th></th>
+                                            <th class="customselect" nrocol="6">
+                                                <select class="form-control">
+                                                    <option value="">Todos</option>
+                                                    <option value="Anulado">Anulado</option>
+                                                    <option value="Aperturado">Aperturado</option>
+                                                    <option value="Cerrado">Cerrado</option>                                            
+                                                </select>
+                                            </th>                                   
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                        </div><!-- /.box-body table-responsive-->
+                    </div>
+                </div>  
+            </div>
         </div>
     </section>
 </aside>
