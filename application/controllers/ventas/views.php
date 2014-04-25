@@ -342,7 +342,6 @@ class views extends CI_Controller
 			$datafooter['active'] = 'cuadre_caja';
 			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
-		
 		//}
 		//else
 			//redirect('/ventas', 'refresh');

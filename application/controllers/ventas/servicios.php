@@ -242,7 +242,7 @@ class servicios extends CI_Controller {
 	public function getMovimiento_byCaja($nCaja_id)
 	{
 		$this->load->model('ventas/inicie_caja_model','acm');
-		//$id_local=intval($this->session->userdata('current_local')["nLocal_id"]);
+		$id_local=intval($this->session->userdata('current_local')["nLocal_id"]);
 		$result = $this->acm->getMovimientos_byCaja($nCaja_id);
 		$this->output
 			->set_content_type('application/json')

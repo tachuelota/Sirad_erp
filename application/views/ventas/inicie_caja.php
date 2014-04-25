@@ -49,12 +49,18 @@
                                                 <span class="input-group-addon">0.0</span>
                                             </div>
                                         </div>
-                                    </div>                                
-                                    <div class="box-tools pull-right">                                        
-                                        <button id="Abrir_caja" type="button" class="col-lg-6 btn btn-info btn-flat btn-abrirc">   Abrir</button> 
-                                        <button disabled="true" id="Cerrar_caja" type="button" class="col-lg-6 btn btn-success btn-flat" >Cerrar</button>
-                                        
-                                    </div>
+                                    </div> 
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-8">
+                                            <div class="col-lg-6">    
+                                                <button id="Abrir_caja" type="button" class="col-lg-12 btn btn-info btn-flat btn-abrirc">   Abrir</button>
+                                            </div>    
+                                            <div class="col-lg-6">                              
+                                                <button disabled="true" id="Cerrar_caja" type="button" class="col-lg-12 btn btn-success btn-flat" >Cerrar</button>
+                                            </div>  
+                                        </div> 
+                                    </div>                               
+                            
                                     <?php else : ?>
                                     <div class="form-group">
                                         <label class="col-lg-5 control-label" for="fec-caja">Fecha </label>
@@ -75,10 +81,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="box-tools pull-right">                                        
-                                        <button id="Abrir_caja" type="button" class=" btn btn-info btn-flat btn-abrirc">   Abrir</button> 
-                                        <button disabled="true" id="Cerrar_caja" type="button" class=" btn btn-success btn-flat" >Cerrar</button>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-8">
+                                            <div class="col-lg-6">    
+                                                <button id="Abrir_caja" type="button" class="col-lg-12 btn btn-info btn-flat btn-abrirc">   Abrir</button>
+                                            </div>    
+                                            <div class="col-lg-6">                              
+                                                <button disabled="true" id="Cerrar_caja" type="button" class="col-lg-12 btn btn-success btn-flat" >Cerrar</button>
+                                            </div>  
+                                        </div> 
                                     </div>
+                            
                                     <?php endif ?>
                                 </div>
                             </div>

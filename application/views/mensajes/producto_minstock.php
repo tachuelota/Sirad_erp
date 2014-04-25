@@ -73,10 +73,9 @@
                                             </div>
                                         </div>
                                         <div class="modal-footer clearfix">
-
-                                        <button type="button" class="btn btn-flat" data-dismiss="modal">Cancelar</button>
-                                        <button id="btn_enviar_correo" type="button" class="btn btn-primary btn-flat"> Enviar</button>
-                                    </div>                                    
+											<button type="button" class="btn btn-flat" data-dismiss="modal">Cancelar</button>
+	                                        <button id="btn_enviar_correo" type="button" class="btn btn-primary btn-flat"> Enviar</button>
+                                    	</div>                                    
                                 	</form>
                                 </div>
 							</div>
