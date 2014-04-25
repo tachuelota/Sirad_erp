@@ -98,20 +98,18 @@
 		return datoszona;
 	}
 	
-
 	//REPORTES
 		$("#btn-rpt-tienda").click(function(){
 			var table_venta = toHTML(crearTablaToArray("tventas",
-			['FECHA REGISTRO','TIENDA','CLIENTE','PRODUCTO','SERIE','CANT','DESCRIPCION','P COSTO','P VENTA CONTADO','P VENTA CREDITO'],
-			[	'style="width: 8%;" class="head" ','style="width: 7%;" class="head" ','style="width: 14%;" class="head" ',
-			'style="width:14%;" class="head" ','style="width: 10%;" class="head" ','style="width: 6%;" class="head" ',
-			'style="width: 11%;" class="head" ','style="width: 11%;" class="head" ','style="width: 9%;" class="head" ',
-			'style="width: 10%;" class="head" '],
-			['FecReg','Tienda','Cliente','Producto','Serie','Cant','Desct','PrecioCosto','PrecioVentaContado','PrecioVentaCredito'],
-			[	'style="width: 8%;" ','style="width: 7%;" ','style="width: 14%;" ',
-			'style="width: 14%;" ','style="width: 10%;" ','style="width: 6%;" ',
-			'style="width: 11%;" ','style="width: 11%;" ','style="width: 9%;" ',
-			'style="width: 10%;" '],
+			['FECHA REGISTRO','VENDEDOR','CLIENTE','TIPO PAGO','SUB TOTAL','DESCUENTO','TIPO IGV','TOTAL','ACUENTA','SALDO','ESTADO'],
+			[	'style="width: 10%;" class="head" ','style="width: 7%;" class="head" ','style="width: 10%;" class="head" ',
+			'style="width:10%;" class="head" ','style="width: 10%;" class="head" ','style="width: 6%;" class="head" ',
+			'style="width: 11%;" class="head" ','style="width: 8%;" class="head" ','style="width: 9%;" class="head" ','style="width: 8%;" class="head" ','style="width: 10%;" class="head" '],
+			['cVentaFecReg','Vendedor','Cliente','tipo_pago','SubTotal','Descuento','TipoIGV','Total','Acuenta','Saldo','Estado'],
+			[	'style="width: 10%;" ','style="width: 7%;" ','style="width: 10%;" ',
+			'style="width: 10%;" ','style="width: 10%;" ','style="width: 6%;" ',
+			'style="width: 11%;" ','style="width: 8%;" ','style="width: 9%;" ',
+			'style="width: 8%;" ','style="width: 10%;" '],
 			VenTiendaTable.fnGetData()));
 
 			$("#title").val("REPORTE DE VENTAS DE TIENDA");
