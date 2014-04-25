@@ -87,4 +87,22 @@ class inicie_caja_model extends CI_Model {
 	
 	}
 
+
+	public function getDetalleCaja_byCaja($nCaja_id)
+	{
+		$query = $this ->db->query ("select * from ven_consultardetallecaja_bycaja dc where dc.nLocal_id =  (select c.nLocal_id from caja c where c.nCaja_id=".$nCaja_id.") and nCaja_id=".$nCaja_id);
+		return $query -> result_array();
+		
+	}
+
+	public function getMovimientos_byCaja($nCaja_id)
+	{
+		$query = $this ->db->query ("select * from ven_consultarmovimiento_bycaja vm where ( vm.nLocal_id = (select c.nLocal_id from caja c where c.nCaja_id=".$nCaja_id.")) and (DATE(vm.FechaOperacion) = (select DATE(c.dCajaFechaApertura) from caja c where c.nCaja_id=".$nCaja_id."))");		                              
+		return $query -> result_array();
+		
+	}
+
+
+
+
 }

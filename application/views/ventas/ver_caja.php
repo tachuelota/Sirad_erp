@@ -21,79 +21,18 @@
 			<div class="col-xs-12">
 				<div class="box">
 					<div class="box-body">
-						<section id="resumen_venta" class="content invoice">                    
-		                    <!-- title row -->
-		                    <div class="row">
-		                        <div class="col-xs-12">
-		                            <h2 class="page-header">
-		                                <i class="fa fa-globe"></i> CLM Developers SAC
-		                                <small class="pull-right">Fecha: <?php echo date("d/m/Y"); ?></small>
-		                            </h2>                            
-		                        </div><!-- /.col -->
-		                    </div>
-							<!-- info row -->
-		                    <div class="row invoice-info">
-		                        <div class="col-sm-4 invoice-col">
-		                            De
-		                            <address>
-		                                <strong>CLM Developers, SAC.</strong><br>
-		                                Bernardo Alcedo 187<br>
-		                                Urb. San Fernando, Trujillo<br>
-		                                <i class="fa fa-phone"></i> +51 999494821 / +51 044 612874<br/>
-		                                <i class="fa fa-envelope"></i> contacto@clmdevelopers.com
-		                            </address>
-		                        </div><!-- /.col -->
-		                        
-		                    </div><!-- /.row -->
-							<!-- TABLA DE PRODUCTOS POR COMPRAR aqui -->
-							<!-- Table row -->
-		                    <div class="row">
-		                        <div class="col-xs-12 table-responsive">
-		                            <table id="tabla_resumen_productos" class="table table-striped">
-										<thead >
-											<tr>
-												<th>Fecha Apertura</th>
-												<th>Fecha Cierre</th>
-												<th>Saldo Final</th>
-												<th>Faltante / Sobrante</th>
-												<th>Saldo Final Caja</th>
-											</tr>
-										</thead>
-										<tbody>
-											</tbody>
-										</tbody>
-									</table>
+						<div class="box-header">						
+						<h3 class="box-title">Productos con Stock mínimo</h3>		
+						<div class="box-tools pull-right">
+							<form method="post" target="_blank" id="CreatePDFForm">
+								<input type="hidden" name="title" id="title"/>
+								<input type="hidden" name="table_caja" id="table_caja"/>
+								<div>						
+									<button type="button" class="btn btn-success btn-flat" id="xlsutton">Exportar</button>					          											       
 								</div>
-							</div>
-							<br>
-							<!-- END TABLA DE PRODUCTOS -->
-							<div class="row">
-								<div class="col-xs-6 col-lg-6"></div>
-								<div class="col-xs-6 col-lg-6">
-									<table class="table">
-										<tr>
-											<td >
-												<strong>Subtotal</strong>
-											</td>
-											
-											<tr>
-												
-											</tr>
-											<tr>
-												
-											</tr>
-											<tr>
-												<td>
-													<strong>Total</strong>
-												</td>
-												
-											</tr>
-											<tr>
-											</tr>
-									</table>
-								</div>
-							</div>
-						</section>
+							</form>
+						</div>
+					</div>
 					</div>
 					<div class="box-footer">
 						<a href="<?php echo base_url() ?>ventas/views/inicie_caja" class="btn btn-success btn-flat"> <i class="fa fa-reply"></i>

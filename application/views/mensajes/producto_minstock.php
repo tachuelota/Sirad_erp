@@ -20,7 +20,7 @@
 								<input type="hidden" name="table_productos" id="table_productos"/>
 								<div>						
 									<button type="button" class="btn btn-success btn-flat" id="xlsutton">Exportar</button>	
-				          <button type="button" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#compose-modal">Enviar</button>									       
+				          			<button type="button" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#compose-modal">Enviar</button>									       
 								</div>
 							</form>
 						</div>
