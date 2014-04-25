@@ -1,6 +1,6 @@
 <?php
 $title = $_POST['title'];
-$table_caja = $_POST['table_caja'];
+$table_cajamovi = $_POST['table_cajamovi'];
 
 header('Content-type: application/x-msdownload; charset=utf-16');
 header('Content-Disposition: attachment; filename=reporte_caja_'.date("d-m-Y").'.xls');
@@ -31,17 +31,17 @@ header('Expires: 0');
 		font-weight: bold; 
 		text-transform: uppercase;
 	}
-	#tcaja{
+	#tmovimi{
 		border-collapse: collapse;
 		text-align: center;
 	}
-	#tcaja td.head{
+	#tmovimi td.head{
 		background: #e7e6e6;
 	}
-	#tcaja th, #tcaja td{
+	#tmovimi th, #tmovimi td{
 		border: black 1px solid;
 	}
-	#tcaja td.izquierda{
+	#tmovimi td.izquierda{
 		text-align: left;
 		padding-left: 17px;
 	}
@@ -57,7 +57,7 @@ header('Expires: 0');
 		</div>
 		<br>
 		Fecha Emision: <?php echo date('d/m/Y'); ?><br>	
-		<?php echo $table_caja ?><br>
+		<?php echo $table_cajamovi ?><br>
 		<br>
     </body>
     </html>

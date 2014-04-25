@@ -18,7 +18,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-body">                  
-                        <form id="InicieCajaForm" class="form-horizontal" action-1="<?php echo base_url();?>ventas/inicie_caja/registrar" action-2="<?php echo base_url(); ?>ventas/inicie_caja/cierre_caja">
+                        <form id="InicieCajaForm" class="form-horizontal" action-1="<?php echo base_url();?>ventas/inicie_caja/registrar" action-2="<?php echo base_url(); ?>ventas/inicie_caja/cierre_caja">                            
                             <div class="row">
                                 <div class="form-horizontal col-lg-12 col-lg-offset-0"><!--6-2-->
                                     <legend>APERTURA DE CAJA</legend>
@@ -65,7 +65,7 @@
                                     <div class="form-group">
                                         <label class="col-lg-5 control-label" for="fec-caja">Fecha </label>
                                         <div class="col-lg-3">
-                                            <div class="input-group">                                                   
+                                            <div class="input-group">                            
                                                 <input  type="text" placeholder="dd/mm/YYYY"  maxlength="10" title="Debe ingresar un formato de fecha correcto" class="form-control datepicker validate[required,custom[date]]" id="fecApertura" name="fecApertura" value="<?php echo date("d/m/Y"); ?>" >
                                                 <div class="input-group-addon"><i class="fa fa-calendar"></i>
                                                 </div>                                             
@@ -143,7 +143,14 @@
                                 </table>
                         </div><!-- /.box-body table-responsive-->
                     </div>
-                </div>  
+                </div> 
+                <div>
+                 <form method="post" id="CreatePDFForm" target="_blank">
+                    <input type="hidden" name="title" id="title"/>
+                    <input type="hidden" name="table_caja" id="table_caja" value=""/>
+                    <input type="hidden" name="table_cajamovi" id="table_cajamovi" value=""/>
+                 </form>
+                </div> 
             </div>
         </div>
     </section>
