@@ -61,4 +61,17 @@ $(document).ready(function(){
 			});
 	});
 
+	//editar
+	$("#btn-editar-mat").click(function(event){
+		event.preventDefault();
+		if($("#MaterialForm").validationEngine('validate'))
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalMateriales').modal('hide');
+					enviar($("#MaterialForm").attr("action-2"),{formulario:$("#MaterialForm").serializeObject()}, successMaterial, null)
+				}
+			});
+	});
+
 });

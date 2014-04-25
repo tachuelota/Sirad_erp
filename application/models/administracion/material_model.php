@@ -27,14 +27,14 @@ class material_model extends CI_Model {
 		}
 	}
 
-	/*public function update($id,$data){
+	public function update($id,$data){
 		
 		$this->db->trans_start();
 		
 		$this->db->trans_begin();
 
-        $this->db->where('nCargo_id',$id);
-		$this->db->update('ven_cargo',$data);
+        $this->db->where('nMaterial_id',$id);
+		$this->db->update('material',$data);
 
 		if ($this->db->trans_status() === FALSE)
 		{
@@ -46,7 +46,7 @@ class material_model extends CI_Model {
 			$this->db->trans_commit();
 			return true;
 		}
-	}*/
+	}
 
 
  	public function get_material($nMaterial_id = FALSE)

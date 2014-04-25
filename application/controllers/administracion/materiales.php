@@ -43,21 +43,38 @@ class materiales extends CI_Controller {
 		echo $return;
 	} 
 	
-	/*public function editar(){
+	public function editar(){
 		$form = $this->input->post('formulario',null);
 	
-		$CargoDesc = null;
-		$cCargoEst = null; 
+		$Descripcion = $form["descripcion"];
+		$Marca = $form["marca"];
+		$Precio = $form["precio"];
+		$Categoria = $form["categoria"];
+		$UnidadMedida = $form["unimedida"];
+		$Estado = $form["estado"];
+		$Cantidad=$form["cantidad"];
 		
 		if ($form!=null){
 
-			$Cargoid = $form["idCargo"];
-			$CargoDesc = $form["nom_cargo"];
-			$cCargoEst = $form["selectEstado"];
+			$id_Mat = $form["codigo"];
+			$Descripcion = $form["descripcion"];
+			$Marca = $form["marca"];
+			$Precio = $form["precio"];
+			$Categoria = $form["categoria"];
+			$UnidadMedida = $form["unimedida"];
+			$Estado = $form["estado"];
+			$Cantidad=$form["cantidad"];
 							
-			$data = array('nCargoDesc' => $CargoDesc,'cCargoEst' =>$cCargoEst );		
+			$data = array(
+				'cMaterialDesc' => $Descripcion,
+				'nMarca_id' => $Marca,
+				'nMaterialPCosto' => $Precio,
+				'nCategoria_id' => $Categoria,
+				'nMaterialCantidad' => $Cantidad,
+				'nMaterialUnidMedida' =>$UnidadMedida,
+				'cMaterialEst'=>$Estado );		
 			
-			if($this->acam->update($Cargoid,$data)){
+			if($this->mm->update($id_Mat,$data)){
 				$return = array('responseCode'=>200, 'datos'=>$data);
 			}
 			else{
@@ -70,6 +87,6 @@ class materiales extends CI_Controller {
 	
 		$return = json_encode($return);
 		echo $return;
-	}*/
+	}
 	
 }

@@ -45,7 +45,7 @@
 								<div class="modal-header">
 									<h4 class="modal-title">Registrar Material</h4>
 								</div>
-								<form id="MaterialForm" class="form-horizontal" action-1="<?php echo base_url();?>administracion/materiales/registrar" action-2="<?php echo base_url();?>logistica/productos/editar">
+								<form id="MaterialForm" class="form-horizontal" action-1="<?php echo base_url();?>administracion/materiales/registrar" action-2="<?php echo base_url();?>administracion/materiales/editar">
 									<div class="modal-body">
 										<input id="codigo" name="codigo" type="hidden">
 										<input type="hidden" name="idLocal" id="idLocal" value="<?php //echo $local["nLocal_id"];?>">
