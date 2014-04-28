@@ -53,10 +53,10 @@
                                     <div class="form-group">
                                         <div class="col-lg-offset-8">
                                             <div class="col-lg-6">    
-                                                <button id="Abrir_caja" type="button" class="col-lg-12 btn btn-info btn-flat btn-abrirc">   Abrir</button>
+                                                <button id="Abrir_caja" disabled="true" type="button" class="col-lg-12 btn btn-info btn-flat btn-abrirc">   Abrir</button>
                                             </div>    
                                             <div class="col-lg-6">                              
-                                                <button disabled="true" id="Cerrar_caja" type="button" class="col-lg-12 btn btn-success btn-flat" >Cerrar</button>
+                                                <button id="Cerrar_caja" type="button" class="col-lg-12 btn btn-success btn-flat" >Cerrar</button>
                                             </div>  
                                         </div> 
                                     </div>                               
@@ -96,6 +96,7 @@
                                 </div>
                             </div>
                         </form>
+                        <?php if( $this->session->userdata('trabajador')["nCargoDesc"] === "ADMINISTRADOR" ){ ?>
                         <div class="box-body table-responsive">
                             <legend>CONSULTA</legend>
                                 <table id="caja_table" class="table table-bordered table-striped"  data-source="<?php echo base_url();?>ventas/servicios/getCaja">
@@ -143,6 +144,7 @@
                                     <tbody></tbody>
                                 </table>
                         </div><!-- /.box-body table-responsive-->
+                        <?php } ?>
                     </div>
                 </div> 
                 <div>
