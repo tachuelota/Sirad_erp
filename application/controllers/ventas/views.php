@@ -298,8 +298,8 @@ class views extends CI_Controller
 
 	public function inicie_caja()
 	{
-		//if($this->ion_auth->in_group("ven_inicie_caja"))
-		//{
+		if($this->ion_auth->in_group("ven_inicie_caja"))
+		{
 			$this->load->model('ventas/inicie_caja_model','inicie');
 			$this->inicie->get_EstadoCaja();	
 
@@ -317,15 +317,15 @@ class views extends CI_Controller
 			$datafooter['active'] = 'inicie_caja';
 			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
-		//}
-		//else
-			//redirect('/ventas', 'refresh');
+		}
+		else
+			redirect('/ventas', 'refresh');
 	}
 
 	public function cuadre_caja()
 	{
-		//if($this->ion_auth->in_group("ven_inicie_caja"))
-		//{
+		if($this->ion_auth->in_group("ven_caja"))
+		{
 			$this->load->model('ventas/inicie_caja_model','inimod');	
 			$this->load->model('ventas/cuadre_caja_model','ccm');	
 			$id_local=intval($this->session->userdata('current_local')["nLocal_id"]);
@@ -342,9 +342,9 @@ class views extends CI_Controller
 			$datafooter['active'] = 'cuadre_caja';
 			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
-		//}
-		//else
-			//redirect('/ventas', 'refresh');
+		}
+		else
+			redirect('/ventas', 'refresh');
 	}
 
 }

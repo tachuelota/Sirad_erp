@@ -209,6 +209,14 @@
 									</a>
 								</li>
 							<?php endif ?>
+							<?php if($this->ion_auth->in_group("log_ord_com_mat")): ?>
+								<li id="ord_com">
+									<a class="ajax-link" href="<?php echo base_url();?>logistica/views/cons_ordencompra_mat">
+										<i class="fa fa-file-text"></i>
+										Compra Materiales</span>
+									</a>
+								</li>
+							<?php endif ?>
 							<!-<?php if($this->ion_auth->in_group("log_rep_sal_prod")): ?> -->
 								<!--<li id="rep_sal_prod">
 									<a class="ajax-link" href="<?php echo base_url();?>logistica/views/cronogramas">

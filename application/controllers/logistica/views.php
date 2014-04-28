@@ -281,6 +281,39 @@ class views extends CI_Controller
 		else
 			redirect('/logistica', 'refresh');
 	}
+	public function cons_ordencompra_mat()
+	{
+		if($this->ion_auth->in_group("log_ord_com_mat"))
+		{			
+			$dataheader['title'] = 'Orden de Compras Materiales - ';			
+			$this->load->view('templates/headers.php',$dataheader);		
+			$this->load->view('templates/menu.php');
+			$this->load->view('logistica/cons_compras_mat.php');
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/cons_compras_mat.js';
+			$datafooter['active'] = '';
+			$datafooter['dropactive'] = 'droplogistica';
+			$this->load->view('templates/footer.php',$datafooter);
+		}
+		else
+			redirect('/logistica', 'refresh');
+	}
+
+	public function reg_ordencompra_mat()
+	{
+		//if($this->ion_auth->in_group("log_ord_com_mat"))
+		//{			
+			$dataheader['title'] = 'Registrar Compra Materiales - ';			
+			$this->load->view('templates/headers.php',$dataheader);		
+			$this->load->view('templates/menu.php');
+			$this->load->view('logistica/reg_compras_mat.php');
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/reg_compras_mat.js';
+			$datafooter['active'] = '';
+			$datafooter['dropactive'] = 'droplogistica';
+			$this->load->view('templates/footer.php',$datafooter);
+		//}
+		//else
+		//	redirect('/logistica', 'refresh');
+	}
 
 	/*public function cons_pedidos()
 	{
