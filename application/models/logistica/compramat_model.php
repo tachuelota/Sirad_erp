@@ -41,11 +41,11 @@ class compramat_model extends CI_Model
 
 	public function get_fromrange($Desde,$Hasta)
 	{
-		$query = $this->db->query("select * from log_ordcom_all where OrdComFecReg between '".$Desde."' and '".$Hasta."'");
+		$query = $this->db->query("select * from log_ordcom_mat_all where OrdComMatFecReg between '".$Desde."' and '".$Hasta."'");
 		return $query -> result_array();
 	}
 	
-	public function get_OrdCompra_views($nOrdenCom_id = FALSE)
+	/*public function get_OrdCompra_views($nOrdenCom_id = FALSE)
 	{
 		if($nOrdenCom_id === FALSE )
 		{
@@ -54,7 +54,7 @@ class compramat_model extends CI_Model
 		}
 		$query = $this->db->query("SELECT * FROM log_ordcom_all  where nOrdenCom_id =" .$nOrdenCom_id);
 		return $query->row_array();
-	}
+	}*/
 	
 }
 
