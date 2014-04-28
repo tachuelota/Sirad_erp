@@ -241,6 +241,7 @@ class servicios extends CI_Controller {
 			->set_content_type('application/json')
 			->set_output(json_encode($data_ruc));
 	}
+	
 	public function get_log_ordcompmaterial($Desde,$Hasta){		
 			$this->load->model('logistica/compramat_model','ocm');
 			$ordmat = $this->ocm->get_fromrange($Desde,$Hasta);
@@ -261,5 +262,5 @@ class servicios extends CI_Controller {
 	}
 
 	
-
+}
 }
