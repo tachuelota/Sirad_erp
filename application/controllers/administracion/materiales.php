@@ -5,6 +5,7 @@ class materiales extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->model('administracion/material_model','mm');
+		$this->load->model('administracion/localmaterial_model','lomat');
 	}
 	
 	public function registrar(){
@@ -18,6 +19,7 @@ class materiales extends CI_Controller {
 			$UnidadMedida = $form["unimedida"];
 			$Estado = $form["estado"];
 			$Cantidad=$form["cantidad"];
+			$idLocal=$form["idLocal"];
 							
 			$Material = array(
 				'cMaterialDesc' => $Descripcion,
@@ -27,20 +29,44 @@ class materiales extends CI_Controller {
 				'nMaterialCantidad' => $Cantidad,
 				'nMaterialUnidMedida' =>$UnidadMedida,
 				'cMaterialEst'=>$Estado );
-	
-			if($this->mm->insert($Material)){
-				$return = array("responseCode"=>200, "datos"=>"ok");
-			}else{
-				$return = array("responseCode"=>400, "greeting"=>"Bad");
-			}; 
 
+			$band = true;
+			$this->db->trans_begin();
+			$id_Material = $this->mm->insert($Material);
+
+			if($id_Material === FALSE)
+			{ 
+				$this->output->set_status_header('400');
+				$band = false;
+			} 
+			else
+			{
+				$detalle=array('nLocal_id'=>$idLocal,
+					'nProducto_id'=>$id_Material,
+					'clocalProducto_Estado'=>"1");
+				
+				if(!$this->lomat->insert_batch($detalle))
+					$band = false;
+
+			}
+
+			if($band)
+				$this->db->trans_commit();
+			else
+			{
+				$this->db->trans_rollback();
+				$this->output->set_status_header('400');
+			} 
 		}
-		else {
-			$return = array("responseCode"=>400, "greeting"=>"Bad");
+		else 
+		{
+			$this->output->set_status_header('400');
+			$return = "bad";
 		} 
 	
-		$return = json_encode($return);
-		echo $return;
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode("ok"));
 	} 
 	
 	public function editar(){

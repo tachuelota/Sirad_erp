@@ -373,4 +373,14 @@ class servicios extends CI_Controller {
 			->set_output(json_encode(array('aaData' => $result)));
 	}
 
+	public function getMaterial_ByLocal()
+	{
+		$this->load->model('administracion/material_model','mm');
+		$idLocal=$this->session->userdata('current_local')["nLocal_id"];
+		$result = $this->mm->get_material_bylocal($idLocal);
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode(array('aaData' => $result)));
+	}
+
 }

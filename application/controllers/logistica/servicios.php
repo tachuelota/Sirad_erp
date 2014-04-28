@@ -243,10 +243,21 @@ class servicios extends CI_Controller {
 	}
 	public function get_log_ordcompmaterial($Desde,$Hasta){		
 			$this->load->model('logistica/compramat_model','ocm');
-			$result = $this->ocm->get_fromrange($Desde,$Hasta);
+			$ordmat = $this->ocm->get_fromrange($Desde,$Hasta);
+
+			foreach ($ordmat as $key => $ordmats) {
+			switch ($ordmats["cOrdComMatEst"]) {				
+			    case 0:
+			        $ordmat[$key]["estadolabel"] = '<span class="label label-info">Inhabilitado</span>';
+			        break;
+			    case 1:
+			        $ordmat[$key]["estadolabel"] = '<span class="label label-success">Habilitado</span>';
+			        break;
+			}
+
 			$this->output
 			->set_content_type('application/json')
-			->set_output(json_encode(array('aaData' => $result)));		
+			->set_output(json_encode(array('aaData' => $ordmat)));		
 	}
 
 	

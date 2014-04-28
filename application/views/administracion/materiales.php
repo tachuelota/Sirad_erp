@@ -48,7 +48,7 @@
 								<form id="MaterialForm" class="form-horizontal" action-1="<?php echo base_url();?>administracion/materiales/registrar" action-2="<?php echo base_url();?>administracion/materiales/editar">
 									<div class="modal-body">
 										<input id="codigo" name="codigo" type="hidden">
-										<input type="hidden" name="idLocal" id="idLocal" value="<?php //echo $local["nLocal_id"];?>">
+										<input type="hidden" name="idLocal" id="idLocal" value="<?php echo $local["nLocal_id"];?>">
 										<fieldset>
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="marca-prod">Marca</label>

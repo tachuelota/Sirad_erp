@@ -304,10 +304,11 @@ class views extends CI_Controller
 	{
 		if($this->ion_auth->in_group("admin_material"))
 		{			
-			$dataheader['title'] = 'Materiales';			
+			$dataheader['title'] = 'Materiales';
+			$pagedata["local"] = $this->session->userdata('current_local');			
 			$this->load->view('templates/headers.php',$dataheader);		
 			$this->load->view('templates/menu.php');
-			$this->load->view('administracion/materiales.php');
+			$this->load->view('administracion/materiales.php',$pagedata);
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/materiales.js';
 			$datafooter['active'] = 'admin';
 			$datafooter['dropactive'] = '';

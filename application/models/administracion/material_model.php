@@ -14,6 +14,7 @@ class material_model extends CI_Model {
 		$this->db->trans_begin();
 
 		$this->db->insert('material',$data);
+		$id_Material=$this->db->insert_id();
 
 		if ($this->db->trans_status() === FALSE)
 		{
@@ -23,7 +24,7 @@ class material_model extends CI_Model {
 		else
 		{
 			$this->db->trans_commit();
-			return true;
+			return $id_Material;
 		}
 	}
 
@@ -58,6 +59,12 @@ class material_model extends CI_Model {
 		}
 		$query = $this->db->get_where('material', array('nMaterial_id' => $nMaterial_id));
 		return $query->row_array();
+	}
+
+	public function get_material_bylocal($idLocal=FALSE)
+	{
+		$query = $this ->db->query ('select * from adm_material_all where nLocal_id='.$idLocal);
+		return $query -> result_array();
 	}
 
 
