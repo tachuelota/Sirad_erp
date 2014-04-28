@@ -98,7 +98,7 @@
                         </form>
                         <div class="box-body table-responsive">
                             <legend>CONSULTA</legend>
-                                <table id="caja_table" class="table table-bordered table-striped" data-source="<?php echo base_url();?>ventas/servicios/getCaja">
+                                <table id="caja_table" class="table table-bordered table-striped"  data-source="<?php echo base_url();?>ventas/servicios/getCaja">
                                     <thead>
                                         <tr>
                                             <th width="14%">Nombre Local</th>
@@ -110,6 +110,7 @@
                                             <th width="10%">Estado</th>
                                         </tr>
                                     </thead>
+
                                     <thead>
                                         <tr>
                                             <th class="input">
@@ -156,7 +157,6 @@
     </section>
 </aside>
 </div>
-
 
 
 
