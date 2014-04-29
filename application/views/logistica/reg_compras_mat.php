@@ -16,7 +16,7 @@
 			<div class="col-xs-12">
 				<div class="box">
 					<div class="box-body">
-						<form id="RegistrarOrdenCompraForm" class="form-horizontal" method="post" action-1="<?php echo base_url();?>logistica/ordencompras/registrar">
+						<form id="RegistrarOrdenMaterialesForm" class="form-horizontal" method="post" action-1="<?php echo base_url();?>logistica/ordencompras/registrar">
 								<div class="row">
 									<div class="col-lg-6">
 										<div class="form-group">
@@ -114,11 +114,11 @@
 											<label class="col-lg-4 control-label" for="amortizacion">Materiales</label>
 											<div class="col-lg-8">
 												<div class="input-group">
-													<input class="form-control" id="producto" type="text" placeholder="Materiales" readonly>
-			                                        <div class="btn btn-info btn-flat input-group-addon" id="btn-reg-producto">
+													<input class="form-control" id="materiales" type="text" placeholder="Materiales" readonly>
+			                                        <div class="btn btn-info btn-flat input-group-addon" id="btn-reg-materiales">
 			                                            <i class="fa fa-search" style="color:white;"></i>
 			                                        </div>
-													<input id="producto_id" name="producto_id" type="hidden">
+													<input id="materiales_id" name="materiales_id" type="hidden">
 												</div>
 											</div>
 										</div>
@@ -154,7 +154,7 @@
 							</div>
 						</div>
 						<div class="box-body table-responsive">
-							<table id="productos_table" class="table table-striped table-bordered bootstrap-datatable datatable">
+							<table id="detalle_materiales_table" class="table table-striped table-bordered bootstrap-datatable datatable">
 								<thead>
 									<tr>
 										<th>Código</th>
@@ -170,7 +170,7 @@
 							</table>
 						</div>
 						<div class="box-footer" style="padding-left: 17px;">
-							<a href="<?php echo base_url();?>logistica/views/cons_ordencompra/" type="reset" class="btn btn-flat btn-default btn-cancelar" >
+							<a href="<?php echo base_url();?>logistica/views/cons_ordencompra_mat/" type="reset" class="btn btn-flat btn-default btn-cancelar" >
 								<i class="icon icon-white icon-arrowthick-w"></i>
 								Volver
 							</a>
@@ -243,19 +243,19 @@
 				</div>					
 			</div>
 			<!--------------MODAL PRODUCTO------------------------>
-			<div class="modal fade" id="modalBuscarProducto">
+			<div class="modal fade" id="modalBuscarmateriales">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h3>Productos</h3>
+							<h3>Materiales</h3>
 						</div>
 						<div class="modal-body">
-							<table id="select_producto_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>logistica/servicios/getProductos" >
+							<table id="select_materiales_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>administracion/servicios/getMaterial_ByLocal" >
 								<thead>
 									<tr>
 										<th>Código</th>
-										<th>Producto</th>
-										<th>Stock</th>
+										<th>Descripción</th>
+										<th>Cantidad</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -264,7 +264,7 @@
 						</div>
 						<div class="modal-footer">
 							<a href="#" class="btn" data-dismiss="modal">Cancelar</a>
-							<a  id="select_producto" href="#" class="btn btn-primary">Seleccionar</a>
+							<a  id="select_materiales" href="#" class="btn btn-primary">Seleccionar</a>
 						</div>	
 					</div>
 				</div>					
