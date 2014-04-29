@@ -58,7 +58,7 @@ $(document).ready(function(){
 				[	'style="width: 5%;" ','style="width: 20%;" ','style="width: 20%;" ',
 					'style="width: 10%;" ','style="width: 10%;" ','style="width: 15%;" ','style="width: 20%;" '],
 					detalleCaja.aaData));
-		$("#title").val("DETALLE CAJA");
+		$("#title").val("DETALLE POR CAJA");
 		$("#table_caja").val(table_caja);
 		$("#CreatePDFForm").attr("action",urlExportXLSGen);
 		$("#CreatePDFForm").submit();
@@ -74,7 +74,7 @@ $(document).ready(function(){
 				[	'style="width: 20%;" ','style="width: 20%;" ','style="width: 20%;" ',
 					'style="width: 20%;" ','style="width: 20%;" '],
 					detalleCajaMovi.aaData));
-		$("#title").val("DETALLE MOVIMIENTO DE CAJA");
+		$("#title").val("DETALLE MOVIMIENTO POR CAJA");
 		$("#table_cajamovi").val(table_cajamovi);
 		$("#CreatePDFForm").attr("action",urlExportXLSDet);
 		$("#CreatePDFForm").submit();
