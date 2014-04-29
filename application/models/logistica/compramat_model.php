@@ -45,16 +45,16 @@ class compramat_model extends CI_Model
 		return $query -> result_array();
 	}
 	
-	/*public function get_OrdCompra_views($nOrdenCom_id = FALSE)
+	public function get_OrdCompraMat_views($nOrdenComMat_id = FALSE)
 	{
-		if($nOrdenCom_id === FALSE )
+		if($nOrdenComMat_id === FALSE )
 		{
-			$query = $this ->db->query ('SELECT * FROM log_ordcom_all');
+			$query = $this ->db->query ('select * from log_ordcommat_all;');
 			return $query -> result_array();
 		}
-		$query = $this->db->query("SELECT * FROM log_ordcom_all  where nOrdenCom_id =" .$nOrdenCom_id);
+		$query = $this->db->query("SELECT * FROM log_ordcommat_all  where nOrdenComMat_id =" .$nOrdenComMat_id);
 		return $query->row_array();
-	}*/
+	}
 	
 }
 

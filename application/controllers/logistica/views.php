@@ -314,6 +314,24 @@ class views extends CI_Controller
 		//else
 		//	redirect('/logistica', 'refresh');
 	}
+	public function ver_ordencomprasmat($nOrdenComMat_id)
+	{
+		if($this->ion_auth->in_group("log_ord_com_mat"))
+		{
+			$this->load->model('logistica/compramat_model','ordcomp');
+			$dataheader['title'] = 'OrdenCompras (Ver)';			
+			$pagedata = $this->ordcomp->get_OrdCompraMat_views($nOrdenComMat_id);				
+			$this->load->view('templates/headers.php',$dataheader);		
+			$this->load->view('templates/menu.php');
+			$this->load->view('logistica/ver_ordenMateriales.php',$pagedata);
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/ver_ordenMateriales.js';
+			$datafooter['active'] = 'ord_com';
+			$datafooter['dropactive'] = 'droplogistica';
+			$this->load->view('templates/footer.php',$datafooter);
+		}
+		else
+			redirect('/logistica', 'refresh');
+	}
 
 	/*public function cons_pedidos()
 	{
