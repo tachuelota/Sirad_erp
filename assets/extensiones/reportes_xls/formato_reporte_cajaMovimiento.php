@@ -3,7 +3,7 @@ $title = $_POST['title'];
 $table_cajamovi = $_POST['table_cajamovi'];
 
 header('Content-type: application/x-msdownload; charset=utf-16');
-header('Content-Disposition: attachment; filename=reporte_caja_'.date("d-m-Y").'.xls');
+header('Content-Disposition: attachment; filename=reporte_cajaMovimientos_'.date("d-m-Y").'.xls');
 header('Pragma: no-cache');
 header('Expires: 0');
 ?>

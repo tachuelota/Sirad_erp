@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+	//alert("hola");
 	var OrdComprasOptions = {
 		"aoColumns":[
 			 		  { "mDataProp": "serNumOrdComMat"},
@@ -20,5 +21,7 @@ $(document).ready(function(){
 		OrdenCompraTable.fnReloadAjax($("#OrdCompraForm").attr("action-1")+"/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2));
 		OrdenCompraTable.reloadSigleFilter();
 	});
+
+
 
 });
