@@ -259,8 +259,8 @@ class servicios extends CI_Controller {
 			$this->output
 			->set_content_type('application/json')
 			->set_output(json_encode(array('aaData' => $ordmat)));		
+		}
 	}
 
-	
 }
-}
+
