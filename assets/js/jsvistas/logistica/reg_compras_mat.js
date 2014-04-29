@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	$("#RegistrarOrdenMaterialesForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000});
 	//creamos el datatable de proveedor
 	$(".SelectAjax").SelectAjax();
 
@@ -88,8 +89,8 @@ $(document).ready(function(){
 	"aoColumns":[
 		{ "sWidth": "12%","mDataProp": "nMaterial_id"},
 		{ "sWidth": "12%","mDataProp": "cMaterialDesc"},
-		{ "sWidth": "12%","mDataProp": "nMaterialCantidad"},
-		{ "sWidth": "12%","mDataProp": "PrecioUnitario"},
+		{ "sWidth": "12%","mDataProp": "nDetCompraCant"},
+		{ "sWidth": "12%","mDataProp": "nDetCompraPrecUnt"},
 		{ "sWidth": "12%","mDataProp": "nDetCompraImporte"},
 		{ "sWidth": "12%","mDataProp": "dOrdPedFecReg"},			
 	              ],
@@ -103,8 +104,8 @@ $(document).ready(function(){
 		event.preventDefault();
 		SelectmaterialesData[0].nMaterial_id = $("#materiales_id").val();;
 		SelectmaterialesData[0].cMaterialDesc = $("#materiales").val();
-		SelectmaterialesData[0].nMaterialCantidad = $("#cantidad").val();
-		SelectmaterialesData[0].PrecioUnitario = 	$("#importe").val()/ $("#cantidad").val();
+		SelectmaterialesData[0].nDetCompraCant = $("#cantidad").val();
+		SelectmaterialesData[0].nDetCompraPrecUnt = 	$("#importe").val()/ $("#cantidad").val();
 		SelectmaterialesData[0].nDetCompraImporte = $("#importe").val();
 		SelectmaterialesData[0].dOrdPedFecReg = fechanow() ;
 		OrdenMaterialesTable.fnAddData(SelectmaterialesData);
@@ -123,7 +124,7 @@ $(document).ready(function(){
 	{
 		var datoscompra = {
 			formulario:$("#RegistrarOrdenMaterialesForm").serializeObject(),
-			tabla: CopyArray(OrdenMaterialesTable.fnGetData(),["nDetOrdOrdPed","nDetCompraCant","nDetCompraImporte","nDetCompraPrecUnt","nProducto_id"])
+			tabla: CopyArray(OrdenMaterialesTable.fnGetData(),["nDetCompraCant","nDetCompraImporte","nDetCompraPrecUnt","nMaterial_id"])
 		}
 		return datoscompra;
 	}
@@ -144,8 +145,8 @@ $(document).ready(function(){
 				$.blockUI({ 
 					onBlock: function()
 					{ 
-						console.log($("#RegistrarOrdenMaterialesForm").serializeObject());
-						//enviar($("#RegistrarOrdenMaterialesForm").attr("action-1"),prepararDatos(), successOrdenMateriales, null);
+						//console.log($("#RegistrarOrdenMaterialesForm").serializeObject());
+						enviar($("#RegistrarOrdenMaterialesForm").attr("action-1"),prepararDatos(), successOrdenMateriales, null);
 					}
 	        	});				
 		}

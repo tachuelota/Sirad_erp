@@ -20,18 +20,18 @@ class ordercompramaterial extends CI_Controller
 		
 		if ($form!=null){
 			//CABECERA
-			$idPersonal = $form[""];
-			$idProveedor=$form[""];
-			$subtotal = $form[""];
-			$descuento=$form[""];
-			$igv = $form[""];
-			$total=$form[""];
-			$Observacion = $form[""];
-			$docSerie=$form[""];
-			$docNumero=$form[""];
-			$tipodoc=$form[""];
+			$idPersonal = $form["id_registrador"];
+			$idProveedor=$form["proveedor_id"];
+			$subtotal = $form["subtotal"];
+			$descuento=$form["descuento"];
+			$igv = $form["igv"];
+			$total=$form["total"];
+			$Observacion = $form["observaciones"];
+			$docSerie=$form["doc_serie"];
+			$docNumero=$form["doc_numero"];
+			$tipodoc=$form["tipdoc"];
 			
-			$OrdCompras = array(
+			$OrdCompraMaterial = array(
 				'nPersonal_id' => $idPersonal,
 				'nProveedor_id' =>$idProveedor,
 				'nOrdComMatSubTotal' => $subtotal,
@@ -44,7 +44,7 @@ class ordercompramaterial extends CI_Controller
 				'nOrdTipoDocumento'=>$tipodoc);
 			$band = true;
 			//$this->db->trans_begin();
-			$OrdCompra_id = $this->ordcom->insert($OrdCompras);
+			$OrdCompra_id = $this->ocm->insert($OrdCompraMaterial);
 			if($OrdCompra_id === FALSE)
 			{ 
 				$this->output->set_status_header('400');
@@ -52,24 +52,23 @@ class ordercompramaterial extends CI_Controller
 			} 
 			else
 			{
-				/*foreach ($tabla as $key => $row)
+				foreach ($tabla as $key => $row)
 				{
-					$tabla[$key]["nOrdenCompra_id"] = intval($OrdCompra_id);
+					$tabla[$key]["nOrdenComMat_id"] = intval($OrdCompra_id);
+					$tabla[$key]["cDetCompraEst"]=1;
 
 				}
-				if(!$this->detordcom->insert_batch($tabla))
-					$band = false;*/
-					echo "INSERTO CORRECTAMENTE LA CABECERA";
-				
+				if(!$this->docm->insert_batch($tabla))
+					$band = false;				
 			}
 
-			/*if($band)
+			if($band)
 				$this->db->trans_commit();
 			else
 			{
 				$this->db->trans_rollback();
 				$this->output->set_status_header('400');
-			}*/
+			}
 		}
 		else 
 		{
