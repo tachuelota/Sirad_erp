@@ -22,7 +22,7 @@
                         </div>
                 	</div>
                 	<div class="box-body">
-                		<div id="OrdCompraMaterialesForm" name="OrdCompraMaterialesForm" action-1="<?php echo base_url();?>logistica/servicios/get_log_ordcompmaterial" action-2="<?php echo base_url();?>logistica/views/ver_ordenMateriales">						
+                		<div id="OrdCompraMaterialesForm" name="OrdCompraMaterialesForm" action-1="<?php echo base_url();?>logistica/servicios/get_log_ordcompmaterial" action-2="<?php echo base_url();?>logistica/views/ver_ordencomprasmat">						
 							<div class="row">
 								<div class="col-lg-10">
 									<div class="form-group">

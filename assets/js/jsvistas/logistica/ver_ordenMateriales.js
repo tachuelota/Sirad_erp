@@ -36,7 +36,7 @@ $(document).ready(function(){
 
 		nombre = $("#codigo").text();
 		$('#nombrearchivo').val("orden_compra_"+nombre);
-		$("#title").val("ORDEN DE COMPRA");
+		$("#title").val("ORDEN DE MATERIALES");
 		$("#table_resumen").val(tablaresumen);
 		$("#table_producto").val(tableproductos);
 		$("#table_total").val(tablatotal);

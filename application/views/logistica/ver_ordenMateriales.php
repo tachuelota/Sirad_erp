@@ -1,6 +1,6 @@
 <aside class="right-side">
 	<section class="content-header">
-		<h1>Orden de Compras <small> Consultar</small></h1>
+		<h1>Orden de Materiales <small> Consultar</small></h1>
 		<ol class="breadcrumb">
 			<li>
 				<a href="<?php echo base_url();?>">Home</a>
@@ -8,7 +8,7 @@
 			<li>
 				<a href="<?php echo base_url();?>logistica">Logistica</a>
 			</li>
-			<li class="active">Orden de Compras</li>
+			<li class="active">Orden de Materiales</li>
 		</ol>
 	</section>
 	<section class="content">
@@ -31,13 +31,13 @@
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="fecRegistro">Fecha de Registro</label>
 											<div class="col-lg-8">
-												<span id="fec_reg" class="help-inline"><?php echo $OrdComFecReg;?></span>
+												<span id="fec_reg" class="help-inline"><?php echo $OrdComMatFecReg;?></span>
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-lg-4 control-label" for="nroOrdeCompras">N° Orden Compra</label>
+											<label class="col-lg-4 control-label" for="nroOrdeCompras">N° Orden Compra - Material</label>
 											<div class="col-lg-8">
-												<span id="codigo" class="help-inline"><?php echo $serNumOrdenCompra;?></span>					
+												<span id="codigo" class="help-inline"><?php echo $nOrdenComMat_id;?></span>					
 											</div>
 										</div>
 										<div class="form-group">
@@ -61,7 +61,7 @@
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="observacion">Observaciones</label>
 											<div class="col-lg-8">
-												<span id="observaciones" class="help-inline"><?php echo $cOrdComObsv;?></span>
+												<span id="observaciones" class="help-inline"><?php echo $cOrdComMatObsv;?></span>
 											</div>
 										</div>
 									</div>
@@ -69,25 +69,25 @@
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="subtotal">Subtotal</label>
 											<div class="col-lg-8">
-												<span id="subtotal" class="help-inline"><?php echo "S/ ".$nOrdComSubTotal;?></span>
+												<span id="subtotal" class="help-inline"><?php echo "S/ ".$nOrdComMatSubTotal;?></span>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="subtotal">IGV</label>
 											<div class="col-lg-8">
-												<span id="igv" class="help-inline" style="margin-top:5px;"><?php echo $nOrdComIGV."  %";?></span>
+												<span id="igv" class="help-inline" style="margin-top:5px;"><?php echo $nOrdComMatIGV."  %";?></span>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="descuento">Descuento</label>
 											<div class="col-lg-8">
-												<span id="descuento" class="help-inline" style="margin-top:5px;"><?php echo $nOrdComDesct." %";?></span>
+												<span id="descuento" class="help-inline" style="margin-top:5px;"><?php echo $nOrdComMatDesct." %";?></span>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="subtotal">Total</label>
 											<div class="col-lg-8">
-												<span id="total" class="help-inline"><?php echo "S/  ".$nOrdComTotal;?></span>
+												<span id="total" class="help-inline"><?php echo "S/  ".$nOrdComMatTotal;?></span>
 											</div>
 										</div>
 									</div>
@@ -95,7 +95,7 @@
 							</fieldset>
 						</div>
 						<hr>
-						<h3>Detalle Orden de Compra</h3>
+						<h3>Detalle Orden de Materiales</h3>
 						<hr>
 						<div class="box-body table-responsive">
 							<table id="productos_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url()."logistica/servicios/get_log_detordcompras/".$nOrdenCom_id;?>">

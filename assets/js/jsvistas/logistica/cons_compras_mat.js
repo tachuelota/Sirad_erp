@@ -1,7 +1,18 @@
 $(document).ready(function(){
 
-	
-	//alert("hola");
+	var OrdenCompraTA = new DTActions({
+	'conf': '100',
+	'idtable': 'ordcom_table',
+	'ViewFunction':function(nRow, aData, iDisplayIndex){
+		location.href = $("#OrdCompraMaterialesForm").attr("action-2")+"/"+aData.nOrdenComMat_id;
+	}
+	});
+
+	OrdenCompraRowCBF = function(nRow, aData, iDisplayIndex){
+		OrdenCompraTA.RowCBFunction(nRow, aData, iDisplayIndex);	
+	};
+
+
 	var OrdComprasOptions = {
 		"aoColumns":[
 			 		  { "mDataProp": "serNumOrdComMat"},
@@ -10,9 +21,11 @@ $(document).ready(function(){
 		              { "mDataProp": "cProveedorRazSocial"},
 		              { "mDataProp": "nOrdComMatTotal"},
 		              { "mDataProp": "estadolabel"}
-				]
-
+				],
+		"fnCreatedRow": OrdenCompraTA.RowCBFunction,
+		"sDom": "t<'row'<'col-xs-6'i><'col-xs-6'p>>"
 	};
+
 	var OrdenCompraTable = createDataTable2('ordcom_table',OrdComprasOptions);
 
 
@@ -23,16 +36,5 @@ $(document).ready(function(){
 		OrdenCompraTable.reloadSigleFilter();
 	});
 
-	var OrdenCompraTA = new DTActions({
-	'conf': '100',
-	'idtable': 'ordcom_table',
-	'ViewFunction':function(nRow, aData, iDisplayIndex){
-		location.href = $("#OrdCompraMaterialesForm").attr("action-2")+"/"+aData.nOrdenComMat_id;
-	}
-	});
 	
-	OrdenCompraRowCBF = function(nRow, aData, iDisplayIndex){
-		OrdenCompraTA.RowCBFunction(nRow, aData, iDisplayIndex);	
-	};
-
 });
