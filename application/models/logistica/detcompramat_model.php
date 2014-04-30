@@ -23,13 +23,13 @@ class detcompramat_model extends CI_Model {
 	}
 
 
-	/*public function get_DetOrdCompra($nOrdenCom_id)
+	public function get_DetOrdCompra($nOrdenComMat_id)
 	{
-		$query = $this->db->query("SELECT * FROM log_ordcomdetalle_all  where nOrdenCom_id =" .$nOrdenCom_id);
+		$query = $this->db->query("SELECT * FROM log_ordcommatdetalle_all  where nOrdenComMat_id =" .$nOrdenComMat_id);
 		return $query->result_array();
 	}
 
-	public function get_OrdCompra()
+	/*public function get_OrdCompra()
 	{
 		$query = $this->db->query("SELECT * FROM log_ordcomdetalle_all");
 		return $query->result_array();

@@ -262,6 +262,15 @@ class servicios extends CI_Controller {
 		}
 	}
 
+	public function get_log_detordcomprasMateriales($nOrdenComMat_id)
+	{		
+			$this->load->model('logistica/detcompramat_model','detordcompra');
+			$detalles=$this->detordcompra->get_DetOrdCompra($nOrdenComMat_id);
+			$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode(array('aaData' => $detalles)));		
+	}
+
 
 }
 
