@@ -43,7 +43,7 @@
 					</div>
 				
 					<div class="box-body table-responsive">
-						<table id="ordcom_table" class="table table-striped table-bordered bootstrap-datatable datatable">
+						<table id="ordmat_table" class="table table-striped table-bordered bootstrap-datatable datatable">
 							<thead>
 								<tr>
 									<th>N° Ord. Compra</th>

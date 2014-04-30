@@ -1,19 +1,18 @@
 $(document).ready(function(){
 
-	var OrdenCompraTA = new DTActions({
+	var OrdenMaterialTA = new DTActions({
 	'conf': '100',
-	'idtable': 'ordcom_table',
+	'idtable': 'ordmat_table',
 	'ViewFunction':function(nRow, aData, iDisplayIndex){
 		location.href = $("#OrdCompraMaterialesForm").attr("action-2")+"/"+aData.nOrdenComMat_id;
 	}
 	});
 
-	OrdenCompraRowCBF = function(nRow, aData, iDisplayIndex){
-		OrdenCompraTA.RowCBFunction(nRow, aData, iDisplayIndex);	
+	OrdenMaterialRowCBF = function(nRow, aData, iDisplayIndex){
+		OrdenMaterialTA.RowCBFunction(nRow, aData, iDisplayIndex);	
 	};
 
-
-	var OrdComprasOptions = {
+	var OrdMaterialOptions = {
 		"aoColumns":[
 			 		  { "mDataProp": "serieNummeroOrdMat"},
 		              { "mDataProp": "OrdComMatFecReg"},
@@ -22,19 +21,16 @@ $(document).ready(function(){
 		              { "mDataProp": "nOrdComMatTotal"},
 		              { "mDataProp": "estadolabel"}
 				],
-		"fnCreatedRow": OrdenCompraTA.RowCBFunction,
+		"fnCreatedRow": OrdenMaterialTA.RowCBFunction,
 		"sDom": "t<'row'<'col-xs-6'i><'col-xs-6'p>>"
 	};
 
-	var OrdenCompraTable = createDataTable2('ordcom_table',OrdComprasOptions);
-
+	var OrdenMaterialTable = createDataTable2('ordmat_table',OrdMaterialOptions);
 
 	$("#buscarfecha").click(function(event){
 		date1 = new Date($("#date01").datepicker("getDates"));
 		date2 = new Date($("#date02").datepicker("getDates"));
-		OrdenCompraTable.fnReloadAjax($("#OrdCompraMaterialesForm").attr("action-1")+"/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2));
-		OrdenCompraTable.reloadSigleFilter();
+		OrdenMaterialTable.fnReloadAjax($("#OrdCompraMaterialesForm").attr("action-1")+"/"+fechaFormatoSQL(date1)+"/"+fechaFormatoSQL(date2));
+		OrdenMaterialTable.reloadSigleFilter();
 	});
-
-	
 });

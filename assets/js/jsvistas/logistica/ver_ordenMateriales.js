@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-		OrdenCompradOptions = {
+		OrdenMaterialesOptions = {
 		"aoColumns":[
 			{ "mDataProp": "cMaterialDesc"},
 			{ "mDataProp": "nDetCompraCant"},
@@ -9,7 +9,7 @@ $(document).ready(function(){
 			{ "mDataProp": "nOrdenComMat_id"}					
 		              ]
 		};
-		DetalleMaterialesTable = createDataTable2('materiales_table',OrdenCompradOptions);
+		DetalleMaterialesTable = createDataTable2('materiales_table',OrdenMaterialesOptions);
 	
 	var urlExportXLS = base_url +"assets/extensiones/reportes_xls/formato_reporte_logistica.php";
 	var urlExportPDF = base_url +"assets/extensiones/reportes_pdf/formato_reporte_logistica.php";
@@ -44,7 +44,6 @@ $(document).ready(function(){
 			['style="width: 80%;" class="upbold" ','style="width: 20%;"  class="verde"'],
 			total));
 
-
 		nombre = $("#codigo").text();
 		$('#nombrearchivo').val("orden_compra_mat"+nombre);
 		$("#title").val("ORDEN DE MATERIALES");
@@ -67,6 +66,5 @@ $(document).ready(function(){
 		$("#CreatePDFForm").submit();
 		$("#exportmodal").modal('hide');
 	});
-		
-		
+
 });

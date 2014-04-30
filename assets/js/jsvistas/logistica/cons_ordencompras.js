@@ -40,8 +40,9 @@ $('#xlscuadrecaja').click(function(e){
 	$('#table_cuadrecaja').val('');
 	$('#modalcuadrecaja').modal('hide');
 });
+
 	$(document).ready(function(){
-		$("#OrdCompraForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000});
+	$("#OrdCompraForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000});
 	var OrdenCompraTA = new DTActions({
 		'conf': '100',
 		'idtable': 'ordcom_table',

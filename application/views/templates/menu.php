@@ -210,7 +210,7 @@
 								</li>
 							<?php endif ?>
 							<?php if($this->ion_auth->in_group("log_ord_com_mat")): ?>
-								<li id="ord_com">
+								<li id="ord_mat">
 									<a class="ajax-link" href="<?php echo base_url();?>logistica/views/cons_ordencompra_mat">
 										<i class="fa fa-file-text"></i>
 										Compra Materiales</span>

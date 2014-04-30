@@ -290,7 +290,7 @@ class views extends CI_Controller
 			$this->load->view('templates/menu.php');
 			$this->load->view('logistica/cons_compras_mat.php');
 			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/cons_compras_mat.js';
-			$datafooter['active'] = '';
+			$datafooter['active'] = 'ord_mat';
 			$datafooter['dropactive'] = 'droplogistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
@@ -319,7 +319,7 @@ class views extends CI_Controller
 		if($this->ion_auth->in_group("log_ord_com_mat"))
 		{
 			$this->load->model('logistica/compramat_model','ordcomp');
-			$dataheader['title'] = 'OrdenCompras (Ver)';			
+			$dataheader['title'] = 'Orden Materiales (Ver)';			
 			$pagedata = $this->ordcomp->get_OrdCompraMat_views($nOrdenComMat_id);				
 			$this->load->view('templates/headers.php',$dataheader);		
 			$this->load->view('templates/menu.php');

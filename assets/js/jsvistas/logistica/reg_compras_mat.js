@@ -77,7 +77,7 @@ $(document).ready(function(){
 	});
 
 //Agregar a tabla Detalle Compra Materiales
-	var OrdenComprasActions = new DTActions({
+	var OrdenMaterialesActions = new DTActions({
 	'conf': '001',
 	'DropFunction': function(nRow, aData, iDisplayIndex) {
 				var index = $(OrdenMaterialesTable.fnGetData()).getIndexObj(aData,'nProducto_id');
@@ -85,7 +85,7 @@ $(document).ready(function(){
 		}
 	});
 
-	BuscarOrdenPedidodOptions = {
+	BuscarOrdenMaterialesOptions = {
 	"aoColumns":[
 		{ "sWidth": "12%","mDataProp": "nMaterial_id"},
 		{ "sWidth": "12%","mDataProp": "cMaterialDesc"},
@@ -95,10 +95,10 @@ $(document).ready(function(){
 		{ "sWidth": "12%","mDataProp": "dOrdPedFecReg"},			
 	              ],
 	//"sDom":"t<'row-fluid'<'span12'i><'span12 center'p>>",
-	"fnCreatedRow":OrdenComprasActions.RowCBFunction
+	"fnCreatedRow":OrdenMaterialesActions.RowCBFunction
 	};
 
-	OrdenMaterialesTable = createDataTable2('detalle_materiales_table',BuscarOrdenPedidodOptions);	
+	OrdenMaterialesTable = createDataTable2('detalle_materiales_table',BuscarOrdenMaterialesOptions);	
 
 	$('#agregar_producto').click(function(event){
 		event.preventDefault();
