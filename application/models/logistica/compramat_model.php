@@ -41,7 +41,7 @@ class compramat_model extends CI_Model
 
 	public function get_fromrange($Desde,$Hasta)
 	{
-		$query = $this->db->query("select * from log_ordcom_mat_all where OrdComMatFecReg between '".$Desde."' and '".$Hasta."'");
+		$query = $this->db->query("select * from log_ordcommat_all where OrdComMatFecReg between '".$Desde."' and '".$Hasta."'");
 		return $query -> result_array();
 	}
 	

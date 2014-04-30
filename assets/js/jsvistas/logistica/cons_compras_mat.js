@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 	var OrdComprasOptions = {
 		"aoColumns":[
-			 		  { "mDataProp": "serNumOrdComMat"},
+			 		  { "mDataProp": "serieNummeroOrdMat"},
 		              { "mDataProp": "OrdComMatFecReg"},
 		              { "mDataProp": "cPersonalNom"},
 		              { "mDataProp": "cProveedorRazSocial"},

@@ -37,7 +37,7 @@
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="nroOrdeCompras">N° Orden Compra - Material</label>
 											<div class="col-lg-8">
-												<span id="codigo" class="help-inline"><?php echo $nOrdenComMat_id;?></span>					
+												<span id="codigo" class="help-inline"><?php echo $cOrdComMatDocSerie."-".$cOrdComMatDocNro;?></span>					
 											</div>
 										</div>
 										<div class="form-group">
