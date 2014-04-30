@@ -20,8 +20,9 @@ class saldo_model extends CI_Model {
 	}
 
 	public function get_saldoactual_byfecha($fecha){
-		
-		$procedure="call spF_kardex_StockActual(".$fecha->format('Y').",".$fecha->format('m').",2)";
+
+		$local = $this->session->userdata('current_local')["nLocal_id"];
+		$procedure="call spF_kardex_StockActual(".$fecha->format('Y').",".$fecha->format('m').",".$local.")";
 
 		$query = $this->db->query($procedure);	
 		return $query -> result_array();

@@ -6,9 +6,10 @@ $(document).ready(function(){
 
 	var SaldoIniOptions = {
 		"aoColumns": [
-		              { "mDataProp": "Anio"},
-		              { "mDataProp": "Mes"},
 		              { "mDataProp": "Producto"},
+		              { "mDataProp": "cMarcaDesc"},
+		              { "mDataProp": "cCategoriaNom"},
+		              { "mDataProp": "cConstanteDesc"},
 		              { "mDataProp": "Stock"},
 		              { "mDataProp": "PrecUnit"},
 		              { "mDataProp": "PrecTotal"}
@@ -20,9 +21,10 @@ $(document).ready(function(){
 	//creamos datatable de saldo actual
 	var SaldoActOptions = {
 		"aoColumns": [
-		              { "mDataProp": "Anio"},
-		              { "mDataProp": "Mes"},
 		              { "mDataProp": "Producto"},
+		              { "mDataProp": "cMarcaDesc"},
+		              { "mDataProp": "cCategoriaNom"},
+		              { "mDataProp": "cConstanteDesc"},
 		              { "mDataProp": "Stock"},
 		              { "mDataProp": "PrecUnit"},
 		              { "mDataProp": "PrecTot"}
