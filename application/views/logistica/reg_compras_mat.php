@@ -74,7 +74,7 @@
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="amortizacion">Subtotal</label>
 											<div class="col-lg-8">
-												<input class="form-control" id="subtotal" name="subtotal" min="0" type="number" readonly value="0">
+												<input class="form-control" id="subtotal" name="subtotal" min="0" type="" readonly value="0">
 											</div>
 										</div>	
 										<div class="form-group">
@@ -98,7 +98,7 @@
 										<div class="form-group">
 											<label class="col-lg-4 control-label" for="amortizacion">Total</label>
 											<div class="col-lg-8">
-												<input class="form-control" id="total" name="total" type="number" readonly value="0">
+												<input class="form-control" id="total" name="total" type="" readonly value="0">
 											</div>
 										</div>
 									</div>
@@ -158,7 +158,7 @@
 								<thead>
 									<tr>
 										<th>Código</th>
-										<th>Producto</th>
+										<th>Materiales</th>
 										<th>Cantidad</th>
 										<th>Precio Unitario</th>
 										<th>Importe S/.</th>

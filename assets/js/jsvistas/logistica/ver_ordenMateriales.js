@@ -1,5 +1,16 @@
 $(document).ready(function(){
 
+		OrdenCompradOptions = {
+		"aoColumns":[
+			{ "mDataProp": "cMaterialDesc"},
+			{ "mDataProp": "nDetCompraCant"},
+			{ "mDataProp": "nDetCompraPrecUnt"},
+			{ "mDataProp": "nDetCompraImporte"},
+			{ "mDataProp": "nOrdenComMat_id"}					
+		              ]
+		};
+		DetalleMaterialesTable = createDataTable2('materiales_table',OrdenCompradOptions);
+	
 	var urlExportXLS = base_url +"assets/extensiones/reportes_xls/formato_reporte_logistica.php";
 	var urlExportPDF = base_url +"assets/extensiones/reportes_pdf/formato_reporte_logistica.php";
 
@@ -21,12 +32,12 @@ $(document).ready(function(){
 					['style="width: 25%;" class="impar" ','style="width:25%;" ','style="width: 25%;" class="impar" ','style="width: 25%;" '],
 					resumen));
 
-		tableproductos = toHTML(crearTablaToArray("tproductos",
-				['Producto','Cantidad', 'Precio Unitario','Importe'],
-				['style="width: 45%;" class="prodth" ','style="width: 15%;" class="prodth" ','style="width: 20%;" class="prodth" ','style="width: 20%;" class="prodth" '],
-				['cProductoDesc','nDetCompraCant','nDetCompraPrecUnt','nDetCompraImporte'],
+		tablemateriales = toHTML(crearTablaToArray("tmateriales",
+				['Materiales','Cantidad', 'Precio Unitario','Importe'],
+				['style="width: 45%;" class="matth" ','style="width: 15%;" class="matth" ','style="width: 20%;" class="matth" ','style="width: 20%;" class="matth" '],
+				['cMaterialDesc','nDetCompraCant','nDetCompraPrecUnt','nDetCompraImporte'],
 				['style="width: 45%;" class="izquierda"','style="width: 15%;"','style="width: 20%;"','style="width: 20%;"'],
-				DetalleProductosTable.fnGetData()));
+				DetalleMaterialesTable.fnGetData()));
 		
 		tablatotal = toHTML(crearTablaToArray('total',null,null,
 			['td1','td2'],
@@ -35,10 +46,10 @@ $(document).ready(function(){
 
 
 		nombre = $("#codigo").text();
-		$('#nombrearchivo').val("orden_compra_"+nombre);
+		$('#nombrearchivo').val("orden_compra_mat"+nombre);
 		$("#title").val("ORDEN DE MATERIALES");
 		$("#table_resumen").val(tablaresumen);
-		$("#table_producto").val(tableproductos);
+		$("#table_producto").val(tablemateriales);
 		$("#table_total").val(tablatotal);
 		$("#exportmodal").modal('show');		
 	});
@@ -57,14 +68,5 @@ $(document).ready(function(){
 		$("#exportmodal").modal('hide');
 	});
 		
-		OrdenCompradOptions = {
-		"aoColumns":[
-			{ "mDataProp": "cProductoDesc"},
-			{ "mDataProp": "nDetCompraCant"},
-			{ "mDataProp": "nDetCompraPrecUnt"},
-			{ "mDataProp": "nDetCompraImporte"},
-			{ "mDataProp": "nOrdenCom_id"}					
-		              ]
-		};
-		DetalleProductosTable = createDataTable2('productos_table',OrdenCompradOptions);
+		
 });

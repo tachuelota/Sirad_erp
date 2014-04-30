@@ -98,10 +98,10 @@
 						<h3>Detalle Orden de Materiales</h3>
 						<hr>
 						<div class="box-body table-responsive">
-							<table id="productos_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url()."logistica/servicios/get_log_detordcompras/".$nOrdenCom_id;?>">
+							<table id="materiales_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url()."logistica/servicios/get_log_detordcomprasMateriales/".$nOrdenComMat_id;?>">
 								<thead>
 									<tr>
-										<th>Producto</th>
+										<th>Material</th>
 										<th>Cantidad</th>
 										<th>Prec. Unitario S/.</th>
 										<th>Importe S/.</th>
@@ -113,7 +113,7 @@
 							</table>
 						</div>
 						<div class="box-footer">
-							<a href="<?php echo base_url();?>logistica/views/cons_ordencompra/" class="btn btn-success"> <i class="icon icon-white icon-arrowthick-w"></i>Volver</a>
+							<a href="<?php echo base_url();?>logistica/views/cons_ordencompra_mat/" class="btn btn-success"> <i class="icon icon-white icon-arrowthick-w"></i>Volver</a>
 						</div>
 					</div>
 					

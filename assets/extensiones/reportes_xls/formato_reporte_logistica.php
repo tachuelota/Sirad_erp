@@ -52,6 +52,23 @@
 		text-align: left;
 		padding-left: 17px;
 	}
+
+	#tmateriales{
+		border-collapse: collapse;
+		text-align: center;
+	}
+	#tmateriales td.matth{
+		background: #e7e6e6;
+		text-transform: uppercase;
+	}
+	#tmateriales th, #tmateriales td{
+		border: black 1px solid;
+	}
+	#tmateriales td.izquierda{
+		text-align: left;
+		padding-left: 17px;
+	}
+
 	#total td.verde{
 		padding-left: 17px;
 		font-weight: bold;
