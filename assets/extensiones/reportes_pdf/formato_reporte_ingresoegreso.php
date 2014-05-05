@@ -52,7 +52,7 @@ ob_start();
 	</style>
 	<page>
 		<div style="border: 2px solid #000;padding:5px; height: 98%; width: 98.5%;">
-			Fecha Emision: <?php echo date('d/m/Y'); ?><br>
+			Fecha Emisión: <?php echo date('d/m/Y'); ?><br>
 			<table id="header">
 				<tr>
 					<td id="logo" rowspan="3">

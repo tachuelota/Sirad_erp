@@ -35,13 +35,13 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-lg-4 control-label" for="nroOrdeCompras">Codigo del Documento</label>
+											<label class="col-lg-4 control-label" for="nroOrdeCompras">Código del Documento</label>
 											<div class="col-lg-8">
 												<span id="codigo" class="help-inline"><?php echo $serieNummeroOrdMat;?></span>					
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-lg-4 control-label" for="nroOrdeCompras">Codigo Interno</label>
+											<label class="col-lg-4 control-label" for="nroOrdeCompras">Código Interno</label>
 											<div class="col-lg-8">
 												<span id="codigo" class="help-inline"><?php echo $serNumOrdCompraMat;?></span>					
 											</div>

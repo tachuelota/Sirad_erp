@@ -65,7 +65,7 @@
 							<table id="oferta_productos_table" name="oferta_productos_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url()."administracion/servicios/getProductosByOferta/".$nOferta_id; ?>">
 								<thead>
 									<tr>
-										<th>Codigo</th>
+										<th>Código</th>
 										<th>Producto</th>
 										<th>P.Costo/P.Cont/P.Cred</th>
 										<th>Marca</th>
@@ -101,7 +101,7 @@
 											<table id="select_producto_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>administracion/servicios/getProductoSinOferta">
 												<thead>
 													<tr>
-														<th>Codigo</th>
+														<th>Código</th>
 														<th>Producto</th>
 														<th>P.Costo/P.Cont/P.Cred</th>
 														<th>Marca</th>

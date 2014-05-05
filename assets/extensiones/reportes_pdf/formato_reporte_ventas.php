@@ -72,7 +72,7 @@ ob_start();
 				</tr>
 			</table>
 			<br>
-			Fecha Emision: <?php echo date('d/m/Y'); ?>
+			Fecha Emisión: <?php echo date('d/m/Y'); ?>
 			<br>
 			<br>
 			<?php echo $table_venta ?><br>

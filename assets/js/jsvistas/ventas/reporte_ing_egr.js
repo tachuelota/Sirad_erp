@@ -87,7 +87,7 @@ $(document).ready(function(){
 				{'td1':'TOTAL:','td2':$("#TotalGeneral").text()}];		
 
 		tablatotal = toHTML(crearTablaToArray("treporte",
-				['DESCRIPCION','MONTO'],
+				['DESCRIPCIÓN','MONTO'],
 				['style="width: 20%;" class="head" ','style="width: 20%;" class="head" '],					
 				['td1','td2'],						
 				['style="width: 50%;" class="impar" ','style="width:50%;" '],

@@ -76,7 +76,7 @@
 													<option value="2">Pagada</option>
 													<option value="0">Anulada</option>
 													<option value="1">Credito</option>
-													<option value="3">Sepracion</option>
+													<option value="3">Separación</option>
 												</select>														
 											</div>
 										</div>
@@ -93,7 +93,7 @@
 							<table id="ventas_table" class="table table-bordered table-striped">
 								<thead>
 									<tr>
-										<th>Fecha Emision</th>
+										<th>Fecha Emisión</th>
 										<th>Vendedor</th>
 										<th>Cliente</th>
 										<th>Tipo Pago</th>
@@ -176,8 +176,8 @@
 													<option value="-1">Seleccionar</option>
 													<option value="2">Pagada</option>
 													<option value="0">Anulada</option>
-													<option value="1">Credito</option>
-													<option value="3">Sepracion</option>
+													<option value="1">Crédito</option>
+													<option value="3">Separación</option>
 												</select>														
 											</div>
 										</div>
@@ -194,7 +194,7 @@
 									<table id="ventas_table_zona" class="table table-bordered table-striped">
 										<thead>
 											<tr>
-												<th>Fecha Emision</th>
+												<th>Fecha Emisión</th>
 												<th>Vendedor</th>
 												<th>Cliente</th>
 												<th>Tipo Pago</th>
