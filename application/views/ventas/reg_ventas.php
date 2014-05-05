@@ -105,8 +105,8 @@
 										    	<label for="cliente" class="col-lg-4 control-label">Cliente</label>
 											    <div class="col-lg-8"> 
 										    		<div class="input-group">
-										    			<input type="hidden" id="cliente_id" name="cliente_id" value="<?php echo $clianonimo["nCliente_id"] ?>">                                    
-			                                            <input class="form-control" id="cliente" type="text" readonly value="<?php echo $clianonimo["cClienteNom"]." ".$clianonimo["cClienteApe"] ?>">
+										    			<input type="hidden" id="cliente_id" name="cliente_id" value="">                                    
+			                                            <input class="form-control" id="cliente" type="text" readonly value="">
 			                                            <div class="btn btn-info btn-flat input-group-addon btn-buscarc">
 			                                                <i class="fa fa-search" style="color:white;"></i>
 			                                            </div>
@@ -227,7 +227,7 @@
 													<label class="col-lg-4 control-label" for="importe">Importe</label>
 													<div class="col-lg-8">
 														<div class="input-group">
-															<input id="importe" name="importe" type="text"class="form-control validate[required,custom[number],min[0]]">
+															<input id="importe" name="importe" maxlength="12" type="text"class="form-control validate[required,custom[number],min[0]">
 															<div class="input-group-addon">
 			                                                	S/.
 			                                            	</div>
@@ -372,7 +372,7 @@
 							<div class="box-body">
 								<ul class="pager wizard">
 									<li class="previous">
-										<a class="btn btn-default" href="<?php echo base_url();?>ventas/views/cons_ventas/">Atrás</a>
+										<a class="btn btn-default" href="javascript:">Atrás</a>
 
 									</li>
 									<li class="next">

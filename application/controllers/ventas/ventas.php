@@ -31,7 +31,8 @@ class ventas extends CI_Controller {
 				$MontoTrans = $form["total"];
 				$DesTrans = "Venta al Contado";
 				$Estado = null;
-				$id_Caja=$this->session->userdata('id_Caja');
+
+				$id_Caja=$this->session->userdata('caja')["id"];
 
 				if ($form["forma_pago"] == 1) 
 					$Estado = '2'; //pagada/cancelada

@@ -324,7 +324,7 @@ $(document).ready(function(){
 			onBlock: function() {
 			printResumen();
 				enviar($("#EnviarVentaForm").attr("action-1"),prepararDatos(), printResumen, null);
-				}
-        	});
+			}
+        });
 	});
 });
