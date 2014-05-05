@@ -317,4 +317,23 @@ class views extends CI_Controller
 		else
 			redirect('/administracion', 'refresh');
 	}
+
+	public function config_doc()
+	{
+		/*if($this->ion_auth->in_group("admin_material"))*/
+		{			
+			$dataheader['title'] = 'Configuración de Documentos';
+			$pagedata["local"] = $this->session->userdata('current_local');			
+			$this->load->view('templates/headers.php',$dataheader);		
+			$this->load->view('templates/menu.php');
+			$this->load->view('administracion/config_doc.php',$pagedata);
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/administracion/config_doc.js';
+			$datafooter['active'] = 'admin';
+			$datafooter['dropactive'] = '';
+			$this->load->view('templates/footer.php',$datafooter);
+		}
+		/*else
+			redirect('/administracion', 'refresh');*/
+	}
+
 }
