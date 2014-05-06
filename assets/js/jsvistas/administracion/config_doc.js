@@ -15,18 +15,18 @@ $(document).ready(function(){
 			$("#btn-reg-confdoc").hide();
 			$("#btn-editar-confdoc").show();
 	  		$("#modalConfigDoc").modal('show');
-	  		$("#NumSerie").val();
-	  		$("#NumComp").val();
-	  		$("#estado").val();
+	  		$("#NumSerie").val(aData.cDocNumSerie);
+	  		$("#NumComp").val(aData.cDocNumComprobante);
+	  		$("#estado").val(aData.cDocEstado);
 		},
 	});
 
 	var ConfDocOptions = {
 		"aoColumns":[
-			{ "mDataProp": ""},
-			{ "mDataProp": ""},
-			{ "mDataProp": ""},
-		    { "mDataProp": ""}
+			{ "mDataProp": "tipoComprobante"},
+			{ "mDataProp": "cDocNumSerie"},
+			{ "mDataProp": "cDocNumComprobante"},
+		    { "mDataProp": "cDocEstado"}
 				],
 		"fnCreatedRow": Actions.RowCBFunction
 	};

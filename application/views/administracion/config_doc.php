@@ -23,7 +23,7 @@
 					</div>
 					<div class="box-body table-responsive">
 						<table class="table table-striped table-bordered bootstrap-datatable datatable" id="configdoc_table"
-						data-source ="">
+						data-source ="<?php echo base_url();?>administracion/servicios/getConfDoc">
 							<thead>
 								<tr>
 									<th>Tipo Doc</th>
@@ -55,7 +55,6 @@
 													<select id="TipDoc" class="form-control SelectAjax" name="TipDoc" data-source="<?php echo base_url();?>administracion/servicios/getConstantesByClase/7"   attrval="cConstanteValor" attrdesc="cConstanteDesc" ></select>
 												</div>
 											</div>
-											
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="NumSerie">Numero de Serie</label>
 												<div class="col-lg-8">
@@ -65,12 +64,11 @@
 													</div>
 												</div>
 											</div>
-
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="NumComp">Numero de Comprobante</label>
 												<div class="col-lg-8">
 													<div class="input-group">
-														<input class="form-control validate[required,custom[number]]" name="NumComp" id="NumComp" type="text" data-prompt-position="topLeft">
+														<input class="form-control validate[required,custom[number]]" name="NumComp" id="NumComp" maxlength="6" type="text" data-prompt-position="topLeft">
 														<span class="input-group-addon"><i class="fa fa-paste"></i></span>
 													</div>
 												</div>
