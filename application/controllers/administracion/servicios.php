@@ -386,7 +386,17 @@ class servicios extends CI_Controller {
 	public function getConfDoc()
 	{
 		$this->load->model('administracion/confdoc_model','cdm');
-		$result = $this->cdm->get_confdoc();	
+		$result = $this->cdm->get_confdoc();
+		foreach ($result as $key => $config) {
+			switch ($config["cDocEstado"]) {				
+			    case 0:
+			        $result[$key]["estadoLabel"] = '<span class="label label-danger">Inhabilitado</span>';
+			        break;
+			    case 1:
+			        $result[$key]["estadoLabel"] = '<span class="label label-success">Habilitado</span>';
+			        break;
+			}
+		}	
 		$this->output
 			->set_content_type('application/json')
 			->set_output(json_encode(array('aaData' => $result)));

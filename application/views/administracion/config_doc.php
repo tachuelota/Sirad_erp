@@ -59,7 +59,7 @@
 												<label class="col-lg-4 control-label" for="NumSerie">Numero de Serie</label>
 												<div class="col-lg-8">
 													<div class="input-group">
-														<input class="form-control validate[required]" name="NumSerie" id="NumSerie" type="text" data-prompt-position="topLeft">
+														<input class="form-control validate[required]" name="NumSerie" id="NumSerie" maxlength="4" type="text" data-prompt-position="topLeft">
 														<span class="input-group-addon"><i class="fa fa-paste"></i></span>
 													</div>
 												</div>

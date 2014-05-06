@@ -27,7 +27,7 @@ $(document).ready(function(){
 			{ "mDataProp": "tipoComprobante"},
 			{ "mDataProp": "cDocNumSerie"},
 			{ "mDataProp": "cDocNumComprobante"},
-		    { "mDataProp": "cDocEstado"}
+		    { "mDataProp": "estadoLabel"}
 				],
 		"fnCreatedRow": Actions.RowCBFunction
 	};
