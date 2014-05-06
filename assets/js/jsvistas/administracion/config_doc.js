@@ -18,6 +18,7 @@ $(document).ready(function(){
 	  		$("#NumSerie").val(aData.cDocNumSerie);
 	  		$("#NumComp").val(aData.cDocNumComprobante);
 	  		$("#estado").val(aData.cDocEstado);
+	  		$("#codigo").val(aData.nConfDoc);
 		},
 	});
 

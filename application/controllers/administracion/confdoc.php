@@ -53,18 +53,20 @@ class confdoc extends CI_Controller {
 		$tipoComprobante=null; 
 		
 		if ($form!=null){
-			$id=$form[""];
-			$Serie = $form[""];
-			$Numero = $form[""];
-			$estado=$form[""];
-			$tipoComprobante=$form[""]; 
+			$id=$form["codigo"];
+			$Serie = $form["NumSerie"];
+			$Numero = $form["NumComp"];
+			$estado=$form["estado"];
+			$tipoComprobante=$form["TipDoc"]; 
 							
 			$Data = 
 				array(
-					'nDocNumSerie' => $Serie,'nDocNumComprobante' =>$Numero,'cDocEstado'=>$estado,'cTipoComprobante'=>$tipoComprobante );		
-			
-			if($this->cdm->update($id,$data)){
-				$return = array('responseCode'=>200, 'datos'=>$data);
+					'cDocNumSerie' => $Serie,
+					'cDocNumComprobante' =>$Numero,
+					'cDocEstado'=>$estado,
+					'nTipoComprobante'=>$tipoComprobante );
+			if($this->cdm->update($id,$Data)){
+				$return = array('responseCode'=>200, 'datos'=>$Data);
 			}
 			else{
 				$return = array('responseCode'=>400, 'greeting'=>'Bad');

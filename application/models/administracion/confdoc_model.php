@@ -33,7 +33,7 @@ class confdoc_model extends CI_Model {
 		
 		$this->db->trans_begin();
 
-        $this->db->where('idConfDoc',$id);
+        $this->db->where('nConfDoc',$id);
 		$this->db->update('configuracion_documento',$data);
 
 		if ($this->db->trans_status() === FALSE)
