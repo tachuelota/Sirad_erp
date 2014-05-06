@@ -1,5 +1,7 @@
 $(document).ready(function(){
+$(".SelectAjax").SelectAjax();
 $("#ClienteForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000});
+$("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000});
 	var Ubigeos = getAjaxObject($("#ClienteForm").attr("data-source"));
 	cargarUbigeo(Ubigeos,"dist", "prov", "dep");
 

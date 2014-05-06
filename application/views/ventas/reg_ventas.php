@@ -224,6 +224,23 @@
 											</div>
 											<div id="pagocont_block">
 												<div class="form-group">
+													<label class="col-lg-4 control-label" for="tipo_doc">Tipo de Documento</label>
+													<div class="col-lg-8">
+														<select class="form-control SelectAjax" name="tipo_doc" id="tipo_doc" data-source="<?php echo base_url();?>
+															administracion/servicios/getConstantesByClase/7" attrval="cConstanteValor" attrdesc="cConstanteDesc">
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-lg-4 control-label" for="importe">Serie - Comprobante</label>
+													<div class="col-lg-8">
+														<div class="input-group">
+															<input id="seriecommp" name="seriecommp" maxlength="12" type="text"class="form-control" readonly>
+															<span class="input-group-addon"><i class="fa fa-paste"></i></span>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
 													<label class="col-lg-4 control-label" for="importe">Importe</label>
 													<div class="col-lg-8">
 														<div class="input-group">
@@ -273,6 +290,7 @@
 				                        <div class="col-sm-4 invoice-col">
 				                            De
 				                            <address>
+				                            	RUC: 20559603563<br>
 				                                <strong>CLM Developers, SAC.</strong><br>
 				                                Bernardo Alcedo 187<br>
 				                                Urb. San Fernando, Trujillo<br>
