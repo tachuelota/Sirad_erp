@@ -290,7 +290,7 @@
 				                        <div class="col-sm-4 invoice-col">
 				                            De
 				                            <address>
-				                            	RUC: 20559603563<br>
+				                            	<b>RUC:</B> 20559603563<br>
 				                                <strong>CLM Developers, SAC.</strong><br>
 				                                Bernardo Alcedo 187<br>
 				                                Urb. San Fernando, Trujillo<br>
@@ -299,15 +299,26 @@
 				                            </address>
 				                        </div><!-- /.col -->
 				                        <div class="col-sm-4 invoice-col">
-				                            Cliente
+				                            Cliente:
 				                            <address>
 				                                <strong id="clienteR"></strong><br>
 				                                <span id="direccionR"></span><br>
 				                            </address>
+				                            Ruc:
+					                            <address>
+					                                <strong id="rucR"></strong><br>
+				                                </address>
 				                        </div><!-- /.col -->
 				                        <div class="col-sm-4 invoice-col">
-				                            <br/>
-				                            <b>Fec. Emisión:</b><span id="fechaR"><?php echo date("d/m/Y"); ?></span><br/>
+				                            Tipo Documento: <br>
+				                            <address>
+					                                <strong id="tipdocR"></strong><br>
+				                            </address>
+				                            Serie - Comprobante: <br>
+				                            <address>
+					                                <strong id="sercomR"></strong><br>
+			                                </address>
+				                            <b>Fec. Emisión: </b><span id="fechaR"><?php echo date("d/m/Y"); ?></span><br/>
 				                        </div><!-- /.col -->
 				                    </div><!-- /.row -->
 									<!-- TABLA DE PRODUCTOS POR COMPRAR aqui -->
