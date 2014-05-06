@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class cargos extends CI_Controller {
+class confdoc extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
@@ -16,14 +16,17 @@ class cargos extends CI_Controller {
 		$tipoComprobante=null; 
 		
 		if ($form!=null){
-			$Serie = $form[""];
-			$Numero = $form[""];
-			$estado=$form[""];
-			$tipoComprobante=$form[""]; 
+			$Serie = $form["NumSerie"];
+			$Numero = $form["NumComp"];
+			//$estado=$form[""];
+			$tipoComprobante=$form["TipDoc"]; 
 							
 			$Data = 
 				array(
-					'nDocNumSerie' => $Serie,'nDocNumComprobante' =>$Numero,'cDocEstado'=>$estado,'cTipoComprobante'=>$tipoComprobante );
+					'cDocNumSerie' => $Serie,
+					'cDocNumComprobante' =>$Numero,
+					'cDocEstado'=>$estado,
+					'nTipoComprobante'=>$tipoComprobante );
 	
 			if($this->cdm->insert($Data)){
 				$return = array("responseCode"=>200, "datos"=>"ok");

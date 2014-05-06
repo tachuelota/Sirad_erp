@@ -47,18 +47,16 @@ class confdoc_model extends CI_Model {
 			return true;
 		}
 	}
-/*
-
- 	public function get_cargos($nCargo_id = FALSE)
+	public function get_confdoc($nConfDoc = FALSE)
 	{
-		if($nCargo_id === FALSE )
+		if($nConfDoc === FALSE )
 		{
-			$query = $this ->db->query ('select * from ven_cargo_all;');
+			$query = $this ->db->query ('select * from adm_confdocumento_all;');
 			return $query -> result_array();
 		}
-		$query = $this->db->get_where('ven_cargo', array('nCargo_id' => $nCargo_id));
+		$query = $this->db->get_where('configuracion_documento', array('nConfDoc' => $nConfDoc));
 		return $query->row_array();
 	}
-*/
+
 
 }

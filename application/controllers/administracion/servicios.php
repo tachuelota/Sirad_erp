@@ -383,4 +383,14 @@ class servicios extends CI_Controller {
 			->set_output(json_encode(array('aaData' => $result)));
 	}
 
+	public function getConfDoc()
+	{
+		$this->load->model('administracion/confdoc_model','cdm');
+		$result = $this->cdm->get_confdoc();	
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode(array('aaData' => $result)));
+	}
+
+
 }
