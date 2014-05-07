@@ -189,8 +189,8 @@ $(document).ready(function(){
 
     var unlockload = function()
     {
-    	$("#view_impri").attr("action",base_url+"ventas/views/ver_ventas/78"); 
-    	$("#view_impri").submit();
+    	/*$("#view_impri").attr("action",base_url+"ventas/views/ver_ventas/78"); 
+    	$("#view_impri").submit();*/
     	$.unblockUI({
 	    	onUnblock: function(){	    		
 	            $(location).attr("href",base_url+"ventas/views/cons_ventas"); 
