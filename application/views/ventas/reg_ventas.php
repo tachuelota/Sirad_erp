@@ -299,22 +299,22 @@
 				                            </address>
 				                        </div><!-- /.col -->
 				                        <div class="col-sm-4 invoice-col">
-				                            Cliente:
+				                            <b>Cliente:</b>
 				                            <address>
 				                                <strong id="clienteR"></strong><br>
 				                                <span id="direccionR"></span><br>
 				                            </address>
-				                            Ruc:
+				                            <b>Ruc:</b>
 					                            <address>
 					                                <strong id="rucR"></strong><br>
 				                                </address>
 				                        </div><!-- /.col -->
 				                        <div class="col-sm-4 invoice-col">
-				                            Tipo Documento: <br>
+				                            <b>Tipo Documento:</b> <br>
 				                            <address>
 					                                <strong id="tipdocR"></strong><br>
 				                            </address>
-				                            Serie - Comprobante: <br>
+				                            <b>Serie - Comprobante:</b> <br>
 				                            <address>
 					                                <strong id="sercomR"></strong><br>
 			                                </address>

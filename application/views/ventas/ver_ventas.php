@@ -36,6 +36,7 @@
 		                        <div class="col-sm-4 invoice-col">
 		                            De
 		                            <address>
+		                            	<b>RUC:</B> 20559603563<br>
 		                                <strong>CLM Developers, SAC.</strong><br>
 		                                Bernardo Alcedo 187<br>
 		                                Urb. San Fernando, Trujillo<br>
@@ -44,17 +45,28 @@
 		                            </address>
 		                        </div><!-- /.col -->
 		                        <div class="col-sm-4 invoice-col">
-		                            Cliente
+		                            <b>Cliente:</b>
 		                            <address>
 		                                <strong id="clienteR"><?php echo $venta["Cliente"]; ?></strong><br>
 		                                <?php echo $venta["Cliente_direccion"];?><br>
 		                            </address>
+		                            <b>Ruc:</b>
+		                            <address>
+		                                <strong id="rucR"></strong><br>
+	                                </address>
 		                        </div><!-- /.col -->
 		                        <div class="col-sm-4 invoice-col">
-		                            <br/>
+		                            <b>Tipo Documento:</b> <br>
+		                            <address>
+			                                <strong id="tipdocR"></strong><br>
+		                            </address>
+		                            <b>Serie - Comprobante:</b> <br>
+		                            <address>
+			                                <strong id="sercomR"></strong><br>
+	                                </address>
 		                            <b>Fec. Emisión:</b><?php echo date("d/m/Y"); ?><br/>
 		                            <b>Vendedor:</b><?php echo $venta["Vendedor"]; ?><br/>
-		                            <b>Tipo Pago:</b><?php echo $venta["tipo_pago"]; ?><br/>
+		                            <b>Tipo Pago:</b><?php echo $venta["tipo_pago"]; ?><br/><br/>
 		                        </div><!-- /.col -->
 		                    </div><!-- /.row -->
 							<!-- TABLA DE PRODUCTOS POR COMPRAR aqui -->
