@@ -243,11 +243,10 @@
 																	</div>
 																	<div class="form-group">
 																		<label class="col-lg-3 control-label" for="etipCont">Tipo de Contribuyente</label>
-																		<div class="col-lg-8">													
-																			<div class="input-group">
-																				<input class="form-control" maxlength="50" id="etipCont" name="etipCont" class="focusedInput" type="text" data-prompt-position="topLeft" readonly>
-																				<span class="input-group-addon"><i class="fa fa-puzzle-piece"></i></span>
-																			</div>													
+																		<div class="col-lg-8">
+																			<select class="form-control SelectAjax" name="etipCont" id="etipCont" data-source="<?php echo base_url();?>
+																				administracion/servicios/getConstantesByClase/10" attrval="cConstanteValor" attrdesc="cConstanteDesc">
+																			</select>
 																		</div>
 																	</div>															
 																	<div class="form-group">

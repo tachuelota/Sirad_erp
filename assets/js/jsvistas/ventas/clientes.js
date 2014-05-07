@@ -108,8 +108,6 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 	});
 
 
-
-
 	$("#btn-editar-clientes").click(function(event){
 		event.preventDefault();
 		if($("#ClienteForm").validationEngine('validate'))
