@@ -152,7 +152,7 @@
 																		<label class="col-lg-3 control-label" for="estado">Estado</label>
 																		<div class="col-lg-8">
 																			<div class="input-group">
-																			  <input class="form-control focused validate[required,custom[number]]"  maxlength="12" id="estado" name="estado" type="text" data-prompt-position="topLeft" readonly>
+																			  <input class="form-control focused "  maxlength="12" id="estado" name="estado" type="text" data-prompt-position="topLeft" readonly>
 																			  <div class="input-group-addon"><i class="fa fa-tags"></i></div> 	
 																			</div>
 																		</div>
@@ -196,15 +196,15 @@
 												<!-- /.tab-pane -->
 												<div class="tab-pane" id="tab_2">
 													<form id="ClienteForm1" class="form-horizontal" method="post" action-1="<?php echo base_url();?>ventas/clientes/registrar" action-2="<?php echo base_url();?>ventas/clientes/editar" data-source="<?php echo base_url();?>administracion/servicios/getUbigeo">
-														<input type="hidden" id="idClientes" name="idClientes">
+														<input type="hidden" id="idEmpresa" name="idEmpresa">
 														<div class="modal-body">
 															<div class="row">
 																<div class="col-lg-6">
 																	<div class="form-group">
-																		<label class="col-lg-3 control-label" for="ruc">RUC</label>
+																		<label class="col-lg-3 control-label" for="eruc">RUC</label>
 																		<div class="col-lg-8">
 																			<div class="input-group">
-																				<input class="form-control focused validate[required,custom[onlyNumberSp]] validate[maxSize[11]] validate[minSize[11]]" id="ruc" name="ruc" type="text" data-prompt-position="topLeft">
+																				<input class="form-control focused validate[required,custom[onlyNumberSp]] validate[maxSize[11]] validate[minSize[11]]" id="eruc" name="eruc" type="text" data-prompt-position="topLeft">
 																				<div class="btn btn-info btn-flat input-group-addon btn-validar">
 						                                            				<i class="ion-checkmark" style="color:white;"></i>
 						                                        				</div>
@@ -212,19 +212,19 @@
 																		</div>
 																	</div>
 																	<div class="form-group">
-																		<label class="col-lg-3 control-label" for="razonSocial">Razón Social</label>
+																		<label class="col-lg-3 control-label" for="erazonSocial">Razón Social</label>
 																		<div class="col-lg-8">
 																			<div class="input-group">
-																				<input class="form-control" type="text" id="razonsocial" name="razonsocial" data-prompt-position="topLeft" readonly>
+																				<input class="form-control" type="text" id="erazonsocial" name="erazonsocial" data-prompt-position="topLeft" readonly>
 																				<span class="input-group-addon"><i class="glyphicon glyphicon-registration-mark"></i></span>
 																			</div>	
 																		</div>
 																	</div>
 																	<div class="form-group">
-																		<label class="col-lg-3 control-label" for="telefono">Teléfono</label>
+																		<label class="col-lg-3 control-label" for="etelefono">Teléfono</label>
 																		<div class="col-lg-8">
 																			<div class="input-group">
-																			  <input class="form-control focused validate[required,custom[number]]" placeholder="999999999"  maxlength="12" id="telefono" name="telefono" type="text" data-prompt-position="topLeft">
+																			  <input class="form-control focused validate[required,custom[number]]" placeholder="999999999"  maxlength="12" id="etelefono" name="etelefono" type="text" data-prompt-position="topLeft">
 																			  <div class="input-group-addon"><i class="fa fa-phone"></i></div> 	
 																			</div>
 																		</div>
@@ -233,28 +233,28 @@
 																</div>
 																<div class="col-lg-6">
 																	<div class="form-group">
-																		<label class="col-lg-3 control-label" for="dirfiscal">Dirección Fiscal</label>
+																		<label class="col-lg-3 control-label" for="edirfiscal">Dirección Fiscal</label>
 																		<div class="col-lg-8">
 																			<div class="input-group">
-																				<input class="form-control focused" id="dirfiscal" name="dirfiscal" type="text" readonly>
+																				<input class="form-control focused" id="edirfiscal" name="edirfiscal" type="text" readonly>
 																				<span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
 																			</div>
 																		</div>
 																	</div>
 																	<div class="form-group">
-																		<label class="col-lg-3 control-label" for="tipCont">Tipo de Contribuyente</label>
+																		<label class="col-lg-3 control-label" for="etipCont">Tipo de Contribuyente</label>
 																		<div class="col-lg-8">													
 																			<div class="input-group">
-																				<input class="form-control" maxlength="50" id="tipCont" name="tipCont" class="focusedInput" type="text" data-prompt-position="topLeft" readonly>
+																				<input class="form-control" maxlength="50" id="etipCont" name="etipCont" class="focusedInput" type="text" data-prompt-position="topLeft" readonly>
 																				<span class="input-group-addon"><i class="fa fa-puzzle-piece"></i></span>
 																			</div>													
 																		</div>
 																	</div>															
 																	<div class="form-group">
-																		<label class="col-lg-3 control-label" for="estado">Estado</label>
+																		<label class="col-lg-3 control-label" for="eestado">Estado</label>
 																		<div class="col-lg-8">													
 																			<div class="input-group">
-																				<input class="form-control" maxlength="50" id="estado" name="estado" class="focusedInput" type="text" data-prompt-position="topLeft" readonly>
+																				<input class="form-control" maxlength="50" id="eestado" name="eestado" class="focusedInput" type="text" data-prompt-position="topLeft" readonly>
 																				<span class="input-group-addon"><i class="fa fa-tags"></i></span>
 																			</div>													
 																		</div>
@@ -266,8 +266,8 @@
 														</div>
 														<div class="modal-footer">
 															<button type="reset" class="btn btn-flat btn-default" data-dismiss="modal">Cancelar</button>
-															<button id="btn-reg-clientes" type="button" class="btn btn-flat btn-primary">Registrar</button>
-															<button id="btn-editar-clientes" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>
+															<button id="btn-reg-empresa" type="button" class="btn btn-flat btn-primary">Registrar</button>
+															<button id="btn-editar-empresa" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>
 														</div>
 													</form>
 												</div>

@@ -25,17 +25,29 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 	'EditFunction': function(nRow, aData, iDisplayIndex) {
 		$("#btn-reg-clientes").hide();
 		$("#btn-editar-clientes").show();
+		$("#btn-reg-empresa").hide();
+		$("#btn-editar-empresa").show();
 		$('#modalClientes').modal('show');
+		$("#ruc").val(aData.cClienteNom);
 		$("#nombres").val(aData.cClienteNom);	
 		$("#apellidos").val(aData.cClienteApe);
 		$("#dni").val(aData.cClienteDNI);	
-		$("#referencia").val(aData.cClienteRef);	
-		$("#direccion").val(aData.cClientecDir);	
+		$("#telefono").val(aData.cClienteTel);
+		$("#refRUC").val(aData.cClienteDNI);	
+		$("#direccion").val(aData.cClientecDir);
+		$("#referencia").val(aData.cClienteRef);
+		$("#ocupacion").val(aData.cClienteOcup);	
+		$("#estado").val(aData.cClienteDNI);
+		$("#eruc").val(aData.cClienteDNI);
+		$("#erazonSocial").val(aData.cClienteDNI);
+		$("#etelefono").val(aData.cClienteDNI);
+		$("#edirfiscal").val(aData.cClienteDNI);
+		$("#etipCont").val(aData.cClienteDNI);
+		$("#eestado").val(aData.cClienteDNI);
 		$("#zonas").val(aData.nZona_id);	
 		$("#lineaop").val(aData.nClienteLineaOp);	
-		$("#ocupacion").val(aData.cClienteOcup);
-		$("#telefono").val(aData.cClienteTel);		
 		$("#idClientes").val(aData.nCliente_id);
+		$("#idEmpresa").val(aData.nCliente_id);
 		cargarUbigeo(Ubigeos,"dist", "prov", "dep",aData.nUbigeo_id);
 		//cargarZonas();
 		},
@@ -77,6 +89,27 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 			});
 	});
 
+	$('#modalClientes').on('hidden.bs.modal', function(){		
+		$("#ClienteForm1").reset();
+		$("#btn-reg-empresa").show();
+		$("#btn-editar-empresa").hide();
+	});
+
+	$("#btn-reg-empresa").click(function(event){
+		event.preventDefault();
+		if($("#ClienteForm1").validationEngine('validate'))
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalClientes').modal('hide');
+					enviar($("#ClienteForm1").attr("action-1"),{formulario:$("#ClienteForm1").serializeObject()}, successClientes, null);
+				}
+			});
+	});
+
+
+
+
 	$("#btn-editar-clientes").click(function(event){
 		event.preventDefault();
 		if($("#ClienteForm").validationEngine('validate'))
@@ -89,10 +122,31 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 			});
 	});
 
+	$("#btn-editar-empresa").click(function(event){
+		event.preventDefault();
+		if($("#ClienteForm").validationEngine('validate'))
+			$.blockUI({ 
+				onBlock: function()
+				{
+					$('#modalClientes').modal('hide');
+					enviar($("#ClienteForm1").attr("action-2"),{formulario:$("#ClienteForm1").serializeObject()}, successClientes, null);
+				}
+			});
+	});
+
 	var successClientes = function(){
 		$.unblockUI({
 		    onUnblock: function(){
 				$('#ClienteForm').reset();
+				ClientesTable.fnReloadAjax()
+			}
+		});
+	}
+
+	var successClientes = function(){
+		$.unblockUI({
+		    onUnblock: function(){
+				$('#ClienteForm1').reset();
 				ClientesTable.fnReloadAjax()
 			}
 		});
