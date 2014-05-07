@@ -41,6 +41,20 @@
 								<tr></tr>
 							</tbody>
 						</table>
+						<h3 class="box-title">Lista <small>de Empresas</small></h3>
+						<table class="table table-striped table-bordered bootstrap-datatable datatable" id="empresa_table" data-source="<?php echo base_url();?>ventas/servicios/getclientes">
+							<thead>
+								<tr>
+									<th>RUC</th>
+									<th>Razón Social</th>
+									<th>Dirección Fiscal</th>
+									<th>Tipo de Contribuyente</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr></tr>
+							</tbody>
+						</table>
 						<div class="modal fade" id="modalClientes">
 							<div class="modal-dialog" style="width:1050px;">
 								<div class="modal-content">
@@ -196,7 +210,7 @@
 												<!-- /.tab-pane -->
 												<div class="tab-pane" id="tab_2">
 													<form id="ClienteForm1" class="form-horizontal" method="post" action-1="<?php echo base_url();?>ventas/clientes/registrar" action-2="<?php echo base_url();?>ventas/clientes/editar" data-source="<?php echo base_url();?>administracion/servicios/getUbigeo">
-														<input type="hidden" id="idEmpresa" name="idEmpresa">
+														<input type="hidden" id="idClientes" name="idClientes">
 														<div class="modal-body">
 															<div class="row">
 																<div class="col-lg-6">
