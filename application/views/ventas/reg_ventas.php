@@ -303,20 +303,14 @@
 				                            <address>
 				                                <strong id="clienteR"></strong><br>
 				                                <span id="direccionR"></span><br>
-				                            </address>
-				                            <b>Ruc:</b>
-					                            <address>
-					                                <strong id="rucR"></strong><br>
-				                                </address>
+				                            <b>RUC:</b>
+					                            <strong id="rucR"></strong><br>
+				                             </address>
 				                        </div><!-- /.col -->
 				                        <div class="col-sm-4 invoice-col">
-				                            <b>Tipo Documento:</b> <br>
-				                            <address>
+				                         	<address>
 					                                <strong id="tipdocR"></strong><br>
-				                            </address>
-				                            <b>Serie - Comprobante:</b> <br>
-				                            <address>
-					                                <strong id="sercomR"></strong><br>
+				                            		<strong id="sercomR"></strong><br>
 			                                </address>
 				                            <b>Fec. Emisión: </b><span id="fechaR"><?php echo date("d/m/Y"); ?></span><br/>
 				                        </div><!-- /.col -->

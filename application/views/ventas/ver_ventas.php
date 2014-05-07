@@ -56,11 +56,11 @@
 	                                </address>
 		                        </div><!-- /.col -->
 		                        <div class="col-sm-4 invoice-col">
-		                            <b>Tipo Documento:</b> <br>
+		                            <b></b> <br>
 		                            <address>
 			                                <strong id="tipdocR"></strong><br>
 		                            </address>
-		                            <b>Serie - Comprobante:</b> <br>
+		                            <b></b> <br>
 		                            <address>
 			                                <strong id="sercomR"></strong><br>
 	                                </address>

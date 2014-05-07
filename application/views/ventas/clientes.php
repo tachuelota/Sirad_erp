@@ -101,8 +101,26 @@
 																			</div>													
 																		</div>
 																	</div>
+																	<div class="form-group">
+																		<label class="col-lg-3 control-label" for="telefono">Teléfono</label>
+																		<div class="col-lg-8">
+																			<div class="input-group">
+																			  <input class="form-control focused validate[required,custom[number]]" placeholder="999999999"  maxlength="12" id="telefono" name="telefono" type="text" data-prompt-position="topLeft">
+																			  <div class="input-group-addon"><i class="fa fa-phone"></i></div> 	
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="col-lg-6">
+																	<div class="form-group">
+																		<label class="col-lg-3 control-label" for="refRUC"></label>
+																		<div class="col-lg-8">
+																			<div class="input-group">
+																				<input class="form-control" value=" " maxlength="200" id="refRUC" name="refRUC" type="text" readonly>
+																				<span class="input-group-addon"><i class="fa fa-user"></i></span>
+																			</div>
+																		</div>
+																	</div>
 																	<div class="form-group">
 																		<label class="col-lg-3 control-label" for="direccion">Dirección</label>
 																		<div class="col-lg-8">
@@ -131,11 +149,11 @@
 																		</div>
 																	</div>
 																	<div class="form-group">
-																		<label class="col-lg-3 control-label" for="telefono">Teléfono</label>
+																		<label class="col-lg-3 control-label" for="estado">Estado</label>
 																		<div class="col-lg-8">
 																			<div class="input-group">
-																			  <input class="form-control focused validate[required,custom[number]]" placeholder="999999999"  maxlength="12" id="telefono" name="telefono" type="text" data-prompt-position="topLeft">
-																			  <div class="input-group-addon"><i class="fa fa-phone"></i></div> 	
+																			  <input class="form-control focused validate[required,custom[number]]"  maxlength="12" id="estado" name="estado" type="text" data-prompt-position="topLeft" readonly>
+																			  <div class="input-group-addon"><i class="fa fa-tags"></i></div> 	
 																			</div>
 																		</div>
 																	</div>
@@ -203,14 +221,15 @@
 																		</div>
 																	</div>
 																	<div class="form-group">
-																		<label class="col-lg-3 control-label" for="nomCom">Nombre Comercial</label>
-																		<div class="col-lg-8">													
+																		<label class="col-lg-3 control-label" for="telefono">Teléfono</label>
+																		<div class="col-lg-8">
 																			<div class="input-group">
-																				<input class="form-control" maxlength="50" id="nomCom" name="nomCom" class="focusedInput" type="text" data-prompt-position="topLeft" readonly>
-																				<span class="input-group-addon"><i class="ion-home"></i></span>
-																			</div>													
+																			  <input class="form-control focused validate[required,custom[number]]" placeholder="999999999"  maxlength="12" id="telefono" name="telefono" type="text" data-prompt-position="topLeft">
+																			  <div class="input-group-addon"><i class="fa fa-phone"></i></div> 	
+																			</div>
 																		</div>
 																	</div>
+																	
 																</div>
 																<div class="col-lg-6">
 																	<div class="form-group">
@@ -221,22 +240,26 @@
 																				<span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
 																			</div>
 																		</div>
+																	</div>
+																	<div class="form-group">
+																		<label class="col-lg-3 control-label" for="tipCont">Tipo de Contribuyente</label>
+																		<div class="col-lg-8">													
+																			<div class="input-group">
+																				<input class="form-control" maxlength="50" id="tipCont" name="tipCont" class="focusedInput" type="text" data-prompt-position="topLeft" readonly>
+																				<span class="input-group-addon"><i class="fa fa-puzzle-piece"></i></span>
+																			</div>													
+																		</div>
 																	</div>															
 																	<div class="form-group">
-																		<label class="col-lg-3 control-label" for="telefono">Teléfono</label>
-																		<div class="col-lg-8">
+																		<label class="col-lg-3 control-label" for="estado">Estado</label>
+																		<div class="col-lg-8">													
 																			<div class="input-group">
-																			  <input class="form-control focused validate[required,custom[number]]" placeholder="999999999"  maxlength="12" id="telefono" name="telefono" type="text" data-prompt-position="topLeft">
-																			  <div class="input-group-addon"><i class="fa fa-phone"></i></div> 	
-																			</div>
+																				<input class="form-control" maxlength="50" id="estado" name="estado" class="focusedInput" type="text" data-prompt-position="topLeft" readonly>
+																				<span class="input-group-addon"><i class="fa fa-tags"></i></span>
+																			</div>													
 																		</div>
 																	</div>
-																	<div class="form-group">
-																		<label class="col-lg-3 control-label" for="tipContribuyente">Tipo de Contribuyente</label>
-																		<div class="col-lg-8">
-																			<select id="tipContribuyente" class="form-control SelectAjax" name="tipContribuyente" data-source="<?php echo base_url();?>administracion/servicios/getConstantesByClase/10" attrval="cConstanteValor" attrdesc="cConstanteDesc"></select>
-																		</div>
-																	</div>
+																	
 																</div>
 															</div>
 															
