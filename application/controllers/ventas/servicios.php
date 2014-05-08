@@ -249,6 +249,15 @@ class servicios extends CI_Controller {
 			->set_output(json_encode(array('aaData' => $result)));
 	}
 
+	public function get_serienumero($idTipo)
+	{
+		$this->load->model('ventas/venta_model','vm');
+		$result = $this->vm->get_serie_numero($idTipo);
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode(array('aaData' => $result)));
+	}
+
 	
 }
 

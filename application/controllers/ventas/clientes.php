@@ -17,7 +17,8 @@ public function registrar(){
 		$ClienteRef = null;
 		$ClienteLinOpe = null;
 		$ClienteOcup = null;
-		$ClienteTelefono=null;			
+		$ClienteTelefono=null;
+		$Ruc=null;			
 
 		if ($form != null)
 		{
@@ -31,6 +32,9 @@ public function registrar(){
 			$ClienteTelefono = $form["telefono"];	
 			$cClienteArcCredito =null;
 			$ClienteOcup = $form["ocupacion"];				
+			$ruc=$form["ruc"];
+			$razonsocial=null;
+			$tipoContribuyente=-1;
 			$Cliente = array(
 				'cClienteNom'=> $ClienteNombre,
 				'cClienteApe'=> $ClienteApell,
@@ -41,7 +45,10 @@ public function registrar(){
 			 	'nClienteLineaOp'=> $ClienteLinOpe,
 			 	'cClienteArcCredito' =>"0",
 			 	'cClienteOcup'=> $ClienteOcup,
-			 	'cClienteTel'=>$ClienteTelefono);
+			 	'cClienteTel'=>$ClienteTelefono,
+			 	'cClienteRuc'=>$ruc,
+			 	'cClienteRazonSocial'=>$razonsocial,
+			 	'cClienteTipoContribuyente'=>$tipocontribuyente);
 			if($this->climod->insert($Cliente))
 				$return = array("responseCode"=>200, "datos"=>"ok");
 			else
@@ -53,6 +60,60 @@ public function registrar(){
 		$return = json_encode($return);
 		echo $return;
 	}
+
+	public function registrar_empresa(){
+		$form = $this->input->post('formulario');
+		$ClienteNombre = null;
+		$ClienteApell = null; 
+		$ClienteDNI = null;
+		$ClienteZona = null;
+		$ClienteRef = null;
+		$ClienteLinOpe = null;
+		$ClienteOcup = null;
+		$ClienteTelefono=null;
+		$Ruc=null;
+		$razonsocial=null;
+		$tipocontribuyente=null;
+
+
+		if ($form != null)
+		{
+					
+			$ClienteZona = intval($this->session->userdata('current_local')["nUbigeo_id"]);
+			$ClienteLinOpe=1;				
+			$cClienteArcCredito =null;			
+			$ruc=$form["eruc"];
+			$razonsocial=$form["erazonsocial"];
+			$tipocontribuyente=$form["etipCont"];
+			$ClienteTelefono=$form["etelefono"];
+			$ClienteDirec = $form["edirfiscal"];
+			$Cliente = array(
+				'cClienteNom'=> $ClienteNombre,
+				'cClienteApe'=> $ClienteApell,
+				'cClienteDNI'=> $ClienteDNI,				
+			 	'cClienteRef' => $ClienteRef,
+				'cClientecDir' => $ClienteDirec,
+			 	'nZona_id'=> $ClienteZona,
+			 	'nClienteLineaOp'=> $ClienteLinOpe,
+			 	'cClienteArcCredito' =>"0",
+			 	'cClienteOcup'=> $ClienteOcup,
+			 	'cClienteTel'=>$ClienteTelefono,
+			 	'cClienteRuc'=>$ruc,
+			 	'cClienteRazonSocial'=>$razonsocial,
+			 	'cClienteTipoContribuyente'=>$tipocontribuyente);
+			if($this->climod->insert($Cliente))
+				$return = array("responseCode"=>200, "datos"=>"ok");
+			else
+				$return = array("responseCode"=>400, "greeting"=>"Bad");
+		} 
+		else
+			$return = array("responseCode"=>400, "greeting"=>"Bad");
+
+		$return = json_encode($return);
+		echo $return;
+	}
+
+
 
 	public function editar(){
 		$form = $this->input->post('formulario',null);

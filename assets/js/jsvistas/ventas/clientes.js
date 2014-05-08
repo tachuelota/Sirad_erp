@@ -191,4 +191,76 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 		$("#exportmodal").modal('hide');
 	});
 	  // fin
+	  //validar ruc
+	$("#btn-validar").click(function(e){
+		e.preventDefault();
+		ruc = $("#ruc").val();
+		//alert(ruc);
+		var datos=getAjaxObject(base_url+"logistica/servicios/getdata_from_ruc/"+ruc)
+		if(datos.valido==1){
+			$("#refRUC").val(datos.nombre);
+			$("#direccion").val(datos.direccion);
+			$("#estado").val(datos.estado);
+			var tipo=datos.tipo;
+			/*if(tipo=="SOCIEDAD ANONIMA CERRADA"){
+				//$("#tipContribuyente").val(tipo);
+				tipContribuyente[0].selected = true;
+			}else{
+				tipContribuyente[1].selected=true;
+			}
+			var estado=datos.estado;*/
+		}
+		else
+		{
+			$("#refRUC").val("");
+			$("#direccion").val("");
+			$('#ruc').validationEngine(
+				'showPrompt',
+				'Ruc Invalido',
+				'error',
+				"topLeft" ,
+				true);
+
+		}
+		
+		
+	});
+
+	$("#btn-validar-empresa").click(function(e){
+		e.preventDefault();
+		ruc = $("#eruc").val();
+		//alert(ruc);
+		var datos=getAjaxObject(base_url+"logistica/servicios/getdata_from_ruc/"+ruc)
+		if(datos.valido==1){
+			$("#erazonsocial").val(datos.nombre);
+			$("#edirfiscal").val(datos.direccion);
+			$("#eestado").val(datos.estado);
+			$("#etipCont").val(datos.tipo);
+			var tipo=datos.tipo;
+			/*if(tipo=="SOCIEDAD ANONIMA CERRADA"){
+				//$("#tipContribuyente").val(tipo);
+				tipContribuyente[0].selected = true;
+			}else{
+				tipContribuyente[1].selected=true;
+			}*/
+			//var estado=datos.estado;
+		}
+		else
+		{
+			$("#erazonsocial").val("");
+			$("#edirfiscal").val("");
+			$("#etipCont").val("");
+			$("#eestado").val("");
+			//$("#eruc").val("");
+			$('#ruc').validationEngine(
+				'showPrompt',
+				'Ruc Invalido',
+				'error',
+				"topLeft" ,
+				true);
+
+		}
+		
+		
+	});
 });

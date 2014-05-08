@@ -88,5 +88,10 @@ class venta_model extends CI_Model
 		
 		return $result -> result_array();
 	}
+
+	public function get_serie_numero($idTipo){
+		$query = $this->db->query("SELECT fun_generar_serie_doc(".$idTipo.") as serie,fun_generar_numero_doc(".$idTipo.") as numero;");
+		return $query->row_array();
+	}
 }
 ?>

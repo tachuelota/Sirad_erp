@@ -68,7 +68,7 @@
 																		<div class="col-lg-8">
 																			<div class="input-group">
 																				<input class="form-control focused" id="ruc" name="ruc" type="text" data-prompt-position="topLeft">
-																				<div class="btn btn-info btn-flat input-group-addon btn-validar">
+																				<div class="btn btn-info btn-flat input-group-addon" id="btn-validar">
 						                                            				<i class="ion-checkmark" style="color:white;"></i>
 						                                        				</div>
 																			</div>
@@ -189,13 +189,13 @@
 														<div class="modal-footer">
 															<button type="reset" class="btn btn-flat btn-default" data-dismiss="modal">Cancelar</button>
 															<button id="btn-reg-clientes" type="button" class="btn btn-flat btn-primary">Registrar</button>
-															<button id="btn-editar-clientes" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>
+															<!--<button id="btn-editar-clientes" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>-->
 														</div>
 													</form>
 												</div>
 												<!-- /.tab-pane -->
 												<div class="tab-pane" id="tab_2">
-													<form id="ClienteForm1" class="form-horizontal" method="post" action-1="<?php echo base_url();?>ventas/clientes/registrar" action-2="<?php echo base_url();?>ventas/clientes/editar" data-source="<?php echo base_url();?>administracion/servicios/getUbigeo">
+													<form id="ClienteForm1" class="form-horizontal" method="post" action-1="<?php echo base_url();?>ventas/clientes/registrar_empresa" action-2="<?php echo base_url();?>ventas/clientes/editar" data-source="<?php echo base_url();?>administracion/servicios/getUbigeo">
 														<input type="hidden" id="idEmpresa" name="idEmpresa">
 														<div class="modal-body">
 															<div class="row">
@@ -205,7 +205,7 @@
 																		<div class="col-lg-8">
 																			<div class="input-group">
 																				<input class="form-control focused validate[required,custom[onlyNumberSp]] validate[maxSize[11]] validate[minSize[11]]" id="eruc" name="eruc" type="text" data-prompt-position="topLeft">
-																				<div class="btn btn-info btn-flat input-group-addon btn-validar">
+																				<div class="btn btn-info btn-flat input-group-addon" id="btn-validar-empresa">
 						                                            				<i class="ion-checkmark" style="color:white;"></i>
 						                                        				</div>
 																			</div>
@@ -268,6 +268,9 @@
 															<button type="reset" class="btn btn-flat btn-default" data-dismiss="modal">Cancelar</button>
 															<button id="btn-reg-empresa" type="button" class="btn btn-flat btn-primary">Registrar</button>
 															<button id="btn-editar-empresa" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>
+
+															<!--<button id="btn-editar-empresa" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>-->
+
 														</div>
 													</form>
 												</div>

@@ -23,6 +23,8 @@ $(document).ready(function(){
 		var montoigv;
 		var montoproductos;
 
+		
+
 		formapago = $("#forma_pago").val();	
 		
 		if($("#tipo_moneda").val()==1)
@@ -327,4 +329,6 @@ $(document).ready(function(){
 			}
         });
 	});
+
+	$("#seriecommp").val();
 });
