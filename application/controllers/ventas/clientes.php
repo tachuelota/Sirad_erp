@@ -121,12 +121,15 @@ public function registrar(){
 		$ClienteNombre = null;
 		$ClienteApell = null; 
 		$ClienteDNI = null;
-		$ClienteRef = null;
 		$ClienteDirec = null;
-		$ClienteLinOpe = null;	
-		$ClienteOcup = null;
 		$ClienteZona = null;
-		$ClienteTelefono=$form["telefono"];
+		$ClienteRef = null;
+		$ClienteLinOpe = null;
+		$ClienteOcup = null;
+		$ClienteTelefono=null;
+		$Ruc=null;
+		$razonsocial=null;
+		$tipoContribuyente=null;
 		
 		if ($form!=null){
 
@@ -138,7 +141,10 @@ public function registrar(){
 			$ClienteDirec = $form["direccion"];			
 			$ClienteZona = intval($this->session->userdata('current_local')["nUbigeo_id"]);				
 			$ClienteLinOpe = 1;				
-			$ClienteOcup = $form["ocupacion"];			
+			$ClienteOcup = $form["ocupacion"];
+			$ClienteTelefono=$form["telefono"];
+			$ruc=$form["ruc"];
+			$tipoContribuyente=-1;			
 			$data = array(
 				'cClienteNom'=> $ClienteNombre,
 				'cClienteApe'=> $ClienteApell,
@@ -146,9 +152,13 @@ public function registrar(){
 			 	'cClienteRef' => $ClienteRef,
 				'cClientecDir' => $ClienteDirec,
 			 	'nZona_id'=> $ClienteZona,
-			 	'nClienteLineaOp'=> $ClienteLinOpe,			 				
+			 	'nClienteLineaOp'=> $ClienteLinOpe,
+			 	'cClienteArcCredito' =>"0",
 			 	'cClienteOcup'=> $ClienteOcup,
-			 	'cClienteTel'=>$ClienteTelefono);					
+			 	'cClienteTel'=>$ClienteTelefono,
+			 	'cClienteRuc'=>$ruc,
+			 	'cClienteRazonSocial'=>$razonsocial,
+			 	'cClienteTipoContribuyente'=>$tipocontribuyente);					
 			if($this->climod->update($nCliente_id,$data))
 				$return = array('responseCode'=>200, 'datos'=>$data);
 			else

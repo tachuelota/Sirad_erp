@@ -47,22 +47,22 @@
 		                        <div class="col-sm-4 invoice-col">
 		                            <b>Cliente:</b>
 		                            <address>
-		                                <strong id="clienteR"><?php echo $venta["Cliente"]; ?></strong><br>
+		                                <strong id="clienteR"><?php echo $venta["name"]; ?></strong><br>
 		                                <?php echo $venta["Cliente_direccion"];?><br>
 		                            </address>
 		                            <b>Ruc:</b>
 		                            <address>
-		                                <strong id="rucR"></strong><br>
+		                                <strong id="rucR"><?php echo $venta["cClienteRuc"]; ?></strong><br>
 	                                </address>
 		                        </div><!-- /.col -->
 		                        <div class="col-sm-4 invoice-col">
-		                            <b></b> <br>
+		                            <b>Tipo Comprobante</b> <br>
 		                            <address>
-			                                <strong id="tipdocR"></strong><br>
+			                                <strong id="tipdocR"><?php echo $venta["tipoComprobante"]; ?></strong><br>
 		                            </address>
-		                            <b></b> <br>
+		                            <b>Serie - Numero</b> <br>
 		                            <address>
-			                                <strong id="sercomR"></strong><br>
+			                                <strong id="sercomR"><?php echo $venta["cDocSerie"].' - '.$venta["cDocNumero"]; ?></strong><br>
 	                                </address>
 		                            <b>Fec. Emisión:</b><?php echo date("d/m/Y"); ?><br/>
 		                            <b>Vendedor:</b><?php echo $venta["Vendedor"]; ?><br/>

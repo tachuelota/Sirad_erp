@@ -93,5 +93,28 @@ class venta_model extends CI_Model
 		$query = $this->db->query("SELECT fun_generar_serie_doc(".$idTipo.") as serie,fun_generar_numero_doc(".$idTipo.") as numero;");
 		return $query->row_array();
 	}
+
+	public function insert_doc_venta($data)
+	{
+		$procedure="call sp_ins_ven_docventa(?,?,?,?)";
+
+		$params =array(
+			intval($data['nDocVentaTipDoc']),
+			intval($data['nVenta_id']),
+			$data['dDocVentaFecEms'],
+			$data['dDocVentaFecVenc']);
+
+		$result = $this->db->query($procedure,$params);
+		$result->next_result();
+		$result->free_result();
+		if ($this->db->trans_status() === FALSE)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
 }
 ?>

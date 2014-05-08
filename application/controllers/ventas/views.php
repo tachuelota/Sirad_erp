@@ -191,8 +191,8 @@ class views extends CI_Controller
 
 	public function ver_ventas($nVenta_id)
 	{
-		if($this->ion_auth->in_group("ven_ven_prod"))
-		{
+		//if($this->ion_auth->in_group("ven_ven_prod"))
+		//{
 			$this->load->model('ventas/venta_model','venm');
 			$this->load->model('ventas/detalleventa_model','detvenm');
 			$dataheader['title'] = 'Ventas -(registrar)';			
@@ -205,9 +205,9 @@ class views extends CI_Controller
 			$datafooter['active'] = 'venta_prod';
 			$datafooter['dropactive'] = 'dropventas';
 			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/ventas', 'refresh');
+		//}
+		//else
+		//	redirect('/ventas', 'refresh');
 	} 
 
 	public function ver_caja($nCaja_id)

@@ -203,7 +203,7 @@
 														<div class="modal-footer">
 															<button type="reset" class="btn btn-flat btn-default" data-dismiss="modal">Cancelar</button>
 															<button id="btn-reg-clientes" type="button" class="btn btn-flat btn-primary">Registrar</button>
-															<!--<button id="btn-editar-clientes" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>-->
+															<button id="btn-editar-clientes" type="button" class="btn btn-flat btn-primary " style="display:none">Guardar</button>
 														</div>
 													</form>
 												</div>

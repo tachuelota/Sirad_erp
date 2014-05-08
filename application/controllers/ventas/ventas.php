@@ -61,7 +61,7 @@ class ventas extends CI_Controller {
 					"cVentaEst" => $Estado
 					);
 
-				$nVenta_id = $this->venm->insert($venta);
+				$nVenta_id = $this->venm->insert($venta,$id_Caja);
 				$Caja_Venta=array(
 					"nCaja_id"=>$id_Caja,	
 					"nVenta_id"=>$nVenta_id	
@@ -111,6 +111,18 @@ class ventas extends CI_Controller {
 					$DesTrans = "Venta Credito";
 					$MontoTrans = $form["amortizacion"];
 				}
+				//REGISTRAR EN DOC_VENTA
+				$tipoDoc=$form["tipo_doc"];
+				$fechaEmision=date('Y-m-d');
+				$fechaVencimiento=date('Y-m-d');
+				$Doc=array(
+					'nDocVentaTipDoc'=>$tipoDoc,
+					'nVenta_id'=>$nVenta_id,
+					'dDocVentaFecEms'=>$fechaEmision,
+					'dDocVentaFecVenc'=>$fechaVencimiento	
+					);
+
+				$this->venm->insert_doc_venta($Doc);
 
 				$DetalleSalProd = array();
 
@@ -161,7 +173,7 @@ class ventas extends CI_Controller {
 
 		$this->output
 			->set_content_type('application/json')
-			->set_output(json_encode("ok"));
+			->set_output(json_encode(array('id'=>$nVenta_id)));
 	}
 
 	public function anular()

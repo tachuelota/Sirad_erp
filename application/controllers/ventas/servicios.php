@@ -263,6 +263,14 @@ class servicios extends CI_Controller {
 			->set_content_type('application/json')
 			->set_output(json_encode(array('aaData' => $result)));
 	}
+	public function getClientes_Empresas()
+	{
+		$this->load->model('ventas/clientes_model','climod');
+		$result = $this->climod->get_clientes_empresas();
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode(array('aaData' => $result)));
+	}
 
 	
 }

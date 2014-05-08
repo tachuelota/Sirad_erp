@@ -88,6 +88,11 @@ class clientes_model extends CI_Model {
 		$query = $this->db->get_where('ven_cliente', array('cClienteDNI' => "00000000"));
 		return $query->row_array();
 	}
+	public function get_clientes_empresas()
+	{
+		$query = $this->db->query("select * from ven_cliemp_all;");
+		return $query -> result_array();
+	}
 
 
 }

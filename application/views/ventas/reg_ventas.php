@@ -231,7 +231,7 @@
 														</select>
 													</div>
 												</div>
-												<div class="form-group">
+												<!--<div class="form-group">
 													<label class="col-lg-4 control-label" for="importe">Serie - Comprobante</label>
 													<div class="col-lg-8">
 														<div class="input-group">
@@ -239,7 +239,7 @@
 															<span class="input-group-addon"><i class="fa fa-paste"></i></span>
 														</div>
 													</div>
-												</div>
+												</div>-->
 												<div class="form-group">
 													<label class="col-lg-4 control-label" for="importe">Importe</label>
 													<div class="col-lg-8">
@@ -478,13 +478,13 @@
 							<h4 class="modal-title"><i class="fa fa-search"></i>Clientes</h4>
 						</div>
 						<div class="modal-body">
-							<table id="select_cliente_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>ventas/servicios/getClientes">
+							<table id="select_cliente_table" class="table table-striped table-bordered bootstrap-datatable datatable" data-source="<?php echo base_url();?>ventas/servicios/getClientes_Empresas">
 								<thead>
 									<tr>
-										<th>Nombres</th>
-										<th>Apellidos</th>
+										<th>Cliente</th>
+										<th>RUC</th>
+										<th>Telefono</th>
 										<th>DNI</th>
-										<th>Línea de Crédito</th>
 									</tr>
 								</thead>
 								<tbody></tbody>

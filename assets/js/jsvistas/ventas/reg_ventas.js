@@ -51,7 +51,7 @@ $(document).ready(function(){
 			if(formapago == 2){
 				UnselectRow("select_producto_table");
 				$("#cuotas_block").show();
-				montoproductos = totalcredito;
+				montoproductos = totalcontado;
 			}
 
 			else{
@@ -189,13 +189,15 @@ $(document).ready(function(){
 		},
 	});
 
-    var unlockload = function()
+    var unlockload = function(data)
     {
-    	/*$("#view_impri").attr("action",base_url+"ventas/views/ver_ventas/78"); 
-    	$("#view_impri").submit();*/
+    	
     	$.unblockUI({
-	    	onUnblock: function(){	    		
+	    	onUnblock: function(){
+	    		$("#view_impri").attr("action",base_url+"ventas/views/ver_ventas/"+data.id); 
+    			$("#view_impri").submit();	    		
 	            $(location).attr("href",base_url+"ventas/views/cons_ventas"); 
+	        	
 	        }
 	    });
     };
@@ -220,10 +222,10 @@ $(document).ready(function(){
 
 	ClienteOptions = {
 		"aoColumns":[
-			{ "mDataProp": "cClienteNom"},
-			{ "mDataProp": "cClienteApe"},
-			{ "mDataProp": "cClienteDNI"},		              
-			{ "mDataProp": "nClienteLineaOp"}
+			{ "mDataProp": "name"},
+			{ "mDataProp": "cClienteRuc"},
+			{ "mDataProp": "cClienteTel"},		              
+			{ "mDataProp": "cClienteDNI"}
 		],
 		"fnCreatedRow":getSimpleSelectRowCallBack(SelectClienteData)
 	};
@@ -309,10 +311,11 @@ $(document).ready(function(){
 	$("#btn-select-cliente").click(function(event){
 		event.preventDefault();
 		var data = SelectClienteData[0];
-		$('#cliente').val(data.cClienteNom+" "+data.cClienteApe);
+		$('#cliente').val(data.name);
 		$('#cliente_id').val(data.nCliente_id);
-		$('#clienteR').text(data.cClienteNom+" "+data.cClienteApe);
+		$('#clienteR').text(data.name);
 		$('#direccionR').text(data.cClientecDir);
+		$('#rucR').text(data.cClienteRuc);
 		$('#modalBuscarCliente').modal('hide');		
 	});
 
