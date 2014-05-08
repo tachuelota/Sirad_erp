@@ -41,6 +41,20 @@
 								<tr></tr>
 							</tbody>
 						</table>
+						<h3 class="box-title">Lista <small>de Empresas</small></h3>
+						<table class="table table-striped table-bordered bootstrap-datatable datatable" id="empresa_table" data-source="<?php echo base_url();?>ventas/servicios/getClientes_byEmpresa">
+							<thead>
+								<tr>
+									<th>RUC</th>
+									<th>Razón Social</th>
+									<th>Dirección Fiscal</th>
+									<th>Tipo de Contribuyente</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr></tr>
+							</tbody>
+						</table>
 						<div class="modal fade" id="modalClientes">
 							<div class="modal-dialog" style="width:1050px;">
 								<div class="modal-content">
@@ -197,6 +211,9 @@
 												<div class="tab-pane" id="tab_2">
 													<form id="ClienteForm1" class="form-horizontal" method="post" action-1="<?php echo base_url();?>ventas/clientes/registrar_empresa" action-2="<?php echo base_url();?>ventas/clientes/editar" data-source="<?php echo base_url();?>administracion/servicios/getUbigeo">
 														<input type="hidden" id="idEmpresa" name="idEmpresa">
+
+													<form id="ClienteForm1" class="form-horizontal" method="post" action-1="<?php echo base_url();?>ventas/clientes/registrar" action-2="<?php echo base_url();?>ventas/clientes/editar" data-source="<?php echo base_url();?>administracion/servicios/getUbigeo">
+														<input type="hidden" id="idClientes" name="idClientes">
 														<div class="modal-body">
 															<div class="row">
 																<div class="col-lg-6">
@@ -243,11 +260,10 @@
 																	</div>
 																	<div class="form-group">
 																		<label class="col-lg-3 control-label" for="etipCont">Tipo de Contribuyente</label>
-																		<div class="col-lg-8">													
-																			<div class="input-group">
-																				<input class="form-control" maxlength="50" id="etipCont" name="etipCont" class="focusedInput" type="text" data-prompt-position="topLeft" readonly>
-																				<span class="input-group-addon"><i class="fa fa-puzzle-piece"></i></span>
-																			</div>													
+																		<div class="col-lg-8">
+																			<select class="form-control SelectAjax" name="etipCont" id="etipCont" data-source="<?php echo base_url();?>
+																				administracion/servicios/getConstantesByClase/10" attrval="cConstanteValor" attrdesc="cConstanteDesc">
+																			</select>
 																		</div>
 																	</div>															
 																	<div class="form-group">

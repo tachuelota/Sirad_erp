@@ -410,6 +410,8 @@
 					</div>
 				</div>
 			</div>
+			<form id="view_impri" method="POST" target= "_blank">
+			</form>
 			<div class="modal fade" id="modalBuscarProducto">
 				<div class="modal-dialog" style="width:1050px;">
 					<div class="modal-content">
