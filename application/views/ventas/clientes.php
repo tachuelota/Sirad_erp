@@ -42,7 +42,7 @@
 							</tbody>
 						</table>
 						<h3 class="box-title">Lista <small>de Empresas</small></h3>
-						<table class="table table-striped table-bordered bootstrap-datatable datatable" id="empresa_table" data-source="<?php echo base_url();?>ventas/servicios/getclientes">
+						<table class="table table-striped table-bordered bootstrap-datatable datatable" id="empresa_table" data-source="<?php echo base_url();?>ventas/servicios/getClientes_byEmpresa">
 							<thead>
 								<tr>
 									<th>RUC</th>
