@@ -283,10 +283,7 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 				'error',
 				"topLeft" ,
 				true);
-
 		}
-		
-		
 	});
 
 
@@ -322,15 +319,10 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 				'error',
 				"topLeft" ,
 				true);
-
 		}
-		
-		
 	});
 
-	
-
-  	$( "#tipo_cliente").change(function () {
+	$( "#tipo_cliente").change(function () {
   		if($("#tipo_cliente").val()==1){			
 			$("#form_cliente").show();
 			$("#form_empresa").hide();
