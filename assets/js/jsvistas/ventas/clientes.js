@@ -19,39 +19,80 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 	};
 	cargarZonas();*/
 
+	//tipo_contribuyente = $("#etipCont").val();	
+		
+		
 	var ClientesTA = new DTActions({
 	'conf': '010',
 	'idtable': 'clientes_table',
-	'EditFunction': function(nRow, aData, iDisplayIndex) {
-		$("#btn-reg-clientes").hide();
-		$("#btn-editar-clientes").show();
-		$("#btn-reg-empresa").hide();
-		$("#btn-editar-empresa").show();
-		$('#modalClientes').modal('show');
-		$("#ruc").val(aData.cClienteRuc);
-		$("#nombres").val(aData.cClienteNom);	
-		$("#apellidos").val(aData.cClienteApe);
-		$("#dni").val(aData.cClienteDNI);	
-		$("#telefono").val(aData.cClienteTel);		
-		$("#direccion").val(aData.cClientecDir);
-		$("#referencia").val(aData.cClienteRef);
-		$("#ocupacion").val(aData.cClienteOcup);	
-		$("#eruc").val(aData.cClienteRuc);
-		$("#erazonSocial").val(aData.cClienteRazonSocial);
-		$("#etelefono").val(aData.cClienteTel);
-		$("#edirfiscal").val(aData.cClientecDir);
-		$("#etipCont").val(aData.cClienteTipoContribuyente);
-		$("#zonas").val(aData.nZona_id);	
-		$("#lineaop").val(aData.nClienteLineaOp);	
-		$("#idClientes").val(aData.nCliente_id);
-		cargarUbigeo(Ubigeos,"dist", "prov", "dep",aData.nUbigeo_id);
-		//cargarZonas();
+	'EditFunction': function(nRow, aData, iDisplayIndex) {				
+			$("#form_cliente").show();
+			$("#form_empresa").hide();
+			$("#btn-reg-clientes").hide();		
+			$("#btn-editar-clientes").show();
+			$('#modalClientes').modal('show');
+			$("#regClien").hide();	
+			$("#editClien").show();	
+			$("#tipo_cliente").hide();
+			$("#tipCliente").hide();
+			$("#ruc").val(aData.cClienteRuc);
+			$("#nombres").val(aData.cClienteNom);	
+			$("#apellidos").val(aData.cClienteApe);
+			$("#dni").val(aData.cClienteDNI);	
+			$("#telefono").val(aData.cClienteTel);		
+			$("#direccion").val(aData.cClientecDir);
+			$("#referencia").val(aData.cClienteRef);
+			$("#ocupacion").val(aData.cClienteOcup);	
+			$("#eruc").val(aData.cClienteRuc);
+			$("#erazonSocial").val(aData.cClienteRazonSocial);
+			$("#etelefono").val(aData.cClienteTel);
+			$("#edirfiscal").val(aData.cClientecDir);
+			$("#etipCont").val(aData.cClienteTipoContribuyente);
+			$("#zonas").val(aData.nZona_id);	
+			$("#lineaop").val(aData.nClienteLineaOp);	
+			$("#idClientes").val(aData.nCliente_id);
+			
+			cargarUbigeo(Ubigeos,"dist", "prov", "dep",aData.nUbigeo_id);
+
 		},
 	});
 
-	
+ 	var EmpresaTA = new DTActions({
+ 		'conf':'010',
+ 		'idtable' : 'empresa_table',
+ 		'EditFunction': function(nRow, aData,iDisplayIndex){
+			$("#form_empresa").show();
+			$("#form_cliente").hide();
+			$("#btn-reg-empresa").hide();
+			$("#btn-editar-empresa").show();
+			$('#modalClientes').modal('show');
+			$("#regClien").hide();	
+			$("#editClien").show();
+			$("#tipo_cliente").hide();
+			$("#tipCliente").hide();
+			$("#ruc").val(aData.cClienteRuc);
+			$("#nombres").val(aData.cClienteNom);	
+			$("#apellidos").val(aData.cClienteApe);
+			$("#dni").val(aData.cClienteDNI);	
+			$("#telefono").val(aData.cClienteTel);		
+			$("#direccion").val(aData.cClientecDir);
+			$("#referencia").val(aData.cClienteRef);
+			$("#ocupacion").val(aData.cClienteOcup);	
+			$("#eruc").val(aData.cClienteRuc);
+			$("#erazonSocial").val(aData.cClienteRazonSocial);
+			$("#etelefono").val(aData.cClienteTel);
+			$("#edirfiscal").val(aData.cClientecDir);
+			$("#etipCont").val(aData.cClienteTipoContribuyente);
+			$("#zonas").val(aData.nZona_id);	
+			$("#lineaop").val(aData.nClienteLineaOp);	
+			$("#idClientes").val(aData.nCliente_id);
+			cargarUbigeo(Ubigeos,"dist", "prov", "dep",aData.nUbigeo_id);
+			//cargarZonas();
+ 		},
 
-   ClientesRowCBF = function(nRow, aData, iDisplayIndex){
+ 	});	
+
+   	ClientesRowCBF = function(nRow, aData, iDisplayIndex){
 		ClientesTA.RowCBFunction(nRow, aData, iDisplayIndex);	
 	};
 
@@ -66,7 +107,9 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 	};
 	var ClientesTable = createDataTable2('clientes_table',ClientesOptions);
 
-	
+	ClientesRowCBF = function(nRow, aData, iDisplayIndex){
+		EmpresaTA.RowCBFunction(nRow, aData, iDisplayIndex);	
+	};
 	var EmpresaOptions = {
 		"aoColumns":[
 			{ "mDataProp": "cClienteRuc"},
@@ -74,7 +117,7 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 			{ "mDataProp": "cClientecDir"},	
 			{ "mDataProp": "cClienteTipoContribuyente"}
 				],
-		"fnCreatedRow": ClientesTA.RowCBFunction
+		"fnCreatedRow": EmpresaTA.RowCBFunction
 	};
 	var EmpresaTable = createDataTable2('empresa_table',EmpresaOptions);
 
@@ -164,6 +207,13 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 	$('.btn-registrar').click(function(e){
 		e.preventDefault();
 		$('#modalClientes').modal('show');
+		$('#form_cliente').show();
+		$("#tipo_cliente").show();	
+		$("#tipCliente").show();
+		$("#regClien").show();
+		tipo_cliente[0].selected = true;
+		$("#editClien").hide();	
+		$("#form_empresa").hide();
 	});
 
 	$("#pdfgen").click(function(){
@@ -199,6 +249,8 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 		$("#exportmodal").modal('hide');
 	});
 	  // fin
+
+	  
 	  //validar ruc
 	$("#btn-validar").click(function(e){
 		e.preventDefault();
@@ -271,4 +323,22 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 		
 		
 	});
+
+	
+
+  	$( "#tipo_cliente").change(function () {
+  		if($("#tipo_cliente").val()==1){			
+			$("#form_cliente").show();
+			$("#form_empresa").hide();
+		}
+		else{
+			$("#form_empresa").show();
+			$("#form_cliente").hide();
+			
+			
+		}
+
+	});
+     
+	
 });
