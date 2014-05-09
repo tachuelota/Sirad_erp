@@ -112,7 +112,12 @@ class ventas extends CI_Controller {
 					$MontoTrans = $form["amortizacion"];
 				}
 				//REGISTRAR EN DOC_VENTA
-				$tipoDoc=$form["tipo_doc"];
+				if($form["forma_pago"]==1){
+					$tipoDoc=$form["tipo_doc_contado"];
+				}else{
+					$tipoDoc=$form["tipo_doc_credito"];
+				}
+				
 				$fechaEmision=date('Y-m-d');
 				$fechaVencimiento=date('Y-m-d');
 				$Doc=array(

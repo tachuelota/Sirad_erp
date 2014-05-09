@@ -6,9 +6,14 @@ $(document).ready(function(){
 	var totalcredito = 0;
 	var formapago = null;
 	var moneda = getAjaxObject(base_url+"administracion/servicios/getTipoMonedas").aaData;
-	var tipoigv = getAjaxObject(base_url+"administracion/servicios/getTipoIGVActivo").aaData;	
-	$("#fechaR").text(fechanow());
+	var tipoigv = getAjaxObject(base_url+"administracion/servicios/getTipoIGVActivo").aaData;
+	//var opcionescredito=getAjaxObject(base_url+"administracion/servicios/getConstantesByClase/11").aaData;
+	//var opcionescontado=getAjaxObject(base_url+"administracion/servicios/getConstantesByClase/12").aaData;	
+	//var band=true;
 
+	$("#fechaR").text(fechanow());
+	
+	
 	$("#EnviarVentaForm").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:3000});
 	$("#tipo_moneda").SelectAjax(moneda);
 	$("#tipo_igv").SelectAjax(tipoigv);
@@ -26,6 +31,11 @@ $(document).ready(function(){
 		
 
 		formapago = $("#forma_pago").val();	
+		/*if(formapago == 1){		
+			$("#tipo_doc").SelectAjax(opcionescontado);
+		}else{		
+			$("#tipo_doc").SelectAjax(opcionescredito);
+		}*/
 		
 		if($("#tipo_moneda").val()==1)
 			TipoMoneda = " - s/.";
@@ -41,21 +51,32 @@ $(document).ready(function(){
 			$("#cuotas_block").hide();
 			$("#saldo_block").hide();
 			$("#resume-credito").hide();
+			$("#lblTipoDocumentoContado").show();
+			$("#tipo_doc_contado").show();
+			$("#tipo_doc_credito").hide();
+			$("#lblTipoDocumentoCredito").hide();
 			montoproductos = totalcontado;
 		}
 		else{
 			$("#saldo_block").show();
 			$("#pagocont_block").hide();
 			$("#resume-credito").show();
+			$("#tipo_doc").show();
+			$("#lblTipoDocumentoContado").hide();
+			$("#tipo_doc_contado").hide();
+			$("#tipo_doc_credito").show();
+			$("#lblTipoDocumentoCredito").show();
 			
 			if(formapago == 2){
 				UnselectRow("select_producto_table");
 				$("#cuotas_block").show();
+				//$("#tipo_doc").show();
 				montoproductos = totalcontado;
 			}
 
 			else{
 				$("#cuotas_block").hide();
+				//$("#tipo_doc").show();
 				montoproductos = totalcontado;
 			}
 		}

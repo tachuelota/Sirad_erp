@@ -114,7 +114,7 @@
 												</div> 
 										  	</div>
 											<div class="form-group">
-												<label class="col-lg-4 control-label" for="forma_pago">Tipo de Pago</label>
+												<label class="col-lg-4 control-label" for="forma_pago">Forma de Pago</label>
 												<div class="col-lg-8">
 													<select class="form-control SelectAjax" name="forma_pago" id="forma_pago" data-source="<?php echo base_url();?>
 														administracion/servicios/getConstantesByClase/2" attrval="cConstanteValor" attrdesc="cConstanteDesc">
@@ -176,7 +176,24 @@
 												</div>
 											</div>
 										</div>
+
 										<div class="col-lg-6">
+											<div class="form-group">
+												<label class="col-lg-4 control-label" for="lblTipoDocumentoContado" id="lblTipoDocumentoContado">Tipo de Documento</label>
+												<div class="col-lg-8"> 
+													<select class="form-control SelectAjax" name="tipo_doc_contado" id="tipo_doc_contado" data-source="<?php echo base_url();?>
+														administracion/servicios/getConstantesByClase/12" attrval="cConstanteValor" attrdesc="cConstanteDesc">
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-lg-4 control-label" for="lblTipoDocumentoCredito" id="lblTipoDocumentoCredito">Tipo de Documento</label>
+												<div class="col-lg-8">
+													<select class="form-control SelectAjax" name="tipo_doc_credito" id="tipo_doc_credito" data-source="<?php echo base_url();?>
+														administracion/servicios/getConstantesByClase/11" attrval="cConstanteValor" attrdesc="cConstanteDesc">
+													</select>
+												</div>
+											</div>
 											<div id="saldo_block" >
 												<div class="form-group">
 													<label class="col-lg-4 control-label" for="amortizacion">A cuenta</label>
@@ -222,15 +239,9 @@
 				                                    </div>
 			                                    </div>
 											</div>
+
 											<div id="pagocont_block">
-												<div class="form-group">
-													<label class="col-lg-4 control-label" for="tipo_doc">Tipo de Documento</label>
-													<div class="col-lg-8">
-														<select class="form-control SelectAjax" name="tipo_doc" id="tipo_doc" data-source="<?php echo base_url();?>
-															administracion/servicios/getConstantesByClase/7" attrval="cConstanteValor" attrdesc="cConstanteDesc">
-														</select>
-													</div>
-												</div>
+												
 												<!--<div class="form-group">
 													<label class="col-lg-4 control-label" for="importe">Serie - Comprobante</label>
 													<div class="col-lg-8">
