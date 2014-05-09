@@ -35,6 +35,7 @@ public function registrar(){
 			$ruc=$form["ruc"];
 			$razonsocial=null;
 			$tipoContribuyente=-1;
+
 			$Cliente = array(
 				'cClienteNom'=> $ClienteNombre,
 				'cClienteApe'=> $ClienteApell,
@@ -49,6 +50,7 @@ public function registrar(){
 			 	'cClienteRuc'=>$ruc,
 			 	'cClienteRazonSocial'=>$razonsocial,
 			 	'cClienteTipoContribuyente'=>$tipocontribuyente);
+			 	'cClienteRuc'=>$ruc);
 			if($this->climod->insert($Cliente))
 				$return = array("responseCode"=>200, "datos"=>"ok");
 			else

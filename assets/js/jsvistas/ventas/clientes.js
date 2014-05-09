@@ -250,7 +250,6 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 	});
 	  // fin
 
-	  
 	  //validar ruc
 	$("#btn-validar").click(function(e){
 		e.preventDefault();
@@ -261,6 +260,8 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 			$("#refRUC").val(datos.nombre);
 			$("#direccion").val(datos.direccion);
 			$("#estado").val(datos.estado);
+			$("#nombres").val(datos.nombre);
+			$("#direccion").val(datos.direccion);
 			var tipo=datos.tipo;
 			/*if(tipo=="SOCIEDAD ANONIMA CERRADA"){
 				//$("#tipContribuyente").val(tipo);
@@ -272,7 +273,9 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 		}
 		else
 		{
+
 			$("#refRUC").val("");
+			$("#nombres").val("");
 			$("#direccion").val("");
 			$('#ruc').validationEngine(
 				'showPrompt',
@@ -285,6 +288,7 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 		
 		
 	});
+
 
 	$("#btn-validar-empresa").click(function(e){
 		e.preventDefault();
