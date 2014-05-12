@@ -85,7 +85,7 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 			$("#etipCont").val(aData.cClienteTipoContribuyente);
 			$("#zonas").val(aData.nZona_id);	
 			$("#lineaop").val(aData.nClienteLineaOp);	
-			$("#idClientes").val(aData.nCliente_id);
+			$("#idEmpresa").val(aData.nCliente_id);
 			cargarUbigeo(Ubigeos,"dist", "prov", "dep",aData.nUbigeo_id);
 			//cargarZonas();
  		},
@@ -181,6 +181,7 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 				{
 					$('#modalClientes').modal('hide');
 					enviar($("#ClienteForm1").attr("action-2"),{formulario:$("#ClienteForm1").serializeObject()}, successClientes, null);
+					//console.log($("#ClienteForm1").serializeObject());
 				}
 			});
 	});
@@ -188,17 +189,11 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 	var successClientes = function(){
 		$.unblockUI({
 		    onUnblock: function(){
+		    	$('#ClienteForm1').reset();
+				EmpresaTable.fnReloadAjax();
 				$('#ClienteForm').reset();
-				ClientesTable.fnReloadAjax()
-			}
-		});
-	}
-
-	var successClientes = function(){
-		$.unblockUI({
-		    onUnblock: function(){
-				$('#ClienteForm1').reset();
-				EmpresaTable.fnReloadAjax()
+				ClientesTable.fnReloadAjax();
+				//alert("HOLA");
 			}
 		});
 	}
@@ -251,7 +246,7 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 	  // fin
 
 	  //validar ruc
-	$("#btn-validar").click(function(e){
+	$("#btn_validar_cliente").click(function(e){
 		e.preventDefault();
 		ruc = $("#ruc").val();
 		//alert(ruc);
@@ -287,7 +282,7 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 	});
 
 
-	$("#btn-validar-empresa").click(function(e){
+	$("#btn_validar_empresa").click(function(e){
 		e.preventDefault();
 		ruc = $("#eruc").val();
 		//alert(ruc);

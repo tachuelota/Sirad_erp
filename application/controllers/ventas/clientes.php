@@ -49,8 +49,7 @@ public function registrar(){
 			 	'cClienteTel'=>$ClienteTelefono,
 			 	'cClienteRuc'=>$ruc,
 			 	'cClienteRazonSocial'=>$razonsocial,
-			 	'cClienteTipoContribuyente'=>$tipocontribuyente);
-			 	'cClienteRuc'=>$ruc);
+			 	'cClienteTipoContribuyente'=>$tipoContribuyente);
 			if($this->climod->insert($Cliente))
 				$return = array("responseCode"=>200, "datos"=>"ok");
 			else
@@ -160,7 +159,7 @@ public function registrar(){
 			 	'cClienteTel'=>$ClienteTelefono,
 			 	'cClienteRuc'=>$ruc,
 			 	'cClienteRazonSocial'=>$razonsocial,
-			 	'cClienteTipoContribuyente'=>$tipocontribuyente);					
+			 	'cClienteTipoContribuyente'=>$tipoContribuyente);					
 			if($this->climod->update($nCliente_id,$data))
 				$return = array('responseCode'=>200, 'datos'=>$data);
 			else
@@ -171,7 +170,59 @@ public function registrar(){
 			
 		$return = json_encode($return);
 		echo $return;
-	} 
+	}
+
+	public function editar_empresa(){
+		$form = $this->input->post('formulario',null);
+
+		$ClienteNombre = null;
+		$ClienteApell = null; 
+		$ClienteDNI = null;
+		$ClienteZona = null;
+		$ClienteRef = null;
+		$ClienteLinOpe = null;
+		$ClienteOcup = null;
+		$ClienteTelefono=null;
+		$Ruc=null;
+		$razonsocial=null;
+		$tipocontribuyente=null;
+		
+		if ($form!=null){
+
+			$nCliente_id =$form["idEmpresa"];
+			$ClienteZona = intval($this->session->userdata('current_local')["nUbigeo_id"]);
+			$ClienteLinOpe=1;				
+			$cClienteArcCredito =null;			
+			$ruc=$form["eruc"];
+			$razonsocial=$form["erazonsocial"];
+			$tipocontribuyente=$form["etipCont"];
+			$ClienteTelefono=$form["etelefono"];
+			$ClienteDirec = $form["edirfiscal"];
+			$Empresa = array(
+				'cClienteNom'=> $ClienteNombre,
+				'cClienteApe'=> $ClienteApell,
+				'cClienteDNI'=> $ClienteDNI,				
+			 	'cClienteRef' => $ClienteRef,
+				'cClientecDir' => $ClienteDirec,
+			 	'nZona_id'=> $ClienteZona,
+			 	'nClienteLineaOp'=> $ClienteLinOpe,
+			 	'cClienteArcCredito' =>"0",
+			 	'cClienteOcup'=> $ClienteOcup,
+			 	'cClienteTel'=>$ClienteTelefono,
+			 	'cClienteRuc'=>$ruc,
+			 	'cClienteRazonSocial'=>$razonsocial,
+			 	'cClienteTipoContribuyente'=>$tipocontribuyente);					
+			if($this->climod->update($nCliente_id,$Empresa))
+				$return = array('responseCode'=>200, 'datos'=>$Empresa);
+			else
+				$return = array('responseCode'=>400, 'greeting'=>'Bad');
+		}
+		else 
+			$return = array("responseCode"=>400, "greeting"=>"Bad");
+			
+		$return = json_encode($return);
+		echo $return;
+	}  
 	
 
 	

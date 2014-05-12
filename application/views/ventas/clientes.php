@@ -86,7 +86,7 @@
 																<div class="col-lg-8">
 																	<div class="input-group">
 																		<input class="form-control focused" id="ruc" name="ruc" type="text" data-prompt-position="topLeft">
-																		<div class="btn btn-info btn-flat input-group-addon btn-validar">
+																		<div class="btn btn-info btn-flat input-group-addon" id="btn_validar_cliente">
 				                                            				<i class="ion-checkmark" style="color:white;"></i>
 				                                        				</div>
 																	</div>
@@ -212,8 +212,8 @@
 											</form>
 										</div>
 										<div id="form_empresa">	
-											<form id="ClienteForm1" class="form-horizontal" method="post" action-1="<?php echo base_url();?>ventas/clientes/registrar" action-2="<?php echo base_url();?>ventas/clientes/editar" data-source="<?php echo base_url();?>administracion/servicios/getUbigeo">
-												<input type="hidden" id="idClientes" name="idClientes">
+											<form id="ClienteForm1" class="form-horizontal" method="post" action-1="<?php echo base_url();?>ventas/clientes/registrar_empresa" action-2="<?php echo base_url();?>ventas/clientes/editar_empresa" data-source="<?php echo base_url();?>administracion/servicios/getUbigeo">
+												<input type="hidden" id="idEmpresa" name="idEmpresa">
 												<div class="modal-body">
 													<div class="row">
 														<div class="col-lg-6">
@@ -222,7 +222,7 @@
 																<div class="col-lg-8">
 																	<div class="input-group">
 																		<input class="form-control focused validate[required,custom[onlyNumberSp]] validate[maxSize[11]] validate[minSize[11]]" id="eruc" name="eruc" type="text" data-prompt-position="topLeft">
-																		<div class="btn btn-info btn-flat input-group-addon btn-validar">
+																		<div class="btn btn-info btn-flat input-group-addon" id="btn_validar_empresa">
 				                                            				<i class="ion-checkmark" style="color:white;"></i>
 				                                        				</div>
 																	</div>
