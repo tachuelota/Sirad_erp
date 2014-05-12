@@ -20,7 +20,7 @@
             <div class="footer">                                                               
                 <button type="submit" class="btn bg-light-blue btn-block">Ingresar</button>  
                 
-                <!--p><a href="#">I forgot my password</a></p-->
+                <p><a href="<?php echo base_url() ?>auth/forgot_password">Olvidé mi contraseña</a></p>
             </div>
         </form>
         <div class="margin text-center">

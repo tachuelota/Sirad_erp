@@ -62,7 +62,7 @@
 		                            </address>
 		                            <b>Serie - Numero</b> <br>
 		                            <address>
-			                                <strong id="sercomR"><?php echo $venta["cDocSerie"].' - '.$venta["cDocNumero"]; ?></strong><br>
+			                                <?php echo $venta["cDocSerie"].' - '.$venta["cDocNumero"]; ?><strong id="sercomR"></strong><br>
 	                                </address>
 		                            <b>Fec. Emisión:</b><?php echo date("d/m/Y"); ?><br/>
 		                            <b>Vendedor:</b><?php echo $venta["Vendedor"]; ?><br/>
@@ -145,6 +145,40 @@
 						<a href="#" id="imprimir" class="btn btn-success btn-flat" style="float: right;"> <i class="fa fa-print"></i>
 							Imprimir
 						</a>
+						<button type="button" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#compose-modal" > <i class="fa fa-envelope"></i>  Enviar</button>
+					</div>
+					<!--MODALS-->
+					<div class="modal fade" id="compose-modal">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                  <h4 class="modal-title"><i class="fa fa-envelope-o"></i>  Enviar Mensaje de Facturación</h4>
+                                </div>
+                                <div class="modal-body">
+                                	<form id="EnviarForm" class="form-horizontal" action-1="<?php echo base_url();?>mensajes/facturacion/sendemail_fact">  
+                                        <div class="form-group">
+                                            <div class="col-lg-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">TO:</span>                          
+                                                    <input name="email_to" id="email_to" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                        	<div class="col-lg-12">
+										    <textarea id="email_message" class="form-control" style="height: 120px;" placeholder="Message" name="message"></textarea>
+											</div>
+										</div>  
+                                        <div class="modal-footer clearfix">
+											<button type="button" class="btn btn-flat" data-dismiss="modal">Cancelar</button>
+	                                        <button id="btn_enviar_correo" type="button" class="btn btn-primary btn-flat"> Enviar</button>
+                                    	</div>
+                                    	                                  
+                                	</form>
+                                </div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
