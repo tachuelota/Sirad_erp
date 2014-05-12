@@ -303,6 +303,7 @@
 										<form method="post" target="_blank" id="CreatePDFForm">
 											<input type="hidden" name="title" id="title"/>
 											<input type="hidden" name="table_clientes" id="table_clientes"/>
+											<input type="hidden" name="table_empresas" id="table_empresas">
 											<div class="row">
 												<div class="col-lg-6">
 										            <!-- small box -->

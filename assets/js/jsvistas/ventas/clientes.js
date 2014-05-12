@@ -219,12 +219,22 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 				[	'style="width: 5%;" class="head" ','style="width: 25%;" class="head" ','style="width: 15%;" class="head" ',
 					'style="width: 15%;" class="head" ','style="width: 15%;" class="head" ','style="width: 25%;" class="head" ',],
 				['nCliente_id','cClienteNom','cClienteDNI','nClienteLineaOp','cZonaDesc','cClientecDir'],
-				[	'style="width: 5%;" ','style="width: 25%;" ','style="width: 15%;" ',
+				[	'style="width: 5%;" ','style="width: 25%;" ','style="width: 35%;" ',
 					'style="width: 15%;" ','style="width: 15%;" ','style="width: 25%;" '],
 					ClientesTable.fnGetData()));
+
+		table_Empresas = toHTML(crearTablaToArray("tempresa",
+				['ID','RAZON SOCIAL','DIRECCION FISCAL','TIPO CONTRIBUYENTE'],
+				[	'style="width: 25%;" class="head" ','style="width: 25%;" class="head" ','style="width: 25%;" class="head" ',
+					'style="width: 25%;" class="head" ',],
+				['nCliente_id','cClienteRazonSocial','cClientecDir','cClienteTipoContribuyente'],
+				[	'style="width: 25%;" ','style="width: 25%;" ','style="width: 25%;" ',
+					'style="width: 25%;" '],
+					EmpresaTable.fnGetData()));
 		//};
 		$("#title").val("LISTA DE CLIENTES");
 		$("#table_clientes").val(table_clientes);
+		$("#table_empresas").val(table_Empresas);
 		$("#exportmodal").modal('show');	
 		console.log(table_clientes);
 	});

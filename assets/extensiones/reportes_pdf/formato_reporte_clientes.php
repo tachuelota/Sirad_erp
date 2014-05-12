@@ -1,6 +1,7 @@
 <?php
 $title = $_POST['title'];
 $table_clientes = $_POST['table_clientes'];
+$table_empresa=$_POST['table_empresas'];
 
 ob_start();
 ?>
@@ -52,6 +53,22 @@ ob_start();
 		text-align: left;
 		padding-left: 17px;
 	}
+	#tempresa{
+		border-collapse: collapse;
+		text-align: center;
+	}
+	#tempresa td.head{
+		background: #111;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	#tempresa th, #tempresa td{
+		border: black 1px solid;
+	}
+	#tempresa td.izquierda{
+		text-align: left;
+		padding-left: 17px;
+	}
 	.upbold{
 		text-align: right;
 	}
@@ -81,7 +98,13 @@ ob_start();
 			</table>	
 				Fecha Emision: <?php echo date('d/m/Y'); ?><br>
 			<br>
+		Cliente
+		<br>	
 		<?php echo $table_clientes ?><br>
+
+		Empresa
+		<br>
+		<?php echo $table_empresa ?><br>
 			<br>
 		</div>
     </page>

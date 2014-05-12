@@ -2,6 +2,7 @@
 $title = $_POST['title'];
 $table_resumen = $_POST['table_resumen'];
 $table_clientes = $_POST['table_clientes'];
+$table_empresa=$_POST['table_empresas'];
 
 header('Content-type: application/x-msdownload; charset=utf-16');
 header('Content-Disposition: attachment; filename=reporte_clientes_'.date("d-m-Y").'.xls');
@@ -46,6 +47,24 @@ header('Expires: 0');
 		text-align: left;
 		padding-left: 17px;
 	}
+
+
+	
+	#tempresa{
+		border-collapse: collapse;
+		text-align: center;
+	}
+	#tempresa td.head{
+		background: #e7e6e6;
+	}
+	#tempresa th, #tempresa td{
+		border: black 1px solid;
+	}
+	#tempresa td.izquierda{
+		text-align: left;
+		padding-left: 17px;
+	}
+
 	.upbold{
 		text-align: right;
 	}
@@ -61,5 +80,6 @@ header('Expires: 0');
 		<br><?php echo $table_resumen ?><br>
 		<?php echo $table_clientes ?><br>
 		<br>
+		<?php echo $table_empresa ?><br>
     </body>
     </html>
