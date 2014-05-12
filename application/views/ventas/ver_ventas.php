@@ -55,12 +55,15 @@
 		                                <strong id="rucR"><?php echo $venta["cClienteRuc"]; ?></strong><br>
 	                                </address>
 		                        </div><!-- /.col -->
+
 		                        <div class="col-sm-4 invoice-col">
-		                            <b>Tipo Comprobante</b> <br>
+		                            
 		                            <address>
-			                                <strong id="tipdocR"><?php echo $venta["tipoComprobante"]; ?></strong><br>
+		                                 
+		                                <strong id="tipdocR"><?php echo $venta["tipoComprobante"]; ?></strong><br>
+		                                
 		                            </address>
-		                            <b>Serie - Numero</b> <br>
+		                            
 		                            <address>
 			                                <?php echo $venta["cDocSerie"].' - '.$venta["cDocNumero"]; ?><strong id="sercomR"></strong><br>
 	                                </address>
@@ -68,6 +71,7 @@
 		                            <b>Vendedor:</b><?php echo $venta["Vendedor"]; ?><br/>
 		                            <b>Tipo Pago:</b><?php echo $venta["tipo_pago"]; ?><br/><br/>
 		                        </div><!-- /.col -->
+
 		                    </div><!-- /.row -->
 							<!-- TABLA DE PRODUCTOS POR COMPRAR aqui -->
 							<!-- Table row -->
@@ -105,34 +109,42 @@
 								<div class="col-xs-6 col-lg-6"></div>
 								<div class="col-xs-6 col-lg-6">
 									<table class="table">
-										<tr>
-											<td >
-												<strong>Subtotal</strong>
-											</td>
-											<td>
-												<?php echo $venta["SubTotal"];?></td>
+									
+										<?php if($venta["tipoComprobante"] <> "Boleta") {?> 
+											<tr>
+												<td >
+													<strong>Subtotal</strong>
+												</td>
+												<td>
+												<?php echo $venta["SubTotal"];?>
+												</td>
 											</tr>
 											<tr>
 												<td>
 													<strong>Descuento</strong>
 												</td>
 												<td>
-													<?php echo $venta["Descuento"];?>%</td>
+													<?php echo $venta["Descuento"];?>%
+												</td>
 											</tr>
 											<tr>
 												<td>
 													<strong>IGV</strong>
 												</td>
 												<td>
-													<?php echo $venta["TipoIGV"];?>%</td>
-											</tr>
-											<tr>
-												<td>
-													<strong>Total</strong>
+													<?php echo $venta["TipoIGV"];?>%
 												</td>
-												<td>
-													<?php echo $venta["Total"];?></td>
 											</tr>
+										<?php }?>
+
+										<tr>
+											<td>
+												<strong>Total</strong>
+											</td>
+											<td>
+												<?php echo $venta["Total"];?>
+											</td>
+										</tr>
 									</table>
 								</div>
 							</div>
