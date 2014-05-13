@@ -25,7 +25,8 @@ class email extends CI_Controller {
         $para           =  $trabCorreo;
         $subject        =  "Listado de Productos con Stock Mínimo";
 
-        $html = '<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        $html = '<!DOCTYPE html>
+        <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
             <style type="text/css">
                 h2{
                     font-size: 16px;

@@ -172,7 +172,8 @@
                                         <div class="form-group">
                                             <div class="col-lg-12">
                                                 <div class="input-group">
-                                                    <span class="input-group-addon">TO:</span>                          
+                                                    <span class="input-group-addon">TO:</span>
+                                                    <input type="hidden" name="nVenta_id" value="<?php echo $venta["nVenta_id"];?>">                         
                                                     <input name="email_to" id="email_to" type="text" class="form-control">
                                                 </div>
                                             </div>
