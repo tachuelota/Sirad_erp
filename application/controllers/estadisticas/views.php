@@ -20,13 +20,13 @@ class views extends CI_Controller
 
 	public function index()
 	{
-		if($this->ion_auth->in_group_type(2))
+		if($this->ion_auth->in_group_type(4))
 		{			
-			$dataheader['title'] = 'Logistica';			
+			$dataheader['title'] = 'Estadisticas';			
 			$this->load->view('templates/headers.php',$dataheader);		
 			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/homepage.php');
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/homepage.js';
+			$this->load->view('estadisticas/homepage.php');
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/estadisticas/homepage.js';
 			$datafooter['active'] = '';
 			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
@@ -35,308 +35,43 @@ class views extends CI_Controller
 			redirect('/', 'refresh');
 	}
 
-	public function cons_ordencompra()
+	public function homepage_estadistica_logistica()
 	{
-		if($this->ion_auth->in_group("log_ord_comp"))
+		if($this->ion_auth->in_group_type(4))
 		{			
-			$dataheader['title'] = 'Orden de Compras - ';			
+			$dataheader['title'] = 'Estadisticas';			
 			$this->load->view('templates/headers.php',$dataheader);		
 			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/cons_ordencompras.php');
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/cons_ordencompras.js';
-			$datafooter['active'] = 'ord_com';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}
-
-	public function reg_ordencompra()
-	{
-		if($this->ion_auth->in_group("log_ord_comp"))
-		{
-			$dataheader['title'] = 'OrdenCompras (Registrar)';			
-			$pagedata["local"] = $this->session->userdata('current_local');			
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/reg_ordencompras.php',$pagedata);
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/reg_ordencompras.js';
-			$datafooter['active'] = 'ord_com';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}
-
-	public function ver_ordencompras($nOrdenCom_id)
-	{
-		if($this->ion_auth->in_group("log_ord_comp"))
-		{
-			$this->load->model('logistica/ordcompra_model','ordcomp');
-			$dataheader['title'] = 'OrdenCompras (Ver)';			
-			$pagedata = $this->ordcomp->get_OrdCompra_views($nOrdenCom_id);				
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/ver_ordencompras.php',$pagedata);
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/ver_ordencompras.js';
-			$datafooter['active'] = 'ord_com';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}
-
-	public function cons_ingresoproductos()
-	{
-		if($this->ion_auth->in_group("log_ing_prod"))
-		{
-			$dataheader['title'] = 'Ingreso Productos - ';			
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/cons_ingresoproductos.php');
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/cons_ingresoproductos.js';
-			$datafooter['active'] = 'ing_prod';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}	
-	public function reg_ingresoproductos()
-	{
-		if($this->ion_auth->in_group("log_ing_prod"))
-		{
-			$dataheader['title'] = 'Ingreso Productos (Registrar)';
-			$pagedata["local"] = $this->session->userdata('current_local');			
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/reg_ingresoproductos.php',$pagedata);
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/reg_ingresoproductos.js';
-			$datafooter['active'] = 'ing_prod';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}
-	public function editar_ingresoproductos($nIngProd_id)
-	{
-		if($this->ion_auth->in_group("log_ing_prod"))
-		{
-			$this->load->model('logistica/ingproducto_model','ingprod');
-			$dataheader['title'] = 'Ingreso Productos (Editar)';	
-			$pagedata = $this->ingprod->get_IngProducto($nIngProd_id);			
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/editar_ingresoproductos.php',$pagedata);
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/editar_ingresoproductos.js';
-			$datafooter['active'] = 'ing_prod';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}
-	public function ver_ingresoproductos($nIngProd_id)
-	{
-		if($this->ion_auth->in_group("log_ing_prod"))
-		{
-			$this->load->model('logistica/ingproducto_model','ingprod');
-			$dataheader['title'] = 'Ingreso Productos (Ver)';				
-			$pagedata = $this->ingprod->get_IngProducto($nIngProd_id);			
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/ver_ingresoproductos.php',$pagedata);
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/ver_ingresoproductos.js';
-			$datafooter['active'] = 'ing_prod';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}
-
-	public function kardex()
-	{
-		if($this->ion_auth->in_group("log_gen_kardex"))
-		{
-			$dataheader['title'] = 'Kardex - ';			
-			$pagedata["local"] = $this->session->userdata('current_local');			
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/kardex.php',$pagedata);
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/kardex.js';
-			$datafooter['active'] = 'gen_kardex';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}
-
-	public function productos()
-	{
-		if($this->ion_auth->in_group("log_prod"))
-		{
-			$dataheader['title'] = 'Productos - ';			
-			$pagedata["local"] = $this->session->userdata('current_local');
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/productos.php',$pagedata);
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/productos.js';
-			$datafooter['active'] = 'admin_prod';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}
-
-	public function proveedores()
-	{
-		if($this->ion_auth->in_group("log_prove"))
-		{
-			$dataheader['title'] = 'Proveedores - ';			
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/proveedores.php');
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/proveedores.js';
-			$datafooter['active'] = 'admin_provee';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}
-
-	public function cons_salidaproductos()
-	{
-		if($this->ion_auth->in_group("log_sal_prod"))
-		{
-			$dataheader['title'] = 'Salida Productos - ';			
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/cons_salidaproductos.php');
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/cons_salidaproductos.js';
-			$datafooter['active'] = 'sal_prod';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}
-	public function reg_salidaproductos()
-	{
-		if($this->ion_auth->in_group("log_sal_prod"))
-		{
-			$dataheader['title'] = 'Salida Productos (Registrar) ';			
-			$pagedata["local"] = $this->session->userdata('current_local');			
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/reg_salidaproductos.php',$pagedata);
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/reg_salidaproductos.js';
+			$this->load->view('estadisticas/homepage_estadistica_logistica.php');
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/estadisticas/homepage.js';
 			$datafooter['active'] = '';
-			$datafooter['dropactive'] = 'droplogistica';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
-			redirect('/logistica', 'refresh');
+			redirect('/', 'refresh');
 	}
 
-	public function ver_salidaproductos($nSalProd_id)
+	public function homepage_estadistica_venta()
 	{
-		if($this->ion_auth->in_group("log_sal_prod"))
-		{
-			$this->load->model('logistica/salproducto_model','salprod');			
-			$dataheader['title'] = 'Salida Productos (Ver)';
-			$pagedata = $this->salprod->get_SalProducto($nSalProd_id);
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/ver_salidaproductos.php',$pagedata);
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/ver_salidaproductos.js';
-			$datafooter['active'] = '';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}
-
-	public function saldo_inicial()
-	{
-		if($this->ion_auth->in_group("log_sal_ini"))
-		{
-			$dataheader['title'] = 'Saldo Inicial - ';			
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/saldo_inicial.php');
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/saldo_inicial.js';
-			$datafooter['active'] = 'saldos';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}
-	public function cons_ordencompra_mat()
-	{
-		if($this->ion_auth->in_group("log_ord_com_mat"))
+		if($this->ion_auth->in_group_type(4))
 		{			
-			$dataheader['title'] = 'Orden de Compras Materiales - ';			
+			$dataheader['title'] = 'Estadisticas';			
 			$this->load->view('templates/headers.php',$dataheader);		
 			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/cons_compras_mat.php');
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/cons_compras_mat.js';
-			$datafooter['active'] = 'ord_mat';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}
-
-	public function reg_ordencompra_mat()
-	{
-		//if($this->ion_auth->in_group("log_ord_com_mat"))
-		//{			
-			$dataheader['title'] = 'Registrar Compra Materiales - ';			
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/reg_compras_mat.php');
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/reg_compras_mat.js';
+			$this->load->view('estadisticas/homepage_estadistica_venta.php');
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/estadisticas/homepage.js';
 			$datafooter['active'] = '';
-			$datafooter['dropactive'] = 'droplogistica';
-			$this->load->view('templates/footer.php',$datafooter);
-		//}
-		//else
-		//	redirect('/logistica', 'refresh');
-	}
-	public function ver_ordencomprasmat($nOrdenComMat_id)
-	{
-		if($this->ion_auth->in_group("log_ord_com_mat"))
-		{
-			$this->load->model('logistica/compramat_model','ordcomp');
-			$dataheader['title'] = 'Orden Materiales (Ver)';			
-			$pagedata = $this->ordcomp->get_OrdCompraMat_views($nOrdenComMat_id);				
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/ver_ordenMateriales.php',$pagedata);
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/logistica/ver_ordenMateriales.js';
-			$datafooter['active'] = 'ord_com';
-			$datafooter['dropactive'] = 'droplogistica';
+			$datafooter['dropactive'] = '';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
 		else
-			redirect('/logistica', 'refresh');
+			redirect('/', 'refresh');
 	}
-
 
 	public function ventas_por_cliente()
 	{
-		if($this->ion_auth->in_group("log_prod"))
+		/*if($this->ion_auth->in_group(""))*/
 		{
 			$dataheader['title'] = 'Ventas por Clientes - ';			
 			$pagedata["local"] = $this->session->userdata('current_local');
@@ -348,13 +83,13 @@ class views extends CI_Controller
 			$datafooter['dropactive'] = 'dropestadistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
-		else
-			redirect('/logistica', 'refresh');
+		/*else
+			redirect('/estadisticas', 'refresh');*/
 	}
 
 	public function ventas_por_producto()
 	{
-		if($this->ion_auth->in_group("log_prod"))
+		/*if($this->ion_auth->in_group(""))*/
 		{
 			$dataheader['title'] = 'Ventas por Productos - ';			
 			$pagedata["local"] = $this->session->userdata('current_local');
@@ -366,61 +101,61 @@ class views extends CI_Controller
 			$datafooter['dropactive'] = 'dropestadistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
-		else
-			redirect('/logistica', 'refresh');
+		/*else
+			redirect('/estadisticas', 'refresh');*/
 	}
 
-	/*public function cons_pedidos()
+	public function ingr_egr_general()
 	{
-		if($this->ion_auth->in_group("log_ord_ped"))
+		/*if($this->ion_auth->in_group(""))*/
 		{
-			$dataheader['title'] = 'Dicars - Pedidos -';
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/pedidos.php');
-			$datafooter['jsvista'] = 'assets/js/jsvistas/logistica/pedidos.js';
-			$datafooter['active'] = 'ord_ped';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	}
-
-	public function reg_pedidos()
-	{
-		if($this->ion_auth->in_group("log_ord_ped"))
-		{
-			$this->load->model('administracion/Trabajadores_Model','tra');
-			$pagedata["trabajador"] = $this->tra->get_trabajadores($this->ion_auth->user()->row()->nPersonal_id);
+			$dataheader['title'] = 'Ingresos y Egresos Generales - ';			
 			$pagedata["local"] = $this->session->userdata('current_local');
-			$dataheader['title'] = 'Dicars - Pedidos -';
 			$this->load->view('templates/headers.php',$dataheader);		
 			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/reg_pedidos.php',$pagedata);
-			$datafooter['jsvista'] = 'assets/js/jsvistas/logistica/reg_pedidos.js';
-			$datafooter['active'] = 'ord_ped';
+			$this->load->view('estadisticas/ing_egr_generales.php',$pagedata);
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/estadisticas/ingr_egre_gen.js';
+			$datafooter['active'] = 'ingr_egre_gen';
+			$datafooter['dropactive'] = 'dropestadistica';
 			$this->load->view('templates/footer.php',$datafooter);
 		}
-		else
-			redirect('/logistica', 'refresh');
+		/*else
+			redirect('/estadisticas', 'refresh');*/
+	}
+	public function vent_by_cli_prod()
+	{
+		/*if($this->ion_auth->in_group(""))*/
+		{
+			$dataheader['title'] = 'Ventas por Clientes y Productos - ';			
+			$pagedata["local"] = $this->session->userdata('current_local');
+			$this->load->view('templates/headers.php',$dataheader);		
+			$this->load->view('templates/menu.php');
+			$this->load->view('estadisticas/vent_client_prod.php',$pagedata);
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/estadisticas/vent_by_cli_prod.js';
+			$datafooter['active'] = 'vent_by_cli_prod';
+			$datafooter['dropactive'] = 'dropestadistica';
+			$this->load->view('templates/footer.php',$datafooter);
+		}
+		/*else
+			redirect('/estadisticas', 'refresh');*/
+	}
+	public function ingr_egre_by_prod()
+	{
+		/*if($this->ion_auth->in_group(""))*/
+		{
+			$dataheader['title'] = 'Ingresos y Egresos por Producto - ';			
+			$pagedata["local"] = $this->session->userdata('current_local');
+			$this->load->view('templates/headers.php',$dataheader);		
+			$this->load->view('templates/menu.php');
+			$this->load->view('estadisticas/ing_egr_by_prod.php',$pagedata);
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/estadisticas/ingr_egre_by_prod.js';
+			$datafooter['active'] = 'ingr_egre_by_prod';
+			$datafooter['dropactive'] = 'dropestadistica';
+			$this->load->view('templates/footer.php',$datafooter);
+		}
+		/*else
+			redirect('/estadisticas', 'refresh');*/
 	}
 
-	public function ver_pedidos($nOrdPed_id)
-	{
-		if($this->ion_auth->in_group("log_ord_ped"))
-		{
-			$this->load->model('logistica/OrdPedido_Model','ordped');
-			$pagedata = $this->ordped->get_OrdPedido_Views($nOrdPed_id);
-			$dataheader['title'] = 'Dicars - Pedidos -';
-			$this->load->view('templates/headers.php',$dataheader);		
-			$this->load->view('templates/menu.php');
-			$this->load->view('logistica/ver_pedidos.php',$pagedata);
-			$datafooter['jsvista'] = 'assets/js/jsvistas/logistica/ver_pedidos.js';
-			$datafooter['active'] = 'ord_ped';
-			$this->load->view('templates/footer.php',$datafooter);
-		}
-		else
-			redirect('/logistica', 'refresh');
-	} */
 	
 }

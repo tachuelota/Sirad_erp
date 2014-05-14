@@ -6,7 +6,7 @@
 				<a href="<?php echo base_url();?>">Home</a>
 			</li>
 			<li>
-				<a href="<?php echo base_url();?>logistica">Estadísticas</a>
+				<a href="<?php echo base_url();?>estadisticas">Estadísticas</a>
 			</li>
 			<li class="active">Ventas por Clientes</li>
 		</ol>
@@ -32,9 +32,9 @@
 							</div>
 							<div class="col-lg-3">								
 								<div class="form-group">
-									<label class="col-lg-3 control-label" for="estado">Monto</label>
+									<label class="col-lg-3 control-label" for="monto">Monto</label>
 									<div class="col-lg-9">															
-										<select id="estado" name="estado" class="form-control  validate[required]" >
+										<select id="monto" name="monto" class="form-control  validate[required]" >
 											<option value="1">Mayor a 50</option>
 											<option value="2">Mayor a 100</option>
 											<option value="2">Mayor a 1000</option>
@@ -43,7 +43,7 @@
 								</div>	
 							</div>
 							<div class="col-lg-3">	
-								<button id="btn-rpt-tienda" type="button" class="col-lg-12 btn btn-success btn-flat" >Reporte</button>
+								<button id="btn-rpt-porcliente" type="button" class="col-lg-12 btn btn-success btn-flat" >Reporte</button>
 							</div>
 						</div></br>
 						<div class="form-horizontal">

@@ -235,6 +235,60 @@
 	                    </ul>
 	                </li>
                 <?php endif ?>
+
+                <?php if($this->ion_auth->in_group_type(4)): ?>
+	                <li id="dropestadistica" class="treeview">
+	                    <a href="#">
+	                        <i class="fa fa-bar-chart-o"></i>
+	                        <span>Estadísticas</span>
+	                        <i class="fa fa-angle-left pull-right"></i>
+	                    </a>
+	                    <ul class="treeview-menu">
+	                    	<?php /*if($this->ion_auth->in_group("")):*/ ?>
+								<li id="ventas_por_cliente">
+									<a class="ajax-link" href="<?php echo base_url();?>estadisticas/views/ventas_por_cliente">
+										<i class="fa fa-group"></i>
+										Ventas por Clientes</span>
+									</a>
+								</li>
+							<?php /*endif */?>
+							<?php /*if($this->ion_auth->in_group("")):*/ ?>
+								<li id="vent_prod">
+									<a class="ajax-link" href="<?php echo base_url();?>estadisticas/views/ventas_por_producto">
+										<i class="fa fa-shopping-cart"></i>
+										Ventas por Productos</span>
+									</a>
+								</li>
+							<?php /*endif */?>
+							
+							<?php /*if($this->ion_auth->in_group("")):*/ ?>
+								<li id="ingr_egre_gen">
+									<a class="ajax-link" href="<?php echo base_url();?>estadisticas/views/ingr_egr_general">
+										<i class="fa fa-retweet"></i>
+										Ingresos y Egresos Generales</span>
+									</a>
+								</li>
+							<?php /*endif*/ ?>
+							<?php /*if($this->ion_auth->in_group("")):*/ ?>
+								<li id="vent_by_cli_prod">
+									<a class="ajax-link" href="<?php echo base_url();?>estadisticas/views/vent_by_cli_prod">
+										<i class="fa  fa-puzzle-piece"></i>
+										Ventas por Cliente y Producto</span>
+									</a>
+								</li>
+							<?php /*endif*/ ?>
+							<?php /*if($this->ion_auth->in_group("")):*/ ?>
+								<li id="ingr_egre_by_prod">
+									<a class="ajax-link" href="<?php echo base_url();?>estadisticas/views/ingr_egre_by_prod">
+										<i class="fa  fa-refresh"></i>
+										Ingresos y Egresos por Producto</span>
+									</a>
+								</li>
+							<?php /*endif*/ ?>
+							
+	                    </ul>
+	                </li>
+                <?php endif ?>
             </ul>
         </section>
         <!-- /.sidebar -->

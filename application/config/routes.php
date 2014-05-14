@@ -45,6 +45,7 @@ $route['logout'] = "auth/logout";
 $route['logistica'] = "logistica/views/index";
 $route['ventas'] = "ventas/views/index";
 $route['administracion'] = "administracion/views/index";
+$route['estadisticas'] = "estadisticas/views/index";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
