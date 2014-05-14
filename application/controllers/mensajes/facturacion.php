@@ -29,7 +29,7 @@ class facturacion extends CI_Controller {
                 }
             </style>
         </head>
-        <body>  
+        <body>            
             <div class="content invoice" id="resumen_venta" style="background: none repeat scroll 0 0 #FFFFFF; margin: 10px auto; position: relative; width: 90%; padding: 20px 15px;">                    
                 <!-- title row -->
                 <div class="row" style="margin-left: -15px;margin-right: -15px;">
