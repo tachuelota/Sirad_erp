@@ -23,42 +23,56 @@
 						<div class="row">
 							<div class="col-lg-3">
 								<div class="form-group">
-									<label class="col-lg-3 control-label" for="anio">Año</label>
-									<div class="col-lg-9">															
-										<select id="anio" name="anio" class="form-control  validate[required]" >
-											<option value="1">2001</option>
-											<option value="2">2002</option>
-											<option value="3">2003</option>
-										</select>														
+									<label class="col-lg-2 control-label" for="anio">Año</label>
+									<div class="col-lg-9">
+										<div class="input-group">
+											<input class="form-control " id="anio" name="anio" type="text" data-prompt-position="topLeft">
+											<span class="input-group-addon"><i class="fa fa-file-text-o"></i></span>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-3">								
 								<div class="form-group">
-									<label class="col-lg-3 control-label" for="mes">Mes</label>
+									<label class="col-lg-2 control-label" for="mes">Mes</label>
 									<div class="col-lg-9">															
 										<select id="mes" name="mes" class="form-control  validate[required]" >
-											<option value="1">Enero</option>
-											<option value="2">Febrero</option>
-											<option value="3">Marzo</option>
-										</select>														
-									</div>
-								</div>	
-							</div>
-							<div class="col-lg-3">								
-								<div class="form-group">
-									<label class="col-lg-3 control-label" for="semana">Semana</label>
-									<div class="col-lg-9">															
-										<select id="semana" name="semana" class="form-control  validate[required]" >
-											<option value="1">Semana1</option>
-											<option value="2">Semana2</option>
-											<option value="3">Semana3</option>
+											<option value="1">Todos</option>
+											<option value="2">Enero</option>
+											<option value="3">Febrero</option>
+											<option value="4">Marzo</option>
+											<option value="5">Abril</option>
+											<option value="6">Mayo</option>
+											<option value="7">Junio</option>
+											<option value="8">Julio</option>
+											<option value="9">Agosto</option>
+											<option value="10">Setiembre</option>
+											<option value="11">Octubre</option>
+											<option value="12">Noviembre</option>
+											<option value="13">Diciembre</option>
 										</select>														
 									</div>
 								</div>	
 							</div>
 							<div class="col-lg-3">	
-								<button id="btn-rpt-ingegrprod" type="button" class="col-lg-12 btn btn-success btn-flat" >Reporte</button>
+								<label class="col-lg-0 col-sm-1 checkbox-inline" style="text-align:right;">
+									<input id="semanai" name="semanai" style="float:none;" type="checkbox">
+								</label>							
+								<div class="form-group">
+									<label class="col-lg-3 control-label" for="semana">Semana</label>
+									<div class="col-lg-7">															
+										<select id="semana" name="semana" class="form-control  validate[required]" >
+											<option value="1">Todos</option>
+											<option value="2">Semana1</option>
+											<option value="3">Semana2</option>
+											<option value="4">Semana3</option>
+											<option value="5">Semana4</option>
+										</select>														
+									</div>
+								</div>	
+							</div>
+							<div class="col-lg-3">	
+								<button id="btn-rpt-ingegrprod" type="button" class="col-lg-12 btn btn-success btn-flat" >Generar</button>
 							</div>
 						</div></br>
 						<div class="form-horizontal">

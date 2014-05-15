@@ -43,7 +43,7 @@
 								</div>	
 							</div>
 							<div class="col-lg-3">	
-								<button id="btn-rpt-porcliente" type="button" class="col-lg-12 btn btn-success btn-flat" >Reporte</button>
+								<button id="btn-rpt-porcliente" type="button" class="col-lg-12 btn btn-success btn-flat" >Generar</button>
 							</div>
 						</div></br>
 						<div class="form-horizontal">
