@@ -131,9 +131,15 @@
 													<div class="input-group">
 														<input class="form-control validate[required,custom[onlyNumberSp]]" maxlength="11" name="stockmax" id="stockmax" type="text" data-prompt-position="topLeft">
 														<span class="input-group-addon"><i class="fa fa-paste"></i></span>
+													</div>
 												</div>
 											</div>
-										</div>
+											<div class="form-group">
+												<label class="col-lg-4 control-label" for="tipo_impuesto">Afectado por Impuesto</label>
+												<div class="col-lg-8">
+													<select id="tipo_impuesto" class="form-control SelectAjax" name="tipo_impuesto" data-source="<?php echo base_url();?>administracion/servicios/getConstantesByClase/13" attrval="cConstanteValor" attrdesc="cConstanteDesc"></select>
+												</div>
+											</div>
 											<div class="form-group">
 												<label class="col-lg-4 control-label" for="estado">Estado</label>
 												<div class="col-lg-8">

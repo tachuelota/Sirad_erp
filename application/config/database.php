@@ -49,10 +49,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = '192.168.0.24';
+$db['default']['hostname'] = '192.168.0.55';
 $db['default']['username'] = 'dicars_user';
-$db['default']['password'] = '123456';
-$db['default']['database'] = 'dicarsbd';
+$db['default']['password'] = '123456ap';
+$db['default']['database'] = 'siradbd';
 $db['default']['dbdriver'] = 'MySQLi';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;

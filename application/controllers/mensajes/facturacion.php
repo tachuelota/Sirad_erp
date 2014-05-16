@@ -155,7 +155,7 @@ class facturacion extends CI_Controller {
         </html>';
 
         $para           =  $ClienteCorreo;
-        $subject        =  "Pruebaaasss";
+        $subject        =  "Facturación de su venta";
         $msg            =   $html;                            
         $mainheaders    =  'Content-type: text/html; charset=utf-8' . "\r\n";
         $mainheaders    .=  'From: SIRAD <'.$from.'>' . "\r\n";
