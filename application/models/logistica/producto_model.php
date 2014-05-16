@@ -12,7 +12,7 @@ class producto_model extends CI_Model
 	}
 
 	function insert($Producto){
-		$procedure=("call sp_ins_producto(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		$procedure=("call sp_ins_producto(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
 		$params =array(
 			$Producto['cProductoSerie'],$Producto['cProductoTalla'],$Producto['nProductoMarca'],
@@ -20,7 +20,8 @@ class producto_model extends CI_Model
 			  $Producto['nProductoPCredito'],$Producto['nProductoPCosto'],$Producto['cProductoImage'],
 			  $Producto['nCategoria_id'],$Producto['nProductoStockMin'],$Producto['nProductoStockMax'],
 			  $Producto['nProductoStock'],$Producto['cProductoEst'],$Producto['nProductoPorcUti'],
-			  $Producto['nProductoUtiBruta'],$Producto['nProductoUnidMedida'],$Producto['nProductoPVenta']				
+			  $Producto['nProductoUtiBruta'],$Producto['nProductoUnidMedida'],$Producto['nProductoPVenta'],
+			  $Producto['nProductoAfectoImpuesto']				
 			);
 		$result = $this->db->query($procedure,$params);
 		$id = $result->row_array()["id"];

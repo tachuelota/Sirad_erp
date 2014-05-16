@@ -78,7 +78,7 @@ class views extends CI_Controller
 			$this->load->view('templates/headers.php',$dataheader);		
 			$this->load->view('templates/menu.php');
 			$this->load->view('estadisticas/ventas_por_clientes.php',$pagedata);
-			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/estadisticas/ventas_por_clientes.js';
+			$datafooter['jsvista'] = base_url().'assets/js/jsvistas/estadisticas/vent_by_cli.js';
 			$datafooter['active'] = 'ventas_por_cliente';
 			$datafooter['dropactive'] = 'dropestadistica';
 			$this->load->view('templates/footer.php',$datafooter);

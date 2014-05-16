@@ -37,6 +37,7 @@ class productos extends CI_Controller
 			$idLocal=$form["idLocal"];	
 			$PrecioVenta=$form["precioventa"];
 			$UnidadMedia=$form["unimedida"];
+			$afecto=$form["tipo_impuesto"];
 
 			$Producto = array(
 				'cProductoSerie' => $Serie,'cProductoTalla' =>$Talla,
@@ -48,7 +49,8 @@ class productos extends CI_Controller
 				'nProductoStock'=>$Stock,'nProductoPorcUti'=>$PorcUti,
 				'nProductoUtiBruta'=>$UtiBruta,'cProductoEst'=>$Estado,
 				'nProductoPVenta'=>$PrecioVenta,
-				'nProductoUnidMedida'=>$UnidadMedia);
+				'nProductoUnidMedida'=>$UnidadMedia,
+				'nProductoAfectoImpuesto'=>$afecto);
 
 			$band = true;
 			$this->db->trans_begin();
@@ -110,7 +112,7 @@ class productos extends CI_Controller
 		$PorcUti = 0;
 		$UtiBruta = 0; 
 		$Estado=null;
-		
+		$afectos=null;
 
 		
 		if ($form!=null){
@@ -130,6 +132,7 @@ class productos extends CI_Controller
 			$Estado=$form["estado"];
 			$PrecioVenta=$form["precioventa"];
 			$UnidadMedia=$form["unimedida"];
+			$afectos=$form["tipo_impuesto"];
 							
 			$data = array(
 				'cProductoSerie' => $Serie,'cProductoTalla' =>$Talla,
@@ -140,7 +143,7 @@ class productos extends CI_Controller
 				'nProductoStockMin'=>$StockMin ,'nProductoStockMax'=>$StockMax,
 				'nProductoStock'=>$Stock,'nProductoPorcUti'=>$PorcUti,
 				'nProductoUtiBruta'=>$UtiBruta,'cProductoEst'=>$Estado,
-				'nProductoPVenta'=>$PrecioVenta,'nProductoUnidMedida'=>$UnidadMedia);		
+				'nProductoPVenta'=>$PrecioVenta,'nProductoUnidMedida'=>$UnidadMedia,'nProductoAfectoImpuesto'=>$afectos);		
 			
 			if(!$this->pro->update($Productoid,$data))
 				$this->output->set_status_header('400');

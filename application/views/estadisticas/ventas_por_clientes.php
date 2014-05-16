@@ -1,3 +1,4 @@
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <aside class="right-side">
 	<section class="content-header">
 		<h1>Ventas por Clientes<small>Consultar</small></h1>
@@ -52,36 +53,15 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<div class="box-header">
-								    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-								    <script type="text/javascript">
-								      google.load("visualization", "1", {packages:["corechart"]});
-								      google.setOnLoadCallback(drawChart);
-								      function drawChart() {
-								        var data = google.visualization.arrayToDataTable([
-								          ['Task', 'Hours per Day'],
-								          ['Cliente1',     11],
-								          ['Cliente2',      2],
-								          ['Cliente3',  2],
-								          ['Cliente4', 2],
-								          ['Cliente5',    7]
-								        ]);
-
-								        var options = {
-								          title: 'Ventas por Cliente'
-								        };
-
-								        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-								        chart.draw(data, options);
-								      }
-								    </script>
+								 							   
 								</div>
 							<div class="col-lg-6 col-lg-offset-1 control-label">
 								<div class="modal-body">
 									<div id="piechart" style="width: 900px; height: 500px;"></div>
 								</div>
 							</div>
-							</div>
-						</div>		
+						</div>
+						</div>	
 					</div>
 					
 				</div>

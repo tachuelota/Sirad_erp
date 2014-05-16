@@ -215,21 +215,21 @@ $("#ClienteForm1").validationEngine('attach',{autoHidePrompt:true,autoHideDelay:
 
 	//ClientesRowCBF = function (){
 		table_clientes = toHTML(crearTablaToArray("tclientes",
-				['ID','NOMBRE','DNI','LINEA OPERATIVA','ZONA','DIRECCIÓN'],
-				[	'style="width: 5%;" class="head" ','style="width: 25%;" class="head" ','style="width: 15%;" class="head" ',
-					'style="width: 15%;" class="head" ','style="width: 15%;" class="head" ','style="width: 25%;" class="head" ',],
-				['nCliente_id','cClienteNom','cClienteDNI','nClienteLineaOp','cZonaDesc','cClientecDir'],
-				[	'style="width: 5%;" ','style="width: 25%;" ','style="width: 35%;" ',
-					'style="width: 15%;" ','style="width: 15%;" ','style="width: 25%;" '],
+				['NOMBRE','APELLIDO','RUC','TELEFONO','DNI'],
+				[	'style="width: 20%;" class="head" ','style="width: 20%;" class="head" ',
+					'style="width: 20%;" class="head" ','style="width: 20%;" class="head" ','style="width: 20%;" class="head" ',],
+				['cClienteNom','cClienteApe','cClienteRuc','cClienteTel','cClienteDNI'],
+				[	'style="width: 20%;" ','style="width: 20%;" ',
+					'style="width: 20%;" ','style="width: 20%;" ','style="width: 20%;" '],
 					ClientesTable.fnGetData()));
 
 		table_Empresas = toHTML(crearTablaToArray("tempresa",
-				['ID','RAZON SOCIAL','DIRECCION FISCAL','TIPO CONTRIBUYENTE'],
-				[	'style="width: 25%;" class="head" ','style="width: 25%;" class="head" ','style="width: 25%;" class="head" ',
-					'style="width: 25%;" class="head" ',],
-				['nCliente_id','cClienteRazonSocial','cClientecDir','cClienteTipoContribuyente'],
-				[	'style="width: 25%;" ','style="width: 25%;" ','style="width: 25%;" ',
-					'style="width: 25%;" '],
+				['RUC','RAZON SOCIAL','DIRECCION FISCAL','TIPO CONTRIBUYENTE','TELEFONO'],
+				[	'style="width: 20%;" class="head" ','style="width: 20%;" class="head" ','style="width: 20%;" class="head" ',
+					'style="width: 20%;" class="head" ','style="width: 20%;" class="head" '],
+				['cClienteRuc','cClienteRazonSocial','cClientecDir','cClienteTipoContribuyente','cClienteTel'],
+				[	'style="width: 20%;" ','style="width: 20%;" ','style="width: 20%;" ',
+					'style="width: 20%;" ','style="width: 20%;" '],
 					EmpresaTable.fnGetData()));
 		//};
 		$("#title").val("LISTA DE CLIENTES");

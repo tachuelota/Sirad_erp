@@ -401,6 +401,14 @@ class servicios extends CI_Controller {
 			->set_content_type('application/json')
 			->set_output(json_encode(array('aaData' => $result)));
 	}
+	public function get_tipoproducto()
+	{
+		$this->load->model('administracion/tipo_model','timo');
+		$result = $this->timo->get_tipoproductos();
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode(array('aaData' => $result)));
+	}
 
 
 }

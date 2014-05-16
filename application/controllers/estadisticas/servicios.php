@@ -18,7 +18,7 @@ class servicios extends CI_Controller {
 		$Params = array($desde,$hasta,$cantidad,$monto);
 		$result = $this->rsm->getVentas_ByClientes($Params);
 		
-		echo json_encode(array('aaData' => $result));			
+		echo json_encode(array('datos' => $result));			
 	}
 
 	public function getProductos_Cantidad()
@@ -31,7 +31,7 @@ class servicios extends CI_Controller {
 		$Params = array($desde,$hasta,$cantidad);
 		$result = $this->rsm->getProductos_Cantidad($Params);
 		
-		echo json_encode(array('aaData' => $result));			
+		echo json_encode(array('datos' => $result));			
 	}
 
 	public function get_Ingresos_Egresos()
