@@ -117,6 +117,7 @@ class producto_model extends CI_Model
 		}
 	}
 
+
 }
 
 ?>
