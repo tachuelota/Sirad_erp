@@ -31,7 +31,7 @@ $(document).ready(function(){
 			{ "mDataProp": "cLocalDesc"},		       
 		    { "mDataProp": "cLocalTelf"},
 		    { "mDataProp": "cLocalDirec"},
-		    { "mDataProp": "nLocalTipRub"},
+		    { "mDataProp": "cConstanteDesc"},
 		   	{ "mDataProp": "estadolabel"}
 				],
 		"fnCreatedRow": TipoLocalesTA.RowCBFunction

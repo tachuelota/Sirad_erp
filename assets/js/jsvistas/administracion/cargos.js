@@ -42,6 +42,7 @@ $(document).ready(function(){
 		    onUnblock: function(){
 				CargosTable.fnReloadAjax()
 				$("#CargoForm").reset();
+
 			}
 		})
 	}
