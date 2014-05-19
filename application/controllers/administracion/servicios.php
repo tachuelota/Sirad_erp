@@ -405,6 +405,16 @@ class servicios extends CI_Controller {
 	{
 		$this->load->model('administracion/tipo_model','timo');
 		$result = $this->timo->get_tipoproductos();
+		foreach ($result as $key => $ven_tipoproducto) {
+			switch ($ven_tipoproducto["cTipoProductoEst"]) {				
+			    case 0:
+			        $result[$key]["estadoLabel"] = '<span class="label label-danger">Inhabilitado</span>';
+			        break;
+			    case 1:
+			        $result[$key]["estadoLabel"] = '<span class="label label-success">Habilitado</span>';
+			        break;
+			}
+		}	
 		$this->output
 			->set_content_type('application/json')
 			->set_output(json_encode(array('aaData' => $result)));

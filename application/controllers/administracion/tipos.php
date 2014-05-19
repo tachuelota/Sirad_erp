@@ -10,19 +10,21 @@ class tipos extends CI_Controller {
 	public function registrar(){
 		$form = $this->input->post('formulario');
 	
-		$tipoDesc = null;
-		$tipoEst = null;
-		$idCategoria=null; 
-		$tipoNom=null;
+		$desc_tipo = null;
+		$estado_tipo=null;
+		$select_cat = null;
+		$nom_tipo=null; 
+		
 		
 		if ($form!=null){
-			$tipoDesc = $form["nom_cargo"];
-			$tipoEst = $form["selectEstado"];
-			$idCategoria=$form[""];
-			$tipoNom=$form[""];
+			$desc_tipo = $form["desc_tipo"];
+			$estado_tipo = $form["estado_tipo"];
+			$select_cat=$form["select_cat"];
+			$nom_tipo=$form["nom_tipo"];
+			
 							
-			$Tipo = array('cTipoProductoDesc' => $tipoDesc,'cTipoProductoEst' =>$tipoEst,'nCategoria_id'=>$idCategoria,
-						'cTipoProductoNom'=>$tipoNom );
+			$Tipo = array('cTipoProductoDesc' => $desc_tipo,'cTipoProductoEst' =>$estado_tipo,'nCategoria_id'=>$select_cat,
+						'cTipoProductoNom'=>$nom_tipo );
 	
 			if($this->timo->insert($Tipo)){
 				$return = array("responseCode"=>200, "datos"=>"ok");
@@ -42,21 +44,21 @@ class tipos extends CI_Controller {
 	public function editar(){
 		$form = $this->input->post('formulario',null);	
 		
-		$idTipo=null;
-		$tipoDesc = null;
-		$tipoEst = null;
-		$idCategoria=null; 
-		$tipoNom=null;
+		$desc_tipo = null;
+		$estado_tipo=null;
+		$select_cat = null;
+		$nom_tipo=null; 
+		
 		
 		if ($form!=null){
-			$idTipo=$form[""];
-			$tipoDesc = $form["nom_cargo"];
-			$tipoEst = $form["selectEstado"];
-			$idCategoria=$form[""];
-			$tipoNom=$form[""];							
+			$idTipo=$form["idTipo"];
+			$desc_tipo = $form["desc_tipo"];
+			$estado_tipo = $form["estado_tipo"];
+			$select_cat=$form["select_cat"];
+			$nom_tipo=$form["nom_tipo"];							
 							
-			$Tipo = array('cTipoProductoDesc' => $tipoDesc,'cTipoProductoEst' =>$tipoEst,'nCategoria_id'=>$idCategoria,
-						'cTipoProductoNom'=>$tipoNom );		
+			$Tipo = array('cTipoProductoDesc' => $desc_tipo,'cTipoProductoEst' =>$estado_tipo,'nCategoria_id'=>$select_cat,
+						'cTipoProductoNom'=>$nom_tipo );		
 			
 			if($this->timo->update($idTipo,$Tipo)){
 				$return = array('responseCode'=>200, 'datos'=>$Tipo);

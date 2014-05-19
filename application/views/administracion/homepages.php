@@ -100,7 +100,7 @@
                 <div class="col-lg-3 col-xs-6">
                     <div class="small-box bg-purple">
                         <div class="inner">
-                            <h3>Categorías</h3>
+                            <h3>Categorías y Tipos</h3>
                             <p>Registrar y Editar</p>
                         </div>
                         <div class="icon">
