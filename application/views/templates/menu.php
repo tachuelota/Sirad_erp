@@ -236,7 +236,7 @@
 	                </li>
                 <?php endif ?>
 
-                <?php if($this->ion_auth->in_group_type(4)): ?>
+                <!--<?php if($this->ion_auth->in_group_type(4)): ?>
 	                <li id="dropestadistica" class="treeview">
 	                    <a href="#">
 	                        <i class="fa fa-bar-chart-o"></i>
@@ -288,7 +288,7 @@
 							
 	                    </ul>
 	                </li>
-                <?php endif ?>
+                <?php endif ?>-->
             </ul>
         </section>
         <!-- /.sidebar -->

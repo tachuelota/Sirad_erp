@@ -139,19 +139,27 @@ $(document).ready(function(){
 
 	$("#btn_enviar_ordcom").click(function(event){
 		event.preventDefault();
-		if(OrdenMaterialesTable.fnSettings().fnRecordsTotal() > 0)
-		{
-			if($("#RegistrarOrdenMaterialesForm").validationEngine('validate'))
-				$.blockUI({ 
-					onBlock: function()
-					{ 
-						//console.log($("#RegistrarOrdenMaterialesForm").serializeObject());
-						enviar($("#RegistrarOrdenMaterialesForm").attr("action-1"),prepararDatos(), successOrdenMateriales, null);
-					}
-	        	});				
-		}
+		if ((document.getElementById("proveedor").value).length == 0)
+			{
+				$("#agregarproveedor").modal('show');
+				return false;
+			}
 		else
-			$("#agregarproductos").modal("show");
+		{
+			if(OrdenMaterialesTable.fnSettings().fnRecordsTotal() > 0)
+			{
+				if($("#RegistrarOrdenMaterialesForm").validationEngine('validate'))
+					$.blockUI({ 
+						onBlock: function()
+						{ 
+							//console.log($("#RegistrarOrdenMaterialesForm").serializeObject());
+							enviar($("#RegistrarOrdenMaterialesForm").attr("action-1"),prepararDatos(), successOrdenMateriales, null);
+						}
+		        	});				
+			}
+			else
+				$("#agregarproductos").modal("show");
+		}
 	});
 
 	$('#RegistrarOrdenMaterialesForm').change(function(){Suma();});
