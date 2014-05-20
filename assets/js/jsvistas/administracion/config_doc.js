@@ -16,6 +16,7 @@ $(document).ready(function(){
 			$("#btn-editar-confdoc").show();
 	  		$("#modalConfigDoc").modal('show');
 	  		$("#NumSerie").val(aData.cDocNumSerie);
+	  		$("#TipDoc").val(aData.tipoComprobantes);
 	  		$("#NumComp").val(aData.cDocNumComprobante);
 	  		$("#estado").val(aData.cDocEstado);
 	  		$("#codigo").val(aData.nConfDoc);
