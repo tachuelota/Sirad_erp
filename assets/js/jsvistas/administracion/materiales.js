@@ -18,6 +18,9 @@ $(document).ready(function(){
 	  		$("#precio").val(aData.nMaterialPCosto);
 	  		$("#cantidad").val(aData.nMaterialCantidad);
 	  		$("#descripcion").val(aData.cMaterialDesc);
+	  		$("#categoria").val(aData.nCategoria_id);
+	  		$("#unimedida").val(aData.nMaterialUnidMedida);
+	  		$("#marca").val(aData.nMarca_id);
 	  		$("#codigo").val(aData.nMaterial_id);
 	  		$("#estado").val(aData.cMaterialEst);
 		},
