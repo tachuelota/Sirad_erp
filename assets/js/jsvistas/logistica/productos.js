@@ -30,7 +30,7 @@ $(document).ready(function(){
 		"aoColumns":[
 			 		  { "mDataProp": "cProductoDesc"},
 		              { "mDataProp": "cMarcaDesc"},
-		              { "mDataProp": "cConstanteDesc"},
+		              { "mDataProp": "cTipoProductoDesc"},
 		              { "mDataProp": "cCategoriaNom"},
 		              { "mDataProp": "nProductoStock"},
 		              { "mDataProp": "nProductoPCosto"},
@@ -97,4 +97,12 @@ $(document).ready(function(){
 		$("#btn-reg-prod").show();
 		$("#btn-editar-prod").hide();
 	});
+
+
+	$("#categoria").change(function()
+	{
+		var valcar=$('#categoria').val();
+		var tipo = getAjaxObject(base_url+"administracion/servicios/get_tipoproducto_bycategoria"+"/"+valcar);
+		$("#tipprod").SelectAjax(tipo);
+	})
 });

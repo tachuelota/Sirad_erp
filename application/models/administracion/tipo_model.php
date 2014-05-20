@@ -60,5 +60,16 @@ class tipo_model extends CI_Model {
 		return $query->row_array();
 	}
 
+	public function get_tipoproductos_bycategoria($nCategoria_id)
+	{
+		//if($nCategoria_id === FALSE )
+		//{
+			$query = $this ->db->query ('select * from ven_tipoproductos_all where nCategoria_id='.$nCategoria_id);
+			return $query -> result_array();
+		//}
+		//$query = $this->db->get_where('ven_tipoproducto', array('nCategoria_id' => $nCategoria_id));
+		//return $query->row_array();
+	}
+
 
 }
