@@ -12,7 +12,8 @@ $(document).ready(function(){
 			$("#btn-editar-prod").show();
 	  		$('#modalProductos').modal('show');
 	  		$("#serie").val(aData.cProductoSerie);
-	  		$("#talla").val(aData.cProductoTalla);
+	  		$("#talla").val(aData.cProductoTalla); 
+	  		$("#categoria").val(aData.nCategoria_id); 
 	  		$("#descripcion").val(aData.cProductoDesc);
 	  		$("#preciocosto").val(aData.nProductoPCosto);
 	  		$('#precioventa').val(aData.nProductoPVenta);

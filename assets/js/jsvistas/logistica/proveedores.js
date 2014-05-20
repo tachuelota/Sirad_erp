@@ -18,6 +18,7 @@ $(document).ready(function(){
 	  		$("#dirfiscal").val(aData.cProveedorDireccionFiscal);
 	  		$("#fecInscripcion").val(aData.dProveedorFechaInscripcion);
 	  		$("#inicioActividades").val(aData.dProveedorFechaInicioActividades);
+	  		$("#comprobantePago").val(aData.nProveedorComprobantePago);
 	  		//$("#stockmin").val(aData.nProductoStockMin);
 	  		$("#codigo").val(aData.nProveedor_id);
 		},

@@ -183,11 +183,15 @@ $(document).ready(function(){
 								return false;
 							}
 						}
+						if ((document.getElementById("cliente").value).length == 0)
+						{
+							$("#rquiredclients").modal('show');
+							return false;
+						}
 					}
 					else
 						return false;
 					break;
-							
 			}
 		},
 		onTabShow: function(tab, navigation, index) {

@@ -527,6 +527,26 @@
 					</div><!-- /.modal-content -->
             	</div><!-- /.modal-dialog -->
 			</div>
+
+			<div class="modal fade" id="rquiredclients">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title"><i class="fa fa-exclamation-triangle"></i> Atención</h4>
+						</div>
+						<div class="modal-body">
+							<div class="alert alert-danger alert-dismissable">
+								<p>
+									Necesita Agregar Clientes
+								</p>
+							</div>
+						</div>
+						<div class="modal-footer clearfix">
+							<a href="#" class="btn" data-dismiss="modal">Aceptar</a>
+						</div>
+					</div><!-- /.modal-content -->
+            	</div><!-- /.modal-dialog -->
+			</div>
 		</div>
 	</section>
 	<!-- /.content -->

@@ -190,18 +190,27 @@ $(document).ready(function(){
 	//REGISTRAR ORDEN DE COMPRA
 	$("#btn_enviar_ordcom").click(function(event){
 		event.preventDefault();
-		if(OrdenCompraTable.fnSettings().fnRecordsTotal() > 0)
-		{
-			if($("#RegistrarOrdenCompraForm").validationEngine('validate'))
-				$.blockUI({ 
-					onBlock: function()
-					{ 
-						enviar($("#RegistrarOrdenCompraForm").attr("action-1"),prepararDatos(), successOrdenCompra, null);
-					}
-	        	});				
-		}
+		if ((document.getElementById("proveedor").value).length == 0)
+			{
+				$("#agregarproveedor").modal('show');
+				return false;
+			}
 		else
-			$("#agregarproductos").modal("show");
+			{
+			if(OrdenCompraTable.fnSettings().fnRecordsTotal() > 0)
+			{
+				if($("#RegistrarOrdenCompraForm").validationEngine('validate'))
+					$.blockUI({ 
+						onBlock: function()
+						{ 
+							enviar($("#RegistrarOrdenCompraForm").attr("action-1"),prepararDatos(), successOrdenCompra, null);
+						}
+		        	});				
+			}
+			else
+				$("#agregarproductos").modal("show");
+		}
+
 	});
 
 	var urlExportCierreXLS = "extensiones/reportes_xls/formato_reporte_cuadrecaja.php";
