@@ -19,7 +19,9 @@ $(document).ready(function(){
 					OfertaProductoTable.fnDeleteRow(index); 
 					BuscarProdTable.fnAddData(aData);
 					break;
+			
 			}
+			//$("#OfertasForm").show();
 		}
 	});
 
