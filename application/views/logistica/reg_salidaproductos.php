@@ -81,7 +81,7 @@
 									<div class="form-group">
 										<label class="col-lg-4 control-label" for="observaciones">Observaciones</label>
 										<div class="col-lg-8">
-											<textarea id="observaciones" name="observaciones" class="form-control"></textarea>
+											<textarea id="observaciones" name="observaciones" class="form-control validate[required]"></textarea>
 										</div>
 									</div>
 								</div>

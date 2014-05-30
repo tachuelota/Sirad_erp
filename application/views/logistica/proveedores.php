@@ -138,7 +138,7 @@
 														<label class="col-lg-4 control-label" for="paginaweb">Fecha Inscripción</label>
 														<div class="col-lg-8">
 															<div class="input-group">
-																<input class="form-control datepicker" id="fecInscripcion" name="fecInscripcion" type="text">
+																<input class="form-control datepicker validate[required]" id="fecInscripcion" name="fecInscripcion" type="text">
 																<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
 															</div>
 														</div>
@@ -147,7 +147,7 @@
 														<label class="col-lg-4 control-label" for="inicioActividades">Inicio de Actividades</label>
 														<div class="col-lg-8">
 															<div class="input-group">
-																<input class="form-control datepicker" id="inicioActividades" name="inicioActividades" type="text">
+																<input class="form-control datepicker validate[required]" id="inicioActividades" name="inicioActividades" type="text">
 																<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
 															</div>
 														</div>

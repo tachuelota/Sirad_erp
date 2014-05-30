@@ -15,10 +15,12 @@ $(document).ready(function(){
 	  		$("#talla").val(aData.cProductoTalla); 
 	  		$("#categoria").val(aData.nCategoria_id); 
 	  		$("#descripcion").val(aData.cProductoDesc);
+	  		$("#tipprod").val(aData.nTipoProducto_id);
 	  		$("#preciocosto").val(aData.nProductoPCosto);
 	  		$('#precioventa').val(aData.nProductoPVenta);
 	  		$("#stockmax").val(aData.nProductoStockMax);
-	  		$("#stockmin").val(aData.nProductoStockMin);	  		
+	  		$("#stockmin").val(aData.nProductoStockMin);	
+	  		$("#marca").val(aData.nMarca_id);	 		
 	  		$("#codigo").val(aData.nProducto_id);
 		},
 	});	
@@ -31,8 +33,8 @@ $(document).ready(function(){
 		"aoColumns":[
 			 		  { "mDataProp": "cProductoDesc"},
 		              { "mDataProp": "cMarcaDesc"},
-		              { "mDataProp": "cTipoProductoDesc"},
 		              { "mDataProp": "cCategoriaNom"},
+		              { "mDataProp": "cTipoProductoNom"},		              
 		              { "mDataProp": "nProductoStock"},
 		              { "mDataProp": "nProductoPCosto"},
 		              { "mDataProp": "nProductoPVenta"},

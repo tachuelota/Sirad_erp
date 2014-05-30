@@ -27,9 +27,9 @@
 							<thead>
 								<tr>
 									<th>Nombre</th>
-									<th>Marca</th>
-									<th>Tipo</th>
-									<th>Categoría</th>									
+									<th>Marca</th>									
+									<th>Categoría</th>
+									<th>Tipo</th>									
 									<th>Stock</th>
 									<th>Pre. Costo</th>
 									<th>Pre. Venta</th>
@@ -78,7 +78,7 @@
 												<div class="form-group">
 													<label class="col-lg-4 control-label" for="tipo">Tipo</label>
 													<div class="col-lg-8">
-														<select id="tipprod" class="form-control SelectAjax" name="tipprod" data-source="<?php echo base_url();?>administracion/servicios/get_tipoproducto" attrval="nTipoProducto_id" attrdesc="cTipoProductoDesc"></select> 
+														<select id="tipprod" class="form-control SelectAjax" name="tipprod" data-source="<?php echo base_url();?>administracion/servicios/get_tipoproducto" attrval="nTipoProducto_id" attrdesc="cTipoProductoNom"></select> 
 													</div>
 												</div>
 												<div class="form-group">
