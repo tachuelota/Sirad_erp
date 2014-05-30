@@ -73,20 +73,27 @@ $(document).ready(function(){
 
 	$('#select_producto').click(function(event){
 		event.preventDefault();
+		var data = SelectProductoData[0];
+		$('#cantidad').removeClass();
+		$('#cantidad').addClass("form-control validate[required,custom[number],min[1],max["+data.nProductoStock+"]]");
 		$("#producto_id").val(SelectProductoData[0].nProducto_id);
 		$('#producto').val(SelectProductoData[0].cProductoDesc);
+		
 		$('#modalBuscarProducto').modal('hide');
 	});
 
 	//	Agregar a la tabla
 	$('#btn-agregar-detalle').click(function(event){
-		event.preventDefault();			
-		$("#AgregarProductoForm").validationEngine('validate');
-		SelectProductoData[0].DetSalProdCant = $("#cantidad").val();
-		SalidaProductosTable.fnAddData(SelectProductoData);
-		$("#producto").val("");
-		$("#producto_id").val("");
-		$("#cantidad").val("");
+		event.preventDefault();	
+		if(!$("#cantidad").validationEngine("validate"))
+		{		
+			$("#AgregarProductoForm").validationEngine('validate');
+			SelectProductoData[0].DetSalProdCant = $("#cantidad").val();
+			SalidaProductosTable.fnAddData(SelectProductoData);
+			$("#producto").val("");
+			$("#producto_id").val("");
+			$("#cantidad").val("");
+		}
 	});
 
 		//

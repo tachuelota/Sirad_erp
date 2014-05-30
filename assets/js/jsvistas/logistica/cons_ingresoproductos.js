@@ -20,7 +20,7 @@ $(document).ready(function(){
 	var IngreProductosOptions = {
 		"aoColumns":[
 			 		  { "mDataProp": "dIngProdFecReg"},
-		              { "mDataProp": "serNumIngreso"},
+		              { "mDataProp": "cIngProdSerieNum"},
 		              { "mDataProp": "nomape"},
 		              { "mDataProp": "DescMotivo"},
 		              { "mDataProp": "serNumDoc"},

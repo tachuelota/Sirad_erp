@@ -83,12 +83,13 @@ class ingresoproductos extends CI_Controller
 		if ($form!=null){
 			//CABECERA
 			$id=$form["idingprod"];
-			$DocNumero = $form["edit_numdoc"];
+			$DocNumero = $form["docnumero"];
 			$Motivo = $form["tipo"];
 			$Observacion = $form["observacion"];
+			$DocSerie=$form["docserie"];
 						
 			$IngProducto = array('nIngProd_id'=>$id,'nIngProdMotivo' => $Motivo,'cIngProdDocNro' => $DocNumero,
-			'cIngProdObsv'=>$Observacion);
+			'cIngProdDocSerie'=>$DocSerie,'cIngProdObsv'=>$Observacion);
 
 			$band = true;
 			$this->db->trans_begin();

@@ -64,12 +64,13 @@
 									</div>
 									<div class="form-group">
 											<label class="col-lg-4 control-label" for="solicitante">Número Documento</label>
-										<div class="col-lg-6">
-											<div class="input-group">
-												<input class="form-control focused validate[required]" name="edit_numdoc" id="edit_numdoc" type="text" value="<?php echo $cIngProdDocSerie." - ".$cIngProdDocNro ?>">
-												<span id="spandesc" class="input-group-addon"><i class="ion-document"></i></span>
-											</div>
+										<div class="col-lg-3">
+											<input id="docserie" name="docserie" type="text" class="form-control validate[required] validate[maxSize[4]]" placeholder="Serie" value="<?php echo $cIngProdDocSerie; ?>">
 										</div>
+										<div class="col-lg-5">
+											<input id="docnumero" name="docnumero" type="text" class="form-control validate[required] validate[maxSize[8]]" placeholder="Numero" value="<?php echo $cIngProdDocNro; ?>">
+										</div>										
+									</div>
 									</div>
 								</div>
 							</div>

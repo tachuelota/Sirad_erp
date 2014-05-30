@@ -144,5 +144,6 @@ $(document).ready(function(){
 			if($("#RegistrarIngresoForm").validationEngine('validate'))
 				enviar($("#RegistrarIngresoForm").attr("action-1"),{formulario:$("#RegistrarIngresoForm").serializeObject(),
 				tabla: CopyArray(DetalleProductosTable.fnGetData(),["nProducto_id","nDetIngProdCant","nDetIngProdPrecUnt","nDetIngProdTot","band","nDetIngProd_id"])}, successEditarProducto, null)
+				//console.log($("#RegistrarIngresoForm").serializeObject());
 		});
 });

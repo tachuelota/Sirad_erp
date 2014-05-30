@@ -46,10 +46,10 @@
 							<thead>
 								<tr>
 									<th>Fecha Registro</th>
-									<th>N° Ingreso</th>
+									<th>N° Ingreso(Interno)</th>
 									<th>Personal</th>
 									<th>Motivo</th>
-									<th>N° Documento</th>
+									<th>N° Orden(Externo)</th>
 									
 								</tr>
 							</thead>
