@@ -21,19 +21,20 @@
 							<div class="row-fluid">
 								<div class="col-lg-6">
 									<div class="form-group">
-											<label class="col-lg-4 control-label" for="codigo">Número Ingreso</label>
+										<label class="col-lg-4 control-label" for="codigo">Número Ingreso</label>
 										<div class="col-lg-8">
 											<span class="help-inline" style="margin-top:5px;"><?php echo $cIngProdSerie." - ".$cIngProdNro;?></span>
-											<input type="hidden" id="idingprod" name="idingprod" value="<?php echo $nIngProd_id;?>"></div>
+											<input type="hidden" id="idingprod" name="idingprod" value="<?php echo $nIngProd_id;?>">
+										</div>
 									</div>
 									<div class="form-group">
-											<label class="col-lg-4 control-label" for="registrador">Registrador</label>
+										<label class="col-lg-4 control-label" for="registrador">Registrador</label>
 										<div class="col-lg-8">
 											<span class="help-inline" style="margin-top:5px;"><?php echo $nomape;?></span>
 										</div>
 									</div>
 									<div class="form-group">
-											<label class="col-lg-4 control-label" for="tipo">Motivo</label>
+										<label class="col-lg-4 control-label" for="tipo">Motivo</label>
 										<div class="col-lg-6">
 											<select id="tipo" name="tipo" class="form-control">
 												<option value="1">Devolución</option>
@@ -43,13 +44,13 @@
 										</div>
 									</div>
 									<div class="form-group">
-											<label class="col-lg-4 control-label" for="tienda">Tienda</label>
+										<label class="col-lg-4 control-label" for="tienda">Tienda</label>
 										<div class="col-lg-8">
 											<span class="help-inline" style="margin-top:5px;"><?php echo $cLocalDesc;?></span>
 										</div>
 									</div>
 									<div class="form-group">
-											<label class="col-lg-4 control-label" for="observaciones">Observaciones</label>
+										<label class="col-lg-4 control-label" for="observaciones">Observaciones</label>
 										<div class="col-lg-8">
 											<textarea id="observacion" name="observacion" class="form-control" style="width:245px; height:80px;"><?php echo $cIngProdObsv ?></textarea>
 										</div>
@@ -57,13 +58,13 @@
 								</div>
 								<div class="col-lg-6">
 									<div class="form-group">
-											<label class="col-lg-4 control-label" for="fecha">Fecha</label>
+										<label class="col-lg-4 control-label" for="fecha">Fecha</label>
 										<div class="col-lg-8">
 											<span class="help-inline" style="margin-top:5px;"><?php echo $dIngProdFecReg;?></span>
 										</div>
 									</div>
 									<div class="form-group">
-											<label class="col-lg-4 control-label" for="solicitante">Número Documento</label>
+										<label class="col-lg-4 control-label" for="solicitante">Número Documento</label>
 										<div class="col-lg-3">
 											<input id="docserie" name="docserie" type="text" class="form-control validate[required] validate[maxSize[4]]" placeholder="Serie" value="<?php echo $cIngProdDocSerie; ?>">
 										</div>
@@ -71,11 +72,10 @@
 											<input id="docnumero" name="docnumero" type="text" class="form-control validate[required] validate[maxSize[8]]" placeholder="Numero" value="<?php echo $cIngProdDocNro; ?>">
 										</div>										
 									</div>
-									</div>
-								</div>
+								</div>							
 							</div>
-					</fieldset>
-				</form>
+							</fieldset>
+						</form>
 				<!--<form id="AgregarProductoForm" class="form-horizontal">
 					<div class="control-group">
 						<label class="control-label" for="producto">Producto</label>
