@@ -42,7 +42,10 @@
 								<div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">x</button>
-										<h4 class="modal-title">Registrar Local</h4>
+										<h4 id='regLocal' class="modal-title">Registrar Local</h4>
+										<h4 id='editLocal' class="modal-title">Modificar Local</h4>
+
+
 									</div>
 									<form id="LocalesForm" class="form-horizontal" method="post"  action-1="<?php echo base_url();?>administracion/locales/registrar" action-2="<?php echo base_url();?>administracion/locales/editar" data-source="<?php echo base_url();?>administracion/servicios/getUbigeo">
 										<input type="hidden" id="idlocal" name="idlocal">

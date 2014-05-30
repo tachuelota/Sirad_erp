@@ -50,7 +50,8 @@
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h4 class="modal-title">Registrar Clase</h4>
+									<h4 id='regClase'>Registrar Clase</h4>
+									<h4 id='editClase'>Modificar Clase</h4>
 								</div>
 								<form id="ConstanteForm" class="form-horizontal" action-1="<?php echo base_url();?>administracion/constantes/registrar" action-2="<?php echo base_url();?>administracion/constantes/editar">
 									<input type="hidden" id="idConstante" name="idConstante">

@@ -10,6 +10,8 @@ $(document).ready(function(){
 			$("#btn-reg-cargo").hide();
 			$("#btn-editar-cargo").show();
 	  		$('#modalCargo').modal('show');
+	  		$("#regCargos").hide();	
+	  		$("#editCargos").show();
 	  		$("#nom_cargo").val(aData.nCargoDesc);
 	  		$("#selectEstado").val(aData.cCargoEst);
 	  		$("#idCargo").val(aData.nCargo_id);
@@ -25,6 +27,8 @@ $(document).ready(function(){
 	$('#btn-reg').click(function(e){
 		e.preventDefault();
 		$('#modalCargo').modal('show');
+		$("#regCargos").show();	
+		$("#editCargos").hide();
 	});
 	var CargoOptions = {
 		"aoColumns":[
@@ -59,6 +63,7 @@ $(document).ready(function(){
 	$('.btn-registrar').click(function(e){
 		e.preventDefault();
 		$('#modalCargo').modal('show');
+		
 	});
 
 	$("#btn-reg-cargo").click(function(event){

@@ -130,6 +130,7 @@ $(document).ready(function(){
 		var successEditarProducto = function(){
 		//alert("Hola Como estas");
 		//$('#modalProductos').modal('hide');
+		$(location).attr("href",base_url+"logistica/views/cons_ingresoproductos"); 
 		DetalleProductosTable.fnReloadAjax()
 		}
 		//refrescar tabla

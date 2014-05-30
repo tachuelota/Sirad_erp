@@ -9,6 +9,8 @@ $(document).ready(function(){
 			$("#btn-reg-constante").hide();
 			$("#btn-edit-constante").show();
 	  		$("#modalConstante").modal('show');
+	  		$("#regClase").hide();	
+	  		$("#editClase").show();	
 	  		$("#clase").val(aData.nConstanteClase);
 	  		$("#nom_clase").val(aData.cConstanteDesc);
 	  		$("#valor").val(aData.cConstanteValor);
@@ -31,6 +33,8 @@ $(document).ready(function(){
 	$('#btn-reg').click(function(e){
 		e.preventDefault();
 		$('#modalConstante').modal('show');
+		$("#regClase").show();	
+		$("#editClase").hide();	
 	});
 	
 	var successCategoria = function(){

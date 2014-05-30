@@ -21,7 +21,7 @@ $(document).ready(function(){
 					break;
 			
 			}
-			//$("#OfertasForm").show();
+			
 		}
 	});
 
@@ -40,6 +40,7 @@ $(document).ready(function(){
             	BuscarProdTable.fnReloadAjax();
 				OfertaProductoTable.fnReloadAjax();
 	            //$(location).attr("href",base_url+"administracion/views/ofertas"); 
+	            $(location).attr("href",base_url+"administracion/views/ofertas"); 
             } 
         });
 	}
@@ -70,8 +71,9 @@ $(document).ready(function(){
 				{
 					enviar($("#OfertasForm").attr("action-1"),PrepararDatosOferta(), successEditarOferta, null)
 				}
+				//$("#OfertasForm").show();
 			});	
-	
+			
 	});
 
 	BuscarProdOptions = {

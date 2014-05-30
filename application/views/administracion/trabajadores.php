@@ -41,7 +41,8 @@
 							<div class="modal-dialog">
 								<div class="modal-content">
 									<div class="modal-header">
-										<h4 class="modal-title">Registrar Trabajador</h4>
+										<h4 id='regTrabajador' class="modal-title">Registrar Trabajador</h4>
+										<h4 id='editTrabajador'>Modificar Trabajador</h4>
 									</div>
 									<form id="TrabajadoresForm" class="form-horizontal" method="post" action-1="<?php echo base_url();?>administracion/trabajadores/registrar" action-2="<?php echo base_url();?>administracion/trabajadores/editar">
 										<input type="hidden" id="idTrabajadores" name="idTrabajadores">

@@ -10,6 +10,8 @@ $(document).ready(function(){
 			$("#btn-reg-trabajadores").hide();
 			$("#btn-editar-trabajadores").show();
 	  		$('#modalTrabajadores').modal('show');
+	  		$("#regTrabajador").hide();	
+	  		$("#editTrabajador").show();
 	  		$("#nombres").val(aData.cPersonalNom);	  				
 	  		$("#apellidos").val(aData.cPersonalApe);
 	  		$("#fechanacimiento").val(aData.dPersonalFec);	  		
@@ -45,6 +47,8 @@ $(document).ready(function(){
 	$('#btn-reg').click(function(e){
 		e.preventDefault();
 		$('#modalTrabajadores').modal('show');
+		$("#regTrabajador").show();	
+		$("#editTrabajador").hide();
 	});
 
 	//----------------------------------------------------------

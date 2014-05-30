@@ -38,7 +38,8 @@
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h4 class="modal-title">Registrar Cargo</h4>
+									<h4 id="regCargos" class="modal-title">Registrar Cargo</h4>
+									<h4 id="editCargos" class="modal-title">Modificar Cargo</h4>
 								</div>
 								<form id="CargoForm" class="form-horizontal" action-1="<?php echo base_url();?>administracion/cargos/registrar" action-2="<?php echo base_url();?>administracion/cargos/editar">
 									<input type="hidden" id="idCargo" name="idCargo">

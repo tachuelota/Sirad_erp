@@ -12,6 +12,8 @@ $(document).ready(function(){
 			$("#btn-reg-local").hide();
 			$("#btn-editar-local").show();
 	  		$('#modalLocales').modal('show');
+	  		$("#regLocal").hide();	
+	  		$("#editLocal").show();
 	  		$("#nombre_tienda").val(aData.cLocalDesc);
 	  		$("#direccion").val(aData.cLocalDirec);
 	  		$("#telefono").val(aData.cLocalTelf);
@@ -42,6 +44,8 @@ $(document).ready(function(){
 	$('#btn-reg').click(function(e){
 		e.preventDefault();
 		$('#modalLocales').modal('show');
+		$("#regLocal").show();	
+		$("#editLocal").hide();
 	});
 
 	var successLocales = function(){
