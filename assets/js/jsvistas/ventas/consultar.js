@@ -20,7 +20,7 @@ $(document).ready(function(){
 		if(data.estadoCaja===1){
 			VentasTable.fnReloadAjax();	
 		}else{
-			$('#rquiredproducts').modal('show');
+			//$('#modal_caja').modal('show');
 		}
 	}
 

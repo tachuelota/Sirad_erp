@@ -106,24 +106,7 @@
 										<th>Estado</th>
 									</tr>
 								</thead>
-								<thead>
-								<tr>
-									<th></th>
-									<th>
-									</th>
-									<th >
-									</th>
-									<th>
-									</th>
-									<th></th>
-									<th></th>
-									<th></th>
-									<th></th>
-									<th></th>
-									<th></th>
-									<th></th>								
-								</tr>
-							</thead>
+								
 								<tbody></tbody>
 							</table>
 						</div>

@@ -111,7 +111,7 @@
 					</div>
 				</div>
 				<!--MODAL-->
-				<div class="modal fade" id="rquiredproducts">
+				<div class="modal fade" id="modal_caja">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">

@@ -185,7 +185,7 @@ class ventas extends CI_Controller {
 	{
 		if(isset($_POST) && !empty($_POST))
 		{
-			if ($this->session->userdata("estadoCaja")==1) {		
+			if ($this->session->userdata('caja')["cCajaEstado"]==1) {		
 				
 				$nVenta_id = $this->input->post('nVenta_id',true);
 				$transAnular = $this->transm->get_byVenta($nVenta_id);
