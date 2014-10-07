@@ -153,7 +153,20 @@
                     <input type="hidden" name="table_caja" id="table_caja" value=""/>
                     <input type="hidden" name="table_cajamovi" id="table_cajamovi" value=""/>
                  </form>
-                </div> 
+                </div>
+                <div class="modal fade" id="modal_alerta">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <h4>Usted solamente puede aperturar caja una vez al día.</h4>
+                                </div>
+                                <div class="modal-footer">                                       
+                                    <button id="btn_aceptar_alerta" type="button" class="btn btn-flat btn-primary">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

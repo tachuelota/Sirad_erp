@@ -8,22 +8,22 @@ class inicie_caja_model extends CI_Model {
 	}
 
 	public function insert($data){
-		$this->db->trans_start(true);
+		/*$this->db->trans_start(true);
 		
-		$this->db->trans_begin();
+		$this->db->trans_begin();*/
+		$procedure=("call sp_apertura_caja(?,?,?,?,?,?,?,?,?,?)");
+		$result = $this->db->query($procedure,$data);
+		$id_caja = $result->row_array()["id"];
 
-		$this->db->insert('caja',$data);
-		$id_Caja=$this->db->insert_id();
-
+		$result->next_result();
+		$result->free_result();
 		if ($this->db->trans_status() === FALSE)
 		{
-			$this->db->trans_rollback();
-			return false;
+			return 0;
 		}
 		else
 		{
-			$this->db->trans_commit();
-			return $id_Caja;
+			return $id_caja;
 		}
 	}
 

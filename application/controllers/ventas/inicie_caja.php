@@ -41,9 +41,10 @@ public function __construct()
 				 	'nCajaSaldoFinal'=> $saldoFinal,
 				 	'nCajaFaltanteSobrante'=>$saldoSobrante);
 				$id_Caja=$this->inicie->insert($Caja);
-				if($id_Caja!=null){
+				
+				if($id_Caja>0){
 					$this->inicie->get_EstadoCaja();
-					$return = array("responseCode"=>200, "datos"=>"ok");
+					$return = array("responseCode"=>200, "datos"=>$id_Caja);
 				}else
 					$return = array("responseCode"=>400, "greeting"=>"Bad");
 			} 

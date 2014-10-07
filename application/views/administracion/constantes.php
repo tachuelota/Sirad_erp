@@ -18,7 +18,7 @@
 					<div class="box-header">
 						<h3 class="box-title">Constantes <small>por Tipo</small></h3>
 						<div class="box-tools pull-right">
-                            <button  id="btn-reg" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i></button>
+                            <button  id="btn-reg" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i> Nueva Constante</button>
                         </div>
 					</div>
 	    			<div class="box-body">					

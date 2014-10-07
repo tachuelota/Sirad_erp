@@ -18,7 +18,7 @@
 					<div class="box-header">
 						<h3 class="box-title">Lista <small>de Configuración de Documentos</small></h3>
 						<div class="box-tools pull-right">
-                            <button  id="btn-reg" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i></button>
+                            <button  id="btn-reg" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i> Nuevo Documento</button>
                         </div>
 					</div>
 					<div class="box-body table-responsive">

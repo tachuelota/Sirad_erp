@@ -23,7 +23,7 @@ class productos extends CI_Controller
 			$Tipo = $form["tipprod"];
 			$Categoria = $form["categoria"];
 			$Descripcion = $form["descripcion"];
-			$Imagen = null;
+			$Imagen = "";
 			$PContado = 0;
 			$PCredito = 0;
 			//$PCosto = $form["preciocosto"];

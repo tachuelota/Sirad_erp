@@ -25,10 +25,10 @@
 							<button id="pdfdet" type="button" class="btn btn-success btn-flat">Reporte Detallado</button>
 							
 							<?php if( $this->session->userdata('caja')["cCajaEstado"] === "1"){ ?>
-                            <button href="#" class="btn btn-default btn-flat btn-registrar"> <i class="glyphicon glyphicon-plus"></i>
+                            <button href="#" class="btn btn-default btn-flat btn-registrar"> <i class="glyphicon glyphicon-plus"></i> Nuevo Movimiento
 							</button>
                         	<?php }else{ ?>
-							<button id="modal_caja" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i></button>
+							<button id="modal_caja" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i> Aperturar Caja</button>
                         	<?php } ?>
 						</div>
 					</div>

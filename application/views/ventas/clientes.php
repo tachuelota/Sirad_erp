@@ -23,7 +23,7 @@
 						<div class="box-tools pull-right">
 							<input id="pdfgen" type="button" value="Reporte General" class="btn btn-flat btn-success" />
 							<!--<a id="pdfgen" type="button" class="btn btn-flat btn-success"/><i class="fa fa-file-text-o"></i> Reporte General</a>-->
-							<button class="btn btn-default btn-flat btn-registrar"> <i class="glyphicon glyphicon-plus"></i>
+							<button class="btn btn-default btn-flat btn-registrar"> <i class="glyphicon glyphicon-plus"></i> Nuevo Cliente
 							</button>
 						</div>
 					</div>

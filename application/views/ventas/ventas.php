@@ -21,9 +21,9 @@
                         <h3 class="box-title">Buscar Ventas</h3>
 						<div class="box-tools pull-right">
 							<?php if( $this->session->userdata('caja')["cCajaEstado"] === "1"){ ?>
-                            <a href="<?php echo base_url();?>ventas/views/registrar_ventas" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i></a>
+                            <a href="<?php echo base_url();?>ventas/views/registrar_ventas" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i> Nueva Venta</a>
                         	<?php }else{ ?>
-							<button id="modal_caja" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i></button>
+							<button id="modal_caja" class="btn btn-default btn-flat">Aperturar Caja</button>
                         	<?php } ?>
                         </div>
                     </div><!-- /.box-header -->

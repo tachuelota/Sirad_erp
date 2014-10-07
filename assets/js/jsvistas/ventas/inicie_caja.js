@@ -33,16 +33,23 @@ $(document).ready(function(){
 	};
 	var CajaTable = createDataTable2('caja_table',CajaOptions);
 
-	var successInicie_Caja = function(){
+	var successInicie_Caja = function(data){
 		//location.reload(true);
 		$.unblockUI({
 		    onUnblock: function(){
-				//$("#InicieCajaForm").reset();	
-				location.reload(true);			
+		    	if(data['responseCode']==200){
+		    		location.reload(true);
+		    	}else{
+		    		$('#modal_alerta').modal('show');
+		    	}
+				$("#InicieCajaForm").reset();	
 				
 			}
 		})
 	}
+	$('#btn_aceptar_alerta').click(function(event){
+		$('#modal_alerta').modal('hide');
+	});
 
 	// Reportes
 
@@ -89,8 +96,7 @@ $(document).ready(function(){
 			$.blockUI({ 
 				onBlock: function()
 				{
-					enviar($("#InicieCajaForm").attr("action-1"),{formulario:$("#InicieCajaForm").serializeObject()}, successInicie_Caja, null)
-				
+					enviar($("#InicieCajaForm").attr("action-1"),{formulario:$("#InicieCajaForm").serializeObject()}, successInicie_Caja, null)					
 				}
 			});
 	});
