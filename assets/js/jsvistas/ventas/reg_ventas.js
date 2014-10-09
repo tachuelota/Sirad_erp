@@ -359,4 +359,9 @@ $(document).ready(function(){
 	});
 
 	$("#seriecommp").val();
+
+	$('#modal_caja').click(function(e){
+		e.preventDefault();
+		$('#rquiredproducts').modal('show');
+	});
 });

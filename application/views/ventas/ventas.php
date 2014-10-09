@@ -23,7 +23,7 @@
 							<?php if( $this->session->userdata('caja')["cCajaEstado"] === "1"){ ?>
                             <a href="<?php echo base_url();?>ventas/views/registrar_ventas" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i> Nueva Venta</a>
                         	<?php }else{ ?>
-							<button id="modal_caja" class="btn btn-default btn-flat">Aperturar Caja</button>
+                        	<button id="modal_caja" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i> Nueva Venta</button>							
                         	<?php } ?>
                         </div>
                     </div><!-- /.box-header -->
@@ -110,8 +110,8 @@
 						</div>
 					</div>
 				</div>
-				<!--MODAL-->
-				<div class="modal fade" id="modal_caja">
+			<!--MODAL-->
+			<div class="modal fade" id="rquiredproducts">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -120,16 +120,16 @@
 						<div class="modal-body">
 							<div class="alert alert-danger alert-dismissable">
 								<p>
-									Necesita Iniciar Caja
+									Necesita Inicia Caja
 								</p>
 							</div>
 						</div>
 						<div class="modal-footer clearfix">
+							<a href="<?php echo base_url();?>ventas/views/inicie_caja" class="btn btn-default btn-flat">Aperturar Caja</a>
 							<a href="#" class="btn" data-dismiss="modal">Aceptar</a>
 						</div>
 					</div><!-- /.modal-content -->
             	</div><!-- /.modal-dialog -->
-			</div>
 			</div>
         </div>
     </section><!-- /.content -->

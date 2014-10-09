@@ -28,7 +28,7 @@
                             <button href="#" class="btn btn-default btn-flat btn-registrar"> <i class="glyphicon glyphicon-plus"></i> Nuevo Movimiento
 							</button>
                         	<?php }else{ ?>
-							<button id="modal_caja" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i> Aperturar Caja</button>
+							<button id="modal_caja" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-plus"></i> Nuevo Movimiento</button>
                         	<?php } ?>
 						</div>
 					</div>
@@ -148,24 +148,24 @@
 					</div>
 				</div>
 				<div class="modal fade" id="rquiredproducts">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h4 class="modal-title"><i class="fa fa-exclamation-triangle"></i> Atención</h4>
-						</div>
-						<div class="modal-body">
-							<div class="alert alert-danger alert-dismissable">
-								<p>
-									Necesita Inicia Caja
-								</p>
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title"><i class="fa fa-exclamation-triangle"></i> Atención</h4>
 							</div>
-						</div>
-						<div class="modal-footer clearfix">
-							<a href="#" class="btn" data-dismiss="modal">Aceptar</a>
-						</div>
-					</div><!-- /.modal-content -->
-            	</div><!-- /.modal-dialog -->
-			</div>
+							<div class="modal-body">
+								<div class="alert alert-danger alert-dismissable">
+									<p>
+										Necesita Inicia Caja
+									</p>
+								</div>
+							</div>
+							<div class="modal-footer clearfix">
+								<a href="#" class="btn" data-dismiss="modal">Aceptar</a>
+							</div>
+						</div><!-- /.modal-content -->
+	            	</div><!-- /.modal-dialog -->
+				</div>
 				<div class="modal fade" id="exportmodal">
 					<div class="modal-dialog">
 						<div class="modal-content">
